@@ -13,6 +13,8 @@
   justify-content: space-between;
   position: fixed;
   top: 0;
+  z-index: 100;
+  background-color: colors.$color-primary-white;
 
   &_logo {
     align-self: center;

@@ -1,0 +1,52 @@
+@use '../../../../styles/abstracts/fonts' as fonts;
+@use '../../../../styles/abstracts/colors' as colors;
+
+.banner_cards {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: colors.$color-secondary-white;
+}
+
+.banner_card_container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.banner_card {
+  width: 33%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: colors.$color-primary-white;
+}
+
+.card_img_container {
+  width: 130px;
+  background-color: colors.$color-banner-discription;
+}
+
+.card_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  .cards_heading {
+    font-weight: 700;
+    margin: 1rem 0 0 0;
+    font-size: fonts.$fonts-banner-card-heading;
+  }
+  .card_summary {
+    font-weight: 400;
+    color: colors.$color-banner-discription;
+    font-size: fonts.$fonts-banner-card-discription;
+  }
+}
+
+.banner_cards_last_para {
+  font-weight: 400;
+  text-align: center;
+  font-size: fonts.$fonts-banner-card-para;
+}

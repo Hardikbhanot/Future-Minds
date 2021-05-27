@@ -2,6 +2,8 @@ import Head from 'next/head';
 
 import Navbar from '../components/layout/Navbar/Navbar';
 import Banner from '../components/layout/LandingPage/Banner/Banner';
+import BannerCards from '../components/layout/LandingPage/BannerCards/BannerCards';
+
 const Home = () => {
   return (
     <>
@@ -20,6 +22,7 @@ const Home = () => {
       <main>
         <Navbar />
         <Banner />
+        <BannerCards noOfCards={3} />
       </main>
     </>
   );
