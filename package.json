@@ -1,0 +1,27 @@
+{
+  "name": "futureminds",
+  "version": "1.0.0",
+  "description": "A website to build future ready professionals",
+  "main": "server.js",
+  "scripts": {
+    "server": "nodemon server.js",
+    "client": "cd ./client && npm run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [
+    "education",
+    "innovation"
+  ],
+  "author": "tarun dixit",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^2.3.0"
+  },
+  "dependencies": {
+    "concurrently": "^6.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}

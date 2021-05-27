@@ -1,0 +1,152 @@
+@use '../../../styles/abstracts/fonts' as fonts;
+@use '../../../styles/abstracts/colors' as colors;
+@use '../../../styles/abstracts/breakpoints' as breakpoints;
+
+.navbar {
+  width: 100%;
+  padding: 0.5rem 2rem;
+  display: grid;
+  grid-template-rows: 65px;
+  grid-template-columns: 200px 400px auto;
+  position: fixed;
+  top: 0;
+  overflow: hidden; //! Spectical
+  &_logo {
+    align-self: center;
+    width: min(200px, 90%);
+    margin: auto;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  &_search {
+    width: min(350px, 90%);
+    margin: auto;
+    align-self: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    &_input {
+      width: 75%;
+      font-size: fonts.$fonts-navbar-li;
+      padding: 0.8rem 0.8rem;
+      border-radius: 5px 0 0 5px;
+      border: none;
+      outline: none;
+      background-color: colors.$color-secondary-white;
+    }
+    &_btn {
+      cursor: pointer;
+      font-size: fonts.$fonts-navbar-li;
+      width: 25%;
+      padding: 0.8rem 0.4rem;
+      border-radius: 0 5px 5px 0;
+      border: none;
+      background-color: colors.$color-secondary-white;
+    }
+  }
+  &_links_login_hamber_container {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-evenly;
+    .navbar_links_container {
+      display: none;
+      .navbar_links {
+        font-size: fonts.$fonts-navbar-li;
+        display: flex;
+        flex-direction: row;
+      }
+      .navbar_cart_login_container {
+        font-size: fonts.$fonts-navbar-li;
+        display: flex;
+        flex-direction: row;
+      }
+      .navbar_item {
+        padding: 0.6rem 1rem;
+        list-style: none;
+        &:hover,
+        &:focus,
+        &:active {
+          color: colors.$color-primary-blue;
+        }
+      }
+      .navbar_login_btn {
+        padding: 0.6rem 2rem;
+        color: colors.$color-primary-white;
+        background-color: colors.$color-primary-blue;
+        list-style: none;
+        border-radius: 5px;
+        &:hover,
+        &:focus,
+        &:active {
+          color: colors.$color-primary-white;
+          background-color: colors.$color-primary-dark;
+        }
+      }
+    }
+    .burger {
+      // display: none;
+      margin: auto;
+      padding: 0;
+      background-color: none;
+      border: none;
+      outline: none;
+      display: flex;
+      flex-direction: column;
+      .burger_item {
+        width: 40px;
+        height: 3px;
+        margin: 3px;
+        background-color: colors.$color-primary-dark;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}
+
+.nav-active {
+  transform: translateY(0%);
+}
+
+.toggle {
+  &:nth-child(0) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  &:nth-child(1) {
+    opacity: 0;
+  }
+  &:nth-child(2) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+@media screen and (min-width: breakpoints.$medium-screen) {
+  .navbar {
+    &_links_login_hamber_container {
+      .navbar_links_container {
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        justify-content: space-evenly;
+      }
+    }
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
