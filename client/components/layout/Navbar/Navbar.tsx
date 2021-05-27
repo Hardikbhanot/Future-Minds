@@ -19,30 +19,18 @@ const Navbar = () => {
   const onBurgerMenuClick = () => {
     setBurgerMenu(!burgerMenu);
   };
-  // function navSlide() {
-  //   const burger = document.querySelector('.burger');
-  //   const nav = document.querySelector('.nav-links');
-  //   const navLinks = document.querySelectorAll('.nav-links li');
 
-  //   burger.addEventListener('click', () => {
-  //     //Toggle Nav
-  //     nav.classList.toggle('nav-active');
-
-  //     //Animate Links
-  //     navLinks.forEach((link, index) => {
-  //       if (link.style.animation) {
-  //         link.style.animation = '';
-  //       } else {
-  //         link.style.animation = `navLinkFade 0.5s ease forwards ${
-  //           index / 7 + 0.5
-  //         }s`;
-  //       }
-  //     });
-  //     //Burger Animation
-  //     burger.classList.toggle('toggle');
-  //   });
-  // }
-  // navSlide();
+  // Dynamically changes classNames
+  let navbar_links_login_container: string =
+    styles.navbar_links_login_container;
+  let burger_item: string = styles.burger_item;
+  if (burgerMenu) {
+    burger_item = [styles.burger_item, styles.toggle].join(' ');
+    navbar_links_login_container = [
+      styles.navbar_links_login_container,
+      styles.navbar_active
+    ].join(' ');
+  }
 
   return (
     <nav className={styles.navbar}>
@@ -70,8 +58,8 @@ const Navbar = () => {
         </form>
       </div>
       <div className={styles.navbar_links_login_hamber_container}>
-        <div className={styles.navbar_links_container}>
-          <div className={styles.navbar_links}>
+        <div className={navbar_links_login_container}>
+          <div className={styles.navbar_links_container}>
             <li className={styles.navbar_item}>
               <a title='Courses' href='/'>
                 Courses
@@ -115,23 +103,10 @@ const Navbar = () => {
             </li>
           </div>
         </div>
-        <button
-          className={[styles.burger, styles.toggle].join(' ')}
-          onClick={onBurgerMenuClick}
-        >
-          {burgerMenu ? (
-            <>
-              <span className={styles.burger_item}></span>
-              <span className={styles.burger_item}></span>
-              <span className={styles.burger_item}></span>
-            </>
-          ) : (
-            <>
-              <span className={styles.burger_item}></span>
-              <span className={styles.burger_item}></span>
-              <span className={styles.burger_item}></span>
-            </>
-          )}
+        <button className={styles.burger} onClick={onBurgerMenuClick}>
+          <span className={burger_item}></span>
+          <span className={burger_item}></span>
+          <span className={burger_item}></span>
         </button>
       </div>
     </nav>
