@@ -1,11 +1,11 @@
 import Banner from '../components/LandingPage/Banner/Banner';
-import BannerCards from '../components/LandingPage/BannerCards/BannerCards';
+import SecondaryBanner from '../components/LandingPage/SecondaryBanner/SecondaryBanner';
 
 const Home = () => {
   return (
     <>
       <Banner />
-      <BannerCards noOfCards={3} />
+      <SecondaryBanner />
     </>
   );
 };

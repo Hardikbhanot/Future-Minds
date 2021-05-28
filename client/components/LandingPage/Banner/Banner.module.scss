@@ -1,76 +1,188 @@
 @use '../../../styles/abstracts/fonts' as fonts;
 @use '../../../styles/abstracts/colors' as colors;
+@use '../../../styles/abstracts/breakpoints' as breakpoints;
 
 .banner {
   width: 100%;
   background-color: colors.$color-secondary-white;
   margin-top: 70px;
-  .banner_container {
+}
+
+.banner_container {
+  width: 80%;
+  margin: auto;
+  padding: 5rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.banner_main_content {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.banner_headline {
+  line-height: 1.2em;
+  font-weight: 800;
+  font-size: fonts.$fonts-banner-card-para;
+}
+
+.banner_discription {
+  line-height: 1.5em;
+  font-size: fonts.$fonts-banner-card-discription;
+  color: colors.$color-banner-discription;
+}
+
+.banner_explore_form {
+  display: flex;
+  margin-bottom: 1.2rem;
+  flex-direction: column;
+  input[type='text'] {
+    width: 100%;
+    border-radius: 5px;
+    padding: 0.8rem 0.4rem;
+    font-size: fonts.$fonts-navbar-li;
+    background-color: colors.$color-primary-white;
+    border: 1px solid colors.$color-secondary-white;
+    &:active,
+    &:focus {
+      outline: 0.2px solid colors.$color-primary-blue;
+    }
+  }
+  &_submit_btn {
+    width: 25%;
+    border: none;
+    margin: 1rem auto 0 auto;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0.8rem 0.4rem;
+    font-size: fonts.$fonts-navbar-li;
+    color: colors.$color-primary-white;
+    background-color: colors.$color-primary-blue;
+    &:hover,
+    &:active,
+    &:focus {
+      color: colors.$color-primary-white;
+      background-color: colors.$color-primary-dark;
+    }
+  }
+}
+
+.banner_trending_links_container {
+  .banner_trending_para {
+    display: inline;
+    color: colors.$color-banner-discription;
+    margin-right: 0.6rem;
+  }
+  .banner_trending_links {
+    text-decoration: underline;
+    margin-right: 0.6rem;
+  }
+}
+
+.banner_image_container {
+  width: 95%;
+  margin: 2rem auto;
+  div {
     width: 90%;
     margin: auto;
-    padding: 1.8rem 0;
-    display: flex;
+  }
+}
+
+.banner_card_section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: colors.$color-secondary-white;
+}
+
+.banner_card_container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.banner_card {
+  width: 50%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-evenly;
+  background-color: colors.$color-primary-white;
+}
+
+.card_img_container {
+  width: 130px;
+  height: 100px;
+  background-color: colors.$color-banner-discription;
+}
+
+.card_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  .cards_heading {
+    font-weight: 700;
+    margin: 1rem 0 0 0;
+    font-size: fonts.$fonts-banner-card-heading;
+  }
+  .card_summary {
+    font-weight: 400;
+    color: colors.$color-banner-discription;
+    font-size: fonts.$fonts-banner-card-discription;
+  }
+}
+
+.banner_cards_last_para {
+  font-weight: 400;
+  text-align: center;
+  font-size: fonts.$fonts-banner-card-para;
+}
+
+@media screen and (min-width: breakpoints.$laptop-screen) {
+  .banner_container {
+    width: 90%;
     flex-direction: row;
-    .banner_main_content {
-      width: 50%;
+    padding: 1.8rem 0;
+  }
+  .banner_main_content {
+    width: 50%;
+    margin-right: 0;
+    text-align: start;
+  }
+  .banner_headline {
+    font-size: fonts.$fonts-main-heading;
+  }
+  .banner_discription {
+    font-size: fonts.$fonts-main-discription;
+  }
+  .banner_explore_form {
+    flex-direction: row;
+    input[type='text'] {
+      width: 70%;
+    }
+    &_submit_btn {
+      border-radius: 0 5px 5px 0;
+    }
+  }
+  .banner_image_container {
+    width: 45%;
+    div {
+      width: 90%;
       margin: auto;
-      margin-right: 0;
-      .banner_headline {
-        line-height: 1.2em;
-        font-weight: 800;
-        font-size: fonts.$fonts-main-heading;
-      }
-      .banner_discription {
-        line-height: 1.4em;
-        font-size: fonts.$fonts-main-discription;
-        color: colors.$color-banner-discription;
-      }
-      .banner_explore_form {
-        margin-bottom: 1.2rem;
-        input[type='text'] {
-          width: 70%;
-          font-size: fonts.$fonts-navbar-li;
-          padding: 0.8rem 0.8rem;
-          border-radius: 5px;
-          border: none;
-          outline: none;
-          background-color: colors.$color-secondary-white;
-        }
-        &_submit_btn {
-          cursor: pointer;
-          font-size: fonts.$fonts-navbar-li;
-          width: 25%;
-          padding: 0.8rem 0.4rem;
-          border-radius: 0 5px 5px 0;
-          border: none;
-          color: colors.$color-primary-white;
-          background-color: colors.$color-primary-blue;
-          &:hover,
-          &:active,
-          &:focus {
-            color: colors.$color-primary-white;
-            background-color: colors.$color-primary-dark;
-          }
-        }
-      }
-      .banner_trending_links_container {
-        .banner_trending_para {
-          display: inline;
-          color: colors.$color-banner-discription;
-          margin-right: 0.6rem;
-        }
-        .banner_trending_links {
-          text-decoration: underline;
-          margin-right: 0.6rem;
-        }
-      }
     }
-    .banner_image_container {
-      width: 45%;
-      div {
-        width: 90%;
-        margin: auto;
-      }
-    }
+  }
+  .banner_card_container {
+    justify-content: center;
+  }
+  .banner_card {
+    width: 33%;
+    text-align: start;
   }
 }

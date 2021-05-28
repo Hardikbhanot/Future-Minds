@@ -1,0 +1,62 @@
+@use '../../../styles/abstracts/fonts' as fonts;
+@use '../../../styles/abstracts/colors' as colors;
+@use '../../../styles/abstracts/breakpoints' as breakpoints;
+@use '../../../styles/components/buttons' as action_button;
+
+.secondary_banner {
+  width: 100%;
+}
+
+.secondary_banner_container {
+  padding: 3rem 1rem;
+  width: 100%;
+  text-align: center;
+  > a {
+    margin: 2rem auto;
+    display: block;
+    width: max-content;
+    @include action_button.action_btn;
+  }
+}
+
+.secondary_banner_sub_heading {
+  line-height: 1.6em;
+  color: colors.$color-primary-blue;
+  font-size: fonts.$fonts-banner-card-discription;
+}
+
+.secondary_banner_main_heading {
+  margin: 0.5rem;
+  font-size: fonts.$fonts-banner-card-para;
+}
+
+.secondary_banner_discription {
+  line-height: 1.6em;
+  margin: 0.5rem;
+  display: block;
+  font-size: fonts.$fonts-banner-card-discription;
+}
+
+.courses_detail_card_container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.courses_detail_card {
+  width: 50%;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  > a {
+    color: colors.$color-primary-blue;
+  }
+}
+
+.courses_detail_card_icon {
+  width: 150px;
+  height: 100px;
+  background-color: colors.$color-primary-dark;
+}

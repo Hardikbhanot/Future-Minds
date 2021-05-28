@@ -1,7 +1,7 @@
 @use '../../../styles/abstracts/sizes' as size;
 @use '../../../styles/abstracts/fonts' as fonts;
 @use '../../../styles/abstracts/colors' as colors;
-@use '../../../styles/components/buttons' as button;
+@use '../../../styles/components/buttons' as action_button;
 @use '../../../styles/abstracts/breakpoints' as breakpoints;
 
 .navbar {
@@ -104,7 +104,7 @@
 }
 
 .navbar_login_btn {
-  @include button.action-btn;
+  @include action_button.action-btn;
 }
 
 .burger {
