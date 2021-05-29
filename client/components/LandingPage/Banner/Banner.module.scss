@@ -1,15 +1,16 @@
+@use '../../../styles/abstracts/sizes' as sizes;
 @use '../../../styles/abstracts/fonts' as fonts;
 @use '../../../styles/abstracts/colors' as colors;
 @use '../../../styles/abstracts/breakpoints' as breakpoints;
 
 .banner {
-  width: 100%;
-  background-color: colors.$color-secondary-white;
-  margin-top: 70px;
+  width: sizes.$wd-100;
+  background-color: colors.$clr-secondary-white;
+  margin-top: sizes.$l-3;
 }
 
 .banner_container {
-  width: 80%;
+  width: sizes.$wd-80;
   margin: auto;
   padding: 5rem 0 0 0;
   display: flex;
@@ -17,54 +18,56 @@
 }
 
 .banner_main_content {
-  width: 100%;
+  width: sizes.$wd-100;
   margin: auto;
   text-align: center;
 }
 
 .banner_headline {
-  line-height: 1.2em;
+  line-height: fonts.$fs-nr-s;
   font-weight: 800;
-  font-size: fonts.$fonts-banner-card-para;
+  font-size: fonts.$fs-md;
+  margin-bottom: 0;
 }
 
 .banner_discription {
-  line-height: 1.5em;
-  font-size: fonts.$fonts-banner-card-discription;
-  color: colors.$color-banner-discription;
+  line-height: sizes.$s-3;
+  font-size: fonts.$fs-sm-s;
+  color: colors.$clr-grey-lt;
 }
 
 .banner_explore_form {
   display: flex;
-  margin-bottom: 1.2rem;
+  margin-bottom: sizes.$s-1;
   flex-direction: column;
   input[type='text'] {
-    width: 100%;
-    border-radius: 5px;
-    padding: 0.8rem 0.4rem;
-    font-size: fonts.$fonts-navbar-li;
-    background-color: colors.$color-primary-white;
-    border: 1px solid colors.$color-secondary-white;
+    width: sizes.$wd-100;
+    border-radius: sizes.$border-radius 0 0 sizes.$border-radius;
+    padding: fonts.$fs-i-lg fonts.$fs-sm;
+    font-size: fonts.$fs-sm;
+    background-color: colors.$clr-white-ltr;
+    border: 1px solid colors.$clr-grey-ltst;
     &:active,
     &:focus {
-      outline: 0.2px solid colors.$color-primary-blue;
+      border: 1px solid colors.$clr-primary;
     }
   }
   &_submit_btn {
-    width: 25%;
+    width: sizes.$wd-25;
     border: none;
-    margin: 1rem auto 0 auto;
+    margin: sizes.$s-0 auto 0 auto;
     cursor: pointer;
-    border-radius: 5px;
-    padding: 0.8rem 0.4rem;
-    font-size: fonts.$fonts-navbar-li;
-    color: colors.$color-primary-white;
-    background-color: colors.$color-primary-blue;
+    // border: 1px solid colors.$clr-primary;
+    border-radius: sizes.$border-radius;
+    padding: fonts.$fs-i-lg fonts.$fs-sm;
+    font-size: fonts.$fs-sm;
+    color: colors.$clr-white;
+    background-color: colors.$clr-primary;
     &:hover,
     &:active,
     &:focus {
-      color: colors.$color-primary-white;
-      background-color: colors.$color-primary-dark;
+      color: colors.$clr-white;
+      background-color: colors.$clr-secondary;
     }
   }
 }
@@ -72,33 +75,33 @@
 .banner_trending_links_container {
   .banner_trending_para {
     display: inline;
-    color: colors.$color-banner-discription;
-    margin-right: 0.6rem;
+    color: colors.$clr-grey;
+    margin-right: sizes.$ets-3;
   }
   .banner_trending_links {
     text-decoration: underline;
-    margin-right: 0.6rem;
+    margin-right: sizes.$ets-3;
   }
 }
 
 .banner_image_container {
-  width: 95%;
-  margin: 2rem auto;
+  width: sizes.$wd-95;
+  margin: sizes.$m-0 auto;
   div {
-    width: 90%;
+    width: sizes.$wd-90;
     margin: auto;
   }
 }
 
 .banner_card_section {
-  width: 100%;
+  width: sizes.$wd-100;
   display: flex;
   flex-direction: column;
-  background-color: colors.$color-secondary-white;
+  background-color: colors.$clr-secondary-white;
 }
 
 .banner_card_container {
-  width: 80%;
+  width: sizes.$wd-80;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -107,20 +110,30 @@
 }
 
 .banner_card {
-  width: 50%;
-  padding: 1rem;
+  width: sizes.$wd-50;
+  padding: sizes.$s-0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   text-align: center;
+  border: 1px solid colors.$clr-secondary-white;
   justify-content: space-evenly;
-  background-color: colors.$color-primary-white;
+  background-color: colors.$clr-white;
+  &:nth-child(1) {
+    border-radius: 5px 0 0 5x;
+  }
+  &:nth-child(2) {
+    border-radius: 0;
+  }
+  &:nth-child(3) {
+    border-radius: 0 5px 5px 0;
+  }
 }
 
 .card_img_container {
   width: 130px;
   height: 100px;
-  background-color: colors.$color-banner-discription;
+  background-color: colors.$clr-grey;
 }
 
 .card_content {
@@ -129,60 +142,63 @@
   justify-content: flex-start;
   .cards_heading {
     font-weight: 700;
-    margin: 1rem 0 0 0;
-    font-size: fonts.$fonts-banner-card-heading;
+    margin: sizes.$s-0 0 0 0;
+    font-size: fonts.$fs-sm;
   }
   .card_summary {
     font-weight: 400;
-    color: colors.$color-banner-discription;
-    font-size: fonts.$fonts-banner-card-discription;
+    color: colors.$clr-grey-lt;
+    font-size: fonts.$fs-sm;
   }
 }
 
 .banner_cards_last_para {
   font-weight: 400;
   text-align: center;
-  font-size: fonts.$fonts-banner-card-para;
+  font-size: fonts.$fs-md;
 }
 
 @media screen and (min-width: breakpoints.$laptop-screen) {
   .banner_container {
-    width: 90%;
+    width: sizes.$wd-90;
     flex-direction: row;
-    padding: 1.8rem 0;
+    padding: sizes.$s-4 0;
   }
   .banner_main_content {
-    width: 50%;
+    width: sizes.$wd-50;
     margin-right: 0;
     text-align: start;
   }
   .banner_headline {
-    font-size: fonts.$fonts-main-heading;
+    font-size: fonts.$fs-etlg;
   }
   .banner_discription {
-    font-size: fonts.$fonts-main-discription;
+    font-size: fonts.$fs-sm;
   }
   .banner_explore_form {
     flex-direction: row;
     input[type='text'] {
-      width: 70%;
+      width: sizes.$wd-70;
     }
     &_submit_btn {
-      border-radius: 0 5px 5px 0;
+      margin: 0;
+      width: sizes.$wd-20;
+      border-radius: 0 sizes.$border-radius sizes.$border-radius 0;
     }
   }
   .banner_image_container {
-    width: 45%;
+    width: sizes.$wd-50;
     div {
-      width: 90%;
+      width: sizes.$wd-90;
       margin: auto;
     }
   }
   .banner_card_container {
+    width: sizes.$wd-90;
     justify-content: center;
   }
   .banner_card {
-    width: 33%;
+    width: sizes.$wd-30;
     text-align: start;
   }
 }

@@ -1,80 +1,85 @@
+@use '../../../styles/abstracts/sizes' as sizes;
 @use '../../../styles/abstracts/fonts' as fonts;
 @use '../../../styles/abstracts/colors' as colors;
 @use '../../../styles/abstracts/breakpoints' as breakpoints;
 
 .footer {
-  width: 100%;
+  font-family: 'Nunito', 'Inter', sans-serif;
+  width: sizes.$wd-100;
   display: flex;
   flex-direction: column;
-  color: colors.$color-primary-white;
-  background-color: colors.$color-secondary-dark;
+  color: colors.$clr-white;
+  background-color: colors.$clr-footer;
 }
 
 .footer_main_content {
-  width: 85%;
-  margin: 5rem auto;
+  width: sizes.$wd-85;
+  margin: sizes.$etl-0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .discription_card_container {
-  width: 100%;
+  width: sizes.$wd-100;
   display: flex;
   flex-direction: column;
   .main_heading {
-    font-size: 2em;
-    font-weight: 400;
-    line-height: 1.6em;
     margin: 0;
+    font-weight: 400;
+    font-size: fonts.$fs-nr;
+    line-height: sizes.$m-0;
+    color: colors.$clr-white;
   }
   .main_discription {
-    font-size: 1em;
-    line-height: 2em;
     font-weight: 300;
-    color: colors.$color-light-text;
+    font-size: fonts.$fs-sm;
+    line-height: sizes.$s-4;
+    color: colors.$clr-white-lt;
   }
 }
 
 .card_container {
-  width: 100%;
-  padding-left: 0;
   display: flex;
+  padding-left: 0;
+  width: sizes.$wd-100;
   flex-direction: column;
   li {
-    width: max-content;
     list-style: none;
+    width: max-content;
   }
 }
 
 .sub_heading {
-  font-size: 1em;
   font-weight: 400;
-  line-height: 1.6em;
-  border-bottom: 1px solid colors.$color-lightest-border;
+  font-size: sizes.$s-1;
+  line-height: sizes.$s-3;
+  padding-bottom: sizes.$ets-4;
+  border-bottom: 1px solid colors.$clr-grey-ltst;
 }
 
 .links_list {
-  line-height: 1.4em;
   font-weight: 300;
-  color: colors.$color-light-text;
+  line-height: sizes.$ets-2;
+  color: colors.$clr-white-lt;
   padding: 0;
   > li {
-    font-size: 1em;
-    margin-bottom: 0.6rem;
+    font-size: sizes.$s-0;
+    line-height: sizes.$s-2;
+    margin-bottom: sizes.$ets-3;
     list-style-type: none;
     &::before {
       content: '◼︎';
-      margin-right: 0.6rem;
-      font-size: 1em;
-      color: colors.$color-primary-blue;
+      font-size: fonts.$fs-sm;
+      margin-right: sizes.$ets-3;
+      color: colors.$clr-primary;
     }
     &:hover,
     &:focus,
     &:active {
+      color: colors.$clr-primary;
       transform: translateX(5%);
       transition: transform 0.4s ease-out;
-      color: colors.$color-primary-blue;
     }
   }
 }
@@ -84,60 +89,67 @@
   flex-direction: row;
   padding: 0;
   li {
-    margin: 0.2rem 0.2rem 0 0;
+    margin: sizes.$ets-3 sizes.$ets-3 0 0;
   }
 }
 
 .all_rights_reserved_container {
-  width: 90%;
-  margin: 0 auto 1rem auto;
+  width: sizes.$wd-90;
+  margin: 0 auto sizes.$s-0 auto;
   display: flex;
   flex-direction: column;
-  font-size: fonts.$fonts-navbar-li;
-  border-top: 1px solid colors.$color-lightest-border;
+  font-size: fonts.$fs-sm;
+  color: colors.$clr-white-lt;
+  border-top: 1px solid colors.$clr-grey-ltst;
 }
 
 .all_rights_reserved {
-  width: 100%;
+  width: sizes.$wd-100;
   text-align: center;
 }
 
 .all_rights_reserved_links {
-  width: 100%;
+  width: sizes.$wd-100;
   justify-content: center;
   align-self: center;
   display: flex;
   flex-direction: row;
   a:nth-child(1) {
-    padding-right: 0.5rem;
-    border-right: 1px solid colors.$color-primary-white;
+    padding-right: sizes.$ets-3;
+    border-right: 1px solid colors.$clr-white-ltr;
   }
   a:nth-child(2) {
-    padding-left: 0.5rem;
+    padding-left: sizes.$ets-3;
   }
 }
 
 @media screen and (min-width: breakpoints.$monitor-screen) {
   .footer_main_content {
     flex-direction: row;
-    margin: 5rem auto 12rem auto;
+    margin: sizes.$etl-0 auto 8rem auto;
   }
   .discription_card_container {
-    width: 25%;
+    width: sizes.$wd-20;
+    .main_heading {
+      font-size: fonts.$fs-md;
+    }
+    .main_discription {
+      font-size: fonts.$fs-sm;
+    }
   }
   .card_container {
-    padding-left: 2rem;
-    width: 25%;
+    padding-left: sizes.$m-0;
+    width: sizes.$wd-25;
   }
   .all_rights_reserved_container {
     flex-direction: row;
   }
   .all_rights_reserved {
-    width: 60%;
+    width: sizes.$wd-55;
     text-align: start;
   }
   .all_rights_reserved_links {
-    width: 40%;
+    width: sizes.$wd-45;
     justify-content: flex-end;
   }
 }

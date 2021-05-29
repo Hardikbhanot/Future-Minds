@@ -1,53 +1,53 @@
-@use '../../../styles/abstracts/sizes' as size;
+@use '../../../styles/abstracts/sizes' as sizes;
 @use '../../../styles/abstracts/fonts' as fonts;
 @use '../../../styles/abstracts/colors' as colors;
-@use '../../../styles/components/buttons' as action_button;
+@use '../../../styles/components/buttons' as act_btn;
 @use '../../../styles/abstracts/breakpoints' as breakpoints;
 
 .navbar {
-  width: 100%;
-  min-height: size.$navbar-height;
-  padding: 0.5rem 2rem;
+  width: sizes.$wd-100;
+  min-height: sizes.$etl-0;
+  padding: sizes.$ets-2 sizes.$m-0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   position: fixed;
   top: 0;
   z-index: 100;
-  background-color: colors.$color-primary-white;
+  background-color: colors.$clr-white;
 
   &_logo {
     align-self: center;
-    width: 10%;
-    min-width: 150px;
+    width: sizes.$wd-10;
+    min-width: sizes.$ets-3;
     margin: auto;
   }
 
   &_search {
     display: none;
-    width: 60%;
+    width: sizes.$wd-60;
     min-width: 350px;
     align-self: center;
     form {
-      width: 90%;
+      width: sizes.$wd-90;
       margin: auto;
       .navbar_search_input {
-        width: 85%;
-        font-size: fonts.$fonts-navbar-li;
-        padding: 0.8rem 0.8rem;
-        border-radius: 5px 0 0 5px;
+        width: sizes.$wd-85;
+        font-size: fonts.$fs-sm;
+        padding: sizes.$ets-4;
+        border-radius: sizes.$border-radius 0 0 sizes.$border-radius;
         border: none;
         outline: none;
-        background-color: colors.$color-secondary-white;
+        background-color: colors.$clr-secondary-white;
       }
       .navbar_search_btn {
         cursor: pointer;
-        font-size: fonts.$fonts-navbar-li;
-        width: 15%;
-        padding: 0.8rem 0.4rem;
-        border-radius: 0 5px 5px 0;
+        font-size: fonts.$fs-sm;
+        width: sizes.$wd-15;
+        padding: sizes.$ets-4 sizes.$ets-2;
+        border-radius: 0 sizes.$border-radius sizes.$border-radius 0;
         border: none;
-        background-color: colors.$color-secondary-white;
+        background-color: colors.$clr-white-ltr;
       }
     }
   }
@@ -68,23 +68,23 @@
   position: fixed;
   height: 38vh;
   top: -25vh;
-  right: 5%;
+  right: sizes.$wd-5;
   z-index: -10;
-  width: 90%;
-  background-color: colors.$color-primary-white;
+  width: sizes.$wd-90;
+  background-color: colors.$clr-white;
   transform: translateY(0%);
   opacity: 0;
   border-radius: 0 0 5px 5px;
   transition: all 0.5s ease-in;
   .navbar_links_container {
-    width: 100%;
-    font-size: fonts.$fonts-navbar-li;
+    width: sizes.$wd-100;
+    font-size: fonts.$fs-sm;
     display: flex;
     flex-direction: column;
   }
   .navbar_cart_login_container {
-    width: 100%;
-    font-size: fonts.$fonts-navbar-li;
+    width: sizes.$wd-100;
+    font-size: fonts.$fs-sm;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -92,19 +92,19 @@
 }
 
 .navbar_item {
-  padding: 0.6rem 1rem;
+  padding: sizes.$ets-3 sizes.$s-0;
   text-align: center;
   list-style: none;
-  border-bottom: 1px solid colors.$color-secondary-white;
+  border-bottom: 1px solid colors.$clr-white-ltr;
   &:hover,
   &:focus,
   &:active {
-    color: colors.$color-primary-blue;
+    color: colors.$clr-primary;
   }
 }
 
 .navbar_login_btn {
-  @include action_button.action-btn;
+  @include act_btn.action-btn;
 }
 
 .burger {
@@ -120,7 +120,7 @@
     width: 30px;
     height: 3px;
     margin: 3px;
-    background-color: colors.$color-primary-dark;
+    background-color: colors.$clr-black;
     transition: all 0.3s ease;
   }
 }
@@ -150,7 +150,7 @@
     justify-content: space-evenly;
     &_search {
       display: block;
-      width: 40%;
+      width: sizes.$wd-40;
       min-width: 300px;
     }
   }
@@ -162,10 +162,10 @@
 // everything in navbar should show
 @media screen and (min-width: breakpoints.$tv-screen) {
   .navbar_links_login_hamber_container {
-    width: 70%;
+    width: sizes.$wd-70;
   }
   .navbar_links_login_container {
-    width: 100%;
+    width: sizes.$wd-100;
     flex-direction: row;
     opacity: 1;
     position: relative;
@@ -174,20 +174,20 @@
     right: 0;
     z-index: 0;
     .navbar_links_container {
-      width: 70%;
+      width: sizes.$wd-70;
       align-items: center;
       flex-direction: row;
     }
     .navbar_cart_login_container {
-      width: 30%;
+      width: sizes.$wd-30;
       flex-direction: row;
     }
   }
   .navbar_item {
-    width: 30%;
+    width: sizes.$wd-30;
   }
   .navbar_login_btn {
-    width: 70%;
+    width: sizes.$wd-70;
   }
   .burger {
     display: none;

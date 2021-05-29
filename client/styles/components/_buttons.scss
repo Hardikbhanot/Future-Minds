@@ -1,15 +1,16 @@
+@use '../abstracts/sizes' as sizes;
 @use '../abstracts/colors' as colors;
 
 @mixin action-btn {
-  padding: 0.6rem 2rem;
-  color: colors.$color-primary-white;
-  background-color: colors.$color-primary-blue;
+  padding: sizes.$ets-3 sizes.$m-0;
+  color: colors.$clr-white;
+  background-color: colors.$clr-primary;
   list-style: none;
-  border-radius: 5px;
+  border-radius: sizes.$border-radius;
   &:hover,
   &:focus,
   &:active {
-    color: colors.$color-primary-white;
-    background-color: colors.$color-primary-dark;
+    color: colors.$clr-white;
+    background-color: colors.$clr-secondary;
   }
 }

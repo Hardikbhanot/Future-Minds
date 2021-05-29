@@ -1,44 +1,48 @@
+@use '../../../styles/abstracts/sizes' as sizes;
 @use '../../../styles/abstracts/fonts' as fonts;
 @use '../../../styles/abstracts/colors' as colors;
 @use '../../../styles/abstracts/breakpoints' as breakpoints;
-@use '../../../styles/components/buttons' as action_button;
+@use '../../../styles/components/buttons' as act_btn;
 
 .secondary_banner {
-  width: 100%;
+  width: sizes.$wd-100;
 }
 
 .secondary_banner_container {
-  padding: 3rem 1rem;
-  width: 100%;
+  background-color: colors.$clr-secondary-white;
+  padding: sizes.$m-4 sizes.$s-0;
+  width: sizes.$wd-100;
   text-align: center;
   > a {
-    margin: 2rem auto;
+    margin: sizes.$m-4 auto sizes.$s-0 auto;
     display: block;
     width: max-content;
-    @include action_button.action_btn;
+    @include act_btn.action_btn;
   }
 }
 
 .secondary_banner_sub_heading {
-  line-height: 1.6em;
-  color: colors.$color-primary-blue;
-  font-size: fonts.$fonts-banner-card-discription;
+  color: colors.$clr-primary;
+  line-height: sizes.$s-2;
+  font-size: fonts.$fs-i-lg;
+  margin: 0;
 }
 
 .secondary_banner_main_heading {
-  margin: 0.5rem;
-  font-size: fonts.$fonts-banner-card-para;
+  margin: 0;
+  font-size: fonts.$fs-md-s;
 }
 
 .secondary_banner_discription {
-  line-height: 1.6em;
-  margin: 0.5rem;
+  line-height: sizes.$s-2;
+  margin: sizes.$ets-2 0 sizes.$s-0 0;
   display: block;
-  font-size: fonts.$fonts-banner-card-discription;
+  font-size: fonts.$fs-i-lg;
+  color: colors.$clr-grey-lt;
 }
 
 .courses_detail_card_container {
-  width: 80%;
+  width: sizes.$wd-90;
   margin: auto;
   display: flex;
   flex-direction: row;
@@ -47,16 +51,35 @@
 }
 
 .courses_detail_card {
-  width: 50%;
-  padding: 1rem 1.5rem;
+  width: sizes.$wd-50;
+  padding: sizes.$s-0 sizes.$s-3;
   text-align: center;
   > a {
-    color: colors.$color-primary-blue;
+    color: colors.$clr-primary;
   }
 }
 
 .courses_detail_card_icon {
   width: 150px;
-  height: 100px;
-  background-color: colors.$color-primary-dark;
+  height: 50px;
+  background-color: colors.$clr-black;
+}
+
+.courses_detail_card_heading {
+  font-size: fonts.$fs-nr-s;
+  margin-bottom: 0;
+}
+
+.courses_detail_card_discription {
+  line-height: fonts.$fs-nr;
+  font-size: fonts.$fs-sm-s;
+  color: colors.$clr-grey-lt;
+}
+
+@media screen and (min-width: breakpoints.$laptop-screen) {
+  .courses_detail_card {
+    width: sizes.$wd-30;
+    margin: auto;
+    text-align: start;
+  }
 }

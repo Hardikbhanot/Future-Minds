@@ -1,9 +1,36 @@
-$color-primary-white: #ffffff;
-$color-secondary-white: #f5f5f5;
-$color-primary-blue: #2557fb;
-$color-primary-dark: #221738;
+// lt - light
+// ltr - lighter
+// ltst - lightest
 
-$color-secondary-dark: #100f1f;
-$color-banner-discription: #606060;
-$color-light-text: rgba(255, 255, 255, 0.7);
-$color-lightest-border: rgba(255, 255, 255, 0.08);
+$clr-white: rgba(255, 255, 255, 1);
+$clr-white-lt: rgba(255, 255, 255, 0.8);
+$clr-white-ltr: rgb(255, 255, 255, 0.6);
+$clr-white-ltst: rgb(255, 255, 255, 0.4);
+
+$clr-black: rgba(0, 0, 0, 1);
+$clr-black-lt: rgba(0, 0, 0, 0.8);
+$clr-black-ltr: rgba(0, 0, 0, 0.6);
+$clr-black-ltst: rgba(0, 0, 0, 0.4);
+
+$clr-grey: rgb(96, 96, 96, 1);
+$clr-grey-lt: rgb(96, 96, 96, 0.8);
+$clr-grey-ltr: rgb(96, 96, 96, 0.6);
+$clr-grey-ltst: rgb(96, 96, 96, 0.4);
+
+$clr-primary: rgb(37, 87, 251, 1);
+$clr-primary-lt: rgb(37, 87, 251, 0.8);
+$clr-primary-ltr: rgb(37, 87, 251, 0.6);
+$clr-primary-ltst: rgb(37, 87, 251, 0.4);
+
+$clr-secondary: rgb(34, 23, 56, 1);
+$clr-secondary-lt: rgb(34, 23, 56, 0.8);
+$clr-secondary-ltr: rgb(34, 23, 56, 0.6);
+$clr-secondary-ltst: rgb(34, 23, 56, 0.4);
+
+$clr-secondary-white: rgba(248, 249, 248, 1);
+
+$clr-footer: rgba(17, 16, 32, 1);
+
+// dk - darker
+// dkr - darker
+// dkst - darker
