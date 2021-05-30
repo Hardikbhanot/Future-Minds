@@ -5,7 +5,7 @@ interface PageProps {
   rootMargin: string;
 }
 
-const useIntersection = ({ element, rootMargin }: PageProps) => {
+export default function useIntersection({ element, rootMargin }: PageProps) {
   const [isVisible, setState] = useState(false);
 
   useEffect(() => {
@@ -22,6 +22,4 @@ const useIntersection = ({ element, rootMargin }: PageProps) => {
   }, []);
 
   return isVisible;
-};
-
-export default useIntersection;
+}

@@ -1,10 +1,16 @@
-import { useEffect, useRef } from 'react';
+import { RefObject, useEffect, useRef } from 'react';
 import Link from 'next/link';
 
 import styles from './BottomBanner.module.scss';
+import { useInView } from 'react-intersection-observer';
 // import useIntersections from '../../../hook/useIntersection';
 
 const BottomBanner = () => {
+  // const counterSectionRef = useRef<HTMLElement>(null);
+  const { ref, inView } = useInView({
+    threshold: 1
+  });
+
   const countUpto = {
     finishedSessions: 80,
     enrolledLearners: 816,
@@ -12,14 +18,22 @@ const BottomBanner = () => {
     satisfactionRate: 97
   };
 
-  const counterSectionRef = useRef<HTMLElement>(null);
-  // const isViewPort = useIntersections({
-  //   element: counterSectionRef,
-  //   rootMargin: '-100px'
-  // });
+  // let isViewPort = false;
+
+  // check if counterSectionRef is null
+  // const checkIfCounterSectionIsNull = (
+  //   counterSectionRef: RefObject<HTMLElement>
+  // ) => {
+  //   if (counterSectionRef && counterSectionRef.current) {
+  //     isViewPort = useIntersections({
+  //       element: counterSectionRef.current,
+  //       rootMargin: '-100px'
+  //     });
+  //   }
+  //   return isViewPort;
+  // };
 
   const counterFunc = () => {
-    // if (isViewPort) {
     const counterArray = document.querySelectorAll(
       '.' + styles.count_upto_counter
     );
@@ -45,16 +59,18 @@ const BottomBanner = () => {
       };
       updateCount();
     });
-    // }
   };
 
   useEffect(() => {
-    counterFunc();
-  }, []);
+    // const isInViewPort = checkIfCounterSectionIsNull(counterSectionRef);
+    if (inView) {
+      counterFunc();
+    }
+  }, [inView]);
 
   return (
     <main className={styles.bottom_banner}>
-      <section className={styles.count_upto_container} ref={counterSectionRef}>
+      <section className={styles.count_upto_container} ref={ref}>
         <div className={styles.count_upto}>
           <div className={styles.counter_heading_container}>
             <h2
