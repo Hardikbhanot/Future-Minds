@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic';
 
 import Banner from '../components/LandingPage/Banner/Banner';
+import ReviewBanner from '../components/LandingPage/ReviewsBanner/ReviewBanner';
 import SecondaryBanner from '../components/LandingPage/SecondaryBanner/SecondaryBanner';
 
 // Dynamic import with server site rendering(ssr) off,
@@ -17,6 +18,7 @@ const Home = () => {
     <>
       <Banner />
       <SecondaryBanner />
+      <ReviewBanner />
       <BottomBanner />
     </>
   );
