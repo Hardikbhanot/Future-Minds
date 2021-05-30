@@ -1,6 +1,8 @@
+import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 
 import styles from './BottomBanner.module.scss';
+// import useIntersections from '../../../hook/useIntersection';
 
 const BottomBanner = () => {
   const countUpto = {
@@ -10,34 +12,94 @@ const BottomBanner = () => {
     satisfactionRate: 97
   };
 
+  const counterSectionRef = useRef<HTMLElement>(null);
+  // const isViewPort = useIntersections({
+  //   element: counterSectionRef,
+  //   rootMargin: '-100px'
+  // });
+
+  const counterFunc = () => {
+    // if (isViewPort) {
+    const counterArray = document.querySelectorAll(
+      '.' + styles.count_upto_counter
+    );
+    const speed = 200;
+
+    counterArray.forEach((counter: Element) => {
+      const updateCount = () => {
+        let targetString = counter.getAttribute('data-target');
+        let target;
+        if (targetString) {
+          target = +targetString;
+        } else {
+          target = 0;
+        }
+        const count = +counter.innerHTML;
+        const inc = target / speed;
+        if (count < target) {
+          counter.innerHTML = `${Math.ceil(count + inc)}`;
+          setTimeout(updateCount, 1);
+        } else {
+          counter.innerHTML = `${target}`;
+        }
+      };
+      updateCount();
+    });
+    // }
+  };
+
+  useEffect(() => {
+    counterFunc();
+  }, []);
+
   return (
     <main className={styles.bottom_banner}>
-      <section className={styles.count_upto_container}>
+      <section className={styles.count_upto_container} ref={counterSectionRef}>
         <div className={styles.count_upto}>
-          <h2 className={styles.count_upto_counter}>
-            {countUpto.finishedSessions}
-          </h2>
+          <div className={styles.counter_heading_container}>
+            <h2
+              className={styles.count_upto_counter}
+              data-target={countUpto.finishedSessions}
+            >
+              0
+            </h2>
+          </div>
           <h4 className={styles.count_upto_discription}>Finished Sessions</h4>
         </div>
         <div className={styles.count_upto}>
-          <h2 className={styles.count_upto_counter}>
-            {countUpto.enrolledLearners}
+          <div className={styles.counter_heading_container}>
+            <h2
+              className={styles.count_upto_counter}
+              data-target={countUpto.enrolledLearners}
+            >
+              0
+            </h2>
             <p>+</p>
-          </h2>
+          </div>
           <h4 className={styles.count_upto_discription}>Enrolled Learners</h4>
         </div>
         <div className={styles.count_upto}>
-          <h2 className={styles.count_upto_counter}>
-            {countUpto.onlineInstructures}
+          <div className={styles.counter_heading_container}>
+            <h2
+              className={styles.count_upto_counter}
+              data-target={countUpto.onlineInstructures}
+            >
+              0
+            </h2>
             <p>+</p>
-          </h2>
+          </div>
           <h4 className={styles.count_upto_discription}>Online Instructures</h4>
         </div>
         <div className={styles.count_upto}>
-          <h2 className={styles.count_upto_counter}>
-            {countUpto.satisfactionRate}
+          <div className={styles.counter_heading_container}>
+            <h2
+              className={styles.count_upto_counter}
+              data-target={countUpto.satisfactionRate}
+            >
+              0
+            </h2>
             <p>%</p>
-          </h2>
+          </div>
           <h4 className={styles.count_upto_discription}>Satisfaction Rate</h4>
         </div>
       </section>

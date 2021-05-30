@@ -33,16 +33,24 @@
   flex-direction: column;
 }
 
-.count_upto_counter {
+.counter_heading_container {
   color: colors.$clr-primary;
   font-size: fonts.$fs-nr;
   display: flex;
   flex-direction: row;
   margin: 0;
   justify-content: center;
+  align-items: center;
   > p {
     margin: 0;
+    font-size: fonts.$fs-nr;
   }
+}
+
+.count_upto_counter {
+  color: colors.$clr-primary;
+  font-size: fonts.$fs-nr;
+  margin: 0;
 }
 
 .count_upto_discription {
