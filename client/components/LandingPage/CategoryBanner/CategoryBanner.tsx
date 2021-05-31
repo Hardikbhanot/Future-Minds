@@ -13,54 +13,49 @@ const CategoryBanner = () => {
         <p className={styles.category_banner_discription}>
           Choose from your choice of subjects.
         </p>
-        <div className={styles.category_card_container}>
-          <Link href='/'>
-            <a className={styles.category_card}>
-              <span>Animation</span>
-            </a>
-          </Link>
-
-          <Link href='/'>
-            <a className={styles.category_card}>
-              <span>Data Science</span>
-            </a>
-          </Link>
-
-          <Link href='/'>
-            <a className={styles.category_card}>
-              <span>UX/UI</span>
-            </a>
-          </Link>
-
-          <Link href='/'>
-            <a className={styles.category_card}>
-              <span>Web Development</span>
-            </a>
-          </Link>
-
-          <Link href='/'>
-            <a className={styles.category_card}>
-              <span>Python</span>
-            </a>
-          </Link>
-
-          <Link href='/'>
-            <a className={styles.category_card}>
-              <span>Writing</span>
-            </a>
-          </Link>
-
-          <Link href='/'>
-            <a className={styles.category_card}>
-              <span>Machine Learning</span>
-            </a>
-          </Link>
-
-          <Link href='/'>
-            <a className={styles.category_card}>
-              <span>IT & Software</span>
-            </a>
-          </Link>
+        <div className={styles.category_card_wrapper}>
+          <div className={styles.category_card_container}>
+            <Link href='/'>
+              <a className={styles.category_card}>
+                <span>Animation</span>
+              </a>
+            </Link>
+          </div>
+          <div className={styles.category_card_container}>
+            <Link href='/'>
+              <a className={styles.category_card}>
+                <span>Data Science</span>
+              </a>
+            </Link>
+          </div>
+          <div className={styles.category_card_container}>
+            <Link href='/'>
+              <a className={styles.category_card}>
+                <span>UX/UI</span>
+              </a>
+            </Link>
+          </div>
+          <div className={styles.category_card_container}>
+            <Link href='/'>
+              <a className={styles.category_card}>
+                <span>Web Development</span>
+              </a>
+            </Link>
+          </div>
+          <div className={styles.category_card_container}>
+            <Link href='/'>
+              <a className={styles.category_card}>
+                <span>Python</span>
+              </a>
+            </Link>
+          </div>
+          <div className={styles.category_card_container}>
+            <Link href='/'>
+              <a className={styles.category_card}>
+                <span>Writting</span>
+              </a>
+            </Link>
+          </div>
         </div>
         <Link href='/'>View All Categories</Link>
       </section>
