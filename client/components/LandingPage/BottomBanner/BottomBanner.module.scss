@@ -158,12 +158,17 @@
   }
   .newsletter_form {
     flex-direction: row;
+    width: 65%;
+    margin: auto;
+    justify-content: center;
     > input[type='text'] {
-      width: sizes.$wd-70;
+      width: sizes.$wd-65;
+      margin: 0;
     }
     > button {
       margin: 0;
-      width: sizes.$wd-20;
+      max-width: 200px;
+      width: sizes.$wd-35;
       border-radius: 0 sizes.$border-radius sizes.$border-radius 0;
     }
   }

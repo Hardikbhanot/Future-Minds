@@ -83,9 +83,13 @@
     color: colors.$clr-white;
     border: none;
     border-radius: 10px;
+    transition: all 0.3s ease-in;
   }
   &:hover {
     transform: scale(1.2);
+    span {
+      transform: scale(0.8);
+    }
   }
 }
 

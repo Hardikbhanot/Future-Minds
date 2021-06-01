@@ -5,97 +5,99 @@
 @use '../../../styles/abstracts/breakpoints' as breakpoints;
 
 .navbar {
-  width: sizes.$wd-100;
-  min-height: sizes.$etl-0;
-  padding: sizes.$ets-2 sizes.$m-0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  width: 100%;
+  max-height: 5rem;
+  padding: 0.4rem 1rem;
+  display: grid;
+  grid-template-columns: 30% auto 10%;
+  grid-template-rows: 100%;
+  column-gap: 5px;
   position: fixed;
   top: 0;
   z-index: 100;
   background-color: colors.$clr-white;
+}
 
-  &_logo {
-    align-self: center;
-    width: sizes.$wd-10;
-    min-width: sizes.$ets-3;
-    margin: auto;
-  }
+.navbar_logo {
+  grid-column: 1/2;
+  align-self: center;
+}
 
-  &_search {
-    display: none;
-    width: sizes.$wd-60;
-    min-width: 350px;
-    align-self: center;
-    form {
-      width: sizes.$wd-90;
-      margin: auto;
-      .navbar_search_input {
-        width: sizes.$wd-85;
-        font-size: fonts.$fs-sm;
-        padding: sizes.$ets-4;
-        border-radius: sizes.$border-radius 0 0 sizes.$border-radius;
-        border: none;
-        outline: none;
-        background-color: colors.$clr-secondary-white;
-      }
-      .navbar_search_btn {
-        cursor: pointer;
-        font-size: fonts.$fs-sm;
-        width: sizes.$wd-15;
-        padding: sizes.$ets-4 sizes.$ets-2;
-        border-radius: 0 sizes.$border-radius sizes.$border-radius 0;
-        border: none;
-        background-color: colors.$clr-white-ltr;
-      }
-    }
-  }
+.navbar_logo a {
+  cursor: pointer;
+}
+
+.navbar_search {
+  grid-column: 2/3;
+  width: 90%;
+  margin: auto;
+}
+
+.navbar_search_input {
+  width: sizes.$wd-85;
+  padding: sizes.$ets-4;
+  font-size: fonts.$fs-sm;
+  background-color: colors.$clr-secondary-white;
+  border-radius: sizes.$border-radius 0 0 sizes.$border-radius;
+  border: none;
+  outline: none;
+}
+
+.navbar_search_btn {
+  width: sizes.$wd-15;
+  padding: sizes.$ets-4 sizes.$ets-2;
+  font-size: fonts.$fs-sm;
+  cursor: pointer;
+  background-color: colors.$clr-white-ltr;
+  border: none;
+  border-radius: 0 sizes.$border-radius sizes.$border-radius 0;
 }
 
 .navbar_links_login_hamber_container {
-  display: flex;
-  flex-direction: row;
+  justify-self: center;
   align-self: center;
-  justify-content: space-evenly;
 }
-
+// Check styles
 .navbar_links_login_container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  position: fixed;
-  height: 38vh;
-  top: -25vh;
+  // justify-content: space-evenly;
+  position: absolute;
+  // height: 8rem;
+  top: -14.5rem;
   right: sizes.$wd-5;
   z-index: -10;
   width: sizes.$wd-90;
-  background-color: colors.$clr-white;
   transform: translateY(0%);
   opacity: 0;
   border-radius: 0 0 5px 5px;
   transition: all 0.5s ease-in;
-  .navbar_links_container {
-    width: sizes.$wd-100;
-    font-size: fonts.$fs-sm;
-    display: flex;
-    flex-direction: column;
-  }
-  .navbar_cart_login_container {
-    width: sizes.$wd-100;
-    font-size: fonts.$fs-sm;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
+}
+// Check styles
+.navbar_links_container {
+  width: sizes.$wd-100;
+  font-size: fonts.$fs-sm;
+  background-color: colors.$clr-white;
+  display: flex;
+  flex-direction: column;
+}
+// Check styles
+.navbar_cart_login_container {
+  width: sizes.$wd-100;
+  font-size: fonts.$fs-sm;
+  background-color: colors.$clr-white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .navbar_item {
-  padding: sizes.$ets-3 sizes.$s-0;
-  text-align: center;
   list-style: none;
-  border-bottom: 1px solid colors.$clr-white-ltr;
+  text-align: center;
+  padding: 0.5rem;
+  list-style: none;
+  border-bottom: 1px solid colors.$clr-secondary-white;
+  position: relative;
   &:hover,
   &:focus,
   &:active {
@@ -103,8 +105,24 @@
   }
 }
 
+.navbar_item_has_content {
+  display: flex;
+  flex-direction: column;
+}
+
+.more_navbar_item {
+  padding: 0.5rem;
+}
+
 .navbar_login_btn {
   @include act_btn.action-btn;
+  padding: 0.6rem 1rem;
+}
+
+.navbar_links_login_hamber_container .navbar_active {
+  z-index: 10;
+  opacity: 1;
+  transform: translateY(100%);
 }
 
 .burger {
@@ -116,18 +134,14 @@
   outline: none;
   display: flex;
   flex-direction: column;
-  .burger_item {
-    width: 30px;
-    height: 3px;
-    margin: 3px;
-    background-color: colors.$clr-black;
-    transition: all 0.3s ease;
-  }
 }
 
-.navbar_links_login_hamber_container .navbar_active {
-  opacity: 1;
-  transform: translateY(100%);
+.burger_item {
+  width: 30px;
+  height: 3px;
+  margin: 3px;
+  background-color: colors.$clr-black;
+  transition: all 0.3s ease;
 }
 
 .toggle {
@@ -142,52 +156,108 @@
   }
 }
 
-// cart and search sign should show
+// // cart and search sign should show
 // @media screen and (min-width: breakpoints.$tablet-screen) {}
 
 @media screen and (min-width: breakpoints.$laptop-screen) {
   .navbar {
-    justify-content: space-evenly;
-    &_search {
-      display: block;
-      width: sizes.$wd-40;
-      min-width: 300px;
-    }
+    grid-template-columns: 20% 45% 35%;
   }
-}
-
-// cart and login btn should show
-// @media screen and (min-width: breakpoints.$tv-screen) {}
-
-// everything in navbar should show
-@media screen and (min-width: breakpoints.$tv-screen) {
   .navbar_links_login_hamber_container {
-    width: sizes.$wd-70;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
   }
   .navbar_links_login_container {
-    width: sizes.$wd-100;
-    flex-direction: row;
-    opacity: 1;
+    width: 80%;
+    display: inline-block;
     position: relative;
-    height: inherit;
     top: 0;
     right: 0;
     z-index: 0;
-    .navbar_links_container {
-      width: sizes.$wd-70;
-      align-items: center;
-      flex-direction: row;
-    }
-    .navbar_cart_login_container {
-      width: sizes.$wd-30;
-      flex-direction: row;
-    }
+    opacity: 1;
+    border-radius: 0;
+  }
+  .navbar_links_container {
+    display: inline-block;
+    position: absolute;
+    height: 8rem;
+    top: -3rem;
+    right: sizes.$wd-5;
+    z-index: -10;
+    width: sizes.$wd-90;
+    transform: translateY(0%);
+    opacity: 1;
+    border-radius: 0 0 5px 5px;
+    transition: all 0.5s ease-in;
+  }
+  .navbar_cart_login_container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
   .navbar_item {
-    width: sizes.$wd-30;
+    width: 20%;
+    margin: auto;
   }
   .navbar_login_btn {
-    width: sizes.$wd-70;
+    width: 70%;
+  }
+}
+
+// // cart and login btn should show
+@media screen and (min-width: breakpoints.$monitor-screen) {
+  .navbar_cart_login_container {
+    width: 80%;
+    margin-left: auto;
+  }
+}
+
+// // everything in navbar should show
+@media screen and (min-width: breakpoints.$tv-screen) {
+  .navbar {
+    grid-template-columns: 15% 25% auto;
+  }
+  .navbar_links_login_container {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .navbar_links_container {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .navbar_cart_login_container {
+    width: 30%;
+  }
+  .navbar_item {
+    width: max-content;
+    border-bottom: none;
+  }
+  .navbar_login_btn {
+    width: 75%;
+  }
+  .more_navbar_item {
+    display: none;
+    border-top: 4px solid colors.$clr-primary;
+    background-color: colors.$clr-white;
+  }
+
+  .navbar_item:hover .more_navbar_item,
+  .navbar_item:focus .more_navbar_item,
+  .navbar_item:active .more_navbar_item {
+    display: inline-block;
+    width: 200px;
+    padding: 1rem;
+    text-align: start;
+    position: absolute;
+    top: 2.5rem;
+    left: 1rem;
   }
   .burger {
     display: none;

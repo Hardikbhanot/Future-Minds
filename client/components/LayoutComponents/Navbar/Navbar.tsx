@@ -1,5 +1,7 @@
 import { useRef, useState } from 'react';
 import Image from 'next/Image';
+import Link from 'next/link';
+
 import styles from './Navbar.module.scss';
 
 const Navbar = () => {
@@ -35,14 +37,16 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navbar_logo}>
-        <a title='Root' href=''>
-          <Image
-            src='/images/logo_fm.png'
-            alt='Logo Image'
-            width={190}
-            height={60}
-          />
-        </a>
+        <Link href='/'>
+          <a title='Root'>
+            <Image
+              src='/images/logo_fm.png'
+              alt='Logo Image'
+              width={220}
+              height={60}
+            />
+          </a>
+        </Link>
       </div>
       <div className={styles.navbar_search}>
         <form onSubmit={onSearchClick}>
@@ -61,45 +65,60 @@ const Navbar = () => {
         <div className={navbar_links_login_container}>
           <div className={styles.navbar_links_container}>
             <li className={styles.navbar_item}>
-              <a title='Courses' href='/'>
-                Courses
-              </a>
+              <Link href='/'>
+                <a title='Courses'>Courses</a>
+              </Link>
+            </li>
+            <li
+              className={[
+                styles.navbar_item,
+                styles.navbar_item_has_content
+              ].join(' ')}
+            >
+              <Link href='/'>
+                <a title='Programs'>Programs ↓</a>
+              </Link>
+              <span className={styles.more_navbar_item}>
+                <Link href='/'>
+                  <a title='Setp Degree'>StepDegree</a>
+                </Link>
+              </span>
+            </li>
+            <li
+              className={[
+                styles.navbar_item,
+                styles.navbar_item_has_content
+              ].join(' ')}
+            >
+              <Link href='/'>
+                <a title='Contact'>Contact ↓</a>
+              </Link>
+              <span className={styles.more_navbar_item}>
+                <Link href='/'>
+                  <a title='About Us'>About Us</a>
+                </Link>
+              </span>
             </li>
             <li className={styles.navbar_item}>
-              <a title='Programs' href='/'>
-                Programs
-              </a>
-            </li>
-            <li className={styles.navbar_item}>
-              <a title='Events' href='/'>
-                Events
-              </a>
-            </li>
-            <li className={styles.navbar_item}>
-              <a title='Contact' href='/'>
-                Contact
-              </a>
-            </li>
-            <li className={styles.navbar_item}>
-              <a title='About Us' href='/'>
-                About Us
-              </a>
+              <Link href='/'>
+                <a title='Future Minds HR'>Futureminds HR</a>
+              </Link>
             </li>
           </div>
           <div className={styles.navbar_cart_login_container}>
             <li className={styles.navbar_item}>
-              <a title='Cart' href='/'>
-                Cart
-              </a>
+              <Link href='/'>
+                <a title='Cart'>Cart</a>
+              </Link>
             </li>
             <li
               className={[styles.navbar_item, styles.navbar_login_btn].join(
                 ' '
               )}
             >
-              <a title='Login/Register' href='/'>
-                Login/Register
-              </a>
+              <Link href='/'>
+                <a title='Login/Register'>Login/Register</a>
+              </Link>
             </li>
           </div>
         </div>
