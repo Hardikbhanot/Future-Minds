@@ -88,8 +88,30 @@
   display: flex;
   flex-direction: row;
   padding: 0;
-  li {
-    margin: sizes.$ets-3 sizes.$ets-3 0 0;
+}
+
+.social_media_links_container li {
+  margin: sizes.$ets-3 sizes.$ets-3 0 0;
+}
+
+.social_media_link {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  background-color: colors.$clr-grey-ltst;
+  transition: background-color 0.3s ease-in;
+}
+
+.social_media_links_container li:hover .social_media_link {
+  background-color: colors.$clr-primary;
+}
+
+.social_media_link svg {
+  width: 20px;
+  height: 20px;
+  > path {
+    fill: colors.$clr-white;
   }
 }
 

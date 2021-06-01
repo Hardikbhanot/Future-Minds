@@ -14,7 +14,7 @@
 .bottom_banner_section_blog,
 .bottom_banner_section_newsletter {
   width: sizes.$wd-100;
-  padding: sizes.$m-4 sizes.$s-4;
+  padding: sizes.$etl-0 sizes.$s-4;
   width: sizes.$wd-100;
   text-align: center;
 }
@@ -133,7 +133,7 @@
     }
   }
   > button {
-    width: sizes.$wd-25;
+    width: sizes.$wd-50;
     border: none;
     margin: sizes.$s-0 auto 0 auto;
     cursor: pointer;
