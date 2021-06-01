@@ -13,11 +13,23 @@
   padding: sizes.$m-4 sizes.$s-0;
   width: sizes.$wd-100;
   text-align: center;
-  > a {
-    margin: sizes.$m-4 auto sizes.$s-0 auto;
-    display: block;
-    width: max-content;
-    @include act_btn.action_btn;
+}
+
+.secondary_banner_container > a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: sizes.$m-4 auto sizes.$s-0 auto;
+  width: max-content;
+  text-align: center;
+  @include act_btn.action_btn;
+  > svg {
+    width: 15px;
+    margin: 0 0.4rem;
+  }
+  > p {
+    line-height: 23px;
+    margin: 0 0 0 0.4rem;
   }
 }
 
