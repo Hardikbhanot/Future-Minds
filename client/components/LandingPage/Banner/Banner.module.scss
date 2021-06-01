@@ -40,35 +40,37 @@
   display: flex;
   margin-bottom: sizes.$s-1;
   flex-direction: column;
-  input[type='text'] {
-    width: sizes.$wd-100;
-    border-radius: sizes.$border-radius 0 0 sizes.$border-radius;
-    padding: fonts.$fs-i-lg fonts.$fs-sm;
-    font-size: fonts.$fs-sm;
-    background-color: colors.$clr-white-ltr;
-    border: 1px solid colors.$clr-grey-ltst;
-    &:active,
-    &:focus {
-      border: 1px solid colors.$clr-primary;
-    }
+}
+
+.banner_explore_form input[type='text'] {
+  width: sizes.$wd-100;
+  border-radius: sizes.$border-radius 0 0 sizes.$border-radius;
+  padding: fonts.$fs-i-lg fonts.$fs-sm;
+  font-size: fonts.$fs-sm;
+  background-color: colors.$clr-white-ltr;
+  border: 1px solid colors.$clr-grey-ltst;
+  &:active,
+  &:focus {
+    border: 1px solid colors.$clr-primary;
   }
-  &_submit_btn {
-    width: sizes.$wd-25;
-    border: none;
-    margin: sizes.$s-0 auto 0 auto;
-    cursor: pointer;
-    // border: 1px solid colors.$clr-primary;
-    border-radius: sizes.$border-radius;
-    padding: fonts.$fs-i-lg fonts.$fs-sm;
-    font-size: fonts.$fs-sm;
+}
+
+.banner_explore_form_submit_btn {
+  width: sizes.$wd-30;
+  border: none;
+  margin: sizes.$s-0 auto 0 auto;
+  cursor: pointer;
+  text-align: center;
+  border-radius: sizes.$border-radius;
+  padding: fonts.$fs-i-lg fonts.$fs-sm;
+  font-size: fonts.$fs-sm;
+  color: colors.$clr-white;
+  background-color: colors.$clr-primary;
+  &:hover,
+  &:active,
+  &:focus {
     color: colors.$clr-white;
-    background-color: colors.$clr-primary;
-    &:hover,
-    &:active,
-    &:focus {
-      color: colors.$clr-white;
-      background-color: colors.$clr-secondary;
-    }
+    background-color: colors.$clr-secondary;
   }
 }
 
@@ -85,7 +87,7 @@
 }
 
 .banner_image_container {
-  width: sizes.$wd-95;
+  width: sizes.$wd-100;
   margin: sizes.$m-0 auto;
   div {
     width: sizes.$wd-100;
@@ -101,19 +103,20 @@
 }
 
 .banner_card_container {
-  width: sizes.$wd-80;
+  width: sizes.$wd-90;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
+  background-color: colors.$clr-white;
 }
 
 .banner_card {
-  width: sizes.$wd-50;
-  padding: sizes.$s-0;
+  width: sizes.$wd-100;
+  padding: sizes.$s-1;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   text-align: center;
   border: 1px solid colors.$clr-secondary-white;
@@ -130,32 +133,43 @@
   }
 }
 
-.card_img_container {
-  width: 130px;
-  height: 100px;
-  background-color: colors.$clr-grey;
+.card_img_container svg {
+  width: 50px;
+  height: auto;
+}
+
+.banner_card .card_img_container svg path {
+  fill: colors.$clr-black;
+}
+
+.banner_card:hover .card_img_container svg path,
+.banner_card:focus .card_img_container svg path,
+.banner_card:active .card_img_container svg path {
+  fill: colors.$clr-primary;
 }
 
 .card_content {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  .cards_heading {
-    font-weight: 700;
-    margin: sizes.$s-0 0 0 0;
-    font-size: fonts.$fs-sm;
-  }
-  .card_summary {
-    font-weight: 400;
-    color: colors.$clr-grey-lt;
-    font-size: fonts.$fs-sm;
-  }
+}
+
+.cards_heading {
+  font-weight: 700;
+  margin: sizes.$s-0 0 0 0;
+  font-size: fonts.$fs-sm;
+}
+
+.card_summary {
+  font-weight: 400;
+  color: colors.$clr-grey-lt;
+  font-size: fonts.$fs-sm;
 }
 
 .banner_cards_last_para {
   font-weight: 400;
   text-align: center;
-  font-size: fonts.$fs-md;
+  font-size: fonts.$fs-nr;
 }
 
 @media screen and (min-width: breakpoints.$laptop-screen) {
@@ -177,14 +191,14 @@
   }
   .banner_explore_form {
     flex-direction: row;
-    input[type='text'] {
-      width: sizes.$wd-70;
-    }
-    &_submit_btn {
-      margin: 0;
-      width: sizes.$wd-20;
-      border-radius: 0 sizes.$border-radius sizes.$border-radius 0;
-    }
+  }
+  .banner_explore_form input[type='text'] {
+    width: sizes.$wd-70;
+  }
+  .banner_explore_form_submit_btn {
+    margin: 0;
+    width: sizes.$wd-20;
+    border-radius: 0 sizes.$border-radius sizes.$border-radius 0;
   }
   .banner_image_container {
     width: sizes.$wd-50;
@@ -195,10 +209,16 @@
   }
   .banner_card_container {
     width: sizes.$wd-90;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 5%;
   }
   .banner_card {
     width: sizes.$wd-30;
+    flex-direction: column;
     text-align: start;
+  }
+  .banner_cards_last_para {
+    font-size: fonts.$fs-md;
   }
 }
