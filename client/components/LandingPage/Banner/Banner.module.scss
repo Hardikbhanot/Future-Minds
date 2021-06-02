@@ -87,11 +87,42 @@
 }
 
 .banner_image_container {
+  position: relative;
+  z-index: 10;
   width: sizes.$wd-100;
   margin: sizes.$m-0 auto;
   div {
+    position: relative;
+    z-index: 10;
     width: sizes.$wd-100;
     margin: auto;
+  }
+}
+
+.banner_image_container {
+  .image_circle_animation {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 1%;
+    right: 10%;
+    z-index: 0;
+    animation-name: image_circle_animation;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  .image_weird_animation {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 0;
+    bottom: 10%;
+    right: 5%;
+    animation-name: image_weird_animation;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
   }
 }
 
@@ -170,6 +201,27 @@
   font-weight: 400;
   text-align: center;
   font-size: fonts.$fs-nr;
+}
+
+@keyframes image_circle_animation {
+  0% {
+    transform: translateY(0) scale(0.9);
+  }
+  50% {
+    transform: translateY(10%) scale(1.1);
+  }
+  100% {
+    transform: translateY(0) scale(0.9);
+  }
+}
+
+@keyframes image_weird_animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media screen and (min-width: breakpoints.$laptop-screen) {

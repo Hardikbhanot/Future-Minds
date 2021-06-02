@@ -83,6 +83,31 @@ const LandingPage = () => {
             width={500}
             height={600}
           />
+          <svg
+            className={styles.image_circle_animation}
+            width='78'
+            height='78'
+            viewBox='0 0 78 78'
+            fill='none'
+            xmlns='http://www.w3.org/2000/svg'
+          >
+            <circle cx='39' cy='39' r='39' fill='#BC845E' />
+            <circle cx='39.5' cy='38.5' r='32.5' fill='white' />
+          </svg>
+
+          <svg
+            className={styles.image_weird_animation}
+            width='197'
+            height='235'
+            viewBox='0 0 197 235'
+            fill='none'
+            xmlns='http://www.w3.org/2000/svg'
+          >
+            <path
+              d='M4.19245 77.3909C-10.8075 134.391 18.6926 173.391 26.1926 185.891C78.1926 247.391 197 250.371 197 192.5C197 157 153 149.5 137.5 140C122 130.5 110.014 105.5 107 85.5C102.078 52.8347 133.693 30.8908 111.193 4.39089C96.9504 -12.384 19.1925 20.3909 4.19245 77.3909Z'
+              fill='#ECEAF1'
+            />
+          </svg>
         </div>
       </section>
       <section className={styles.banner_card_section}>
