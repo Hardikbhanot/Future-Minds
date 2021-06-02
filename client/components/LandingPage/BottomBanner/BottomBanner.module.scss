@@ -87,11 +87,24 @@
 
 .bottom_banner_section_online_certification {
   background-color: colors.$clr-secondary-white-lt;
-  > a {
-    margin: sizes.$m-4 auto sizes.$s-0 auto;
-    display: block;
-    width: max-content;
-    @include act_btn.action_btn;
+}
+
+.bottom_banner_section_online_certification > a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: sizes.$m-4 auto sizes.$s-0 auto;
+  width: max-content;
+  text-align: center;
+  @include act_btn.action_btn;
+  padding: 0 sizes.$m-0;
+  > svg {
+    width: 15px;
+    margin: 0 0.4rem;
+  }
+  > p {
+    line-height: 47px;
+    margin: 0 0 0 0.4rem;
   }
 }
 
@@ -117,38 +130,52 @@
 
 .newsletter_form {
   display: flex;
-  margin-bottom: sizes.$s-1;
+  margin: 0 auto sizes.$s-1 auto;
   flex-direction: column;
-  > input[type='text'] {
-    width: sizes.$wd-80;
-    margin: auto;
-    border-radius: sizes.$border-radius 0 0 sizes.$border-radius;
-    padding: fonts.$fs-i-lg fonts.$fs-sm;
-    font-size: fonts.$fs-sm;
-    background-color: colors.$clr-white;
-    border: 1px solid colors.$clr-grey-ltst;
-    &:active,
-    &:focus {
-      border: 1px solid colors.$clr-primary;
-    }
+  width: sizes.$wd-90;
+}
+
+.newsletter_form input[type='text'] {
+  width: sizes.$wd-100;
+  margin: auto;
+  border-radius: sizes.$border-radius 0 0 sizes.$border-radius;
+  padding: fonts.$fs-i-lg fonts.$fs-sm;
+  font-size: fonts.$fs-sm;
+  background-color: colors.$clr-white;
+  border: 1px solid colors.$clr-grey-ltst;
+  &:active,
+  &:focus {
+    border: 1px solid colors.$clr-primary;
   }
-  > button {
-    width: sizes.$wd-50;
-    border: none;
-    margin: sizes.$s-0 auto 0 auto;
-    cursor: pointer;
-    // border: 1px solid colors.$clr-primary;
-    border-radius: sizes.$border-radius;
-    padding: fonts.$fs-i-lg fonts.$fs-sm;
-    font-size: fonts.$fs-sm;
+}
+
+.newsletter_form button {
+  // width: sizes.$wd-70;
+  width: max-content;
+  margin: sizes.$s-0 auto 0 auto;
+  padding: fonts.$fs-i-lg fonts.$fs-sm;
+  font-size: fonts.$fs-sm-s;
+  cursor: pointer;
+  color: colors.$clr-white;
+  background-color: colors.$clr-primary;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: sizes.$border-radius;
+  border: none;
+  > svg {
+    width: 15px;
+    margin: 0 0.4rem;
+  }
+  > p {
+    line-height: 23px;
+    margin: 0 0 0 0.4rem;
+  }
+  &:hover,
+  &:focus,
+  &:active {
     color: colors.$clr-white;
-    background-color: colors.$clr-primary;
-    &:hover,
-    &:active,
-    &:focus {
-      color: colors.$clr-white;
-      background-color: colors.$clr-secondary;
-    }
+    background-color: colors.$clr-secondary;
   }
 }
 
@@ -161,15 +188,15 @@
     width: 65%;
     margin: auto;
     justify-content: center;
-    > input[type='text'] {
-      width: sizes.$wd-65;
-      margin: 0;
-    }
-    > button {
-      margin: 0;
-      max-width: 200px;
-      width: sizes.$wd-35;
-      border-radius: 0 sizes.$border-radius sizes.$border-radius 0;
-    }
+  }
+  .newsletter_form > input[type='text'] {
+    width: sizes.$wd-65;
+    margin: 0;
+  }
+  .newsletter_form > button {
+    margin: 0;
+    max-width: 200px;
+    width: sizes.$wd-35;
+    border-radius: 0 sizes.$border-radius sizes.$border-radius 0;
   }
 }
