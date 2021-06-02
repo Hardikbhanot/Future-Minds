@@ -57,7 +57,7 @@
   color: colors.$clr-grey-lt;
 }
 
-.category_card_wrapper {
+.category_card_container {
   width: 95%;
   margin: auto;
   display: flex;
@@ -66,67 +66,79 @@
   justify-content: center;
 }
 
-.category_card_container {
-  display: block;
-  width: 100%;
-  max-width: 500px;
-  min-height: 200px;
-  margin: 0.5rem;
-  cursor: pointer;
-  border: none;
-  border-radius: 10px;
+.category_card {
+  width: 90%;
+  margin: 1rem;
+  max-width: 320px;
+  max-height: 220px;
+  position: relative;
   overflow: hidden;
+  transition: all 0.3s ease-in;
 }
 
-// background-size: cover;
-// background-color: colors.$clr-primary-ltst;
-// background-repeat: no-repeat;
-// background-position: center center;
+.category_card > div {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: all 0.3s ease-in;
+}
 
-.category_card {
+.category_card > img {
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.category_card:hover > div {
+  transform: scale(1.2);
+}
+
+.category_card:hover > img {
+  border-radius: 10px;
+}
+
+.category_card_link {
   display: block;
   width: 100%;
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: colors.$clr-primary-ltst-ltst;
+  mix-blend-mode: lighten;
+}
+
+.category_card .category_card_link span {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: colors.$clr-white;
+  border: none;
+  border-radius: 10px;
   transition: all 0.3s ease-in;
-  position: relative;
-  > div {
-    width: 100%;
-    height: 100%;
-  }
-  .category_card_background {
-    object-fit: cover;
-  }
-  > span {
-    position: absolute;
-    top: 40%;
-    left: 0;
-    right: 0;
-    text-align: center;
-    color: colors.$clr-white;
-    border: none;
-    border-radius: 10px;
-    transition: all 0.3s ease-in;
-  }
-  &:hover {
-    transform: scale(1.2);
-    span {
-      transform: scale(0.9);
-    }
-  }
+}
+
+.category_card:hover .category_card_link span {
+  transform: scale(0.9);
 }
 
 @media screen and (min-width: breakpoints.$laptop-screen) {
-  .category_card_wrapper {
+  .category_card_container {
     width: 90%;
   }
-  .category_card_container {
+  .category_card {
     width: 45%;
     height: 200px;
   }
 }
 
 @media screen and (min-width: breakpoints.$monitor-screen) {
-  .category_card_container {
+  .category_card {
     width: 29%;
   }
 }

@@ -7,6 +7,7 @@
   background-color: colors.$clr-primary;
   list-style: none;
   border-radius: sizes.$border-radius;
+  transition: background-color 0.3s linear;
   &:hover,
   &:focus,
   &:active {

@@ -14,87 +14,87 @@ const CategoryBanner = () => {
         <p className={styles.category_banner_discription}>
           Choose from your choice of subjects.
         </p>
-        <div className={styles.category_card_wrapper}>
-          <div className={styles.category_card_container}>
+        <div className={styles.category_card_container}>
+          <div className={styles.category_card}>
+            <Image
+              src='/images/course_category_1.jpeg'
+              alt='Category background'
+              width={500}
+              height={600}
+              className={styles.category_card_background}
+            />
             <Link href='/'>
-              <a className={styles.category_card}>
-                <Image
-                  src='/images/category-img1.jpeg'
-                  alt='Category background'
-                  width={500}
-                  height={600}
-                  className={styles.category_card_background}
-                />
+              <a className={styles.category_card_link}>
                 <span>Animation</span>
               </a>
             </Link>
           </div>
-          <div className={styles.category_card_container}>
+          <div className={styles.category_card}>
+            <Image
+              src='/images/course_category_2.jpg'
+              alt='Category background'
+              width={500}
+              height={600}
+              className={styles.category_card_background}
+            />
             <Link href='/'>
-              <a className={styles.category_card}>
-                <Image
-                  src='/images/category-img1.jpeg'
-                  alt='Category background'
-                  width={500}
-                  height={600}
-                  className={styles.category_card_background}
-                />
+              <a className={styles.category_card_link}>
                 <span>Data Science</span>
               </a>
             </Link>
           </div>
-          <div className={styles.category_card_container}>
+          <div className={styles.category_card}>
+            <Image
+              src='/images/course_category_3.jpg'
+              alt='Category background'
+              width={500}
+              height={600}
+              className={styles.category_card_background}
+            />
             <Link href='/'>
-              <a className={styles.category_card}>
-                <Image
-                  src='/images/category-img1.jpeg'
-                  alt='Category background'
-                  width={500}
-                  height={600}
-                  className={styles.category_card_background}
-                />
+              <a className={styles.category_card_link}>
                 <span>UX/UI</span>
               </a>
             </Link>
           </div>
-          <div className={styles.category_card_container}>
+          <div className={styles.category_card}>
+            <Image
+              src='/images/course_category_4.jpg'
+              alt='Category background'
+              width={500}
+              height={600}
+              className={styles.category_card_background}
+            />
             <Link href='/'>
-              <a className={styles.category_card}>
-                <Image
-                  src='/images/category-img1.jpeg'
-                  alt='Category background'
-                  width={500}
-                  height={600}
-                  className={styles.category_card_background}
-                />
+              <a className={styles.category_card_link}>
                 <span>Web Development</span>
               </a>
             </Link>
           </div>
-          <div className={styles.category_card_container}>
+          <div className={styles.category_card}>
+            <Image
+              src='/images/course_category_5.jpg'
+              alt='Category background'
+              width={500}
+              height={600}
+              className={styles.category_card_background}
+            />
             <Link href='/'>
-              <a className={styles.category_card}>
-                <Image
-                  src='/images/category-img1.jpeg'
-                  alt='Category background'
-                  width={500}
-                  height={600}
-                  className={styles.category_card_background}
-                />
+              <a className={styles.category_card_link}>
                 <span>Python</span>
               </a>
             </Link>
           </div>
-          <div className={styles.category_card_container}>
+          <div className={styles.category_card}>
+            <Image
+              src='/images/course_category_6.jpg'
+              alt='Category background'
+              width={500}
+              height={600}
+              className={styles.category_card_background}
+            />
             <Link href='/'>
-              <a className={styles.category_card}>
-                <Image
-                  src='/images/category-img1.jpeg'
-                  alt='Category background'
-                  width={500}
-                  height={600}
-                  className={styles.category_card_background}
-                />
+              <a className={styles.category_card_link}>
                 <span>Writting</span>
               </a>
             </Link>

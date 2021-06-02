@@ -62,7 +62,7 @@
   cursor: pointer;
   text-align: center;
   border-radius: sizes.$border-radius;
-  padding: fonts.$fs-i-lg fonts.$fs-sm;
+  padding: fonts.$fs-i-lg fonts.$fs-i-lg;
   font-size: fonts.$fs-sm;
   color: colors.$clr-white;
   background-color: colors.$clr-primary;
@@ -90,6 +90,7 @@
   position: relative;
   z-index: 10;
   width: sizes.$wd-100;
+  max-width: 500px;
   margin: sizes.$m-0 auto;
   div {
     position: relative;

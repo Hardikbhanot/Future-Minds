@@ -147,12 +147,12 @@ const Navbar = () => {
         <div className={styles.navbar_cart_login_container_mobile}>
           <li className={styles.navbar_item_mobile}>
             <Link href='/'>
-              <a title='Cart'>Cart</a>
+              <a title='Login/Register'>Login/Register</a>
             </Link>
           </li>
           <li className={styles.navbar_item_mobile}>
             <Link href='/'>
-              <a title='Login/Register'>Login/Register</a>
+              <a title='Cart'>Cart</a>
             </Link>
           </li>
         </div>

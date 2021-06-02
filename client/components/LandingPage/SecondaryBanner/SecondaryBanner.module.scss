@@ -8,13 +8,22 @@
   width: sizes.$wd-100;
 }
 
+.banner_container,
 .secondary_banner_container {
-  background-color: colors.$clr-secondary-white;
   padding: sizes.$m-4 sizes.$s-0;
   width: sizes.$wd-100;
   text-align: center;
 }
 
+.banner_container {
+  background-color: colors.$clr-secondary-white;
+}
+
+.secondary_banner_container {
+  background-color: colors.$clr-white;
+}
+
+.banner_container > a,
 .secondary_banner_container > a {
   display: flex;
   flex-direction: row;
@@ -67,8 +76,15 @@
   width: sizes.$wd-100;
   padding: sizes.$s-0 sizes.$s-3;
   text-align: center;
+  transform: translateY(0%);
+  transition: transform 0.3s linear;
   > a {
     color: colors.$clr-primary;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    transform: translateY(-3%);
   }
 }
 

@@ -92,9 +92,8 @@ const LandingPage = () => {
             xmlns='http://www.w3.org/2000/svg'
           >
             <circle cx='39' cy='39' r='39' fill='#BC845E' />
-            <circle cx='39.5' cy='38.5' r='32.5' fill='white' />
+            <circle cx='39.5' cy='38.5' r='32.5' fill='#F8F9F8' />
           </svg>
-
           <svg
             className={styles.image_weird_animation}
             width='197'
