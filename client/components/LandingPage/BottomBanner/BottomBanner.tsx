@@ -138,6 +138,139 @@ const BottomBanner = () => {
             <p>Get Started Now</p>
           </a>
         </Link>
+        <svg
+          className={styles.online_certification_filled_circle_animation}
+          width='244'
+          height='276'
+          viewBox='0 0 244 276'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+        >
+          <circle cx='97.5' cy='97.5' r='97.5' fill='#EA6175' />
+          <line
+            x1='242.061'
+            y1='133.061'
+            x2='101.061'
+            y2='274.061'
+            stroke='#EA6175'
+            strokeWidth='3'
+          />
+        </svg>
+        <svg
+          className={styles.online_certification_concentric_circle_animation}
+          width='197'
+          height='197'
+          viewBox='0 0 197 197'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+        >
+          <circle cx='98.5' cy='98.5' r='98.5' fill='#EA6175' />
+          <circle cx='98.5' cy='98.5' r='84.5' fill='white' />
+          <circle cx='98' cy='98' r='63' fill='#EA6175' />
+          <circle cx='98' cy='98' r='54' fill='white' />
+        </svg>
+        <svg
+          className={styles.online_certification_strip_animation}
+          width='202'
+          height='202'
+          viewBox='0 0 202 202'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+        >
+          <mask
+            id='mask0'
+            mask-type='alpha'
+            maskUnits='userSpaceOnUse'
+            x='0'
+            y='0'
+            width='202'
+            height='202'
+          >
+            <circle cx='101' cy='101' r='101' fill='#2557FB' />
+          </mask>
+          <g mask='url(#mask0)'>
+            <line
+              x1='3.67616'
+              y1='61.4657'
+              x2='57.834'
+              y2='7.30776'
+              stroke='black'
+              strokeWidth='3'
+            />
+            <line
+              x1='-1.85015'
+              y1='97.9393'
+              x2='98.7288'
+              y2='-2.63961'
+              stroke='black'
+              strokeWidth='3'
+            />
+            <line
+              x1='2.57093'
+              y1='124.466'
+              x2='127.466'
+              y2='-0.429079'
+              stroke='black'
+              strokeWidth='3'
+            />
+            <line
+              x1='9.20252'
+              y1='147.676'
+              x2='148.466'
+              y2='8.41303'
+              stroke='black'
+              strokeWidth='3'
+            />
+            <line
+              x1='22.4656'
+              y1='164.255'
+              x2='167.255'
+              y2='19.4657'
+              stroke='black'
+              strokeWidth='3'
+            />
+            <line
+              x1='36.8341'
+              y1='180.834'
+              x2='182.729'
+              y2='34.9393'
+              stroke='black'
+              strokeWidth='3'
+            />
+            <line
+              x1='54.5183'
+              y1='191.887'
+              x2='192.676'
+              y2='53.7288'
+              stroke='black'
+              strokeWidth='3'
+            />
+            <line
+              x1='78.8341'
+              y1='199.624'
+              x2='203.729'
+              y2='74.7288'
+              stroke='black'
+              strokeWidth='3'
+            />
+            <line
+              x1='106.466'
+              y1='202.939'
+              x2='205.939'
+              y2='103.466'
+              stroke='black'
+              strokeWidth='3'
+            />
+            <line
+              x1='142.939'
+              y1='196.308'
+              x2='198.202'
+              y2='141.045'
+              stroke='black'
+              strokeWidth='3'
+            />
+          </g>
+        </svg>
       </section>
       <section className={styles.bottom_banner_section_blog}>
         <p className={styles.bottom_banner_sub_heading}>NEWS</p>
@@ -179,6 +312,121 @@ const BottomBanner = () => {
             <p>Subscribe Now</p>
           </button>
         </form>
+        <svg
+          className={styles.newsletter_concentric_circle_animation}
+          width='197'
+          height='197'
+          viewBox='0 0 197 197'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+        >
+          <circle cx='98.5' cy='98.5' r='98.5' fill='#EA6175' />
+          <circle cx='98.5' cy='98.5' r='84.5' fill='white' />
+          <circle cx='98' cy='98' r='63' fill='#EA6175' />
+          <circle cx='98' cy='98' r='54' fill='white' />
+        </svg>
+        <svg
+          className={styles.newsletter_strip_animation}
+          width='202'
+          height='202'
+          viewBox='0 0 202 202'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+        >
+          <mask
+            id='mask0'
+            mask-type='alpha'
+            maskUnits='userSpaceOnUse'
+            x='0'
+            y='0'
+            width='202'
+            height='202'
+          >
+            <circle cx='101' cy='101' r='101' fill='#2557FB' />
+          </mask>
+          <g mask='url(#mask0)'>
+            <line
+              x1='3.67616'
+              y1='61.4657'
+              x2='57.834'
+              y2='7.30776'
+              stroke='black'
+              strokeWidth='3'
+            />
+            <line
+              x1='-1.85015'
+              y1='97.9393'
+              x2='98.7288'
+              y2='-2.63961'
+              stroke='black'
+              strokeWidth='3'
+            />
+            <line
+              x1='2.57093'
+              y1='124.466'
+              x2='127.466'
+              y2='-0.429079'
+              stroke='black'
+              strokeWidth='3'
+            />
+            <line
+              x1='9.20252'
+              y1='147.676'
+              x2='148.466'
+              y2='8.41303'
+              stroke='black'
+              strokeWidth='3'
+            />
+            <line
+              x1='22.4656'
+              y1='164.255'
+              x2='167.255'
+              y2='19.4657'
+              stroke='black'
+              strokeWidth='3'
+            />
+            <line
+              x1='36.8341'
+              y1='180.834'
+              x2='182.729'
+              y2='34.9393'
+              stroke='black'
+              strokeWidth='3'
+            />
+            <line
+              x1='54.5183'
+              y1='191.887'
+              x2='192.676'
+              y2='53.7288'
+              stroke='black'
+              strokeWidth='3'
+            />
+            <line
+              x1='78.8341'
+              y1='199.624'
+              x2='203.729'
+              y2='74.7288'
+              stroke='black'
+              strokeWidth='3'
+            />
+            <line
+              x1='106.466'
+              y1='202.939'
+              x2='205.939'
+              y2='103.466'
+              stroke='black'
+              strokeWidth='3'
+            />
+            <line
+              x1='142.939'
+              y1='196.308'
+              x2='198.202'
+              y2='141.045'
+              stroke='black'
+              strokeWidth='3'
+            />
+          </g>
+        </svg>
       </section>
     </main>
   );

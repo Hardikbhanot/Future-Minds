@@ -49,7 +49,7 @@
 
 .count_upto_counter {
   color: colors.$clr-primary;
-  font-size: fonts.$fs-nr;
+  font-size: fonts.$fs-nr-s;
   margin: 0;
 }
 
@@ -72,6 +72,8 @@
 }
 
 .bottom_banner_main_heading {
+  position: relative;
+  z-index: 10;
   margin: 0;
   font-size: fonts.$fs-md-s;
 }
@@ -87,9 +89,12 @@
 
 .bottom_banner_section_online_certification {
   background-color: colors.$clr-secondary-white-lt;
+  position: relative;
 }
 
 .bottom_banner_section_online_certification > a {
+  position: relative;
+  z-index: 10;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -105,6 +110,18 @@
   > p {
     line-height: 47px;
     margin: 0 0 0 0.4rem;
+  }
+}
+
+.bottom_banner_section_online_certification {
+  .online_certification_filled_circle_animation {
+    display: none;
+  }
+  .online_certification_concentric_circle_animation {
+    display: none;
+  }
+  .online_certification_strip_animation {
+    display: none;
   }
 }
 
@@ -126,6 +143,7 @@
 
 .bottom_banner_section_newsletter {
   background-color: colors.$clr-secondary-white;
+  position: relative;
 }
 
 .newsletter_form {
@@ -133,6 +151,8 @@
   margin: 0 auto sizes.$s-1 auto;
   flex-direction: column;
   width: sizes.$wd-90;
+  position: relative;
+  z-index: 10;
 }
 
 .newsletter_form input[type='text'] {
@@ -150,7 +170,6 @@
 }
 
 .newsletter_form button {
-  // width: sizes.$wd-70;
   width: max-content;
   margin: sizes.$s-0 auto 0 auto;
   padding: fonts.$fs-i-lg fonts.$fs-sm;
@@ -179,9 +198,91 @@
   }
 }
 
+.bottom_banner_section_newsletter {
+  .newsletter_concentric_circle_animation {
+    display: none;
+  }
+  .newsletter_strip_animation {
+    display: none;
+  }
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomOut {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes BottomBanner_rotateInfinte__2xsUC {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media screen and (min-width: breakpoints.$laptop-screen) {
   .count_upto {
     width: sizes.$wd-20;
+    font-size: fonts.$fs-nr;
+  }
+  .bottom_banner_section_online_certification {
+    .online_certification_filled_circle_animation {
+      display: inline-block;
+      position: absolute;
+      width: 130px;
+      height: 130px;
+      left: 10%;
+      top: 50%;
+      animation-name: upDown;
+      animation-duration: 10s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+    .online_certification_concentric_circle_animation {
+      display: inline-block;
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      right: 15%;
+      top: 50%;
+      animation-name: zoomOut;
+      animation-duration: 10s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+    .online_certification_strip_animation {
+      display: inline-block;
+      position: absolute;
+      z-index: 0;
+      right: 16%;
+      top: 60%;
+      width: 110px;
+      height: 110px;
+      animation-name: BottomBanner_rotateInfinte__2xsUC;
+      animation-duration: 40s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
   }
   .newsletter_form {
     flex-direction: row;
@@ -198,5 +299,32 @@
     max-width: 200px;
     width: sizes.$wd-35;
     border-radius: 0 sizes.$border-radius sizes.$border-radius 0;
+  }
+  .bottom_banner_section_newsletter {
+    .newsletter_concentric_circle_animation {
+      display: inline-block;
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      left: 20%;
+      top: 30%;
+      animation-name: zoomOut;
+      animation-duration: 10s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+    .newsletter_strip_animation {
+      display: inline-block;
+      position: absolute;
+      z-index: 0;
+      left: 16%;
+      top: 40%;
+      width: 110px;
+      height: 110px;
+      animation-name: BottomBanner_rotateInfinte__2xsUC;
+      animation-duration: 40s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
   }
 }

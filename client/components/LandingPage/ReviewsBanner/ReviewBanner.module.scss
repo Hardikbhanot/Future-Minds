@@ -1,8 +1,11 @@
+@use '../../../styles/abstracts/colors' as colors;
 @use '../../../styles/abstracts/breakpoints' as breakpoints;
 
 .review_section {
   width: 100%;
   padding: 4rem 2rem;
+  position: relative;
+  background-color: colors.$clr-orange;
 }
 
 .review_container {
@@ -12,6 +15,7 @@
   display: flex;
   flex-direction: row;
   gap: 10%;
+  background-color: colors.$clr-orange;
   &::-webkit-scrollbar {
     width: 0 !important;
   }
@@ -28,6 +32,7 @@
   flex-direction: column;
   border: 1px solid grey;
   padding: 1rem;
+  background-color: colors.$clr-orange;
 }
 
 .review {
@@ -65,6 +70,11 @@
 .review_pagination_container {
   width: max-content;
   margin: 1rem auto 0 auto;
+  background-color: colors.$clr-orange;
+}
+
+.review_animation {
+  display: none;
 }
 
 @media screen and (min-width: breakpoints.$laptop-screen) {
@@ -74,6 +84,12 @@
   }
   .review_card {
     width: 45%;
+  }
+  .review_animation {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: -5rem;
   }
 }
 
