@@ -6,7 +6,7 @@
 }
 
 .review_container {
-  width: 90%;
+  width: 95%;
   margin: auto;
   overflow-x: auto;
   display: flex;
@@ -22,7 +22,7 @@
 .review_card {
   flex-shrink: 0;
   width: 95%;
-  min-width: 300px;
+  min-width: 250px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -42,6 +42,10 @@
   gap: 10px;
 }
 
+.reviewer_profile img {
+  border-radius: 100%;
+}
+
 .reviewer_details {
   display: flex;
   flex-direction: column;
@@ -56,6 +60,11 @@
 .reviewer_position {
   font-size: 0.9em;
   margin: 0;
+}
+
+.review_pagination_container {
+  width: max-content;
+  margin: 1rem auto 0 auto;
 }
 
 @media screen and (min-width: breakpoints.$laptop-screen) {

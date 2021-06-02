@@ -1,12 +1,10 @@
-import { RefObject, useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import Link from 'next/link';
 
 import styles from './BottomBanner.module.scss';
 import { useInView } from 'react-intersection-observer';
-// import useIntersections from '../../../hook/useIntersection';
 
 const BottomBanner = () => {
-  // const counterSectionRef = useRef<HTMLElement>(null);
   const { ref, inView } = useInView({
     threshold: 1
   });
@@ -17,21 +15,6 @@ const BottomBanner = () => {
     onlineInstructures: 21,
     satisfactionRate: 97
   };
-
-  // let isViewPort = false;
-
-  // check if counterSectionRef is null
-  // const checkIfCounterSectionIsNull = (
-  //   counterSectionRef: RefObject<HTMLElement>
-  // ) => {
-  //   if (counterSectionRef && counterSectionRef.current) {
-  //     isViewPort = useIntersections({
-  //       element: counterSectionRef.current,
-  //       rootMargin: '-100px'
-  //     });
-  //   }
-  //   return isViewPort;
-  // };
 
   const counterFunc = () => {
     const counterArray = document.querySelectorAll(
@@ -62,7 +45,6 @@ const BottomBanner = () => {
   };
 
   useEffect(() => {
-    // const isInViewPort = checkIfCounterSectionIsNull(counterSectionRef);
     if (inView) {
       counterFunc();
     }
