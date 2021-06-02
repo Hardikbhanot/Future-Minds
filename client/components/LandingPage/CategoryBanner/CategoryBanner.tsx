@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/Image';
 
 import styles from './CategoryBanner.module.scss';
 
@@ -17,6 +18,13 @@ const CategoryBanner = () => {
           <div className={styles.category_card_container}>
             <Link href='/'>
               <a className={styles.category_card}>
+                <Image
+                  src='/images/category-img1.jpeg'
+                  alt='Category background'
+                  width={500}
+                  height={600}
+                  className={styles.category_card_background}
+                />
                 <span>Animation</span>
               </a>
             </Link>
@@ -24,6 +32,13 @@ const CategoryBanner = () => {
           <div className={styles.category_card_container}>
             <Link href='/'>
               <a className={styles.category_card}>
+                <Image
+                  src='/images/category-img1.jpeg'
+                  alt='Category background'
+                  width={500}
+                  height={600}
+                  className={styles.category_card_background}
+                />
                 <span>Data Science</span>
               </a>
             </Link>
@@ -31,6 +46,13 @@ const CategoryBanner = () => {
           <div className={styles.category_card_container}>
             <Link href='/'>
               <a className={styles.category_card}>
+                <Image
+                  src='/images/category-img1.jpeg'
+                  alt='Category background'
+                  width={500}
+                  height={600}
+                  className={styles.category_card_background}
+                />
                 <span>UX/UI</span>
               </a>
             </Link>
@@ -38,6 +60,13 @@ const CategoryBanner = () => {
           <div className={styles.category_card_container}>
             <Link href='/'>
               <a className={styles.category_card}>
+                <Image
+                  src='/images/category-img1.jpeg'
+                  alt='Category background'
+                  width={500}
+                  height={600}
+                  className={styles.category_card_background}
+                />
                 <span>Web Development</span>
               </a>
             </Link>
@@ -45,6 +74,13 @@ const CategoryBanner = () => {
           <div className={styles.category_card_container}>
             <Link href='/'>
               <a className={styles.category_card}>
+                <Image
+                  src='/images/category-img1.jpeg'
+                  alt='Category background'
+                  width={500}
+                  height={600}
+                  className={styles.category_card_background}
+                />
                 <span>Python</span>
               </a>
             </Link>
@@ -52,6 +88,13 @@ const CategoryBanner = () => {
           <div className={styles.category_card_container}>
             <Link href='/'>
               <a className={styles.category_card}>
+                <Image
+                  src='/images/category-img1.jpeg'
+                  alt='Category background'
+                  width={500}
+                  height={600}
+                  className={styles.category_card_background}
+                />
                 <span>Writting</span>
               </a>
             </Link>
