@@ -4,6 +4,7 @@
   "description": "A website to build future ready professionals",
   "main": "server.js",
   "scripts": {
+    "build": "cd ./client && npm run build",
     "server": "nodemon server.js",
     "client": "cd ./client && npm run dev",
     "dev": "concurrently \"npm run server\" \"npm run client\""

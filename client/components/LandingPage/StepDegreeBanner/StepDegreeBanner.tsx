@@ -22,7 +22,7 @@ const StepDegreeBanner = () => {
           A long-term degree alternative program to guide you to the right path.
         </p>
 
-        <Link href='https://futureminds.in/'>
+        <Link href='https://learn.futureminds.in/'>
           <a
             className={styles.step_degree_banner_link}
             title='Explore StepDegree'

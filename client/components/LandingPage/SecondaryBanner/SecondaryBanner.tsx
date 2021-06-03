@@ -23,7 +23,7 @@ const SecondaryBanner = () => {
           <div className={styles.secondary_banner_courses_card}></div>
           <div className={styles.secondary_banner_courses_card}></div>
         </div> */}
-        <Link href='https://futureminds.in/courses/'>
+        <Link href='https://learn.futureminds.in/courses/'>
           <a title='View All Courses'>
             <svg
               width='20'
@@ -44,7 +44,7 @@ const SecondaryBanner = () => {
           Enjoy the top notch learning methods and achieve next level skills!
           You are the creator of your own career & we will guide you through
           that.{' '}
-          <Link href='https://futureminds.in/student-registration/'>
+          <Link href='https://learn.futureminds.in/student-registration/'>
             Register Free Now!​
           </Link>
           ​
@@ -97,7 +97,7 @@ const SecondaryBanner = () => {
               Mobile App Development or any in-demand skills, Our experts teach
               them all.
             </p>
-            <Link href='https://futureminds.in/courses/'>Start Now!</Link>
+            <Link href='https://learn.futureminds.in/courses/'>Start Now!</Link>
           </div>
           <div className={styles.courses_detail_card}>
             <div className={styles.courses_detail_card_icon}>
@@ -125,7 +125,7 @@ const SecondaryBanner = () => {
               Be it Technical course OR Job oriented Non- technical one, We
               ensure you get live experience through corporate internships .
             </p>
-            <Link href='https://futureminds.in/courses/'>Start Now!</Link>
+            <Link href='https://learn.futureminds.in/courses/'>Start Now!</Link>
           </div>
           <div className={styles.courses_detail_card}>
             <div className={styles.courses_detail_card_icon}>
@@ -153,7 +153,7 @@ const SecondaryBanner = () => {
               Having issues paying fees! Don't worry our financial partners got
               it covered for You.
             </p>
-            <Link href='https://futureminds.in/courses/'>Start Now!</Link>
+            <Link href='https://learn.futureminds.in/courses/'>Start Now!</Link>
           </div>
         </div>
       </section>

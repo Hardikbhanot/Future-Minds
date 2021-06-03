@@ -18,17 +18,17 @@ const Footer = () => {
           <h3 className={styles.sub_heading}>Explore</h3>
           <ul className={styles.links_list}>
             <li>
-              <Link href='https://futureminds.in/courses/'>
+              <Link href='https://learn.futureminds.in/courses/'>
                 <a title='Courses'>Courses</a>
               </Link>
             </li>
             <li>
-              <Link href='https://futureminds.in/#'>
+              <Link href='https://learn.futureminds.in/#'>
                 <a title='Free Courses'>Free Courses</a>
               </Link>
             </li>
             <li>
-              <Link href='https://futureminds.in/#'>
+              <Link href='https://learn.futureminds.in/#'>
                 <a title='Boot Camps'>Boot Camps</a>
               </Link>
             </li>
@@ -38,27 +38,27 @@ const Footer = () => {
           <h3 className={styles.sub_heading}>Resources</h3>
           <ul className={styles.links_list}>
             <li>
-              <Link href='https://futureminds.in/courses/'>
+              <Link href='https://learn.futureminds.in/courses/'>
                 <a title='Courses'>Courses</a>
               </Link>
             </li>
             <li>
-              <Link href='https://futureminds.in/instructor-registration/'>
+              <Link href='https://learn.futureminds.in/instructor-registration/'>
                 <a title='Instructor Registration'>Instructor Registration</a>
               </Link>
             </li>
             <li>
-              <Link href='https://futureminds.in/student-registration/'>
+              <Link href='https://learn.futureminds.in/student-registration/'>
                 <a title='Student Registration'>Student Registration</a>
               </Link>
             </li>
             <li>
-              <Link href='https://futureminds.in/reset-password/'>
+              <Link href='https://learn.futureminds.in/reset-password/'>
                 <a title='Reset Password'>Reset Password</a>
               </Link>
             </li>
             <li>
-              <Link href='https://futureminds.in/success-story/'>
+              <Link href='https://learn.futureminds.in/success-story/'>
                 <a title='Sucess Story'>Sucess Story</a>
               </Link>
             </li>
@@ -68,7 +68,7 @@ const Footer = () => {
           <h3 className={styles.sub_heading}>Address</h3>
           <ul className={styles.links_list}>
             <li>
-              <Link href='https://futureminds.in/'>
+              <Link href='https://learn.futureminds.in/'>
                 <a title='Address'>New Delhi, India</a>
               </Link>
             </li>
@@ -84,7 +84,7 @@ const Footer = () => {
             </li>
             <ul className={styles.social_media_links_container}>
               <li>
-                <Link href='https://futureminds.in/#'>
+                <Link href='https://learn.futureminds.in/#'>
                   <a title='Twitter link' className={styles.social_media_link}>
                     <svg
                       width='49'
@@ -102,7 +102,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href='https://futureminds.in/#'>
+                <Link href='https://learn.futureminds.in/#'>
                   <a title='Facebook link' className={styles.social_media_link}>
                     <svg
                       width='30'
@@ -120,7 +120,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href='https://futureminds.in/#'>
+                <Link href='https://learn.futureminds.in/#'>
                   <a
                     title='Instagram link'
                     className={styles.social_media_link}
@@ -149,7 +149,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href='https://futureminds.in/#'>
+                <Link href='https://learn.futureminds.in/#'>
                   <a title='Linkedin link' className={styles.social_media_link}>
                     <svg
                       width='49'
@@ -183,10 +183,10 @@ const Footer = () => {
           ©2021 Futureminds. All right reserved.
         </p>
         <div className={styles.all_rights_reserved_links}>
-          <Link href='https://futureminds.in/privacy-policy/'>
+          <Link href='https://learn.futureminds.in/privacy-policy/'>
             Privacy Policy
           </Link>
-          <Link href='https://futureminds.in/terms-conditions/'>
+          <Link href='https://learn.futureminds.in/terms-conditions/'>
             Terms & Conditions
           </Link>
         </div>

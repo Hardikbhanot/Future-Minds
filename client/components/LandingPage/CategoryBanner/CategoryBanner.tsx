@@ -23,7 +23,7 @@ const CategoryBanner = () => {
               height={600}
               className={styles.category_card_background}
             />
-            <Link href='https://futureminds.in/course-category/animation/'>
+            <Link href='https://learn.futureminds.in/course-category/animation/'>
               <a className={styles.category_card_link}>
                 <span>Animation</span>
               </a>
@@ -37,7 +37,7 @@ const CategoryBanner = () => {
               height={600}
               className={styles.category_card_background}
             />
-            <Link href='https://futureminds.in/course-category/data-science/'>
+            <Link href='https://learn.futureminds.in/course-category/data-science/'>
               <a className={styles.category_card_link}>
                 <span>Data Science</span>
               </a>
@@ -51,7 +51,7 @@ const CategoryBanner = () => {
               height={600}
               className={styles.category_card_background}
             />
-            <Link href='https://futureminds.in/course-category/ux-ui/'>
+            <Link href='https://learn.futureminds.in/course-category/ux-ui/'>
               <a className={styles.category_card_link}>
                 <span>UX/UI</span>
               </a>
@@ -65,7 +65,7 @@ const CategoryBanner = () => {
               height={600}
               className={styles.category_card_background}
             />
-            <Link href='https://futureminds.in/course-category/web-development/'>
+            <Link href='https://learn.futureminds.in/course-category/web-development/'>
               <a className={styles.category_card_link}>
                 <span>Web Development</span>
               </a>
@@ -79,7 +79,7 @@ const CategoryBanner = () => {
               height={600}
               className={styles.category_card_background}
             />
-            <Link href='https://futureminds.in/course-category/python/'>
+            <Link href='https://learn.futureminds.in/course-category/python/'>
               <a className={styles.category_card_link}>
                 <span>Python</span>
               </a>
@@ -93,14 +93,14 @@ const CategoryBanner = () => {
               height={600}
               className={styles.category_card_background}
             />
-            <Link href='https://futureminds.in/'>
+            <Link href='https://learn.futureminds.in/'>
               <a className={styles.category_card_link}>
                 <span>Writting</span>
               </a>
             </Link>
           </div>
         </div>
-        <Link href='https://futureminds.in/categories/'>
+        <Link href='https://learn.futureminds.in/categories/'>
           <a title='View All Categories'>
             <svg
               width='20'

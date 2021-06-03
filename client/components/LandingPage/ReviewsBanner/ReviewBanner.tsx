@@ -19,20 +19,25 @@ const Review = () => {
   }, [review_container]);
 
   // scroll left or right
-  const onPaginationBtnChange = (event: ChangeEvent) => {
-    console.log(event);
-    const paginationBtnClicked: string = event.target?.defaultValue;
+  const onPaginationBtnChange = (event: ChangeEvent<HTMLInputElement>) => {
+    // console.log(event.target.value);
+    const paginationBtnClicked: string = event.target.value;
     if (review_container && review_container.current) {
       // console.log(review_container.current);
-      if (paginationBtnClicked === 'paginationBtn1') {
+      if (paginationBtnClicked === 'paginationBtn1' && first_review.current) {
         review_container.current.scrollLeft -=
           first_review.current.offsetWidth * 2.2;
-      } else if (paginationBtnClicked === 'paginationBtn2') {
+      } else if (
+        paginationBtnClicked === 'paginationBtn2' &&
+        second_review.current
+      ) {
         review_container.current.scrollLeft +=
           second_review.current.offsetWidth * 0.6;
       } else {
-        review_container.current.scrollLeft +=
-          third_review.current.offsetWidth * 2.2;
+        if (third_review.current) {
+          review_container.current.scrollLeft +=
+            third_review.current.offsetWidth * 2.2;
+        }
       }
     }
   };
@@ -114,21 +119,27 @@ const Review = () => {
           value='paginationBtn1'
           defaultChecked
           className={styles.pagination_btn}
-          onChange={(event: ChangeEvent) => onPaginationBtnChange(event)}
+          onChange={(event: ChangeEvent<HTMLInputElement>) =>
+            onPaginationBtnChange(event)
+          }
         />
         <input
           type='radio'
           name='paginationBtn'
           value='paginationBtn2'
           className={styles.pagination_btn}
-          onChange={(event: ChangeEvent) => onPaginationBtnChange(event)}
+          onChange={(event: ChangeEvent<HTMLInputElement>) =>
+            onPaginationBtnChange(event)
+          }
         />
         <input
           type='radio'
           name='paginationBtn'
           value='paginationBtn3'
           className={styles.pagination_btn}
-          onChange={(event: ChangeEvent) => onPaginationBtnChange(event)}
+          onChange={(event: ChangeEvent<HTMLInputElement>) =>
+            onPaginationBtnChange(event)
+          }
         />
       </div>
       <div className={styles.review_animation}>
