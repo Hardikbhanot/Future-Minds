@@ -1,16 +1,23 @@
 import { useRef } from 'react';
 import Image from 'next/Image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+
 import styles from './Banner.module.scss';
 
 const LandingPage = () => {
   const explore = useRef<HTMLInputElement>(null);
+  const router = useRouter();
 
   // on explore button click
   const onExploreClick = (event: React.SyntheticEvent) => {
     event.preventDefault();
     if (explore && explore.current) {
       // can access explore current value here
-      // const valueTypedInExplore =  explore.current.value
+      const valueTypedInExplore = explore.current.value;
+      router.push(
+        `https://futureminds.in/?s=${valueTypedInExplore}&ref=course&post_type=courses`
+      );
     }
   };
 
@@ -43,37 +50,37 @@ const LandingPage = () => {
           </form>
           <div className={styles.banner_trending_links_container}>
             <p className={styles.banner_trending_para}>Trending </p>
-            <a
-              className={styles.banner_trending_links}
-              title='Python-AI/ML'
-              href='/'
-            >
-              Python-AI/ML
-            </a>{' '}
-            <a
-              className={styles.banner_trending_links}
-              title='Web Development'
-              href='/'
-            >
-              Web Development
-            </a>{' '}
-            <a className={styles.banner_trending_links} title='UX/UI' href='/'>
-              UX/UI
-            </a>{' '}
-            <a
-              className={styles.banner_trending_links}
-              title='Professional Traning'
-              href='/'
-            >
-              Professional Traning
-            </a>{' '}
-            <a
-              className={styles.banner_trending_links}
-              title='Development'
-              href='/'
-            >
-              Development
-            </a>
+            <Link href='https://futureminds.in/course-category/data-science/'>
+              <a className={styles.banner_trending_links} title='Python-AI/ML'>
+                Python-AI/ML
+              </a>
+            </Link>
+            <Link href='https://futureminds.in/course-category/web-development/'>
+              <a
+                className={styles.banner_trending_links}
+                title='Web Development'
+              >
+                Web Development
+              </a>
+            </Link>
+            <Link href='https://futureminds.in/course-category/ux-ui/'>
+              <a className={styles.banner_trending_links} title='UX/UI'>
+                UX/UI
+              </a>
+            </Link>
+            <Link href='https://futureminds.in/course-category/development/'>
+              <a
+                className={styles.banner_trending_links}
+                title='Professional Traning'
+              >
+                Professional Training
+              </a>
+            </Link>
+            <Link href='https://futureminds.in/'>
+              <a className={styles.banner_trending_links} title='Development'>
+                Development
+              </a>
+            </Link>
           </div>
         </div>
         <div className={styles.banner_image_container}>

@@ -1,18 +1,23 @@
 import { useRef, useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import styles from './Navbar.module.scss';
 
 const Navbar = () => {
   const [menu, setMenu] = useState<boolean>(false);
   const search = useRef<HTMLInputElement>(null);
+  const router = useRouter();
 
   // on search button click
   const onSearchClick = (event: React.SyntheticEvent) => {
     event.preventDefault();
     if (search && search.current) {
       // can access search current value here
-      // const valueTypedInSearch =  search.current.value
+      const valueTypedInSearch = search.current.value;
+      router.push(
+        `https://futureminds.in/?s=${valueTypedInSearch}&ref=course&post_type=courses`
+      );
     }
   };
 
@@ -163,7 +168,7 @@ const Navbar = () => {
         </li>
         <li className={styles.navbar_links_item}>
           <Link href='https://futureminds.in/#'>
-            <a title='Programs'>Programs ↓</a>
+            <a title='Programs'>Programs</a>
           </Link>
           <span className={styles.more_navbar_links_item}>
             <Link href='https://futureminds.in/#'>
@@ -178,19 +183,19 @@ const Navbar = () => {
         </li>
         <li className={styles.navbar_links_item}>
           <Link href='https://futureminds.in/contact/'>
-            <a title='Contact'>Contact ↓</a>
+            <a title='Contact'>Contact</a>
           </Link>
-          <span className={styles.more_navbar_links_item}>
+          {/* <span className={styles.more_navbar_links_item}>
             <Link href='https://futureminds.in/about-us/'>
               <a title='About Us'>About Us</a>
             </Link>
-          </span>
+          </span> */}
         </li>
-        <li className={styles.navbar_links_item_additional}>
+        {/* <li className={styles.navbar_links_item_additional}>
           <Link href='https://futureminds.in/about-us/'>
             <a title='About Us'>About Us</a>
           </Link>
-        </li>
+        </li> */}
         <li className={styles.navbar_links_item}>
           <Link href='https://futureminds.in/futureminds-hr/'>
             <a title='Future Minds HR'>Futureminds HR</a>

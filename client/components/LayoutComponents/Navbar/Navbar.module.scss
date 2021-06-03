@@ -23,7 +23,7 @@
 
 .navbar_logo {
   grid-column: 1/2;
-  width: 80%;
+  width: 100%;
   justify-self: center;
   align-self: center;
   svg {
@@ -97,7 +97,7 @@
   flex-direction: column;
 
   position: absolute;
-  height: 28rem;
+  height: 24rem;
   top: 4rem;
   right: 0;
   z-index: -10;
@@ -178,6 +178,9 @@
   .navbar {
     grid-template-columns: 20% auto 10% 10%;
   }
+  .navbar_logo {
+    width: 90%;
+  }
   .navbar_cart_login_container {
     grid-column: 3/4;
     display: flex;
@@ -186,7 +189,7 @@
     display: none;
   }
   .navbar_links_container {
-    height: 21rem;
+    height: 17.2rem;
   }
   .menu {
     grid-column: 4/5;
@@ -196,6 +199,9 @@
 @media screen and (min-width: breakpoints.$monitor-screen) {
   .navbar {
     grid-template-columns: 15% 30% 45% 10%;
+  }
+  .navbar_logo {
+    width: 80%;
   }
   .navbar_search_input {
     font-size: fonts.$fs-sm;
