@@ -121,7 +121,7 @@ const BottomBanner = () => {
           Students friendly pricing for the certificate programs helps
           individuals to get their skill certificate easier than ever!
         </p>
-        <Link href='/'>
+        <Link href='https://futureminds.in/student-registration/'>
           <a title='Get started now'>
             <svg
               width='28'
@@ -283,7 +283,7 @@ const BottomBanner = () => {
         </p>
         <p className={styles.bottom_banner_blog_para}>
           Get into details now?
-          <Link href='/'> View all posts</Link>
+          <Link href='https://futureminds.in/blog/'> View all posts</Link>
         </p>
       </section>
       <section className={styles.bottom_banner_section_newsletter}>
