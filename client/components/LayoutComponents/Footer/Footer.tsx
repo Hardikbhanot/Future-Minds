@@ -78,7 +78,7 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href='info@futureminds.in'>
+              <Link href='/info@futureminds.in'>
                 <a title='Contact Email'>info@futureminds.in</a>
               </Link>
             </li>

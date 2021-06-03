@@ -66,6 +66,7 @@
   font-size: fonts.$fs-sm;
   color: colors.$clr-white;
   background-color: colors.$clr-primary;
+  transition: background-color 0.2s linear;
   &:hover,
   &:active,
   &:focus {
