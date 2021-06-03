@@ -23,7 +23,8 @@
 
 .navbar_logo {
   grid-column: 1/2;
-  width: 100%;
+  width: 80%;
+  justify-self: center;
   align-self: center;
   svg {
     display: inline-block;

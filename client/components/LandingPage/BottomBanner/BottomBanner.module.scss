@@ -182,6 +182,7 @@
   justify-content: center;
   border-radius: sizes.$border-radius;
   border: none;
+  transition: background-color 0.3s linear;
   > svg {
     width: 15px;
     margin: 0 0.4rem;
