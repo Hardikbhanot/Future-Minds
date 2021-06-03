@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import styles from './Footer.module.scss';
 
 const Footer = () => {
@@ -17,17 +18,17 @@ const Footer = () => {
           <h3 className={styles.sub_heading}>Explore</h3>
           <ul className={styles.links_list}>
             <li>
-              <Link href='/'>
+              <Link href='https://futureminds.in/courses/'>
                 <a title='Courses'>Courses</a>
               </Link>
             </li>
             <li>
-              <Link href='/'>
+              <Link href='https://futureminds.in/#'>
                 <a title='Free Courses'>Free Courses</a>
               </Link>
             </li>
             <li>
-              <Link href='/'>
+              <Link href='https://futureminds.in/#'>
                 <a title='Boot Camps'>Boot Camps</a>
               </Link>
             </li>
@@ -37,27 +38,27 @@ const Footer = () => {
           <h3 className={styles.sub_heading}>Resources</h3>
           <ul className={styles.links_list}>
             <li>
-              <Link href='/'>
+              <Link href='https://futureminds.in/courses/'>
                 <a title='Courses'>Courses</a>
               </Link>
             </li>
             <li>
-              <Link href='/'>
+              <Link href='https://futureminds.in/instructor-registration/'>
                 <a title='Instructor Registration'>Instructor Registration</a>
               </Link>
             </li>
             <li>
-              <Link href='/'>
+              <Link href='https://futureminds.in/student-registration/'>
                 <a title='Student Registration'>Student Registration</a>
               </Link>
             </li>
             <li>
-              <Link href='/'>
+              <Link href='https://futureminds.in/reset-password/'>
                 <a title='Reset Password'>Reset Password</a>
               </Link>
             </li>
             <li>
-              <Link href='/'>
+              <Link href='https://futureminds.in/success-story/'>
                 <a title='Sucess Story'>Sucess Story</a>
               </Link>
             </li>
@@ -67,23 +68,23 @@ const Footer = () => {
           <h3 className={styles.sub_heading}>Address</h3>
           <ul className={styles.links_list}>
             <li>
-              <Link href='/'>
-                <a title='address'>New Delhi, India</a>
+              <Link href='https://futureminds.in/'>
+                <a title='Address'>New Delhi, India</a>
               </Link>
             </li>
             <li>
-              <Link href='/'>
-                <a title='contact number'>+9185953 67753</a>
+              <Link href='tel:+91%2085953%2067753'>
+                <a title='Contact Number'>+9185953 67753</a>
               </Link>
             </li>
             <li>
-              <Link href='/'>
-                <a title='contact email'>info@futureminds.in</a>
+              <Link href='info@futureminds.in'>
+                <a title='Contact Email'>info@futureminds.in</a>
               </Link>
             </li>
             <ul className={styles.social_media_links_container}>
               <li>
-                <Link href='/'>
+                <Link href='https://futureminds.in/#'>
                   <a title='Twitter link' className={styles.social_media_link}>
                     <svg
                       width='49'
@@ -101,7 +102,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href='/'>
+                <Link href='https://futureminds.in/#'>
                   <a title='Facebook link' className={styles.social_media_link}>
                     <svg
                       width='30'
@@ -119,7 +120,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href='/'>
+                <Link href='https://futureminds.in/#'>
                   <a
                     title='Instagram link'
                     className={styles.social_media_link}
@@ -148,7 +149,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href='/'>
+                <Link href='https://futureminds.in/#'>
                   <a title='Linkedin link' className={styles.social_media_link}>
                     <svg
                       width='49'
