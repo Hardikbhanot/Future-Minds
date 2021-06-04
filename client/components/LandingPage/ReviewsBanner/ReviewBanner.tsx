@@ -47,56 +47,9 @@ const Review = () => {
       <div className={styles.review_container} ref={review_container}>
         <div className={styles.review_card} ref={first_review}>
           <p className={styles.review}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
-            illum inventore repudiandae animi, ab iusto! Lorem ipsum dolor sit
-            amet consectetur adipisicing elit. Asperiores illum inventore
-            repudiandae animi, ab iusto!Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Asperiores illum inventore repudiandae animi, ab
-            iusto!
-          </p>
-          <div className={styles.reviewer_profile}>
-            <Image
-              src='/images/user1.jpg'
-              alt='Picture of the reviewer'
-              width={50}
-              height={50}
-            />
-            <div className={styles.reviewer_details}>
-              <h3 className={styles.reviewer_name}>Ayush Yadav</h3>
-              <p className={styles.reviewer_position}>Web developer</p>
-            </div>
-          </div>
-        </div>
-        <div className={styles.review_card} ref={second_review}>
-          <p className={styles.review}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
-            illum inventore repudiandae animi, ab iusto! Lorem ipsum dolor sit
-            amet consectetur adipisicing elit. Asperiores illum inventore
-            repudiandae animi, ab iusto! Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Asperiores illum inventore repudiandae animi, ab
-            iusto!
-          </p>
-          <div className={styles.reviewer_profile}>
-            <Image
-              src='/images/user2.jpg'
-              alt='Picture of the reviewer'
-              width={50}
-              height={50}
-            />
-            <div className={styles.reviewer_details}>
-              <h3 className={styles.reviewer_name}>Ayush Yadav</h3>
-              <p className={styles.reviewer_position}>Web developer</p>
-            </div>
-          </div>
-        </div>
-        <div className={styles.review_card} ref={third_review}>
-          <p className={styles.review}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
-            illum inventore repudiandae animi, ab iusto! Lorem ipsum dolor sit
-            amet consectetur adipisicing elit. Asperiores illum inventore
-            repudiandae animi, ab iusto! Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Asperiores illum inventore repudiandae animi, ab
-            iusto!
+            A course encapsulating myriad hues. It helped me think out of the
+            box and pinprick not only my faults but also helped in polishing my
+            skills.
           </p>
           <div className={styles.reviewer_profile}>
             <Image
@@ -106,8 +59,50 @@ const Review = () => {
               height={50}
             />
             <div className={styles.reviewer_details}>
-              <h3 className={styles.reviewer_name}>Ayush Yadav</h3>
-              <p className={styles.reviewer_position}>Web developer</p>
+              <h3 className={styles.reviewer_name}>John Smith</h3>
+              <p className={styles.reviewer_position}>Python Developer</p>
+            </div>
+          </div>
+        </div>
+        <div className={styles.review_card} ref={second_review}>
+          <p className={styles.review}>
+            At Future Minds, I have unleashed subtle skills in many aspects. Be
+            it, certifications or guaranteed internships, Future Minds knows the
+            tact.
+          </p>
+          <div className={styles.reviewer_profile}>
+            <Image
+              src='/images/user2.jpg'
+              alt='Picture of the reviewer'
+              width={50}
+              height={50}
+            />
+            <div className={styles.reviewer_details}>
+              <h3 className={styles.reviewer_name}>Shruti</h3>
+              <p className={styles.reviewer_position}>
+                Human Resource Management
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className={styles.review_card} ref={third_review}>
+          <p className={styles.review}>
+            Future Minds efficaciously brings in practical exposure virtually,
+            ensuring that distance does not dampen the experience. It has been a
+            great journey!
+          </p>
+          <div className={styles.reviewer_profile}>
+            <Image
+              src='/images/user1.jpg'
+              alt='Picture of the reviewer'
+              width={50}
+              height={50}
+            />
+            <div className={styles.reviewer_details}>
+              <h3 className={styles.reviewer_name}>Anuj</h3>
+              <p className={styles.reviewer_position}>
+                Human Resource Management
+              </p>
             </div>
           </div>
         </div>

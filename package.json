@@ -4,16 +4,17 @@
   "description": "A website to build future ready professionals",
   "main": "server.js",
   "scripts": {
-    "build": "cd ./client && npm run build",
     "server": "nodemon server.js",
     "client": "cd ./client && npm run dev",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "cd ./client && npm run build",
+    "start": "concurrently \"npm run server\" \"npm run start\""
   },
   "keywords": [
     "education",
     "innovation"
   ],
-  "author": "tarun dixit",
+  "author": "ayush yadav",
   "license": "ISC",
   "devDependencies": {
     "prettier": "^2.3.0"

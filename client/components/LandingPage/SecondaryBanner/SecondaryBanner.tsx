@@ -47,7 +47,6 @@ const SecondaryBanner = () => {
           <Link href='https://learn.futureminds.in/student-registration/'>
             Register Free Now!​
           </Link>
-          ​
         </p>
       </section>
       <section className={styles.secondary_banner_container}>
@@ -58,8 +57,8 @@ const SecondaryBanner = () => {
           Online Classes Ease of Learning
         </h2>
         <p className={styles.secondary_banner_discription}>
-          In the ever evolving world & fast growing competition, We equip you
-          with the best skills to command you success.
+          In a world of virtualization, we platter to you our authentic
+          E-services, because we believe learning should not be hampered.
         </p>
         <div className={styles.courses_detail_card_container}>
           <div className={styles.courses_detail_card}>
@@ -90,12 +89,12 @@ const SecondaryBanner = () => {
               </svg>
             </div>
             <h3 className={styles.courses_detail_card_heading}>
-              Learn the In-Demand Skills
+              Sought After Skills
             </h3>
             <p className={styles.courses_detail_card_discription}>
-              Be it AI/ML Development, UI/UX, Full Stack, Digital Marketing,
-              Mobile App Development or any in-demand skills, Our experts teach
-              them all.
+              Hone your skills! Be it AI/ML Development, UI/UX, Full Stack,
+              Digital Marketing, Mobile App Development or any fresh from the
+              oven skill. You always have us!
             </p>
             <Link href='https://learn.futureminds.in/courses/'>Start Now!</Link>
           </div>
@@ -122,8 +121,9 @@ const SecondaryBanner = () => {
               Secured Internship
             </h3>
             <p className={styles.courses_detail_card_discription}>
-              Be it Technical course OR Job oriented Non- technical one, We
-              ensure you get live experience through corporate internships .
+              Does the fear of rejections numb you from enrolling in
+              internships? Future Minds values exposure via its conducive
+              internships and ensures everyone gets valued.
             </p>
             <Link href='https://learn.futureminds.in/courses/'>Start Now!</Link>
           </div>
@@ -147,11 +147,12 @@ const SecondaryBanner = () => {
               </svg>
             </div>
             <h3 className={styles.courses_detail_card_heading}>
-              We Got Your Fee Covered
+              Fee? Not to worry
             </h3>
             <p className={styles.courses_detail_card_discription}>
-              Having issues paying fees! Don't worry our financial partners got
-              it covered for You.
+              Are financial clutches being a barrier? Or whatsoever be the
+              reason behind, don't be a worrywart! Our financial partners are
+              there to aid you.
             </p>
             <Link href='https://learn.futureminds.in/courses/'>Start Now!</Link>
           </div>

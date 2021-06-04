@@ -6,8 +6,8 @@
 
 .navbar {
   width: 100%;
-  max-height: 5rem;
-  padding: 0.6rem 1rem;
+  max-height: 8rem;
+  padding: 1.1rem 1rem;
   display: grid;
   grid-template-columns: 20% auto 10%;
   grid-template-rows: 100%;
@@ -16,6 +16,7 @@
   top: 0;
   z-index: 100;
   background-color: colors.$clr-white;
+  box-shadow: 1px 2px 5px colors.$clr-secondary-white;
   li {
     list-style: none;
   }

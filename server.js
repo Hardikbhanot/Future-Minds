@@ -3,11 +3,14 @@ const path = require('path');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const express = require('express');
+// const next = require('next');
+// const environment = process.env.NODE_ENV !== 'production';
 
 // Public Routes
 const generalRoutes = require('./src/Routes/public/general');
 
 const app = express();
+// const nextServer = next({ environment });
 // To access auth-token in frontend
 const corsOptions = {
   exposedHeaders: 'auth-token'
@@ -17,6 +20,14 @@ dotenv.config();
 
 // Middlewares
 app.use(express.json());
+
+// nextServer
+//   .prepare()
+//   .then(() => {})
+//   .catch((error) => {
+//     console.log(error.stack);
+//     process.exit(1);
+//   });
 
 // Public Route Middlewares
 app.use('/api/', generalRoutes);
