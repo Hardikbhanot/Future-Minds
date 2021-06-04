@@ -89,6 +89,7 @@ const LandingPage = () => {
             alt='Build Skills With Experts Any Time, Anywhere'
             width={500}
             height={600}
+            priority
           />
           <svg
             className={styles.image_circle_animation}
