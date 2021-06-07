@@ -76,13 +76,17 @@
   width: 90%;
   overflow: hidden;
   margin: auto;
-  > div {
-    transform: scale(1);
-    transition: all 0.4s ease-in;
-    border-radius: 20px;
-    &:hover {
-      transform: scale(1.2);
-    }
+  border-radius: 10px;
+}
+
+.step_degree_image {
+  width: 100%;
+  transform: scale(1);
+  object-fit: cover;
+  transition: all 0.4s ease-in;
+  border-radius: 10px;
+  &:hover {
+    transform: scale(1.2);
   }
 }
 
