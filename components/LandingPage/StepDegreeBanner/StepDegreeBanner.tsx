@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import styles from './StepDegreeBanner.module.scss';
@@ -32,10 +33,12 @@ const StepDegreeBanner = () => {
       </div>
       <div className={styles.step_degree_image_animation_container}>
         <div className={styles.step_degree_image_container}>
-          <img
+          <Image
             className={styles.step_degree_image}
             src='/images/step_degree_img.jpg'
             alt='Explore Step Degree'
+            width={900}
+            height={650}
           />
           <svg
             className={styles.circle_animation}

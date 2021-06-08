@@ -51,7 +51,7 @@ const BottomBanner = () => {
   }, [inView]);
 
   return (
-    <main className={styles.bottom_banner}>
+    <>
       <section className={styles.count_upto_container} ref={ref}>
         <div className={styles.count_upto}>
           <div className={styles.counter_heading_container}>
@@ -597,7 +597,7 @@ const BottomBanner = () => {
           />
         </svg>
       </section>
-    </main>
+    </>
   );
 };
 

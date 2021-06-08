@@ -4,10 +4,6 @@
 @use '../../../styles/abstracts/breakpoints' as breakpoints;
 @use '../../../styles/components/buttons' as act_btn;
 
-.secondary_banner {
-  width: sizes.$wd-100;
-}
-
 .banner_container,
 .secondary_banner_container {
   padding: sizes.$m-4 sizes.$s-0;

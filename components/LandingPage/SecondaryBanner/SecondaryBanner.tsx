@@ -3,7 +3,7 @@ import styles from './SecondaryBanner.module.scss';
 
 const SecondaryBanner = () => {
   return (
-    <main className={styles.secondary_banner}>
+    <>
       <section className={styles.banner_container}>
         <p className={styles.secondary_banner_sub_heading}>
           IMPARTING EDUCATION THROUGH INNOVATION
@@ -158,7 +158,7 @@ const SecondaryBanner = () => {
           </div>
         </div>
       </section>
-    </main>
+    </>
   );
 };
 

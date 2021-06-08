@@ -5,8 +5,8 @@ import styles from './CategoryBanner.module.scss';
 
 const CategoryBanner = () => {
   return (
-    <main className={styles.category_banner}>
-      <section className={styles.category_banner_section}>
+    <section className={styles.category_banner}>
+      <div className={styles.category_banner_section}>
         <p className={styles.category_banner_sub_heading}>EXPLORE</p>
         <h2 className={styles.category_banner_main_heading}>
           Course Categories
@@ -23,9 +23,9 @@ const CategoryBanner = () => {
               height={600}
               className={styles.category_card_background}
             />
-            <Link href='https://learn.futureminds.in/course-category/animation/'>
+            <Link href='https://learn.futureminds.in/course-category/machine-learning/'>
               <a className={styles.category_card_link}>
-                <span>Animation</span>
+                <span>Machine Learning</span>
               </a>
             </Link>
           </div>
@@ -95,7 +95,7 @@ const CategoryBanner = () => {
             />
             <Link href='https://learn.futureminds.in/'>
               <a className={styles.category_card_link}>
-                <span>Writting</span>
+                <span>Management</span>
               </a>
             </Link>
           </div>
@@ -117,8 +117,8 @@ const CategoryBanner = () => {
             <p>View All Categories</p>
           </a>
         </Link>
-      </section>
-    </main>
+      </div>
+    </section>
   );
 };
 

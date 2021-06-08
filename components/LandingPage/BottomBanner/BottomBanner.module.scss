@@ -4,10 +4,6 @@
 @use '../../../styles/abstracts/breakpoints' as breakpoints;
 @use '../../../styles/components/buttons' as act_btn;
 
-.bottom_banner {
-  width: sizes.$wd-100;
-}
-
 .count_upto_container,
 .bottom_banner_section_our_experts,
 .bottom_banner_section_online_certification,
