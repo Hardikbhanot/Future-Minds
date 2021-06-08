@@ -35,7 +35,7 @@ const StepDegreeBanner = () => {
         <div className={styles.step_degree_image_container}>
           <Image
             className={styles.step_degree_image}
-            src='/images/step_degree_img.jpg'
+            src='/images/step_degree_img.png'
             alt='Explore Step Degree'
             width={900}
             height={650}

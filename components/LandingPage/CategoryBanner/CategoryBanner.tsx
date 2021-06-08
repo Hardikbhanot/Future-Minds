@@ -17,7 +17,7 @@ const CategoryBanner = () => {
         <div className={styles.category_card_container}>
           <div className={styles.category_card}>
             <Image
-              src='/images/course_category_1.jpeg'
+              src='/images/course_machine_learning.png'
               alt='Category background'
               width={500}
               height={600}
@@ -31,7 +31,7 @@ const CategoryBanner = () => {
           </div>
           <div className={styles.category_card}>
             <Image
-              src='/images/course_category_2.jpg'
+              src='/images/course_data_science.png'
               alt='Category background'
               width={500}
               height={600}
@@ -45,7 +45,7 @@ const CategoryBanner = () => {
           </div>
           <div className={styles.category_card}>
             <Image
-              src='/images/course_category_3.jpg'
+              src='/images/course_ux_ui.png'
               alt='Category background'
               width={500}
               height={600}
@@ -59,7 +59,7 @@ const CategoryBanner = () => {
           </div>
           <div className={styles.category_card}>
             <Image
-              src='/images/course_category_4.jpg'
+              src='/images/course_web_development.png'
               alt='Category background'
               width={500}
               height={600}
@@ -73,7 +73,7 @@ const CategoryBanner = () => {
           </div>
           <div className={styles.category_card}>
             <Image
-              src='/images/course_category_5.jpg'
+              src='/images/course_python.png'
               alt='Category background'
               width={500}
               height={600}
@@ -87,7 +87,7 @@ const CategoryBanner = () => {
           </div>
           <div className={styles.category_card}>
             <Image
-              src='/images/course_category_6.jpg'
+              src='/images/course_management.jpg'
               alt='Category background'
               width={500}
               height={600}
