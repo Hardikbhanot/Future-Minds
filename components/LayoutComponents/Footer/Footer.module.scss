@@ -1,5 +1,3 @@
-@use '../../../styles/abstracts/sizes' as sizes;
-@use '../../../styles/abstracts/fonts' as fonts;
 @use '../../../styles/abstracts/colors' as colors;
 @use '../../../styles/abstracts/breakpoints' as breakpoints;
 
@@ -13,28 +11,28 @@
 }
 
 .footer_main_content {
-  width: sizes.$wd-85;
-  margin: sizes.$etl-0 auto;
+  width: 85%;
+  margin: 4rem auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .discription_card_container {
-  width: sizes.$wd-100;
+  width: 100%;
   display: flex;
   flex-direction: column;
   .main_heading {
     margin: 0;
     font-weight: 400;
     font-size: 1.5em;
-    line-height: sizes.$m-0;
+    line-height: 2rem;
     color: colors.$clr-white;
   }
   .main_discription {
     font-weight: 300;
-    font-size: fonts.$fs-sm;
-    line-height: sizes.$s-4;
+    font-size: 1em;
+    line-height: 1.8rem;
     color: colors.$clr-white-lt;
   }
 }
@@ -42,7 +40,7 @@
 .card_container {
   display: flex;
   padding-left: 0;
-  width: sizes.$wd-100;
+  width: 100%;
   flex-direction: column;
   li {
     list-style: none;
@@ -52,26 +50,26 @@
 
 .sub_heading {
   font-weight: 400;
-  font-size: sizes.$s-1;
-  line-height: sizes.$s-3;
-  padding-bottom: sizes.$ets-4;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  padding-bottom: 0.8rem;
   border-bottom: 1px solid colors.$clr-grey-ltst;
 }
 
 .links_list {
   font-weight: 300;
-  line-height: sizes.$ets-2;
+  line-height: 0.4rem;
   color: colors.$clr-white-lt;
   padding: 0;
   > li {
-    font-size: sizes.$s-0;
-    line-height: sizes.$s-2;
-    margin-bottom: sizes.$ets-3;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    margin-bottom: 0.6rem;
     list-style-type: none;
     &::before {
       content: '◼︎';
-      font-size: fonts.$fs-sm;
-      margin-right: sizes.$ets-3;
+      font-size: 1em;
+      margin-right: 0.6rem;
       color: colors.$clr-primary;
     }
     &:hover,
@@ -91,7 +89,7 @@
 }
 
 .social_media_links_container li {
-  margin: sizes.$ets-3 sizes.$ets-3 0 0;
+  margin: 0.6rem 0.6rem  0 0;
 }
 
 .social_media_link {
@@ -116,62 +114,62 @@
 }
 
 .all_rights_reserved_container {
-  width: sizes.$wd-90;
-  margin: 0 auto sizes.$s-0 auto;
+  width: 90%;
+  margin: 0 auto 1rem auto;
   display: flex;
   flex-direction: column;
-  font-size: fonts.$fs-sm;
+  font-size: 1em;
   color: colors.$clr-white-lt;
   border-top: 1px solid colors.$clr-grey-ltst;
 }
 
 .all_rights_reserved {
-  width: sizes.$wd-100;
+  width: 100%;
   text-align: center;
 }
 
 .all_rights_reserved_links {
-  width: sizes.$wd-100;
+  width: 100%;
   justify-content: center;
   align-self: center;
   display: flex;
   flex-direction: row;
   a:nth-child(1) {
-    padding-right: sizes.$ets-3;
+    padding-right: 0.6rem;
     border-right: 1px solid colors.$clr-white-ltr;
   }
   a:nth-child(2) {
-    padding-left: sizes.$ets-3;
+    padding-left: 0.6rem;
   }
 }
 
 @media screen and (min-width: breakpoints.$monitor-screen) {
   .footer_main_content {
     flex-direction: row;
-    margin: sizes.$etl-0 auto 8rem auto;
+    margin: 4rem auto 8rem auto;
   }
   .discription_card_container {
-    width: sizes.$wd-20;
+    width: 20%;
     .main_heading {
-      font-size: fonts.$fs-md;
+      font-size: 2em;
     }
     .main_discription {
-      font-size: fonts.$fs-sm;
+      font-size: 1em;
     }
   }
   .card_container {
-    padding-left: sizes.$m-0;
-    width: sizes.$wd-25;
+    padding-left: 2rem;
+    width: 25%;
   }
   .all_rights_reserved_container {
     flex-direction: row;
   }
   .all_rights_reserved {
-    width: sizes.$wd-55;
+    width: 55%;
     text-align: start;
   }
   .all_rights_reserved_links {
-    width: sizes.$wd-45;
+    width: 45%;
     justify-content: flex-end;
   }
 }

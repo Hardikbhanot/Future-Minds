@@ -1,13 +1,11 @@
-@use '../../../styles/abstracts/sizes' as sizes;
-@use '../../../styles/abstracts/fonts' as fonts;
 @use '../../../styles/abstracts/colors' as colors;
 @use '../../../styles/abstracts/breakpoints' as breakpoints;
 @use '../../../styles/components/buttons' as act_btn;
 
 .banner_container,
 .secondary_banner_container {
-  padding: sizes.$m-4 sizes.$s-0;
-  width: sizes.$wd-100;
+  padding: 2.8rem 1rem;
+  width: 100%;
   text-align: center;
 }
 
@@ -24,7 +22,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: sizes.$m-4 auto sizes.$s-0 auto;
+  margin: 2.8rem auto 1rem auto;
   width: max-content;
   text-align: center;
   @include act_btn.action_btn;
@@ -41,26 +39,26 @@
 .secondary_banner_sub_heading {
   text-transform: uppercase;
   color: colors.$clr-primary;
-  line-height: sizes.$s-2;
-  font-size: fonts.$fs-i-lg;
+  line-height: 1.4rem;
+  font-size: 0.8em;
   margin: 0;
 }
 
 .secondary_banner_main_heading {
   margin: 0;
-  font-size: fonts.$fs-md-s;
+  font-size: 1.8em;
 }
 
 .secondary_banner_discription {
-  line-height: sizes.$s-2;
-  margin: sizes.$ets-2 0 sizes.$s-0 0;
+  line-height: 1.4rem;
+  margin: 0.4rem 0 1rem 0;
   display: block;
-  font-size: fonts.$fs-i-lg;
+  font-size: 0.8em;
   color: colors.$clr-grey-lt;
 }
 
 .courses_detail_card_container {
-  width: sizes.$wd-90;
+  width: 90%;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -69,8 +67,8 @@
 }
 
 .courses_detail_card {
-  width: sizes.$wd-100;
-  padding: sizes.$s-0 sizes.$s-3;
+  width: 100%;
+  padding: 1rem 1.6rem;
   text-align: center;
   transform: translateY(0%);
   transition: transform 0.3s linear;
@@ -90,13 +88,13 @@
 }
 
 .courses_detail_card_heading {
-  font-size: fonts.$fs-nr-s;
+  font-size: 1.2em;
   margin-bottom: 0;
 }
 
 .courses_detail_card_discription {
-  line-height: fonts.$fs-nr;
-  font-size: fonts.$fs-sm-s;
+  line-height: 1.5em;
+  font-size: 1.2em;
   color: colors.$clr-grey-lt;
 }
 
@@ -107,13 +105,13 @@
     justify-content: flex-start;
   }
   .courses_detail_card {
-    width: sizes.$wd-50;
+    width: 50%;
   }
 }
 
 @media screen and (min-width: breakpoints.$laptop-screen) {
   .courses_detail_card {
-    width: sizes.$wd-30;
+    width: 30%;
     margin: auto;
     text-align: start;
   }

@@ -1,16 +1,14 @@
-@use '../../../styles/abstracts/sizes' as sizes;
-@use '../../../styles/abstracts/fonts' as fonts;
 @use '../../../styles/abstracts/colors' as colors;
 @use '../../../styles/abstracts/breakpoints' as breakpoints;
 
 .banner {
-  width: sizes.$wd-100;
+  width: 100%;
   background-color: colors.$clr-secondary-white;
-  margin-top: sizes.$l-3;
+  margin-top: 3.6rem;
 }
 
 .banner_container {
-  width: sizes.$wd-80;
+  width: 80%;
   margin: auto;
   padding: 5rem 0 0 0;
   display: flex;
@@ -18,35 +16,35 @@
 }
 
 .banner_main_content {
-  width: sizes.$wd-100;
+  width: 100%;
   margin: auto;
   text-align: center;
 }
 
 .banner_headline {
-  line-height: fonts.$fs-nr-s;
+  line-height: 1.2em;
   font-weight: 800;
-  font-size: fonts.$fs-md;
+  font-size: 2em;
   margin-bottom: 0;
 }
 
 .banner_discription {
-  line-height: sizes.$s-3;
-  font-size: fonts.$fs-sm-s;
+  line-height: 1.6rem;
+  font-size: 0.9em;
   color: colors.$clr-grey-lt;
 }
 
 .banner_explore_form {
   display: flex;
-  margin-bottom: sizes.$s-1;
+  margin-bottom: 1.6rem;
   flex-direction: column;
 }
 
 .banner_explore_form input[type='text'] {
-  width: sizes.$wd-100;
-  border-radius: sizes.$border-radius 0 0 sizes.$border-radius;
-  padding: fonts.$fs-i-lg fonts.$fs-sm;
-  font-size: fonts.$fs-sm;
+  width: 100%;
+  border-radius: 5px 0 0 5px;
+  padding: 0.8em 0.4em;
+  font-size: 1em;
   background-color: colors.$clr-white-ltr;
   border: 1px solid colors.$clr-grey-ltst;
   &:active,
@@ -56,14 +54,14 @@
 }
 
 .banner_explore_form_submit_btn {
-  width: sizes.$wd-30;
+  width: 30%;
   border: none;
-  margin: sizes.$s-0 auto 0 auto;
+  margin: 1rem auto 0 auto;
   cursor: pointer;
   text-align: center;
-  border-radius: sizes.$border-radius;
-  padding: fonts.$fs-i-lg fonts.$fs-i-lg;
-  font-size: fonts.$fs-sm;
+  border-radius: 5px;
+  padding: 0.8em 0.8em;
+  font-size: 1em;
   color: colors.$clr-white;
   background-color: colors.$clr-primary;
   transition: background-color 0.2s linear;
@@ -79,24 +77,24 @@
   .banner_trending_para {
     display: inline;
     color: colors.$clr-grey;
-    margin-right: sizes.$ets-3;
+    margin-right: 0.6rem;
   }
   .banner_trending_links {
     text-decoration: underline;
-    margin-right: sizes.$ets-3;
+    margin-right: 0.6rem;
   }
 }
 
 .banner_image_container {
   position: relative;
   z-index: 10;
-  width: sizes.$wd-100;
+  width: 100%;
   max-width: 500px;
-  margin: sizes.$m-0 auto;
+  margin: 2rem;
   div {
     position: relative;
     z-index: 10;
-    width: sizes.$wd-100;
+    width: 100%;
     margin: auto;
   }
 }
@@ -129,14 +127,14 @@
 }
 
 .banner_card_section {
-  width: sizes.$wd-100;
+  width: 100%;
   display: flex;
   flex-direction: column;
   background-color: colors.$clr-secondary-white;
 }
 
 .banner_card_container {
-  width: sizes.$wd-90;
+  width: 90%;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -146,8 +144,8 @@
 }
 
 .banner_card {
-  width: sizes.$wd-100;
-  padding: sizes.$s-1;
+  width: 100%;
+  padding: 1.2rem;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -189,20 +187,20 @@
 
 .cards_heading {
   font-weight: 700;
-  margin: sizes.$s-0 0 0 0;
-  font-size: fonts.$fs-sm;
+  margin: 1rem 0 0 0;
+  font-size: 1em;
 }
 
 .card_summary {
   font-weight: 400;
   color: colors.$clr-grey-lt;
-  font-size: fonts.$fs-sm;
+  font-size: 1em;
 }
 
 .banner_cards_last_para {
   font-weight: 400;
   text-align: center;
-  font-size: fonts.$fs-nr;
+  font-size: 1.5em;
 }
 
 @keyframes image_circle_animation {
@@ -228,51 +226,51 @@
 
 @media screen and (min-width: breakpoints.$laptop-screen) {
   .banner_container {
-    width: sizes.$wd-90;
+    width: 90%;
     flex-direction: row;
-    padding: sizes.$s-4 0;
+    padding: 1.8rem 0;
   }
   .banner_main_content {
-    width: sizes.$wd-50;
+    width: 50%;
     margin-right: 0;
     text-align: start;
   }
   .banner_headline {
-    font-size: fonts.$fs-etlg;
+    font-size: 3em;
   }
   .banner_discription {
-    font-size: fonts.$fs-sm;
+    font-size: 1em;
   }
   .banner_explore_form {
     flex-direction: row;
   }
   .banner_explore_form input[type='text'] {
-    width: sizes.$wd-70;
+    width: 70%;
   }
   .banner_explore_form_submit_btn {
     margin: 0;
-    width: sizes.$wd-20;
-    border-radius: 0 sizes.$border-radius sizes.$border-radius 0;
+    width: 20%;
+    border-radius: 0 5px 5px 0;
   }
   .banner_image_container {
-    width: sizes.$wd-50;
+    width: 50%;
     div {
-      width: sizes.$wd-90;
+      width: 90%;
       margin: auto;
     }
   }
   .banner_card_container {
-    width: sizes.$wd-90;
+    width: 90%;
     flex-direction: row;
     justify-content: flex-start;
     gap: 5%;
   }
   .banner_card {
-    width: sizes.$wd-30;
+    width: 30%;
     flex-direction: column;
     text-align: start;
   }
   .banner_cards_last_para {
-    font-size: fonts.$fs-md;
+    font-size: 2em;
   }
 }
