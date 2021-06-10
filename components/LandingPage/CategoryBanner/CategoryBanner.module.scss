@@ -1,8 +1,6 @@
-// @use '../../../styles/abstracts/sizes' as sizes;
-// @use '../../../styles/abstracts/fonts' as fonts;
 @use '../../../styles/abstracts/colors' as colors;
-@use '../../../styles/abstracts/breakpoints' as breakpoints;
 @use '../../../styles/components/buttons' as act_btn;
+@use '../../../styles/abstracts/breakpoints' as breakpoints;
 
 .category_banner {
   width: 100%;
@@ -51,7 +49,7 @@
   line-height: 1.4rem;
   margin: 0.4rem 0 1rem 0;
   display: block;
-  font-size:0.8em;
+  font-size: 0.8em;
   color: colors.$clr-grey-lt;
 }
 
