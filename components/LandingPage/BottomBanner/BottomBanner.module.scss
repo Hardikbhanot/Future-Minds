@@ -1,5 +1,3 @@
-@use '../../../styles/abstracts/sizes' as sizes;
-@use '../../../styles/abstracts/fonts' as fonts;
 @use '../../../styles/abstracts/colors' as colors;
 @use '../../../styles/abstracts/breakpoints' as breakpoints;
 @use '../../../styles/components/buttons' as act_btn;
@@ -9,9 +7,9 @@
 .bottom_banner_section_online_certification,
 .bottom_banner_section_blog,
 .bottom_banner_section_newsletter {
-  width: sizes.$wd-100;
-  padding: sizes.$etl-0 sizes.$s-4;
-  width: sizes.$wd-100;
+  width: 100%;
+  padding: 4rem 1.8rem;
+  width: 100%;
   text-align: center;
 }
 
@@ -24,14 +22,14 @@
 }
 
 .count_upto {
-  width: sizes.$wd-45;
+  width: 45%;
   display: flex;
   flex-direction: column;
 }
 
 .counter_heading_container {
   color: colors.$clr-primary;
-  font-size: fonts.$fs-nr;
+  font-size: 1.5em;
   display: flex;
   flex-direction: row;
   margin: 0;
@@ -39,20 +37,20 @@
   align-items: center;
   > p {
     margin: 0;
-    font-size: fonts.$fs-nr;
+    font-size: 1.5em;
   }
 }
 
 .count_upto_counter {
   color: colors.$clr-primary;
-  font-size: fonts.$fs-nr-s;
+  font-size: 1.2em;
   margin: 0;
 }
 
 .count_upto_discription {
   text-transform: uppercase;
-  font-size: fonts.$fs-sm;
-  font-size: fonts.$fs-i-lg;
+  font-size: 1em;
+  font-size: 0.8em;
 }
 
 .bottom_banner_section_our_experts {
@@ -62,8 +60,8 @@
 .bottom_banner_sub_heading {
   text-transform: uppercase;
   color: colors.$clr-primary;
-  line-height: sizes.$s-2;
-  font-size: fonts.$fs-i-lg;
+  line-height: 1.4rem;
+  font-size: 0.8em;
   margin: 0;
 }
 
@@ -71,15 +69,15 @@
   position: relative;
   z-index: 10;
   margin: 0;
-  font-size: fonts.$fs-md-s;
+  font-size: 1.8em;
 }
 
 .bottom_banner_discription {
-  width: sizes.$wd-90;
-  line-height: sizes.$s-2;
-  margin: sizes.$ets-2 auto sizes.$s-0 auto;
+  width: 90%;
+  line-height: 1.4 rem;
+  margin: 0.4rem auto 1rem auto;
   display: block;
-  font-size: fonts.$fs-sm-s;
+  font-size: 0.9em;
   color: colors.$clr-grey-lt;
 }
 
@@ -94,11 +92,11 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: sizes.$m-4 auto sizes.$s-0 auto;
+  margin: 2.8rem auto 1rem auto;
   width: max-content;
   text-align: center;
   @include act_btn.action_btn;
-  padding: 0 sizes.$m-0;
+  padding: 0 2rem;
   > svg {
     width: 15px;
     margin: 0 0.4rem;
@@ -126,11 +124,11 @@
 }
 
 .bottom_banner_blog_para {
-  width: sizes.$wd-90;
-  line-height: sizes.$s-2;
-  margin: sizes.$l-0 auto sizes.$m-0 auto;
+  width: 90%;
+  line-height: 1.4 rem;
+  margin: 3rem  auto 2rem auto;
   display: block;
-  font-size: fonts.$fs-sm-s;
+  font-size: 0.9em;
   color: colors.$clr-grey-lt;
   > a {
     color: colors.$clr-primary;
@@ -144,19 +142,19 @@
 
 .newsletter_form {
   display: flex;
-  margin: 0 auto sizes.$s-1 auto;
+  margin: 0 auto 1.2rem auto;
   flex-direction: column;
-  width: sizes.$wd-90;
+  width: 90%;
   position: relative;
   z-index: 10;
 }
 
 .newsletter_form input[type='text'] {
-  width: sizes.$wd-100;
+  width: 100%;
   margin: auto;
-  border-radius: sizes.$border-radius 0 0 sizes.$border-radius;
-  padding: fonts.$fs-i-lg fonts.$fs-sm;
-  font-size: fonts.$fs-sm;
+  border-radius: 5px 0 0 5px;
+  padding: 0.8em 1em;
+  font-size: 1em;
   background-color: colors.$clr-white;
   border: 1px solid colors.$clr-grey-ltst;
   &:active,
@@ -167,9 +165,9 @@
 
 .newsletter_form button {
   width: max-content;
-  margin: sizes.$s-0 auto 0 auto;
-  padding: fonts.$fs-i-lg fonts.$fs-sm;
-  font-size: fonts.$fs-sm-s;
+  margin: 1rem auto 0 auto;
+  padding: 0.8em 1em;
+  font-size: 0.9em;
   cursor: pointer;
   align-items: center;
   color: colors.$clr-white;
@@ -177,12 +175,12 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  border-radius: sizes.$border-radius;
+  border-radius: 5px;
   border: none;
   transition: background-color 0.3s linear;
   > p {
-    font-size: fonts.$fs-nr-s;
-    line-height: fonts.$fs-sm;
+    font-size: 1.2em;
+    line-height: 1em;
     margin: 0 0 0 0.4rem;
   }
   &:hover,
@@ -295,8 +293,8 @@
 
 @media screen and (min-width: breakpoints.$laptop-screen) {
   .count_upto {
-    width: sizes.$wd-20;
-    font-size: fonts.$fs-nr;
+    width: 20%;
+    font-size: 1.5em;
   }
   .bottom_banner_section_online_certification {
     .online_certification_filled_circle_animation {
@@ -344,14 +342,14 @@
     justify-content: center;
   }
   .newsletter_form > input[type='text'] {
-    width: sizes.$wd-65;
+    width: 65%;
     margin: 0;
   }
   .newsletter_form > button {
     margin: 0;
     max-width: 200px;
-    width: sizes.$wd-35;
-    border-radius: 0 sizes.$border-radius sizes.$border-radius 0;
+    width: 35%;
+    border-radius: 0 5px 5px 0;
   }
   .bottom_banner_section_newsletter {
     .newsletter_concentric_circle_animation {

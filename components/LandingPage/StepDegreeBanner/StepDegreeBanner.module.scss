@@ -1,5 +1,3 @@
-@use '../../../styles/abstracts/sizes' as sizes;
-@use '../../../styles/abstracts/fonts' as fonts;
 @use '../../../styles/abstracts/colors' as colors;
 @use '../../../styles/abstracts/breakpoints' as breakpoints;
 @use '../../../styles/components/buttons' as act_btn;
@@ -24,31 +22,31 @@
 .step_degree_banner_sub_heading {
   text-transform: uppercase;
   color: colors.$clr-primary;
-  line-height: fonts.$fs-lg-s;
-  font-size: fonts.$fs-sm-s;
+  line-height: 2.2em;
+  font-size: 0.9em;
   margin: 0;
 }
 
 .step_degree_banner_main_heading {
   margin: 0;
-  line-height: fonts.$fs-nr-s;
-  font-size: fonts.$fs-lg-s;
+  line-height: 1.2em;
+  font-size: 2.2em;
 }
 
 .step_degree_banner_discription {
-  line-height: sizes.$s-2;
-  margin: sizes.$ets-2 0 sizes.$s-0 0;
+  line-height: 1.4rem;
+  margin: 0.4rem 0 1rem 0;
   display: block;
-  font-size: fonts.$fs-sm-s;
+  font-size: 0.9em;
   color: colors.$clr-grey-lt;
-  line-height: fonts.$fs-nr;
+  line-height: 1.5em;
 }
 
 .step_degree_banner_bold_discription {
   margin: 0;
   color: colors.$clr-grey-lt;
   font-weight: bold;
-  line-height: fonts.$fs-nr;
+  line-height: 1.5em;
 }
 
 .step_degree_banner_link {
@@ -56,7 +54,7 @@
   width: max-content;
   color: colors.$clr-primary;
   font-weight: bold;
-  line-height: fonts.$fs-nr;
+  line-height: 1.5em;
   border-bottom: none;
   transition: all 0.2s linear;
   &:hover,

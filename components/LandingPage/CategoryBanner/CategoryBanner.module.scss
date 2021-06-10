@@ -1,18 +1,18 @@
-@use '../../../styles/abstracts/sizes' as sizes;
-@use '../../../styles/abstracts/fonts' as fonts;
+// @use '../../../styles/abstracts/sizes' as sizes;
+// @use '../../../styles/abstracts/fonts' as fonts;
 @use '../../../styles/abstracts/colors' as colors;
 @use '../../../styles/abstracts/breakpoints' as breakpoints;
 @use '../../../styles/components/buttons' as act_btn;
 
 .category_banner {
-  width: sizes.$wd-100;
+  width: 100%;
   background-color: colors.$clr-orange;
 }
 
 .category_banner_section {
   background-color: colors.$clr-secondary-white;
-  padding: sizes.$etl-4 sizes.$s-0 sizes.$m-4 sizes.$s-0;
-  width: sizes.$wd-100;
+  padding: 4.8rem 1rem 2.8rem 1rem;
+  width: 100%;
   text-align: center;
 }
 
@@ -20,7 +20,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: sizes.$m-4 auto sizes.$s-0 auto;
+  margin: 2.8rem auto 1rem auto;
   width: max-content;
   text-align: center;
   @include act_btn.action_btn;
@@ -37,21 +37,21 @@
 .category_banner_sub_heading {
   text-transform: uppercase;
   color: colors.$clr-primary;
-  line-height: sizes.$s-2;
-  font-size: fonts.$fs-i-lg;
+  line-height: 1.2rem;
+  font-size: 0.8em;
   margin: 0;
 }
 
 .category_banner_main_heading {
   margin: 0;
-  font-size: fonts.$fs-md-s;
+  font-size: 1.8em;
 }
 
 .category_banner_discription {
-  line-height: sizes.$s-2;
-  margin: sizes.$ets-2 0 sizes.$s-0 0;
+  line-height: 1.4rem;
+  margin: 0.4rem 0 1rem 0;
   display: block;
-  font-size: fonts.$fs-i-lg;
+  font-size:0.8em;
   color: colors.$clr-grey-lt;
 }
 

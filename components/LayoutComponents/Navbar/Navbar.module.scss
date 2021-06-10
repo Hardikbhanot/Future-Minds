@@ -1,5 +1,3 @@
-@use '../../../styles/abstracts/sizes' as sizes;
-@use '../../../styles/abstracts/fonts' as fonts;
 @use '../../../styles/abstracts/colors' as colors;
 @use '../../../styles/components/buttons' as act_btn;
 @use '../../../styles/abstracts/breakpoints' as breakpoints;
@@ -50,23 +48,23 @@
 }
 
 .navbar_search_input {
-  width: sizes.$wd-80;
-  padding: sizes.$ets-4;
-  font-size: fonts.$fs-sm-s;
+  width: 80%;
+  padding: 0.8rem;
+  font-size: 1.2em;
   background-color: colors.$clr-secondary-white;
-  border-radius: sizes.$border-radius 0 0 sizes.$border-radius;
+  border-radius: 5px 0 0 5px;
   border: none;
   outline: none;
 }
 
 .navbar_search_btn {
-  width: sizes.$wd-20;
-  padding: sizes.$ets-3 sizes.$ets-2;
-  font-size: fonts.$fs-sm;
+  width: 20%;
+  padding: 0.6rem 0.4rem;
+  font-size: 1em;
   cursor: pointer;
   background-color: colors.$clr-secondary-white;
   border: none;
-  border-radius: 0 sizes.$border-radius sizes.$border-radius 0;
+  border-radius: 0 5px 5px 0;
 }
 
 .navbar_cart_login_container {
@@ -205,7 +203,7 @@
     width: 80%;
   }
   .navbar_search_input {
-    font-size: fonts.$fs-sm;
+    font-size: 1em;
   }
   .navbar_links_container {
     grid-column: 3/4;
