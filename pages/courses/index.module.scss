@@ -1,3 +1,16 @@
 .courses {
   margin-top: 5rem;
 }
+
+.heading {
+  text-align: center;
+}
+
+.card_container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
