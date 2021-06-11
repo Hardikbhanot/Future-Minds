@@ -11,7 +11,9 @@ const Courses = () => {
       discription:
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nisi illum veniam, doloribus quam eius!',
       noOfCourses: 0,
-      noOfStudents: 1
+      noOfStudents: 1,
+      courseLevel: 'easy',
+      coursePrice: 6000
     },
     {
       courseId: 2,
@@ -21,7 +23,9 @@ const Courses = () => {
       discription:
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nisi illum veniam, doloribus quam eius!',
       noOfCourses: 0,
-      noOfStudents: 1
+      noOfStudents: 1,
+      courseLevel: 'easy',
+      coursePrice: 6000
     },
     {
       courseId: 3,
@@ -31,7 +35,9 @@ const Courses = () => {
       discription:
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nisi illum veniam, doloribus quam eius!',
       noOfCourses: 0,
-      noOfStudents: 1
+      noOfStudents: 1,
+      courseLevel: 'easy',
+      coursePrice: 6000
     },
     {
       courseId: 4,
@@ -41,7 +47,9 @@ const Courses = () => {
       discription:
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nisi illum veniam, doloribus quam eius!',
       noOfCourses: 0,
-      noOfStudents: 1
+      noOfStudents: 1,
+      courseLevel: 'easy',
+      coursePrice: 6000
     },
     {
       courseId: 5,
@@ -51,7 +59,9 @@ const Courses = () => {
       discription:
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nisi illum veniam, doloribus quam eius!',
       noOfCourses: 0,
-      noOfStudents: 1
+      noOfStudents: 1,
+      courseLevel: 'easy',
+      coursePrice: 6000
     }
   ];
 
@@ -62,8 +72,8 @@ const Courses = () => {
 
   return (
     <main className={styles.courses}>
-      <div>Hello this is courses route</div>
-      {card}
+      <div className={styles.heading}>Hello this is courses route</div>
+      <div className={styles.card_container}>{card}</div>
     </main>
   );
 };
