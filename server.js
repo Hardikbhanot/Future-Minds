@@ -37,6 +37,9 @@ app
   .prepare()
   .then(() => {
     const server = express();
+    // to accept body as json in api routes
+    server.use(express.json());
+
     // pass routes starting with /api to backend
     server.use('/api/', publicRoutes);
     server.use('/api/course', coursePublicRoutes);

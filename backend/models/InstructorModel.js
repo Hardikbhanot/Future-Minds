@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 
 const instructorSchema = new mongoose.Schema({
-  id: mongoose.Schema.Types.ObjectId,
+  _id: mongoose.Schema.Types.ObjectId,
   firstName: { type: String, trim: true, required: true, min: 3, max: 255 },
   lastName: { type: String, trim: true, min: 3, max: 255 },
-  emailId: { type: String, trim: true, required: true, min: 6, max: 255 },
+  email: { type: String, trim: true, required: true, min: 6, max: 255 },
   password: { type: String, trim: true, required: true, min: 6, max: 255 },
-  mobileNumber: { type: String, trim: true, required: true },
+  mobileNumber: { type: Number, trim: true, required: true },
   address: { type: String, trim: true, min: 6, max: 1024 },
   courseAdded: [mongoose.Schema.Types.ObjectId],
   coursePurchased: [mongoose.Schema.Types.ObjectId],
