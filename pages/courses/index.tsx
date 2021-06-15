@@ -1,5 +1,6 @@
 import styles from './index.module.scss';
 import CourseCard from '../../components/CoursesCard/CourseCard';
+import Banner from '../../components/HeadingBanner/Banner';
 
 const Courses = () => {
   const dummy_data = [
@@ -12,7 +13,7 @@ const Courses = () => {
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nisi illum veniam, doloribus quam eius!',
       noOfCourses: 0,
       noOfStudents: 1,
-      courseLevel: 'easy',
+      courseLevel: 'Beginner',
       coursePrice: 6000
     },
     {
@@ -62,6 +63,18 @@ const Courses = () => {
       noOfStudents: 1,
       courseLevel: 'easy',
       coursePrice: 6000
+    },
+    {
+      courseId: 6,
+      courseImg:
+        'https://images.pexels.com/photos/4348791/pexels-photo-4348791.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+      courseName: 'HRM',
+      discription:
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nisi illum veniam, doloribus quam eius!',
+      noOfCourses: 0,
+      noOfStudents: 1,
+      courseLevel: 'Advanced',
+      coursePrice: 6000
     }
   ];
 
@@ -72,7 +85,13 @@ const Courses = () => {
 
   return (
     <main className={styles.courses}>
-      <div className={styles.heading}>Hello this is courses route</div>
+      <Banner />
+      {/* <div className={styles.subSection}> */}
+      <div className={styles.courseFilter}>
+        <p className={styles.abc}>Showing 6 Courses</p>
+        <p>Dropdown</p>
+      </div>
+      {/* </div> */}
       <div className={styles.card_container}>{card}</div>
     </main>
   );

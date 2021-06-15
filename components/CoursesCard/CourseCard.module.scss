@@ -1,27 +1,25 @@
-.course_card {
-  background-image: purple;
-}
-
 .card {
-  // outline: 1px solid red;
   width: 30%;
-  // padding: 4rem 1.8rem;
+  // transform: translate(50%,10%);
   text-align: center;
   min-width: 200px;
-  margin: 0 3.33% 1rem 0;
-  // width: 400px;
-  // height: 600px;
+  margin: 0 1.665% 3rem 1.665%;
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
   border-radius: 3px;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.11);
+  box-shadow: 0px 8px 16px 0px rgb(146 184 255 / 20%);
   overflow: hidden;
+
+  &:hover {
+    box-shadow: 0px 8px 16px 0px rgb(146 184 255 / 30%);
+  }
 }
 
 .imgContainer {
   position: relative;
   width: 100%;
+  overflow: hidden;
 }
 
 .card_img {
@@ -34,10 +32,13 @@
 
 .levels {
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
-  z-index: 10;
-  background-color: white;
+  background-color: black;
+  color: white;
+  width: 25%;
+  margin-right: 0.6rem;
+  padding: 0.2rem;
 }
 
 .bookmarkBtn {
@@ -46,16 +47,82 @@
   top: 0;
   z-index: 10;
   background-color: white;
+  border-radius: 8%;
+  padding: 0.2rem;
+  margin: 0.8rem;
+  border: none;
+  width: max-content;
+  display: grid;
+  place-items: center;
+
+  &:hover {
+    fill: white;
+    background-color: #fe4a55;
+  }
+}
+.bookmark:hover > path {
+  fill: #ffffff;
+}
+
+.bookmark {
+  height: 15px;
+  & > path {
+    fill: #fe4a55;
+  }
+  // &>path:hover{
+  //   fill:white;
+
+  // }
 }
 
 .priceValue {
+  margin: 0;
+  margin-bottom: 0.3rem;
   position: absolute;
   right: 0;
   bottom: 0;
   z-index: 10;
-  background-color: white;
+  background-color: #2458ff;
+  border-top-left-radius: 12px;
+  padding: 1rem;
+  color: white;
+  font-size: 1.2em;
 }
 
-.dataContainer {
+.card_Container {
   width: 100%;
+  position: relative;
+
+  // .cardFooter{
+  //   display: flex;
+  //   justify-content: space-between;
+  //   margin: 1.5rem;
+
+  // }
+}
+.courseName {
+  text-align: left;
+  margin: 1rem;
+
+  &:hover {
+    color: blue;
+  }
+}
+.courseFilter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1.5rem;
+}
+
+.courseDescription {
+  text-align: left;
+  margin: 1rem;
+}
+.starRating {
+  text-align: left;
+  margin: 1rem;
+}
+.stars > path {
+  fill: #f4c150;
 }
