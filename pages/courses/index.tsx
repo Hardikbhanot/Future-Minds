@@ -86,9 +86,15 @@ const Courses = () => {
 
   return (
     <main className={styles.courses}>
-      {/* <div className={styles.heading}>Hello this is courses route</div> */}
       <Banner />
+      {/* <div className={styles.subSection}> */}
+      <div className={styles.courseFilter}>
+        <p className={styles.abc}>Showing 6 Courses</p>
+        <p>Dropdown</p>
+      </div>
+      {/* </div> */}
       <div className={styles.card_container}>{card}</div>
+
     </main>
   );
 };

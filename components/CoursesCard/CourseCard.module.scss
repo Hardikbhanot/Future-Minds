@@ -5,7 +5,7 @@
   // transform: translate(50%,10%);
   text-align: center;
   min-width: 200px;
-  margin: 0 3.33% 3rem 0;
+  margin: 0 1.665% 3rem 1.665%;
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
@@ -115,6 +115,13 @@
   &:hover{
     color:blue;
   }
+}
+.courseFilter{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1.5rem;
+
 }
 
 .courseDescription{
