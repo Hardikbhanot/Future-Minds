@@ -11,6 +11,9 @@ const handle = app.getRequestHandler();
 
 // Import all server routes
 const publicRoutes = require('./backend/routes/public/public');
+const coursePublicRoutes = require('./backend/routes/public/course');
+const studentPublicRoutes = require('./backend/routes/public/student');
+const instructorPublicRoutes = require('./backend/routes/public/instructor');
 
 // Connect to Database
 const connectDB = async () => {
@@ -34,10 +37,16 @@ app
   .prepare()
   .then(() => {
     const server = express();
-    // pass routes starting with /api/public to publicRoutes folder
-    server.use('/api/public', publicRoutes);
+    // to accept body as json in api routes
+    server.use(express.json());
 
-    // pass all the other routes to nextJS
+    // pass routes starting with /api to backend
+    server.use('/api/', publicRoutes);
+    server.use('/api/course', coursePublicRoutes);
+    server.use('/api/student', studentPublicRoutes);
+    server.use('/api/instructor', instructorPublicRoutes);
+
+    // pass all the other routes to nextJS frontend
     server.get('*', (req, res) => {
       return handle(req, res);
     });

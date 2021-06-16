@@ -1,6 +1,6 @@
 @use '../../../styles/abstracts/colors' as colors;
-@use '../../../styles/abstracts/breakpoints' as breakpoints;
 @use '../../../styles/components/buttons' as act_btn;
+@use '../../../styles/abstracts/breakpoints' as breakpoints;
 
 .banner_container,
 .secondary_banner_container {
@@ -94,7 +94,7 @@
 
 .courses_detail_card_discription {
   line-height: 1.5em;
-  font-size: 1.2em;
+  font-size: 1em;
   color: colors.$clr-grey-lt;
 }
 

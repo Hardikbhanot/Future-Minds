@@ -43,13 +43,15 @@
 .banner_explore_form input[type='text'] {
   width: 100%;
   border-radius: 5px 0 0 5px;
-  padding: 0.8em 0.4em;
+  padding: 0.8em 0.4em 0.8em 0.8em;
   font-size: 1em;
-  background-color: colors.$clr-white-ltr;
-  border: 1px solid colors.$clr-grey-ltst;
+  background-color: colors.$clr-white;
+  border: 0.1px solid colors.$clr-white-ltst;
+  transition: border 0.3s linear;
+  color: colors.$clr-grey-ltst;
   &:active,
   &:focus {
-    border: 1px solid colors.$clr-primary;
+    border: 0.1px solid colors.$clr-primary-ltst;
   }
 }
 
@@ -154,7 +156,7 @@
   justify-content: space-evenly;
   background-color: colors.$clr-white;
   &:nth-child(1) {
-    border-radius: 5px 0 0 5x;
+    border-radius: 5px 0 0 5px;
   }
   &:nth-child(2) {
     border-radius: 0;

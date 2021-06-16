@@ -94,7 +94,6 @@
   background-color: colors.$clr-white;
   display: flex;
   flex-direction: column;
-
   position: absolute;
   height: 24rem;
   top: 4rem;
@@ -132,7 +131,9 @@
 .navbar_item_mobile:nth-child(1) {
   color: colors.$clr-white;
   background-color: colors.$clr-primary;
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     background-color: colors.$clr-secondary;
   }
 }

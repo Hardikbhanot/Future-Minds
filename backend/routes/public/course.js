@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
 router.get('/', (req, res) => {
-  res.status(200).json({ message: 'Welcome to backend' });
+  res.status(200).json({ message: 'course route' });
 });
 
 module.exports = router;

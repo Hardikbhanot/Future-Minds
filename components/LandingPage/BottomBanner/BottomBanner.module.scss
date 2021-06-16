@@ -1,6 +1,6 @@
 @use '../../../styles/abstracts/colors' as colors;
-@use '../../../styles/abstracts/breakpoints' as breakpoints;
 @use '../../../styles/components/buttons' as act_btn;
+@use '../../../styles/abstracts/breakpoints' as breakpoints;
 
 .count_upto_container,
 .bottom_banner_section_our_experts,
@@ -74,7 +74,7 @@
 
 .bottom_banner_discription {
   width: 90%;
-  line-height: 1.4 rem;
+  line-height: 1.4rem;
   margin: 0.4rem auto 1rem auto;
   display: block;
   font-size: 0.9em;
@@ -125,8 +125,8 @@
 
 .bottom_banner_blog_para {
   width: 90%;
-  line-height: 1.4 rem;
-  margin: 3rem  auto 2rem auto;
+  line-height: 1.4rem;
+  margin: 3rem auto 2rem auto;
   display: block;
   font-size: 0.9em;
   color: colors.$clr-grey-lt;
@@ -353,42 +353,13 @@
   }
   .bottom_banner_section_newsletter {
     .newsletter_concentric_circle_animation {
-      display: inline-block;
-      position: absolute;
-      width: 60px;
-      height: 60px;
       left: 20%;
-      top: 30%;
-      animation-name: zoomOut;
-      animation-duration: 10s;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
     }
     .newsletter_strip_animation {
-      display: inline-block;
-      position: absolute;
-      z-index: 0;
       left: 16%;
-      top: 40%;
-      width: 110px;
-      height: 110px;
-      animation-name: BottomBanner_rotateInfinte__2xsUC;
-      animation-duration: 40s;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
     }
     .newsletter_plane_animation {
-      display: inline-block;
-      position: absolute;
-      z-index: 0;
       right: 18%;
-      top: 20%;
-      width: 150px;
-      height: 150px;
-      animation-name: newsletterPlaneAnimation;
-      animation-duration: 10s;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
     }
   }
 }

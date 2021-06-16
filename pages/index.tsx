@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic';
 
-import Banner from '../components/LandingPage/Banner/Banner';
+import MainBanner from '../components/LandingPage/MainBanner/MainBanner';
 import CategoryBanner from '../components/LandingPage/CategoryBanner/CategoryBanner';
 import ReviewBanner from '../components/LandingPage/ReviewsBanner/ReviewBanner';
 import StepDegreeBanner from '../components/LandingPage/StepDegreeBanner/StepDegreeBanner';
@@ -18,7 +18,7 @@ const BottomBanner = dynamic(
 const Home = () => {
   return (
     <>
-      <Banner />
+      <MainBanner />
       <SecondaryBanner />
       <StepDegreeBanner />
       <ReviewBanner />
