@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-import styles from './Banner.module.scss';
+import styles from './MainBanner.module.scss';
 
 const LandingPage = () => {
   const explore = useRef<HTMLInputElement>(null);

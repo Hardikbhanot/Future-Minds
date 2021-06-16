@@ -1,25 +1,30 @@
-.card {
-  width: 30%;
-  // transform: translate(50%,10%);
+@use '../../styles/abstracts/colors' as colors;
+@use '../../styles/abstracts/breakpoints' as breakpoints;
+
+.course_card {
+  width: 90%;
   text-align: center;
-  min-width: 200px;
-  margin: 0 1.665% 3rem 1.665%;
+  min-width: 180px;
+  margin: 0 5% 2rem 5%;
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
-  border-radius: 3px;
-  box-shadow: 0px 8px 16px 0px rgb(146 184 255 / 20%);
+  background-color: colors.$clr-white;
+  border-radius: 12px;
+  box-shadow: 0px 0px 16px 0px colors.$clr-primary-ltst;
   overflow: hidden;
 
-  &:hover {
-    box-shadow: 0px 8px 16px 0px rgb(146 184 255 / 30%);
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: 0px 0px 16px 0px colors.$clr-grey-ltst;
   }
 }
 
-.imgContainer {
+.img_container {
   position: relative;
   width: 100%;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .card_img {
@@ -30,23 +35,12 @@
   object-fit: cover;
 }
 
-.levels {
-  position: absolute;
-  right: 0;
-  top: 0;
-  background-color: black;
-  color: white;
-  width: 25%;
-  margin-right: 0.6rem;
-  padding: 0.2rem;
-}
-
-.bookmarkBtn {
+.bookmark_btn {
   position: absolute;
   right: 0;
   top: 0;
   z-index: 10;
-  background-color: white;
+  background-color: colors.$clr-white;
   border-radius: 8%;
   padding: 0.2rem;
   margin: 0.8rem;
@@ -55,32 +49,33 @@
   display: grid;
   place-items: center;
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     fill: white;
     background-color: #fe4a55;
   }
 }
-.bookmark:hover > path {
-  fill: #ffffff;
+
+.bookmark_btn:hover .bookmark_svg > path,
+.bookmark_btn:focus .bookmark_svg > path,
+.bookmark_btn:active .bookmark_svg > path {
+  fill: colors.$clr-white;
 }
 
-.bookmark {
+.bookmark_svg {
   height: 15px;
   & > path {
     fill: #fe4a55;
   }
-  // &>path:hover{
-  //   fill:white;
-
-  // }
 }
 
-.priceValue {
+.price_value {
   margin: 0;
   margin-bottom: 0.3rem;
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: 0.1rem;
   z-index: 10;
   background-color: #2458ff;
   border-top-left-radius: 12px;
@@ -89,40 +84,81 @@
   font-size: 1.2em;
 }
 
-.card_Container {
+.detail_container {
   width: 100%;
-  position: relative;
-
-  // .cardFooter{
-  //   display: flex;
-  //   justify-content: space-between;
-  //   margin: 1.5rem;
-
-  // }
 }
-.courseName {
-  text-align: left;
-  margin: 1rem;
 
+.rating_level_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.star_rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 5px;
+}
+
+.stars {
+  width: 20px;
+  height: auto;
+}
+
+.stars > path {
+  fill: #f4c150;
+}
+
+.course_level {
+  background-color: black;
+  color: white;
+  width: max-content;
+  margin: 0;
+  text-transform: capitalize;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+}
+
+.course_name {
+  display: block;
+  text-decoration: none;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2rem;
+  margin: 0 1rem;
+  cursor: pointer;
   &:hover {
     color: blue;
   }
 }
-.courseFilter {
+
+.course_filter {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 1.5rem;
 }
 
-.courseDescription {
+.course_description {
   text-align: left;
   margin: 1rem;
+  font-size: 1rem;
+  line-height: 1.7rem;
 }
-.starRating {
-  text-align: left;
-  margin: 1rem;
+
+@media screen and (min-width: breakpoints.$large-tablet-screen) {
+  .course_card {
+    width: 46%;
+    margin: 0 2% 3rem 2%;
+  }
 }
-.stars > path {
-  fill: #f4c150;
+
+@media screen and (min-width: breakpoints.$monitor-screen) {
+  .course_card {
+    width: 30%;
+    margin: 0 1.665% 3rem 1.665%;
+  }
 }

@@ -1,13 +1,35 @@
-.courses {
-  margin-top: 5rem;
+@use '../../styles/abstracts/colors' as colors;
+@use '../../styles/abstracts/breakpoints' as breakpoints;
+
+.course_filter {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+  margin-bottom: 3rem;
+  padding: 0 1.665%;
 }
 
-.heading {
-  text-align: center;
+.pagination_detail {
+  width: max-content;
+}
+
+.dropdown_container {
+  margin: auto 0;
+  width: max-content;
+  height: max-content;
+}
+
+.dropdown {
+  width: max-content;
+  padding: 0.6rem 0.8rem;
+  outline: none;
+  border: 1px solid colors.$clr-grey-ltst;
 }
 
 .card_container {
-  width: 80%;
+  width: 95%;
   margin: auto;
   display: flex;
   flex-direction: row;
@@ -15,12 +37,11 @@
   flex-wrap: wrap;
 }
 
-.courseFilter {
-  width: 80%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: auto;
-  margin-bottom: 3rem;
-  padding: 0 1.665%;
+@media screen and (min-width: breakpoints.$monitor-screen) {
+  .course_filter {
+    width: 90%;
+  }
+  .card_container {
+    width: 90%;
+  }
 }
