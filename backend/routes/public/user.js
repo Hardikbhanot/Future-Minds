@@ -1,42 +1,42 @@
 const mongoose = require('mongoose');
 const router = require('express').Router();
-const Instructor = require('../../models/InstructorModel');
+const User = require('../../models/UserModel');
 const {
   registerValidation,
   loginValidation
-} = require('../../validation/instructorValidation');
+} = require('../../validation/userValidation');
 
 router.get('/', (req, res) => {
-  res.status(200).json({ message: 'instructor route' });
+  res.status(200).json({ message: 'user route' });
 });
 
 router.post('/login', async (req, res) => {
   // Validate login data
   const { error } = loginValidation(req.body);
-  // if (error)
-  //   return res
-  //     .status(400)
-  //     .json({ error: { message: error.details[0].message } });
-  if (error) return res.status(400).json(error);
+  if (error)
+    return res
+      .status(400)
+      .json({ error: { message: error.details[0].message } });
+  // if (error) return res.status(400).json(error);
 
-  const instructorEmail = req.body.email;
-  const instructorPassword = req.body.password;
+  const userEmail = req.body.email;
+  const userPassword = req.body.password;
 
   try {
-    const loginInstructor = await Instructor.findOne({
-      email: instructorEmail
+    const loginUser = await User.findOne({
+      email: userEmail
     });
-    if (!loginInstructor)
+    if (!loginUser)
       return res
         .status(400)
         .json({ error: { message: "Email doesn't exist. Please register" } });
-    if (loginInstructor.password !== instructorPassword)
+    if (loginUser.password !== userPassword)
       return res
         .status(400)
         .json({ error: { message: 'Email or password is incorrect' } });
-    res.status(200).json(loginInstructor);
+    res.status(200).json(loginUser);
   } catch (error) {
-    console.log('Error in logging instructor ' + error.message);
+    console.log('Error in loging user ' + error.message);
     res.status(500).json({ error: { message: error.message } });
   }
 });
@@ -51,28 +51,30 @@ router.post('/register', async (req, res) => {
 
   // Check if email exist
   const emailToBeChecked = req.body.email;
-  const emailExist = await Instructor.findOne({ email: emailToBeChecked });
+  const emailExist = await User.findOne({ email: emailToBeChecked });
   if (emailExist)
     return res.status(208).json({
       error: { message: 'Email already registered' }
     });
-
+  const date = new Date();
   // creates a new user
-  const newInstructor = new Instructor({
+  const newUser = new User({
     _id: new mongoose.Types.ObjectId(),
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     email: req.body.email,
     password: req.body.password,
-    mobileNumber: req.body.mobileNumber
+    mobileNumber: req.body.mobileNumber,
+    typeOfUser: req.body.typeOfUser,
+    dateAdded: date.toLocaleString('en-GB')
   });
 
   // save a new user
   try {
-    const savedInstructor = await newInstructor.save();
-    res.status(200).json(savedInstructor);
+    const savedUser = await newUser.save();
+    res.status(200).json(savedUser);
   } catch (error) {
-    console.log('Error in registering instructor ' + error.message);
+    console.log('Error in registering user ' + error.message);
     res.status(500).json({ error: { message: error.message } });
   }
 });

@@ -6,7 +6,7 @@ interface PageProps {
 
 const Banner = ({ heading }: PageProps) => {
   return (
-    <div className={styles.banner_container}>
+    <section className={styles.banner_container}>
       <h1 className={styles.banner_text}>{heading}</h1>
       <svg
         className={styles.cross}
@@ -21,7 +21,7 @@ const Banner = ({ heading }: PageProps) => {
           fill='#29EAC8'
         />
       </svg>
-    </div>
+    </section>
   );
 };
 

@@ -2,7 +2,6 @@
 
 ### This repository is for the new version of futureminds.in
 
-<br>
 It uses NextJS TypeScript as frontend, NodeJS as backend.
 
 ---
@@ -15,8 +14,8 @@ npm install
 
 I use prettier for formatting the code. To keep the consistency during the development, I strongly suggest you do the same. (It is a dev-dependency).
 
-There are some other dev-dependencies i.e. <strong>scss</strong>, <strong>typescript</strong> and <strong>@types/react</strong>. To install them, run
+There are some other dev-dependencies i.e. **scss**, **typescript** and **@types/react**. To install them, run
 
 ```
-npm install --dev
+npm install --also-dev
 ```

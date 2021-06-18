@@ -12,7 +12,7 @@ const Courses = () => {
       courseId: 1,
       courseImg:
         'https://images.pexels.com/photos/4348791/pexels-photo-4348791.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-      courseName: 'HRM',
+      courseName: 'Human Resource',
       discription:
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nisi illum veniam, doloribus quam eius!',
       noOfCourses: 0,
@@ -24,7 +24,7 @@ const Courses = () => {
       courseId: 2,
       courseImg:
         'https://images.pexels.com/photos/4348791/pexels-photo-4348791.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-      courseName: 'HRM',
+      courseName: 'MS Excel',
       discription:
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nisi illum veniam, doloribus quam eius!',
       noOfCourses: 0,
@@ -36,7 +36,7 @@ const Courses = () => {
       courseId: 3,
       courseImg:
         'https://images.pexels.com/photos/4348791/pexels-photo-4348791.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-      courseName: 'HRM',
+      courseName: 'Web Development',
       discription:
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nisi illum veniam, doloribus quam eius!',
       noOfCourses: 0,

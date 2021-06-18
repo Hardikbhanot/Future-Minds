@@ -6,7 +6,8 @@ const registerValidation = (data) => {
     lastName: Joi.string().min(3),
     email: Joi.string().email().min(6).required(),
     password: Joi.string().min(6).required(),
-    mobileNumber: Joi.number().required()
+    mobileNumber: Joi.number().required(),
+    typeOfUser: Joi.string()
   });
 
   return registerSchema.validate(data);

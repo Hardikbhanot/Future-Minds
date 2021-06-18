@@ -6,36 +6,34 @@ const courseSchema = new mongoose.Schema({
   coursePrice: { type: Number, required: true },
   courseImage: { type: String, required: true },
   courseBy: {
-    type: [
-      {
-        instructorId: mongoose.Schema.Types.ObjectId,
-        instructorName: String
-      }
-    ],
+    type: {
+      instructorId: mongoose.Schema.Types.ObjectId,
+      instructorName: String
+    },
     required: true
   },
-  courseLevel: { type: [String], required: true },
+  courseLevel: { type: String, required: true },
   courseCategory: { type: [String], required: true },
   courseDuration: { type: Number, required: true },
-  totalEnrolledStudents: { type: Number, required: true },
+  totalEnrolledStudents: { type: Number, default: 0 },
   lastUpdated: { type: Date },
-  dateAdded: { type: Date, default: Date.now },
-  smallDiscription: { type: String, required: true },
-  largeDiscription: { type: String, required: true },
-  whatWillILearnDisp: { type: [String], required: true },
+  dateAdded: { type: Date, required: true },
+  smallDescription: { type: String, required: true },
+  largeDescription: { type: String, required: true },
+  whatWillYouLearnDisp: { type: [String], required: true },
   topicsOfCourse: {
     type: [
       {
         topicName: String,
-        topics: [Stirng]
+        topics: [String]
       }
     ],
     required: true
   },
-  ratings: { type: Number },
-  requriments: { type: String, required: true },
+  ratings: { type: Number, default: 0 },
+  requirements: { type: [String], required: true },
   tags: { type: [String], required: true },
-  targetAudience: { type: [string], required: true }
+  targetAudience: { type: [String], required: true }
 });
 
 module.exports = mongoose.model('courses', courseSchema);
