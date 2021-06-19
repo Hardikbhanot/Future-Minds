@@ -121,4 +121,6 @@ const Courses = () => {
   );
 };
 
+export const getStaticProps = async () => {};
+
 export default Courses;
