@@ -5,10 +5,11 @@ const courseSchema = new mongoose.Schema({
   courseName: { type: String, required: true, min: 3, max: 255 },
   coursePrice: { type: Number, required: true },
   courseImage: { type: String, required: true },
+  courseInclude: { type: [String], required: true },
   courseBy: {
     type: {
-      instructorId: mongoose.Schema.Types.ObjectId,
-      instructorName: String
+      instructorId: { type: mongoose.Schema.Types.ObjectId },
+      instructorName: { type: String }
     },
     required: true
   },
@@ -20,7 +21,7 @@ const courseSchema = new mongoose.Schema({
   dateAdded: { type: Date, required: true },
   smallDescription: { type: String, required: true },
   largeDescription: { type: String, required: true },
-  whatWillYouLearnDisp: { type: [String], required: true },
+  whatWillYouLearnDesp: { type: [String], required: true },
   topicsOfCourse: {
     type: [
       {

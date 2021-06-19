@@ -21,8 +21,8 @@ interface courseFields {
   lastUpdated: string;
   smallDescription: string;
   largeDescription: string;
-  whatWillYouLearnDisp: string[];
-  topicsOfCourse: { topicName: string; topics: string[] }[];
+  whatWillYouLearnDesp: string[];
+  topicsOfCourse: { topicName: string; topics: string[]; _id: string }[];
   ratings: number;
   requirements: string[];
   tags: string[];
@@ -95,7 +95,7 @@ const CourseDescription = ({ course }: pageProps) => {
       </section>
       <ListElement
         heading='What Will You Learn?'
-        content={course.whatWillYouLearnDisp}
+        content={course.whatWillYouLearnDesp}
       />
       <section>
         <h3>Topics for this course</h3>

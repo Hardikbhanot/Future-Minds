@@ -33,7 +33,7 @@ const DynamicCourses = () => {
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nisi illum veniam, doloribus quam eius!',
     largeDescription:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis mollitia repellat laboriosam at obcaecati nulla in quia fuga, eos cumque repudiandae vero porro dignissimos aliquam delectus sed ipsum ullam. Cumque maiores asperiores eligendi iure? Saepe autem eos cum exercitationem numquam unde eveniet laborum dolore hic. Cupiditate dolor corrupti, quaerat maiores mollitia est expedita incidunt ipsa beatae eligendi eius, illo dolorem quidem quos ut. Incidunt voluptates nisi libero, reprehenderit recusandae, ea officiis eos quidem asperiores possimus ducimus commodi ipsam cum maxime deserunt a tempore perspiciatis dicta quos. Accusamus sint vel voluptatem amet qui saepe delectus provident modi sit maxime, et totam.',
-    whatWillYouLearnDisp: [
+    whatWillYouLearnDesp: [
       'Build website from scratch',
       'Help customer reach the global market'
     ],
@@ -50,7 +50,8 @@ const DynamicCourses = () => {
           'Anchor Tags',
           'Images',
           'Comments'
-        ]
+        ],
+        _id: '60cd8f716d82360c9744c393'
       },
       {
         topicName: 'HTML 5 & Semantic Tags',
@@ -61,7 +62,8 @@ const DynamicCourses = () => {
           'Playing With Semantic Elements',
           'Screen Reader Demonstration',
           'VSCode Tip: Emmet'
-        ]
+        ],
+        _id: '60cd8f716d82360c9744c393'
       },
       {
         topicName: 'HTML forms & tables',
@@ -77,7 +79,8 @@ const DynamicCourses = () => {
           'The Name Attribute',
           'Radio Buttons, Checkboxes, & Selects',
           'Range & Text Area'
-        ]
+        ],
+        _id: '60cd8f716d82360c9744c393'
       },
       {
         topicName: 'Introduction to CSS',
@@ -90,7 +93,8 @@ const DynamicCourses = () => {
           'Common Text Properties',
           'Font Size Basics With Pixels',
           'The Font Family Property'
-        ]
+        ],
+        _id: '60cd8f716d82360c9744c393'
       }
     ],
     ratings: 4,
