@@ -1,0 +1,35 @@
+@use '../../../styles/abstracts/colors' as colors;
+
+.list_element_container {
+  margin-top: 1rem;
+  border: 1px solid colors.$clr-grey-ltst;
+}
+
+.list_heading {
+  padding: 0 1em;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: colors.$clr-black;
+}
+
+.list_element_list {
+  padding: 0 1rem;
+}
+
+.list_content_container {
+  list-style: none;
+  color: colors.$clr-grey-lt;
+  display: flex;
+  flex-direction: row;
+  margin: 0.5rem 0;
+}
+
+.list_svg {
+  width: 5%;
+  margin: auto;
+}
+
+.list_content {
+  width: 90%;
+  margin: 0;
+}

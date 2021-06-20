@@ -1,6 +1,30 @@
 @use '../../styles/abstracts/colors' as colors;
 @use '../../styles/abstracts/breakpoints' as breakpoints;
 
+.banner_container {
+  width: 100%;
+  background-color: #f8f9f8;
+  padding: 3rem 0;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.banner_text {
+  color: #221638;
+  font-weight: 800;
+  font-size: 2.2em;
+  display: grid;
+  place-items: center;
+}
+
+.cross {
+  display: none;
+}
+
+.page_content {
+  width: 100%;
+}
+
 .course_filter {
   width: 95%;
   display: flex;
@@ -35,6 +59,28 @@
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: breakpoints.$large-tablet-screen) {
+  .banner_container {
+    padding: 5rem 0;
+    margin-bottom: 4rem;
+  }
+  .cross {
+    display: inline-block;
+    position: absolute;
+    left: 10%;
+    animation: rotate 7s infinite;
+  }
 }
 
 @media screen and (min-width: breakpoints.$monitor-screen) {

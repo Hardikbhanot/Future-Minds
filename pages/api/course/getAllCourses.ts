@@ -5,7 +5,10 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === 'GET') {
     try {
       const db_url: string = process.env.DB_URL || '';
-      const client = await MongoClient.connect(db_url);
+      const client = await MongoClient.connect(db_url, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+      });
       const db = client.db();
       const courseCollection = db.collection('courses');
       const result = await courseCollection.find().limit(18).toArray();
@@ -13,7 +16,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       if (result && result.length > 0) {
         const response = {
           count: result.length,
-          data: result.map((course) => {
+          courses: result.map((course) => {
             return {
               courseId: course._id,
               courseName: course.courseName,

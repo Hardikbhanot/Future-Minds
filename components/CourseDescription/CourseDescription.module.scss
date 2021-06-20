@@ -1,3 +1,150 @@
+@use '../../styles/abstracts/colors' as colors;
+
 .course_description_page {
   width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
 }
+
+.course_main_section {
+  width: 30%;
+  order: 2;
+}
+
+.image_container {
+  border: 1px solid colors.$clr-grey-ltst;
+}
+
+.image {
+  width: 100%;
+  object-fit: contain;
+}
+
+.price_enroll_btn_container {
+  padding: 1.2rem;
+}
+
+.price {
+  text-align: left;
+  font-weight: 400;
+  font-size: 2em;
+  margin: 0;
+  color: colors.$clr-grey-lt;
+}
+
+.enroll_now_btn {
+  width: 100%;
+  display: block;
+  background-color: #e5434c;
+  color: white;
+  margin-top: 2rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 1.2em;
+  border: none;
+}
+
+.course_description_section {
+  width: 55%;
+  order: 1;
+  margin: auto;
+  gap: 3%;
+}
+
+.course_main_description_container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid colors.$clr-grey-ltst;
+}
+
+.course_level_category_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid colors.$clr-grey-ltst;
+}
+
+.course_category_container {
+  display: flex;
+  height: max-content;
+  flex-direction: row;
+  margin: auto 0;
+}
+
+.course_category {
+  margin: 0 0.3rem;
+}
+
+.course_duration_enroll_Stdn_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid colors.$clr-grey-ltst;
+}
+
+.course_small_description {
+  color: colors.$clr-grey;
+}
+
+.course_small_description_heading {
+  color: colors.$clr-black;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.course_large_description {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid colors.$clr-grey-ltst;
+  color: colors.$clr-grey;
+}
+
+.course_large_description_heading {
+  margin: 0;
+  color: colors.$clr-black;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.topics_of_course {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid colors.$clr-grey-ltst;
+}
+
+.topics_of_course_heading {
+  margin: 0;
+  margin-bottom: 1rem;
+  color: colors.$clr-black;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.course_chapter_container {
+  width: 100%;
+}
+
+.course_instructor_description {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid colors.$clr-grey-ltst;
+}
+
+.course_instructor_heading {
+  margin: 0;
+  color: colors.$clr-black;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+// .course_description_field {
+//   color: colors.$clr-grey-lt;
+// }
+
+// .course_description_field_value {
+//   color: colors.$clr-black;
+// }

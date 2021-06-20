@@ -1,0 +1,38 @@
+@use '../../../styles/abstracts/colors' as colors;
+
+.course_chapter {
+  border: 1px solid colors.$clr-grey-ltst;
+  margin: 1rem 0;
+  padding: 0.5rem 0;
+}
+
+.topic_btn {
+  font-size: 1em;
+  margin-left: 0.5rem;
+  color: #e5434c;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.topic_btn::before {
+  content: '+';
+  font-size: 1.4em;
+  margin-right: 0.5rem;
+}
+
+.topic_container {
+  display: none;
+}
+
+.show_topic_container {
+  display: block;
+}
+
+.topic {
+  list-style: none;
+  color: colors.$clr-grey-lt;
+  display: flex;
+  flex-direction: row;
+  margin: 0.5rem 0;
+}
