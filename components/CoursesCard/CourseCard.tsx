@@ -34,9 +34,9 @@ const CourseCard = ({ course }: pageProps) => {
             />
           </svg>
         </button>
-        <p className={styles.price_value}>
+        {/* <p className={styles.price_value}>
           <strong>Rs. {course.coursePrice}</strong> Including GST
-        </p>
+        </p> */}
         <img
           src={course.courseImage}
           alt='Course name'
