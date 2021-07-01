@@ -3,8 +3,7 @@
 
 .banner {
   width: 100%;
-  background-color: colors.$clr-secondary-white;
-  margin-top: 3.6rem;
+  background-color: colors.$clr-main-background;
 }
 
 .banner_container {
@@ -31,7 +30,7 @@
 .banner_discription {
   line-height: 1.6rem;
   font-size: 0.9em;
-  color: colors.$clr-grey-lt;
+  color: colors.$clr-black-20;
 }
 
 .banner_explore_form {
@@ -46,12 +45,12 @@
   padding: 0.8em 0.4em 0.8em 0.8em;
   font-size: 1em;
   background-color: colors.$clr-white;
-  border: 0.1px solid colors.$clr-white-ltst;
+  border: 0.1px solid colors.$clr-white-40;
   transition: border 0.3s linear;
-  color: colors.$clr-grey-ltst;
+  color: colors.$clr-black-20;
   &:active,
   &:focus {
-    border: 0.1px solid colors.$clr-primary-ltst;
+    border: 0.1px solid colors.$clr-primary-17;
   }
 }
 
@@ -78,7 +77,7 @@
 .banner_trending_links_container {
   .banner_trending_para {
     display: inline;
-    color: colors.$clr-grey;
+    color: colors.$clr-black-60;
     margin-right: 0.6rem;
   }
   .banner_trending_links {
@@ -132,7 +131,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: colors.$clr-secondary-white;
+  background-color: colors.$clr-main-background;
 }
 
 .banner_card_container {
@@ -152,7 +151,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   text-align: center;
-  border: 1px solid colors.$clr-secondary-white;
+  border: 1px solid colors.$clr-main-background;
   justify-content: space-evenly;
   background-color: colors.$clr-white;
   &:nth-child(1) {
@@ -195,7 +194,7 @@
 
 .card_summary {
   font-weight: 400;
-  color: colors.$clr-grey-lt;
+  color: colors.$clr-black-20;
   font-size: 1em;
 }
 

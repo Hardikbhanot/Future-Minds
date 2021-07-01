@@ -2,7 +2,7 @@
 
 .list_element_container {
   margin-top: 1rem;
-  border: 1px solid colors.$clr-grey-ltst;
+  border: 1px solid colors.$clr-black-40;
 }
 
 .list_heading {
@@ -18,7 +18,7 @@
 
 .list_content_container {
   list-style: none;
-  color: colors.$clr-grey-lt;
+  color: colors.$clr-black-40;
   display: flex;
   flex-direction: row;
   margin: 0.5rem 0;

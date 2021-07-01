@@ -14,7 +14,7 @@
 }
 
 .count_upto_container {
-  background-color: colors.$clr-secondary-white;
+  background-color: colors.$clr-main-background;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -54,7 +54,7 @@
 }
 
 .bottom_banner_section_our_experts {
-  background-color: colors.$clr-secondary-white;
+  background-color: colors.$clr-main-background;
 }
 
 .bottom_banner_sub_heading {
@@ -78,11 +78,11 @@
   margin: 0.4rem auto 1rem auto;
   display: block;
   font-size: 0.9em;
-  color: colors.$clr-grey-lt;
+  color: colors.$clr-main-background;
 }
 
 .bottom_banner_section_online_certification {
-  background-color: colors.$clr-secondary-white-lt;
+  background-color: colors.$clr-main-background;
   position: relative;
 }
 
@@ -129,14 +129,14 @@
   margin: 3rem auto 2rem auto;
   display: block;
   font-size: 0.9em;
-  color: colors.$clr-grey-lt;
+  color: colors.$clr-black-20;
   > a {
     color: colors.$clr-primary;
   }
 }
 
 .bottom_banner_section_newsletter {
-  background-color: colors.$clr-secondary-white;
+  background-color: colors.$clr-main-background;
   position: relative;
 }
 
@@ -156,7 +156,7 @@
   padding: 0.8em 1em;
   font-size: 1em;
   background-color: colors.$clr-white;
-  border: 1px solid colors.$clr-grey-ltst;
+  border: 1px solid colors.$clr-black-20;
   &:active,
   &:focus {
     border: 1px solid colors.$clr-primary;

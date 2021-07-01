@@ -10,13 +10,13 @@
   flex-direction: column;
   background-color: colors.$clr-white;
   border-radius: 12px;
-  box-shadow: 0px 0px 16px 0px colors.$clr-primary-ltst;
+  box-shadow: 0px 0px 16px 0px colors.$clr-primary;
   overflow: hidden;
 
   &:hover,
   &:focus,
   &:active {
-    box-shadow: 0px 0px 16px 0px colors.$clr-grey-ltst;
+    box-shadow: 0px 0px 16px 0px colors.$clr-black-40;
   }
 }
 
@@ -77,10 +77,10 @@
   right: 0;
   bottom: 0.1rem;
   z-index: 10;
-  background-color: #2458ff;
+  background-color: colors.$clr-primary;
   border-top-left-radius: 12px;
   padding: 1rem;
-  color: white;
+  color: colors.$clr-white;
   font-size: 1.2em;
 }
 
@@ -131,7 +131,7 @@
   margin: 0 1rem;
   cursor: pointer;
   &:hover {
-    color: blue;
+    color: colors.$clr-primary;
   }
 }
 

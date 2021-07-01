@@ -4,11 +4,11 @@
 
 .category_banner {
   width: 100%;
-  background-color: colors.$clr-orange;
+  background-color: colors.$clr-card-white;
 }
 
 .category_banner_section {
-  background-color: colors.$clr-secondary-white;
+  background-color: colors.$clr-card-white;
   padding: 4.8rem 1rem 2.8rem 1rem;
   width: 100%;
   text-align: center;
@@ -50,7 +50,7 @@
   margin: 0.4rem 0 1rem 0;
   display: block;
   font-size: 0.8em;
-  color: colors.$clr-grey-lt;
+  color: colors.$clr-black-20;
 }
 
 .category_card_container {
@@ -98,7 +98,7 @@
   left: 0;
   right: 0;
   z-index: 10;
-  background-color: colors.$clr-filter;
+  background-color: colors.$clr-secondary-background;
   mix-blend-mode: normal;
 }
 

@@ -40,7 +40,7 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navbar_logo}>
-        <Link href='https://learn.futureminds.in/'>
+        <Link href='/'>
           <a title='Root'>
             <svg
               width='189'
@@ -104,7 +104,7 @@ const Navbar = () => {
       </div>
       <div className={styles.navbar_cart_login_container}>
         <li className={styles.navbar_item}>
-          <Link href='https://learn.futureminds.in/cart/'>
+          <Link href='/'>
             <a title='Cart'>
               <svg
                 width='20'
@@ -130,7 +130,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li className={[styles.navbar_item, styles.navbar_login_btn].join(' ')}>
-          <Link href='https://learn.futureminds.in/student-registration/'>
+          <Link href='/'>
             <a title='Login/Register'>
               <svg
                 width='59'
@@ -155,38 +155,38 @@ const Navbar = () => {
       <div className={navbar_links_container}>
         <div className={styles.navbar_cart_login_container_mobile}>
           <li className={styles.navbar_item_mobile}>
-            <Link href='https://learn.futureminds.in/student-registration/'>
+            <Link href='/'>
               <a title='Login/Register'>Login/Register</a>
             </Link>
           </li>
           <li className={styles.navbar_item_mobile}>
-            <Link href='https://learn.futureminds.in/cart/'>
+            <Link href='/'>
               <a title='Cart'>Cart</a>
             </Link>
           </li>
         </div>
         <li className={styles.navbar_links_item}>
-          <Link href='https://learn.futureminds.in/courses/'>
+          <Link href='/courses'>
             <a title='Courses'>Courses</a>
           </Link>
         </li>
         <li className={styles.navbar_links_item}>
-          <Link href='https://learn.futureminds.in/#'>
+          <Link href='/'>
             <a title='Programs'>Programs</a>
           </Link>
           <span className={styles.more_navbar_links_item}>
-            <Link href='https://learn.futureminds.in/#'>
+            <Link href='/'>
               <a title='Setp Degree'>StepDegree</a>
             </Link>
           </span>
         </li>
         <li className={styles.navbar_links_item_additional}>
-          <Link href='https://learn.futureminds.in/#'>
+          <Link href='/'>
             <a title='Setp Degree'>StepDegree</a>
           </Link>
         </li>
         <li className={styles.navbar_links_item}>
-          <Link href='https://learn.futureminds.in/contact/'>
+          <Link href='/'>
             <a title='Contact'>Contact</a>
           </Link>
           {/* <span className={styles.more_navbar_links_item}>
@@ -196,12 +196,12 @@ const Navbar = () => {
           </span> */}
         </li>
         {/* <li className={styles.navbar_links_item_additional}>
-          <Link href='https://learn.futureminds.in/about-us/'>
+          <Link href='/'>
             <a title='About Us'>About Us</a>
           </Link>
         </li> */}
         <li className={styles.navbar_links_item}>
-          <Link href='https://learn.futureminds.in/futureminds-hr/'>
+          <Link href='/'>
             <a title='Future Minds HR'>Futureminds HR</a>
           </Link>
         </li>

@@ -1,41 +1,38 @@
-// lt - light
-// ltr - lighter
-// ltst - lightest
+//* LIGHT COLORS
 
 $clr-white: rgba(255, 255, 255, 1);
-$clr-white-lt: rgba(255, 255, 255, 0.8);
-$clr-white-ltr: rgb(255, 255, 255, 0.6);
-$clr-white-ltst: rgb(255, 255, 255, 0.4);
+$clr-white-80: rgba(255, 255, 255, 0.8);
+$clr-white-60: rgba(255, 255, 255, 0.6);
+$clr-white-40: rgba(255, 255, 255, 0.4);
+$clr-white-20: rgba(255, 255, 255, 0.2);
+
+//* DARK COLORS
 
 $clr-black: rgba(0, 0, 0, 1);
-$clr-black-lt: rgba(0, 0, 0, 0.8);
-$clr-black-ltr: rgba(0, 0, 0, 0.6);
-$clr-black-ltst: rgba(0, 0, 0, 0.4);
+$clr-black-80: rgba(0, 0, 0, 0.8);
+$clr-black-60: rgba(0, 0, 0, 0.6);
+$clr-black-40: rgba(0, 0, 0, 0.4);
+$clr-black-20: rgba(0, 0, 0, 0.2);
 
-$clr-grey: rgb(96, 96, 96, 1);
-$clr-grey-lt: rgb(96, 96, 96, 0.8);
-$clr-grey-ltr: rgb(96, 96, 96, 0.6);
-$clr-grey-ltst: rgb(96, 96, 96, 0.4);
+//* UI COLORS
 
-$clr-primary: rgb(37, 87, 251, 1);
-$clr-primary-lt: rgb(37, 87, 251, 0.8);
-$clr-primary-ltr: rgb(37, 87, 251, 0.6);
-$clr-primary-ltst: rgb(37, 87, 251, 0.4);
-$clr-primary-ltst-ltst: rgb(37, 87, 251, 0.05);
+$clr-primary: rgba(18, 113, 255, 1);
+$clr-primary-17: rgba(18, 113, 255, 0.17);
+$clr-primary-14: rgba(18, 113, 255, 0.14);
+$clr-primary-09: rgba(18, 113, 255, 0.09);
+$clr-primary-04: rgba(18, 113, 255, 0.04);
 
-$clr-secondary: rgb(34, 23, 56, 1);
-$clr-secondary-lt: rgb(34, 23, 56, 0.8);
-$clr-secondary-ltr: rgb(34, 23, 56, 0.6);
-$clr-secondary-ltst: rgb(34, 23, 56, 0.4);
+$clr-secondary: rgba(0, 240, 181, 1);
+$clr-secondary-50: rgba(0, 240, 181, 0.5);
+$clr-secondary-40: rgba(0, 240, 181, 0.4);
 
-$clr-secondary-white: rgba(248, 249, 248, 1);
-$clr-secondary-white-lt: rgba(254, 248, 239, 1);
+$clr-card-white: rgba(244, 244, 244, 1);
+$clr-main-background: rgba(229, 229, 229, 1);
+$clr-secondary-background: rgba(18, 113, 255, 0.04);
 
-$clr-orange: rgba(254, 250, 243, 1);
-
-$clr-filter: rgba(11, 21, 88, 0.6);
 $clr-footer: rgba(17, 16, 32, 1);
 
-// dk - darker
-// dkr - darker
-// dkst - darker
+//* FONT COLORS
+
+$clr-font-dark: rgba(39, 45, 78, 1);
+$clr-font-grey: rgba(52, 52, 52, 1);

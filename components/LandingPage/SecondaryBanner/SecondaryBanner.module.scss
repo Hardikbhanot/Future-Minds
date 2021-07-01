@@ -10,7 +10,7 @@
 }
 
 .banner_container {
-  background-color: colors.$clr-secondary-white;
+  background-color: colors.$clr-main-background;
 }
 
 .secondary_banner_container {
@@ -54,7 +54,7 @@
   margin: 0.4rem 0 1rem 0;
   display: block;
   font-size: 0.8em;
-  color: colors.$clr-grey-lt;
+  color: colors.$clr-black-40;
 }
 
 .courses_detail_card_container {
@@ -95,7 +95,7 @@
 .courses_detail_card_discription {
   line-height: 1.5em;
   font-size: 1em;
-  color: colors.$clr-grey-lt;
+  color: colors.$clr-black-20;
 }
 
 @media screen and (min-width: breakpoints.$tablet-screen) {
