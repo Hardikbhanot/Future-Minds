@@ -18,18 +18,24 @@ const Footer = () => {
           <h3 className={styles.sub_heading}>Explore</h3>
           <ul className={styles.links_list}>
             <li>
-              <Link href='https://learn.futureminds.in/courses/'>
-                <a title='Courses'>Courses</a>
+              <Link href='https://futureminds.in/courses/'>
+                <a title='Courses' aria-label='Courses'>
+                  Courses
+                </a>
               </Link>
             </li>
             <li>
-              <Link href='https://learn.futureminds.in/#'>
-                <a title='Free Courses'>Free Courses</a>
+              <Link href='https://futureminds.in/#'>
+                <a title='Free Courses' aria-label='Free Courses'>
+                  Free Courses
+                </a>
               </Link>
             </li>
             <li>
-              <Link href='https://learn.futureminds.in/#'>
-                <a title='Boot Camps'>Boot Camps</a>
+              <Link href='https://futureminds.in/#'>
+                <a title='Boot Camps' aria-label='Boot Camps'>
+                  Boot Camps
+                </a>
               </Link>
             </li>
           </ul>
@@ -38,28 +44,44 @@ const Footer = () => {
           <h3 className={styles.sub_heading}>Resources</h3>
           <ul className={styles.links_list}>
             <li>
-              <Link href='https://learn.futureminds.in/courses/'>
-                <a title='Courses'>Courses</a>
+              <Link href='https://futureminds.in/courses/'>
+                <a title='Courses' aria-label='Courses'>
+                  Courses
+                </a>
               </Link>
             </li>
             <li>
-              <Link href='https://learn.futureminds.in/instructor-registration/'>
-                <a title='Instructor Registration'>Instructor Registration</a>
+              <Link href='https://futureminds.in/instructor-registration/'>
+                <a
+                  title='Instructor Registration'
+                  aria-label='Instructor Registration'
+                >
+                  Instructor Registration
+                </a>
               </Link>
             </li>
             <li>
-              <Link href='https://learn.futureminds.in/student-registration/'>
-                <a title='Student Registration'>Student Registration</a>
+              <Link href='https://futureminds.in/student-registration/'>
+                <a
+                  title='Student Registration'
+                  aria-label='Student Registration'
+                >
+                  Student Registration
+                </a>
               </Link>
             </li>
             <li>
-              <Link href='https://learn.futureminds.in/reset-password/'>
-                <a title='Reset Password'>Reset Password</a>
+              <Link href='https://futureminds.in/reset-password/'>
+                <a title='Reset Password' aria-label='Reset Password'>
+                  Reset Password
+                </a>
               </Link>
             </li>
             <li>
-              <Link href='https://learn.futureminds.in/success-story/'>
-                <a title='Sucess Story'>Sucess Story</a>
+              <Link href='https://futureminds.in/success-story/'>
+                <a title='Sucess Story' aria-label='Sucess Story'>
+                  Sucess Story
+                </a>
               </Link>
             </li>
           </ul>
@@ -68,24 +90,34 @@ const Footer = () => {
           <h3 className={styles.sub_heading}>Address</h3>
           <ul className={styles.links_list}>
             <li>
-              <Link href='https://learn.futureminds.in/'>
-                <a title='Address'>New Delhi, India</a>
+              <Link href='https://futureminds.in/'>
+                <a title='Address' aria-label='Address'>
+                  New Delhi, India
+                </a>
               </Link>
             </li>
             <li>
               <Link href='tel:+91%2085953%2067753'>
-                <a title='Contact Number'>+9185953 67753</a>
+                <a title='Contact Number' aria-label='Contact Number'>
+                  +9185953 67753
+                </a>
               </Link>
             </li>
             <li>
               <Link href='/info@futureminds.in'>
-                <a title='Contact Email'>info@futureminds.in</a>
+                <a title='Contact Email' aria-label='Contact Email'>
+                  info@futureminds.in
+                </a>
               </Link>
             </li>
             <ul className={styles.social_media_links_container}>
               <li>
-                <Link href='https://learn.futureminds.in/#'>
-                  <a title='Twitter link' className={styles.social_media_link}>
+                <Link href='https://futureminds.in/#'>
+                  <a
+                    title='Twitter link'
+                    aria-label='Twitter link'
+                    className={styles.social_media_link}
+                  >
                     <svg
                       width='49'
                       height='40'
@@ -102,8 +134,12 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href='https://learn.futureminds.in/#'>
-                  <a title='Facebook link' className={styles.social_media_link}>
+                <Link href='https://futureminds.in/#'>
+                  <a
+                    title='Facebook link'
+                    aria-label='Facebook link'
+                    className={styles.social_media_link}
+                  >
                     <svg
                       width='30'
                       height='60'
@@ -120,9 +156,10 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href='https://learn.futureminds.in/#'>
+                <Link href='https://futureminds.in/#'>
                   <a
                     title='Instagram link'
+                    aria-label='Instagram link'
                     className={styles.social_media_link}
                   >
                     <svg
@@ -149,8 +186,12 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href='https://learn.futureminds.in/#'>
-                  <a title='Linkedin link' className={styles.social_media_link}>
+                <Link href='https://futureminds.in/#'>
+                  <a
+                    title='Linkedin link'
+                    aria-label='Linkedin link'
+                    className={styles.social_media_link}
+                  >
                     <svg
                       width='49'
                       height='49'
@@ -183,16 +224,17 @@ const Footer = () => {
           ©2021 Futureminds. All right reserved.
         </p>
         <div className={styles.all_rights_reserved_links}>
-          <Link href='https://learn.futureminds.in/privacy-policy/'>
-            Privacy Policy
+          <Link href='https://futureminds.in/privacy-policy/'>
+            <a title='Pricacy Policy' aria-label='Privacy Policy'>
+              Privacy Policy
+            </a>
           </Link>
-          <Link href='https://learn.futureminds.in/terms-conditions/'>
-            Terms & Conditions
+          <Link href='https://futureminds.in/terms-conditions/'>
+            <a title='Terms & Conditions' aria-label='Terms & Conditions'>
+              Terms & Conditions
+            </a>
           </Link>
         </div>
-      </div>
-      <div className={styles.vertical_line_container}>
-        <span className={styles.vertical_line}></span>
       </div>
     </footer>
   );
