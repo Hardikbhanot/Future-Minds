@@ -1,8 +1,20 @@
 import ListElement from './ListElement/ListElement';
 import ChapterElement from './ChapterElement/ChapterElement';
 import HeadingBanner from '../HeadingBanner/HeadingBanner';
-
 import styles from './CourseDescription.module.scss';
+interface courseFields {
+  courseId: number;
+  courseName: string;
+  courseImg: string;
+  aboutCourse: string;
+  discription: string;
+  courseLevel: string;
+  coursePrice: number;
+  category: string;
+  duration: string;
+  totalEnrolled: number;
+  lastUpdate: string;
+}
 
 interface pageProps {
   course: {
