@@ -2,16 +2,18 @@
 @use '../abstracts/colors' as colors;
 
 @mixin action-btn {
-  padding: sizes.$ets-3 sizes.$m-0;
+  padding: 1rem 0.8rem;
   color: colors.$clr-white;
   background-color: colors.$clr-primary;
   list-style: none;
-  border-radius: sizes.$border-radius;
+  border: none;
+  outline: none;
+  border-radius: 5px;
   transition: background-color 0.3s linear;
   &:hover,
   &:focus,
   &:active {
     color: colors.$clr-white;
-    background-color: colors.$clr-secondary;
+    background-color: colors.$clr-footer-background;
   }
 }
