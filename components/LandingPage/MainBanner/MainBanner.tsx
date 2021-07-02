@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { useRef } from 'react';
 import { useRouter } from 'next/router';
 
+
 import styles from './MainBanner.module.scss';
 
 const LandingPage = () => {
@@ -27,10 +28,6 @@ const LandingPage = () => {
           <h1 className={styles.banner_headline}>
             Build Skills With Experts Any Time, Anywhere
           </h1>
-          <p className={styles.banner_discription}>
-            Not only skills we help students to secure assured internship
-            post-course completion, along with easy EMI options.
-          </p>
           <form
             className={styles.banner_explore_form}
             onSubmit={onExploreClick}
@@ -70,24 +67,20 @@ const LandingPage = () => {
             <Link href='https://learn.futureminds.in/course-category/development/'>
               <a
                 className={styles.banner_trending_links}
-                title='Professional Traning'
+                title='Data Science'
               >
-                Professional Training
+                Data Science
               </a>
             </Link>
-            <Link href='https://learn.futureminds.in/'>
-              <a className={styles.banner_trending_links} title='Development'>
-                Development
-              </a>
-            </Link>
+
           </div>
         </div>
         <div className={styles.banner_image_container}>
           <img
-            src='/images/banner-img2.png'
+            src='/images/Main Banner.png'
             alt='Build Skills With Experts Any Time, Anywhere'
-            width={500}
-            height={600}
+            width={959}
+            height={760}
           />
         </div>
       </section>

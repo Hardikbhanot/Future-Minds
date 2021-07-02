@@ -1,0 +1,33 @@
+@use '../../../styles/abstracts/colors';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+$font-stack: Roboto, Sans-serif;
+.highlights_section{
+  margin-top: 1rem;
+  background-color: colors.$clr-secondary-background;
+}
+.card_container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.Heading{
+  text-align: left;
+  width: 100%;
+  font-size: 2em;
+  margin: 2rem;
+  padding: 2rem;
+  font-family: $font-stack;
+  color:colors.$clr-font-main;
+  font-weight: bold;
+}
+.main{
+  
+  width: 300px;
+  height: 200px;
+  background-image:linear-gradient( to bottom, colors.$clr-primary 70% , colors.$clr-white 30%);
+  margin: 1.2rem 2.4rem;
+  padding: 2rem;
+  border-radius: 2em;
+  box-shadow: 0 0 2rem 0 rgb(0 0 0 / 20%);
+}
