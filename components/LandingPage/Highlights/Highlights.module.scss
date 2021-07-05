@@ -1,0 +1,92 @@
+@use '../../../styles/abstracts/colors';
+@use '../../../styles/abstracts/fonts';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+$font-stack: Roboto, Sans-serif;
+.highlights_section{
+  margin-top: 1rem;
+  background-color: colors.$clr-secondary-background;
+}
+.card_container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.Heading{
+  text-align: left;
+  width: 100%;
+  font-size: 3em;
+  margin: 2rem 0 0 7rem;
+  padding: 2rem;
+  font-family: $font-stack;
+  color:colors.$clr-font-main;
+  font-weight: bold;
+}
+.main{
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-image:linear-gradient( to bottom, colors.$clr-primary 70% , colors.$clr-white 30%);
+  margin: 1.2rem 2.4rem;
+  padding: 2rem;
+  border-radius: 0.8em;
+  filter: drop-shadow(0px 4px 4px rgba(0,0,0,25%));
+  box-shadow: (4px 16px 42px -4px rgba(18,113,255,9%));
+}
+.main2{
+  background-image:linear-gradient( to bottom, colors.$clr-secondary-50 70% , colors.$clr-white 30%);
+}
+.card{
+  .card_heading, .card_list{
+    color: colors.$clr-white;
+  }
+
+  .card_list2{
+    color:colors.$clr-black;
+  }
+
+  .card_heading,.card_heading2{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .card_percentage{
+    font-size: 7rem;
+  }
+  .card_hundered{
+    font-size: 5rem;
+  }
+  .card_refer{
+    font-size: 2rem;
+  }
+  .card_text{
+    line-height: 1.8em;
+    font-size: 1.2em;
+  }
+  .card_list, .card_list2{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 6em;
+    ul{
+      li{
+        margin: .4em 0 0 0.4em;
+        list-style: disc;
+      }
+    }
+
+  }
+  .card_bottom_para{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1.5em;
+    line-height: 1.2em;
+  }
+  .card_bottom_corner{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 2em 1.2em 0;
+    font-size: fonts.$fs-i-md;
+    
+  }
+}
