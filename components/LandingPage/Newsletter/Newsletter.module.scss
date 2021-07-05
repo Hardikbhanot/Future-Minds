@@ -5,7 +5,7 @@
 .newsletter_section {
   width: 100%;
   padding: 4rem 0;
-  background-color: colors.$clr-card-white;
+  background-color: colors.$clr-white;
   text-align: center;
 }
 
@@ -51,7 +51,7 @@
   & input[type='text'] {
     width: 90%;
     margin: auto;
-    background-color: colors.$clr-main-background;
+    background-color: colors.$clr-card-white;
     padding: 1rem 0.8rem;
     font-size: 1em;
     border: none;
