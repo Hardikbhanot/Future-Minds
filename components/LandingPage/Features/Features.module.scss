@@ -1,0 +1,104 @@
+@use '../../../styles/abstracts/colors' as colors;
+@use '../../../styles/abstracts/breakpoints' as breakpoints;
+
+.features_section {
+  width: 100%;
+  padding: 2.6rem 0;
+  overflow-x: hidden;
+}
+
+.features_container {
+  width: 100%;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.features_container::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+}
+
+.card_back_shadow {
+  width: 350px;
+  min-width: 300px;
+  box-shadow: 0 -2px 30px 0 colors.$clr-primary-17;
+}
+
+.card {
+  width: 100%;
+  min-height: 8rem;
+  padding: 0 1rem;
+  background-color: colors.$clr-white;
+  border-radius: 11px;
+}
+
+.card_heading {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 1rem 0 0.4rem 0;
+}
+
+.card_description {
+  font-size: 0.8rem;
+  line-height: 1rem;
+  margin: 1rem 0;
+}
+
+.heading_bottom_line {
+  width: 50px;
+  height: 8px;
+  background-color: colors.$clr-secondary;
+}
+
+@media screen and (min-width: breakpoints.$laptop-screen) {
+  .features_container {
+    justify-content: space-evenly;
+    padding-left: 0;
+  }
+  .card_back_shadow {
+    width: 25%;
+    max-width: 400px;
+  }
+  .card {
+    min-height: 10rem;
+    padding: 0 1.5rem;
+  }
+  .card_heading {
+    font-size: 1.6rem;
+  }
+  .card_description {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    margin: 1rem 0;
+  }
+  .heading_bottom_line {
+    width: 70px;
+    height: 8px;
+  }
+}
+
+@media screen and (min-width: breakpoints.$monitor-screen) {
+  .card_back_shadow {
+    width: 25%;
+    max-width: 400px;
+  }
+  .card {
+    min-height: 10rem;
+    padding: 0 1.5rem;
+  }
+  .card_heading {
+    font-size: 1.8rem;
+  }
+  .card_description {
+    font-size: 1.125rem;
+    line-height: 1.4rem;
+    margin: 1rem 0;
+  }
+  .heading_bottom_line {
+    width: 70px;
+    height: 8px;
+  }
+}
