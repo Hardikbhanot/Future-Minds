@@ -14,8 +14,11 @@ const Highlights = () => {
               <p className={styles.card_percentage}><strong>0%</strong></p>
               <p className={styles.card_text}>Interest<br /> on<br /> EMI<br /></p>
             </div>
-            <p className={styles.card_list}>All major banks Debit & Credit Cards</p>
-            <p className={styles.card_bottom_para}>Upto 3 Months EMI  option <br />No Proccessing Fees</p>
+            <p className={styles.card_list}><ul>
+              <li>20% Course value as your Commission </li>
+              <li>10% OFF for your friend who purchase it</li>
+            </ul></p>
+            <p className={styles.card_bottom_para}>All major banks Debit & Credit Cards</p>
             <p className={styles.card_bottom_corner}>T&C Apply</p>
           </div>
         </div>
@@ -29,7 +32,7 @@ const Highlights = () => {
             <div className={styles.card_list2}>
               <ul>
                 <li>Guaranteed  Internship</li>
-                <li>Job Assistant/ Guranteed Job Post Internship</li>
+                <li>Job Assistant/ Guranteed Internship</li>
               </ul>
             </div>
             <p className={styles.card_bottom_para}>Get early access to our premium Job Portal</p>

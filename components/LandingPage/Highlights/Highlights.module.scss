@@ -1,15 +1,18 @@
 @use '../../../styles/abstracts/colors';
 @use '../../../styles/abstracts/fonts';
+@use '../../../styles/abstracts/breakpoints' as breakpoints;
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
 $font-stack: Roboto, Sans-serif;
 .highlights_section{
   margin-top: 1rem;
   background-color: colors.$clr-secondary-background;
+  overflow: hidden;
 }
 .card_container{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
 }
 .Heading{
@@ -24,6 +27,7 @@ $font-stack: Roboto, Sans-serif;
 }
 .main{
   position: relative;
+  min-width: 300px;
   width: 300px;
   height: 200px;
   background-image:linear-gradient( to bottom, colors.$clr-primary 70% , colors.$clr-white 30%);
@@ -71,6 +75,7 @@ $font-stack: Roboto, Sans-serif;
       li{
         margin: .4em 0 0 0.4em;
         list-style: disc;
+        padding-right: 1em;
       }
     }
 
@@ -89,4 +94,55 @@ $font-stack: Roboto, Sans-serif;
     font-size: fonts.$fs-i-md;
     
   }
+}
+
+@media screen and (max-width: breakpoints.$mobile-screen) {
+
+  .main{
+    min-width: 200px;
+    height: 150px;
+  }
+  .card_container{
+
+    .card_percentage{
+    font-size: 5rem;
+  }
+  .card_hundered{
+    font-size: 3rem;
+  }
+  .card_refer{
+    font-size: 1.6rem;
+  }
+  .card_text{
+    line-height: 1.6em;
+    font-size: 1em;
+  }
+  .card_list, .card_list2{
+    margin-bottom: 6.5em;
+    font-size: 0.7rem;
+    ul{
+      li{
+        font-size: 0.7rem;
+        padding-right: 0.8em;
+      }
+    }
+
+  }
+  .card_bottom_para{
+    display: flex;
+    justify-content: center;
+    margin: 0 2.5em 2.5em 0 ;
+    font-size: 0.6rem;
+    text-align: center;
+  }
+  .card_bottom_corner{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 2em 1.2em 0;
+    font-size: fonts.$fs-i-md;
+    
+  }
+
+}
 }

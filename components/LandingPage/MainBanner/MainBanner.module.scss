@@ -245,3 +245,11 @@ $font-stack: Roboto, Sans-serif;
     font-size: 2em;
   }
 }
+@media screen and (max-width: breakpoints.$mobile-screen){
+  .banner_explore_form_submit_btn {
+    margin: 1em auto;
+    width: 40%;
+    border-radius: 5px;
+  }
+  
+}

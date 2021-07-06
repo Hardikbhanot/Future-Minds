@@ -8,7 +8,7 @@ const Home = () => {
     <>
       <MainBanner />
       <Features />
-      {/* <Highlights /> */}
+      <Highlights />
       <Newsletter />
     </>
   );
