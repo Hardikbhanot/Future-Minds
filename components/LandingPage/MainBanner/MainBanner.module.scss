@@ -25,7 +25,7 @@ $font-stack: Roboto, Sans-serif;
   font-size: 1.2em;
   text-align: center;
   font-family: $font-stack;
-  color:colors.$clr-font-main;
+  color: colors.$clr-font-main;
 }
 
 .banner_headline {
@@ -34,7 +34,6 @@ $font-stack: Roboto, Sans-serif;
   font-size: 2em;
   margin-bottom: 0;
 }
-
 
 .banner_explore_form {
   display: flex;
@@ -104,23 +103,22 @@ $font-stack: Roboto, Sans-serif;
   }
 }
 
-
 @keyframes bounceInDown {
-   0% {
-      opacity: 0;
-      transform: translateY(-2000px);
-   }
-   60% {
-      opacity: 1;
-      transform: translateY(30px);
-   }
-   80% {
-      transform: translateY(-10px);
-   }
-   100% {
-      transform: translateY(0);
-   }
-} 
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .banner_card_section {
   width: 100%;
   display: flex;
@@ -245,12 +243,10 @@ $font-stack: Roboto, Sans-serif;
     font-size: 2em;
   }
 }
-@media screen and (max-width: breakpoints.$mobile-screen){
+@media screen and (max-width: breakpoints.$mobile-screen) {
   .banner_explore_form_submit_btn {
     margin: 1em auto;
     width: 40%;
     border-radius: 5px;
-    
   }
-  
 }
