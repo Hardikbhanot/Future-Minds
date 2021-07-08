@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { useRef } from 'react';
 import { useRouter } from 'next/router';
 
-
 import styles from './MainBanner.module.scss';
 
 const LandingPage = () => {
@@ -65,14 +64,10 @@ const LandingPage = () => {
               </a>
             </Link>
             <Link href='https://learn.futureminds.in/course-category/development/'>
-              <a
-                className={styles.banner_trending_links}
-                title='Data Science'
-              >
+              <a className={styles.banner_trending_links} title='Data Science'>
                 Data Science
               </a>
             </Link>
-
           </div>
         </div>
         <div className={styles.banner_image_container}>
