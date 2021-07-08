@@ -12,10 +12,7 @@ const Home = () => {
       <Features />
       <CourseBanner />
       <Highlights />
-<<<<<<< HEAD
       <StepDegree2 />
-=======
->>>>>>> 9f66b1a (course card banner styles improved)
       <Newsletter />
     </>
   );
