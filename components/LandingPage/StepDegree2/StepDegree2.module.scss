@@ -1,0 +1,31 @@
+@use '../../../styles/abstracts/colors';
+@use '../../../styles/abstracts/fonts';
+@use '../../../styles/abstracts/breakpoints' as breakpoints;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+.stepDegree2_section{
+width: 100%;
+gap: 2rem;
+display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: auto;
+
+}
+.stepDegree2_container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 2rem 1rem 0 1rem;
+}
+
+.circle{
+  padding-right: 0.8em;
+}
+
+.text{
+  font-size: 1.2rem;
+  font-weight: bold;
+}

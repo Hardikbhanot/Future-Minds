@@ -15,9 +15,10 @@ const Highlights = () => {
               <p className={styles.card_text}>Interest<br /> on<br /> EMI<br /></p>
             </div>
             <p className={styles.card_list}><ul>
-              <li>20% Course value as your Commission </li>
-              <li>10% OFF for your friend who purchase it</li>
-            </ul></p>
+              <li>Upto 3 Months EMI  option </li>
+              <li>No Proccessing Fees</li>
+            </ul>
+            </p>
             <p className={styles.card_bottom_para}>All major banks Debit & Credit Cards</p>
             <p className={styles.card_bottom_corner}>T&C Apply</p>
           </div>
