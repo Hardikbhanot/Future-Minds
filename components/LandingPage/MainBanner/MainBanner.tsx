@@ -14,15 +14,13 @@ const LandingPage = () => {
     if (explore && explore.current) {
       // can access explore current value here
       const valueTypedInExplore = explore.current.value;
-      router.push(
-        `https://learn.futureminds.in/?s=${valueTypedInExplore}&ref=course&post_type=courses`
-      );
+      router.push(`courses/${valueTypedInExplore}`);
     }
   };
 
   return (
-    <main className={styles.banner}>
-      <section className={styles.banner_container}>
+    <section className={styles.banner}>
+      <div className={styles.banner_container}>
         <div className={styles.banner_main_content}>
           <h1 className={styles.banner_headline}>
             Build Skills With Experts Any Time, Anywhere
@@ -72,14 +70,13 @@ const LandingPage = () => {
         </div>
         <div className={styles.banner_image_container}>
           <img
+            className={styles.banner_image}
             src='/images/Main Banner.png'
             alt='Build Skills With Experts Any Time, Anywhere'
-            width={959}
-            height={760}
           />
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
   );
 };
 

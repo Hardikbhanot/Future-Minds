@@ -2,13 +2,14 @@
 @use '../abstracts/colors' as colors;
 
 @mixin action-btn {
-  padding: 1rem 0.8rem;
-  color: colors.$clr-white;
-  background-color: colors.$clr-primary;
-  list-style: none;
   border: none;
   outline: none;
+  list-style: none;
   border-radius: 5px;
+  padding: 1rem 0.8rem;
+  font-family: 'Roboto', sans-serif;
+  color: colors.$clr-white;
+  background-color: colors.$clr-primary;
   transition: background-color 0.3s linear;
   &:hover,
   &:focus,

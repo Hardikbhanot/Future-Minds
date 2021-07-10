@@ -1,14 +1,13 @@
 @use '../../../styles/abstracts/colors' as colors;
+@use '../../../styles/components/buttons' as act_btn;
 @use '../../../styles/abstracts/breakpoints' as breakpoints;
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-$font-stack: Roboto, Sans-serif;
 
 .banner {
   width: 100%;
   background-image: url(../../../public/images/MainBanner.svg);
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden;
 }
 
 .banner_container {
@@ -23,33 +22,32 @@ $font-stack: Roboto, Sans-serif;
   width: 100%;
   margin: auto;
   font-size: 1.2em;
-  text-align: center;
-  font-family: $font-stack;
+  text-align: left;
   color: colors.$clr-font-main;
 }
 
 .banner_headline {
+  font-weight: 500;
+  font-size: 1.8em;
   line-height: 1.2em;
-  font-weight: 800;
-  font-size: 2em;
   margin-bottom: 0;
 }
 
 .banner_explore_form {
+  width: 100%;
   display: flex;
   margin: 1.6rem 0;
   flex-direction: column;
 }
 
 .banner_explore_form input[type='text'] {
-  width: 100%;
-  border-radius: 5px 0 0 5px;
-  padding: 0.8em 0.4em 0.8em 0.8em;
   font-size: 1em;
+  padding: 0.8rem 0.6rem;
+  color: colors.$clr-black-20;
   background-color: colors.$clr-white;
   border: 0.1px solid colors.$clr-white-40;
+  border-radius: 5px 0 0 5px;
   transition: border 0.3s linear;
-  color: colors.$clr-black-20;
   &:active,
   &:focus {
     border: 0.1px solid colors.$clr-primary-17;
@@ -57,29 +55,19 @@ $font-stack: Roboto, Sans-serif;
 }
 
 .banner_explore_form_submit_btn {
-  width: 30%;
-  border: none;
-  margin: 1rem auto 0 auto;
-  cursor: pointer;
-  text-align: center;
-  border-radius: 5px;
-  padding: 0.8em 0.8em;
+  @include act_btn.action_btn;
+  width: max-content;
+  margin: 1rem 0 0 0;
+  padding: 0.8rem 0.8rem;
   font-size: 1em;
-  color: colors.$clr-white;
-  background-color: colors.$clr-primary;
-  transition: background-color 0.2s linear;
-  &:hover,
-  &:active,
-  &:focus {
-    color: colors.$clr-white;
-    background-color: colors.$clr-secondary;
-  }
 }
 
 .banner_trending_links_container {
+  display: none;
+  line-height: 1.4em;
   .banner_trending_para {
     display: inline;
-    color: colors.$clr-font-para-lt;
+    color: colors.$clr-font-para-ltst;
     margin-right: 0.6rem;
   }
   .banner_trending_links {
@@ -90,17 +78,16 @@ $font-stack: Roboto, Sans-serif;
 
 .banner_image_container {
   position: relative;
+  width: 100%;
+  animation: bounceInDown 3s ease-in;
+}
+
+.banner_image {
+  position: relative;
   z-index: 10;
   width: 100%;
-  max-width: 800px;
-  margin: 0 6rem 2rem 0;
-  animation: bounceInDown 3s ease-in;
-  div {
-    position: relative;
-    z-index: 10;
-    width: 100%;
-    margin: auto;
-  }
+  min-height: 287px;
+  object-fit: cover;
 }
 
 @keyframes bounceInDown {
@@ -119,6 +106,7 @@ $font-stack: Roboto, Sans-serif;
     transform: translateY(0);
   }
 }
+
 .banner_card_section {
   width: 100%;
   display: flex;
@@ -157,60 +145,36 @@ $font-stack: Roboto, Sans-serif;
   }
 }
 
-// .card_img_container svg {
-//   width: 50px;
-//   height: auto;
-// }
-
-// .banner_card .card_img_container svg path {
-//   fill: colors.$clr-black;
-// }
-
-// .banner_card:hover .card_img_container svg path,
-// .banner_card:focus .card_img_container svg path,
-// .banner_card:active .card_img_container svg path {
-//   fill: colors.$clr-primary;
-// }
-
-// .card_content {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-start;
-// }
-
-// .cards_heading {
-//   font-weight: 700;
-//   margin: 1rem 0 0 0;
-//   font-size: 1em;
-// }
-
-// .card_summary {
-//   font-weight: 400;
-//   color: colors.$clr-black-20;
-//   font-size: 1em;
-// }
-
 .banner_cards_last_para {
   font-weight: 400;
   text-align: center;
   font-size: 1.5em;
 }
 
-@media screen and (min-width: breakpoints.$laptop-screen) {
+@media screen and (min-width: breakpoints.$large-tablet-screen) {
+  .banner_trending_links_container {
+    display: block;
+  }
+}
+
+@media screen and (min-width: breakpoints.$monitor-screen) {
   .banner_container {
-    width: 90%;
+    width: 95%;
+    margin: 0 0 0 auto;
     flex-direction: row;
     padding: 1.8rem 0;
   }
   .banner_main_content {
-    width: 50%;
+    width: 45%;
     margin-right: 0;
     text-align: left;
   }
   .banner_headline {
-    font-size: 3em;
+    font-size: 4em;
   }
   .banner_explore_form {
+    width: 80%;
+    margin-right: auto;
     flex-direction: row;
   }
   .banner_explore_form input[type='text'] {
@@ -218,15 +182,14 @@ $font-stack: Roboto, Sans-serif;
   }
   .banner_explore_form_submit_btn {
     margin: 0;
-    width: 20%;
+    width: 30%;
     border-radius: 0 5px 5px 0;
   }
   .banner_image_container {
-    width: 50%;
-    div {
-      width: 90%;
-      margin: auto;
-    }
+    width: 55%;
+  }
+  .banner_image {
+    min-height: 660px;
   }
   .banner_card_container {
     width: 90%;
@@ -241,12 +204,5 @@ $font-stack: Roboto, Sans-serif;
   }
   .banner_cards_last_para {
     font-size: 2em;
-  }
-}
-@media screen and (max-width: breakpoints.$mobile-screen) {
-  .banner_explore_form_submit_btn {
-    margin: 1em auto;
-    width: 40%;
-    border-radius: 5px;
   }
 }

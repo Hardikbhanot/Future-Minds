@@ -1,10 +1,10 @@
-import Features from '../components/LandingPage/Features/Features';
 import MainBanner from '../components/LandingPage/MainBanner/MainBanner';
-import Highlights from '../components/LandingPage/Highlights/Highlights';
-import Newsletter from '../components/LandingPage/Newsletter/Newsletter';
-import StepDegree from '../components/LandingPage/StepDegree/StepDegree'
-import StepDegree2 from '../components/LandingPage/StepDegree2/StepDegree2';
+import Features from '../components/LandingPage/Features/Features';
 import CourseBanner from '../components/LandingPage/CourseBanner/CourseBanner';
+import Highlights from '../components/LandingPage/Highlights/Highlights';
+import StepDegree from '../components/LandingPage/StepDegree/StepDegree';
+import StepDegree2 from '../components/LandingPage/StepDegree2/StepDegree2';
+import Newsletter from '../components/LandingPage/Newsletter/Newsletter';
 
 const Home = () => {
   return (
@@ -13,7 +13,7 @@ const Home = () => {
       <Features />
       {/* <CourseBanner /> */}
       <Highlights />
-      <StepDegree />
+      {/* <StepDegree /> */}
       <StepDegree2 />
       <Newsletter />
     </>
