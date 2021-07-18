@@ -12,23 +12,69 @@ const Navbar = () => {
   };
 
   // Dynamically changes classNames
-  // let navbar_links_container: string = styles.navbar_links_container;
-  // let menu_item: string = styles.menu_item;
-  // if (menu) {
-  //   menu_item = [styles.menu_item, styles.toggle].join(' ');
-  //   navbar_links_container = [
-  //     styles.navbar_links_container,
-  //     styles.navbar_active
-  //   ].join(' ');
-  // }
+  let toggle_navbar_links_mobile: string = styles.toggle_navbar_links_mobile;
+  let menu_item: string = styles.menu_item;
+  if (menu) {
+    menu_item = [styles.menu_item, styles.toggle].join(' ');
+    toggle_navbar_links_mobile = [
+      styles.toggle_navbar_links_mobile,
+      styles.toggle_navbar_active
+    ].join(' ');
+  }
 
   return (
     <nav className={styles.navbar}>
-      {/* <button className={styles.menu} onClick={onMenuClick}>
+      <button className={styles.menu} onClick={onMenuClick}>
         <span className={menu_item}></span>
         <span className={menu_item}></span>
         <span className={menu_item}></span>
-      </button> */}
+      </button>
+      <ul className={toggle_navbar_links_mobile}>
+        <li className={styles.navbar_links_item_mobile}>
+          <Link href='/courses'>
+            <a
+              className={styles.navbar_link_mobile}
+              title='Courses Page Link'
+              aria-label='Courses Page Link'
+            >
+              Academy
+            </a>
+          </Link>
+        </li>
+        <li className={styles.navbar_links_item_mobile}>
+          <Link href='/courses'>
+            <a
+              className={styles.navbar_link_mobile}
+              title='Courses Page Link'
+              aria-label='Courses Page Link'
+            >
+              StepDegree
+            </a>
+          </Link>
+        </li>
+        <li className={styles.navbar_links_item_mobile}>
+          <Link href='/courses'>
+            <a
+              className={styles.navbar_link_mobile}
+              title='Courses Page Link'
+              aria-label='Courses Page Link'
+            >
+              TopSlot
+            </a>
+          </Link>
+        </li>
+        <li className={styles.navbar_links_item_mobile}>
+          <Link href='/courses'>
+            <a
+              className={styles.navbar_link_mobile}
+              title='Courses Page Link'
+              aria-label='Courses Page Link'
+            >
+              Events
+            </a>
+          </Link>
+        </li>
+      </ul>
       <div className={styles.logo_container}>
         <svg
           className={styles.logo_svg}
@@ -131,28 +177,45 @@ const Navbar = () => {
             title='Sign In Link'
             aria-label='Sign In Link'
           >
+            <svg
+              className={styles.signIn_svg}
+              width='20'
+              height='20'
+              viewBox='0 0 20 20'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
+            >
+              <path
+                d='M14 11.875C12.7188 11.875 12.1027 12.5 10 12.5C7.89732 12.5 7.28571 11.875 6 11.875C2.6875 11.875 0 14.2266 0 17.125V18.125C0 19.1602 0.959821 20 2.14286 20H17.8571C19.0402 20 20 19.1602 20 18.125V17.125C20 14.2266 17.3125 11.875 14 11.875ZM17.8571 18.125H2.14286V17.125C2.14286 15.2656 3.875 13.75 6 13.75C6.65179 13.75 7.70982 14.375 10 14.375C12.308 14.375 13.3438 13.75 14 13.75C16.125 13.75 17.8571 15.2656 17.8571 17.125V18.125ZM10 11.25C13.5491 11.25 16.4286 8.73047 16.4286 5.625C16.4286 2.51953 13.5491 0 10 0C6.45089 0 3.57143 2.51953 3.57143 5.625C3.57143 8.73047 6.45089 11.25 10 11.25ZM10 1.875C12.3616 1.875 14.2857 3.55859 14.2857 5.625C14.2857 7.69141 12.3616 9.375 10 9.375C7.63839 9.375 5.71429 7.69141 5.71429 5.625C5.71429 3.55859 7.63839 1.875 10 1.875Z'
+                fill='white'
+              />
+            </svg>
             Sign In
           </a>
         </Link>
       </div>
-      <div className={styles.login_svg_container}>
-        <svg
-          className={styles.login_svg}
-          width='59'
-          height='66'
-          viewBox='0 0 59 66'
-          fill='none'
-          xmlns='http://www.w3.org/2000/svg'
-        >
-          <path
-            d='M29.0714 0C19.4535 0 11.6285 7.74451 11.6285 17.2638C11.6285 26.7829 19.4535 34.5274 29.0714 34.5274C38.6896 34.5274 46.5143 26.7829 46.5143 17.2638C46.5143 7.74451 38.6896 0 29.0714 0ZM29.0714 30.6912C21.5908 30.6912 15.5048 24.6675 15.5048 17.2638C15.5048 9.85989 21.5908 3.83639 29.0714 3.83639C36.5523 3.83639 42.6382 9.85989 42.6382 17.2638C42.6382 24.6675 36.5523 30.6912 29.0714 30.6912Z'
-            fill='black'
-          />
-          <path
-            d='M50.7739 45.8058C45.9986 41.0066 39.6677 38.3639 32.9479 38.3639H25.1954C18.4756 38.3639 12.1447 41.0066 7.36919 45.8058C2.61709 50.5813 0 56.885 0 63.5561C0 64.6155 0.867755 65.4743 1.93811 65.4743H56.2051C57.2753 65.4743 58.1433 64.6155 58.1433 63.5561C58.1433 56.885 55.5261 50.5813 50.7739 45.8058ZM3.96149 61.6379C4.93248 50.7571 14.085 42.2004 25.1954 42.2004H32.9479C44.0581 42.2004 53.2107 50.7571 54.1817 61.6379H3.96149Z'
-            fill='black'
-          />
-        </svg>
+      <div className={styles.signIn_container_mobile}>
+        <Link href='/'>
+          <a
+            className={styles.signIn_mobile}
+            title='Sign In Link'
+            aria-label='Sign In Link'
+          >
+            <svg
+              className={styles.signIn_svg}
+              width='20'
+              height='20'
+              viewBox='0 0 20 20'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
+            >
+              <path
+                d='M14 11.875C12.7188 11.875 12.1027 12.5 10 12.5C7.89732 12.5 7.28571 11.875 6 11.875C2.6875 11.875 0 14.2266 0 17.125V18.125C0 19.1602 0.959821 20 2.14286 20H17.8571C19.0402 20 20 19.1602 20 18.125V17.125C20 14.2266 17.3125 11.875 14 11.875ZM17.8571 18.125H2.14286V17.125C2.14286 15.2656 3.875 13.75 6 13.75C6.65179 13.75 7.70982 14.375 10 14.375C12.308 14.375 13.3438 13.75 14 13.75C16.125 13.75 17.8571 15.2656 17.8571 17.125V18.125ZM10 11.25C13.5491 11.25 16.4286 8.73047 16.4286 5.625C16.4286 2.51953 13.5491 0 10 0C6.45089 0 3.57143 2.51953 3.57143 5.625C3.57143 8.73047 6.45089 11.25 10 11.25ZM10 1.875C12.3616 1.875 14.2857 3.55859 14.2857 5.625C14.2857 7.69141 12.3616 9.375 10 9.375C7.63839 9.375 5.71429 7.69141 5.71429 5.625C5.71429 3.55859 7.63839 1.875 10 1.875Z'
+                fill='black'
+              />
+            </svg>
+          </a>
+        </Link>
       </div>
     </nav>
   );
