@@ -7,7 +7,7 @@
   max-height: 8rem;
   padding: 1.3rem 1.4rem;
   display: grid;
-  grid-template-columns: 20% 20% auto 20%;
+  grid-template-columns: 20% 30% 35% 10%;
   grid-template-rows: 100%;
   position: fixed;
   z-index: 100;
@@ -27,7 +27,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-self: center;
+  align-self: flex-end;
 }
 
 .navbar_links_item {
@@ -59,57 +59,28 @@
   background-color: colors.$clr-primary;
 }
 
-.login_register_container {
+.signIn_container {
   grid-column: 4/5;
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-self: flex-end;
-  position: relative;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.login_container,
-.register_container {
-  width: 55px;
-  font-size: 1.1em;
-  line-height: 1.8em;
-  padding: 0.3rem 1.8rem;
-  background-color: colors.$clr-white;
-  border-radius: 25px;
-}
-
-.login_container {
-  position: absolute;
-  z-index: 10;
-  left: 2px;
-  background-color: colors.$clr-secondary-90;
-  transition: all 0.3s linear;
-}
-
-.login_container:hover {
-  background-color: colors.$clr-secondary-70;
-}
-
-.register_container {
-  position: relative;
-  font-size: 0.9em;
-  line-height: 2.2em;
-  padding-left: 2.6rem;
-  padding-right: 1rem;
+.signIn {
+  font-size: 1em;
+  padding: 0.65rem 1.6rem;
+  border-radius: 20px;
   color: colors.$clr-white;
   background-color: colors.$clr-primary;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease-in;
 }
 
-.register_container:hover,
-.register_container:active,
-.register_container:focus {
-  font-size: 1em;
-  line-height: 1.95em;
-  padding: 0.3rem 1.8rem;
-  z-index: 100;
-  background-color: colors.$clr-primary-90;
+.signIn:hover,
+.signIn:focus,
+.signIn:active {
+  color: colors.$clr-black;
+  background-color: colors.$clr-secondary;
 }
 
 .login_svg_container {

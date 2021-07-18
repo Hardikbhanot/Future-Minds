@@ -29,7 +29,7 @@ const Navbar = () => {
         <span className={menu_item}></span>
         <span className={menu_item}></span>
       </button> */}
-      <span className={styles.logo_container}>
+      <div className={styles.logo_container}>
         <svg
           className={styles.logo_svg}
           width='189'
@@ -60,7 +60,7 @@ const Navbar = () => {
             fill='black'
           />
         </svg>
-      </span>
+      </div>
       <ul className={styles.navbar_links_container}>
         <li className={styles.navbar_links_item}>
           <p className={styles.navbar_links_detail}>Explore</p>
@@ -124,23 +124,18 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
-      <span className={styles.login_register_container}>
-        <span className={styles.login_container}>
-          <Link href='/'>
-            <a title='Sign In Link' aria-label='Sign In Link'>
-              Sign In
-            </a>
-          </Link>
-        </span>
-        <span className={styles.register_container}>
-          <Link href='/'>
-            <a title='Sign Up Link' aria-label='Sign Up Link'>
-              Sign Up
-            </a>
-          </Link>
-        </span>
-      </span>
-      <span className={styles.login_svg_container}>
+      <div className={styles.signIn_container}>
+        <Link href='/'>
+          <a
+            className={styles.signIn}
+            title='Sign In Link'
+            aria-label='Sign In Link'
+          >
+            Sign In
+          </a>
+        </Link>
+      </div>
+      <div className={styles.login_svg_container}>
         <svg
           className={styles.login_svg}
           width='59'
@@ -158,7 +153,7 @@ const Navbar = () => {
             fill='black'
           />
         </svg>
-      </span>
+      </div>
     </nav>
   );
 };

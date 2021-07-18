@@ -31,7 +31,7 @@ const Layout = (props: layoutProps) => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      {/* <Navbar /> */}
+      <Navbar />
       <main className={styles.page_main}>{props.children}</main>
       <Footer />
     </Fragment>
