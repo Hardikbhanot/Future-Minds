@@ -119,6 +119,10 @@
 }
 
 @media screen and (min-width: breakpoints.$tablet-screen) {
+  .highlight_heading {
+    width: 95%;
+    margin-bottom: 1.8rem;
+  }
   .card_container {
     width: 70%;
   }
@@ -127,9 +131,6 @@
   }
 }
 @media screen and (min-width: breakpoints.$large-tablet-screen) {
-  .highlight_heading {
-    width: 95%;
-  }
   .card_container {
     width: 90%;
     flex-direction: row;

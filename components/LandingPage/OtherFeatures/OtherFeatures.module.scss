@@ -2,7 +2,7 @@
 @use '../../../styles/abstracts/colors';
 @use '../../../styles/abstracts/breakpoints' as breakpoints;
 
-.stepDegree2_section {
+.other_features_section {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -12,14 +12,14 @@
   background-color: colors.$clr-primary-04;
 }
 
-.stepDegree2_mobile_container {
+.other_features_mobile_container {
   width: 80%;
   margin: auto;
   display: flex;
   flex-direction: row;
 }
 
-.stepDegree2_container {
+.other_features_container {
   width: 50%;
   display: flex;
   flex-direction: row;
@@ -38,11 +38,10 @@
 }
 
 @media screen and (min-width: breakpoints.$monitor-screen) {
-  .stepDegree2_section {
+  .other_features_section {
     flex-direction: row;
-    background-color: colors.$clr-white;
   }
-  .stepDegree2_mobile_container {
+  .other_features_mobile_container {
     width: 50%;
   }
 }

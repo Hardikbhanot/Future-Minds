@@ -1,10 +1,10 @@
-import styles from './StepDegree2.module.scss';
+import styles from './OtherFeatures.module.scss';
 
 const StepDegree2 = () => {
   return (
-    <section className={styles.stepDegree2_section}>
-      <div className={styles.stepDegree2_mobile_container}>
-        <div className={styles.stepDegree2_container}>
+    <section className={styles.other_features_section}>
+      <div className={styles.other_features_mobile_container}>
+        <div className={styles.other_features_container}>
           <div className={styles.circle}>
             <svg
               width='40'
@@ -36,7 +36,7 @@ const StepDegree2 = () => {
             <p>Career Tracking</p>
           </div>
         </div>
-        <div className={styles.stepDegree2_container}>
+        <div className={styles.other_features_container}>
           <div className={styles.circle}>
             <svg
               width='40'
@@ -69,8 +69,8 @@ const StepDegree2 = () => {
           </div>
         </div>
       </div>
-      <div className={styles.stepDegree2_mobile_container}>
-        <div className={styles.stepDegree2_container}>
+      <div className={styles.other_features_mobile_container}>
+        <div className={styles.other_features_container}>
           <div className={styles.circle}>
             <svg
               width='40'
@@ -102,7 +102,7 @@ const StepDegree2 = () => {
             <p>Expert Support</p>
           </div>
         </div>
-        <div className={styles.stepDegree2_container}>
+        <div className={styles.other_features_container}>
           <div className={styles.circle}>
             <svg
               width='40'

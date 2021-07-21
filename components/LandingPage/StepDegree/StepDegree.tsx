@@ -4,18 +4,22 @@ const StepDegree = () => {
   return (
     <section className={styles.stepDegree_section}>
       <div className={styles.stepDegree_container}>
-        <div className={styles.text_area}>
-          <h2>
+        <h2 className={styles.heading_mobile}>
+          Karo Degree Se Achchi
+          <span> StepDegree</span>
+        </h2>
+        <div className={styles.para_container_monitor}>
+          <h2 className={styles.heading_monitor}>
             Karo Degree
             <br />
             Se Achchi
             <br />
             <span>StepDegree </span>
           </h2>
-          <p>
-            Having doubts related to your career & future, and a regular <br />
-            degree isn't helping out! We've planned for you to enhance your
-            <br /> chances to better jobs & money.
+          <p className={styles.para}>
+            Having doubts related to your career & future, and a regular degree
+            isn't helping out! We've planned for you to enhance your chances to
+            better jobs & money.
           </p>
           <button className={styles.comingSoon_btn}>Coming Soon</button>
         </div>
@@ -133,13 +137,11 @@ const StepDegree = () => {
             </svg>
           </div>
         </div>
-        <div className={styles.mobile}>
-          <p className={styles.text_area}>
-            Having doubts related to your career
-            <br /> & future, and a regular degree isn't <br />
-            helping out! We've planned for you
-            <br /> to enhance your chances to better
-            <br /> jobs & money.
+        <div className={styles.para_container_mobile}>
+          <p className={styles.para}>
+            Having doubts related to your career & future, and a regular degree
+            isn't helping out! We've planned for you to enhance your chances to
+            better jobs & money.
           </p>
           <button className={styles.comingSoon_mobilebtn}>Coming Soon</button>
         </div>
