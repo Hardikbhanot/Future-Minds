@@ -1,7 +1,7 @@
 import { MongoClient, ObjectId } from 'mongodb';
 import { GetServerSideProps } from 'next';
 
-import CourseDescription from '../../components/CourseDescription/CourseDescription';
+import CourseDescription from '../../../components/CourseDescription/CourseDescription';
 
 interface pageProps {
   course: {

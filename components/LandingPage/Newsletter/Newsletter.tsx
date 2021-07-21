@@ -2,13 +2,13 @@ import styles from './Newsletter.module.scss';
 
 const BottomBanner = () => {
   return (
-    <>
-      <section className={styles.bottom_banner_section_newsletter}>
-        <p className={styles.bottom_banner_sub_heading}>GO AT YOUR OWN PACE</p>
-        <h2 className={styles.bottom_banner_main_heading}>
+    <section className={styles.newsletter_section}>
+      <section className={styles.newsletter_section_container}>
+        <p className={styles.newsletter_sub_heading}>GO AT YOUR OWN PACE</p>
+        <h2 className={styles.newsletter_main_heading}>
           Subscribe to Our Newsletter
         </h2>
-        <p className={styles.bottom_banner_discription}>
+        <p className={styles.newsletter_discription}>
           We do not share your email with any third parties.
         </p>
         <form className={styles.newsletter_form}>
@@ -314,7 +314,7 @@ const BottomBanner = () => {
           />
         </svg>
       </section>
-    </>
+    </section>
   );
 };
 

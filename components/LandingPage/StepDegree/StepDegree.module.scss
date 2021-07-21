@@ -1,0 +1,135 @@
+@use '../../../styles/abstracts/colors';
+@use '../../../styles/abstracts/fonts';
+@use '../../../styles/abstracts/breakpoints' as breakpoints;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+.stepDegree_section {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.stepDegree_container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.heading_mobile {
+  margin: 1rem 1rem 0 0.2rem;
+  font-size: 3.2em;
+  font-weight: 700;
+  color: colors.$clr-font-main;
+  span {
+    color: colors.$clr-primary;
+  }
+}
+
+.para_container_monitor {
+  display: none;
+}
+
+.img_area {
+  // outline: 1px solid purple;
+  width: 100%;
+  position: relative;
+}
+
+.boy_img {
+  // outline: 1px solid yellow;
+  width: 100%;
+  min-width: 300px;
+  height: auto;
+  margin: 2rem auto 0 auto;
+}
+
+.svg_img {
+  position: absolute;
+  bottom: 60px;
+  left: -70px;
+}
+
+.svg_img {
+  min-width: 200px;
+  width: 200px;
+  height: auto;
+  position: absolute;
+  bottom: 30px;
+  left: -50px;
+}
+
+.para_container_mobile {
+  display: block;
+  margin: 0 1rem;
+}
+
+.para {
+  font-size: 1.25em;
+  margin: 0.6em 0.2em 0 0.2em;
+  line-height: 1.2em;
+  color: colors.$clr-font-para;
+}
+
+.comingSoon_mobilebtn {
+  font-size: 1em;
+  margin: 1.4rem 0;
+  padding: 0.6rem 1.4rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 30px;
+  background-color: colors.$clr-secondary-40;
+}
+
+@media screen and (min-width: breakpoints.$monitor-screen) {
+  .stepDegree_container {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .heading_mobile,
+  .para_container_mobile {
+    display: none;
+  }
+  .para_container_monitor {
+    display: block;
+  }
+  .text_area {
+    width: 100%;
+  }
+  .heading_monitor {
+    text-align: left;
+    color: colors.$clr-font-main;
+    font-size: 6em;
+    font-weight: bold;
+    span {
+      color: colors.$clr-primary;
+    }
+  }
+  .para {
+    font-size: 1.4em;
+    margin-top: 1.8em;
+    line-height: 1.2em;
+  }
+  .boy_img {
+    width: 100%;
+    margin: 1.5em auto 0 auto;
+  }
+  .svg_img {
+    position: absolute;
+    bottom: 60px;
+    left: -70px;
+  }
+  .comingSoon_btn {
+    margin-top: 1.4em;
+    padding: 1em 1.8em;
+    border-radius: 30px;
+    background-color: colors.$clr-secondary-40;
+    border: none;
+    text-decoration: none;
+    font-size: 1em;
+  }
+}

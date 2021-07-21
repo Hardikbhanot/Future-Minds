@@ -1,9 +1,13 @@
 @use '../../../styles/abstracts/colors' as colors;
+@use '../../../styles/components/buttons' as act_btn;
 @use '../../../styles/abstracts/breakpoints' as breakpoints;
 
 .banner {
   width: 100%;
-  background-color: colors.$clr-main-background;
+  background-image: url(../../../public/images/MainBanner.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .banner_container {
@@ -17,37 +21,33 @@
 .banner_main_content {
   width: 100%;
   margin: auto;
-  text-align: center;
+  font-size: 1.2em;
+  text-align: left;
+  color: colors.$clr-font-main;
 }
 
 .banner_headline {
+  font-weight: 500;
+  font-size: 1.8em;
   line-height: 1.2em;
-  font-weight: 800;
-  font-size: 2em;
   margin-bottom: 0;
 }
 
-.banner_discription {
-  line-height: 1.6rem;
-  font-size: 0.9em;
-  color: colors.$clr-black-20;
-}
-
 .banner_explore_form {
+  width: 100%;
   display: flex;
-  margin-bottom: 1.6rem;
+  margin: 1.6rem 0;
   flex-direction: column;
 }
 
 .banner_explore_form input[type='text'] {
-  width: 100%;
-  border-radius: 5px 0 0 5px;
-  padding: 0.8em 0.4em 0.8em 0.8em;
   font-size: 1em;
+  padding: 0.8rem 0.6rem;
+  color: colors.$clr-black-20;
   background-color: colors.$clr-white;
   border: 0.1px solid colors.$clr-white-40;
+  border-radius: 5px 0 0 5px;
   transition: border 0.3s linear;
-  color: colors.$clr-black-20;
   &:active,
   &:focus {
     border: 0.1px solid colors.$clr-primary-17;
@@ -55,29 +55,19 @@
 }
 
 .banner_explore_form_submit_btn {
-  width: 30%;
-  border: none;
-  margin: 1rem auto 0 auto;
-  cursor: pointer;
-  text-align: center;
-  border-radius: 5px;
-  padding: 0.8em 0.8em;
+  @include act_btn.action_btn;
+  width: max-content;
+  margin: 1rem 0 0 0;
+  padding: 0.8rem 0.8rem;
   font-size: 1em;
-  color: colors.$clr-white;
-  background-color: colors.$clr-primary;
-  transition: background-color 0.2s linear;
-  &:hover,
-  &:active,
-  &:focus {
-    color: colors.$clr-white;
-    background-color: colors.$clr-secondary;
-  }
 }
 
 .banner_trending_links_container {
+  display: none;
+  line-height: 1.4em;
   .banner_trending_para {
     display: inline;
-    color: colors.$clr-black-60;
+    color: colors.$clr-font-para-ltst;
     margin-right: 0.6rem;
   }
   .banner_trending_links {
@@ -88,42 +78,32 @@
 
 .banner_image_container {
   position: relative;
-  z-index: 10;
   width: 100%;
-  max-width: 500px;
-  margin: 2rem;
-  div {
-    position: relative;
-    z-index: 10;
-    width: 100%;
-    margin: auto;
-  }
+  animation: bounceInDown 3s ease-in;
 }
 
-.banner_image_container {
-  .image_circle_animation {
-    width: 70px;
-    height: 70px;
-    position: absolute;
-    top: 1%;
-    right: 10%;
-    z-index: 0;
-    animation-name: image_circle_animation;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+.banner_image {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  min-height: 287px;
+  object-fit: cover;
+}
+
+@keyframes bounceInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px);
   }
-  .image_weird_animation {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    z-index: 0;
-    bottom: 10%;
-    right: 5%;
-    animation-name: image_weird_animation;
-    animation-duration: 40s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+  60% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
@@ -165,84 +145,36 @@
   }
 }
 
-.card_img_container svg {
-  width: 50px;
-  height: auto;
-}
-
-.banner_card .card_img_container svg path {
-  fill: colors.$clr-black;
-}
-
-.banner_card:hover .card_img_container svg path,
-.banner_card:focus .card_img_container svg path,
-.banner_card:active .card_img_container svg path {
-  fill: colors.$clr-primary;
-}
-
-.card_content {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.cards_heading {
-  font-weight: 700;
-  margin: 1rem 0 0 0;
-  font-size: 1em;
-}
-
-.card_summary {
-  font-weight: 400;
-  color: colors.$clr-black-20;
-  font-size: 1em;
-}
-
 .banner_cards_last_para {
   font-weight: 400;
   text-align: center;
   font-size: 1.5em;
 }
 
-@keyframes image_circle_animation {
-  0% {
-    transform: translateY(0) scale(0.9);
-  }
-  50% {
-    transform: translateY(10%) scale(1.1);
-  }
-  100% {
-    transform: translateY(0) scale(0.9);
+@media screen and (min-width: breakpoints.$large-tablet-screen) {
+  .banner_trending_links_container {
+    display: block;
   }
 }
 
-@keyframes image_weird_animation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media screen and (min-width: breakpoints.$laptop-screen) {
+@media screen and (min-width: breakpoints.$monitor-screen) {
   .banner_container {
-    width: 90%;
+    width: 95%;
+    margin: 0 0 0 auto;
     flex-direction: row;
     padding: 1.8rem 0;
   }
   .banner_main_content {
-    width: 50%;
+    width: 45%;
     margin-right: 0;
-    text-align: start;
+    text-align: left;
   }
   .banner_headline {
-    font-size: 3em;
-  }
-  .banner_discription {
-    font-size: 1em;
+    font-size: 4em;
   }
   .banner_explore_form {
+    width: 80%;
+    margin-right: auto;
     flex-direction: row;
   }
   .banner_explore_form input[type='text'] {
@@ -250,15 +182,14 @@
   }
   .banner_explore_form_submit_btn {
     margin: 0;
-    width: 20%;
+    width: 30%;
     border-radius: 0 5px 5px 0;
   }
   .banner_image_container {
-    width: 50%;
-    div {
-      width: 90%;
-      margin: auto;
-    }
+    width: 55%;
+  }
+  .banner_image {
+    min-height: 660px;
   }
   .banner_card_container {
     width: 90%;

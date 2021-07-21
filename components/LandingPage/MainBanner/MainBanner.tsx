@@ -14,23 +14,17 @@ const LandingPage = () => {
     if (explore && explore.current) {
       // can access explore current value here
       const valueTypedInExplore = explore.current.value;
-      router.push(
-        `https://learn.futureminds.in/?s=${valueTypedInExplore}&ref=course&post_type=courses`
-      );
+      router.push(`courses/${valueTypedInExplore}`);
     }
   };
 
   return (
-    <main className={styles.banner}>
-      <section className={styles.banner_container}>
+    <section className={styles.banner}>
+      <div className={styles.banner_container}>
         <div className={styles.banner_main_content}>
           <h1 className={styles.banner_headline}>
             Build Skills With Experts Any Time, Anywhere
           </h1>
-          <p className={styles.banner_discription}>
-            Not only skills we help students to secure assured internship
-            post-course completion, along with easy EMI options.
-          </p>
           <form
             className={styles.banner_explore_form}
             onSubmit={onExploreClick}
@@ -68,30 +62,21 @@ const LandingPage = () => {
               </a>
             </Link>
             <Link href='https://learn.futureminds.in/course-category/development/'>
-              <a
-                className={styles.banner_trending_links}
-                title='Professional Traning'
-              >
-                Professional Training
-              </a>
-            </Link>
-            <Link href='https://learn.futureminds.in/'>
-              <a className={styles.banner_trending_links} title='Development'>
-                Development
+              <a className={styles.banner_trending_links} title='Data Science'>
+                Data Science
               </a>
             </Link>
           </div>
         </div>
         <div className={styles.banner_image_container}>
           <img
-            src='/images/banner-img2.png'
+            className={styles.banner_image}
+            src='/images/Main Banner.png'
             alt='Build Skills With Experts Any Time, Anywhere'
-            width={500}
-            height={600}
           />
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
   );
 };
 

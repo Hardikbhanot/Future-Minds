@@ -1,0 +1,47 @@
+@use '../../../styles/abstracts/fonts';
+@use '../../../styles/abstracts/colors';
+@use '../../../styles/abstracts/breakpoints' as breakpoints;
+
+.other_features_section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding: 2rem 0;
+  background-color: colors.$clr-primary-04;
+}
+
+.other_features_mobile_container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.other_features_container {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto;
+}
+
+.circle {
+  padding-right: 0.8em;
+}
+
+.text {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+@media screen and (min-width: breakpoints.$monitor-screen) {
+  .other_features_section {
+    flex-direction: row;
+  }
+  .other_features_mobile_container {
+    width: 50%;
+  }
+}
