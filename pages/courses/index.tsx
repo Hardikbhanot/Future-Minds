@@ -1,11 +1,19 @@
 import { ChangeEvent, useState } from 'react';
-import { MongoClient } from 'mongodb';
+import { connectToDatabase } from '../../utils/database';
 // import axios from '../../axiosInstance';
 
 import styles from './index.module.scss';
 import CourseCard from '../../components/CoursesCard/CourseCard';
 
-interface courseStructure {}
+interface courseStructure {
+  _id: string;
+  courseName: string;
+  coursePrice: number;
+  courseImage: string;
+  courseLevel: string;
+  smallDescription: string;
+  rating: number;
+}
 
 interface pageProps {
   courses: {
@@ -79,43 +87,31 @@ const Courses = ({ courses, error }: pageProps) => {
 };
 
 export const getStaticProps = async () => {
-  const db_url: string = process.env.DB_URL || '';
-  try {
-    const client = await MongoClient.connect(db_url, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true
-    });
-    const db = client.db();
-    const courseCollection = db.collection('courses');
-    const result = await courseCollection.find().limit(18).toArray();
-    client.close();
-    if (result && result.length > 0) {
-      const response = {
-        count: result.length,
-        courses: result.map((course) => {
-          return {
-            courseId: `${course._id}`,
-            courseName: course.courseName,
-            coursePrice: course.coursePrice,
-            courseImage: course.courseImage,
-            courseLevel: course.courseLevel,
-            smallDescription: course.smallDescription,
-            rating: course.rating || 0
-          };
-        })
-      };
-      return {
-        props: {
-          courses: response.courses,
-          error: false
-        }
-      };
-    }
-  } catch (error) {
+  const { db } = await connectToDatabase();
+  const coursesCollectionData = await db
+    .collection('courses')
+    .find()
+    .limit(18)
+    .toArray();
+  if (coursesCollectionData && coursesCollectionData.length > 0) {
+    const response = {
+      count: coursesCollectionData.length,
+      courses: coursesCollectionData.map((course: courseStructure) => {
+        return {
+          courseId: `${course._id}`,
+          courseName: course.courseName,
+          coursePrice: course.coursePrice,
+          courseImage: course.courseImage,
+          courseLevel: course.courseLevel,
+          smallDescription: course.smallDescription,
+          rating: course.rating || 0
+        };
+      })
+    };
     return {
       props: {
-        courses: [],
-        error: true
+        courses: response.courses,
+        error: false
       }
     };
   }

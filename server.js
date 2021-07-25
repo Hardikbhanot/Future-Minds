@@ -17,7 +17,7 @@ const coursePublicRoutes = require('./backend/routes/public/course');
 // Connect to Database
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.DB_URL, {
+    await mongoose.connect(process.env.MONGO_DB_URL, {
       useNewUrlParser: true,
       useFindAndModify: false,
       useUnifiedTopology: true,
