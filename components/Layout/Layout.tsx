@@ -2,7 +2,7 @@ import { Fragment, ReactNode } from 'react';
 import Head from 'next/head';
 
 import styles from './Layout.module.scss';
-import Navbar from '../LayoutComponents/Navbar/Navbar';
+import LandingNavbar from '../LayoutComponents/LandingNavbar/LandingNavbar';
 import Footer from '../LayoutComponents/Footer/Footer';
 
 interface layoutProps {
@@ -31,7 +31,7 @@ const Layout = (props: layoutProps) => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <Navbar />
+      <LandingNavbar />
       <main className={styles.page_main}>{props.children}</main>
       <Footer />
     </Fragment>

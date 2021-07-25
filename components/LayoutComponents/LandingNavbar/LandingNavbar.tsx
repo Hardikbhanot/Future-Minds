@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
-import styles from './Navbar.module.scss';
+import styles from './LandingNavbar.module.scss';
 
 const Navbar = () => {
   const [menu, setMenu] = useState<boolean>(false);
