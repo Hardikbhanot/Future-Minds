@@ -43,12 +43,12 @@ const LandingPage = () => {
           </form>
           <div className={styles.banner_trending_links_container}>
             <p className={styles.banner_trending_para}>Trending </p>
-            <Link href='https://learn.futureminds.in/course-category/data-science/'>
+            <Link href='/'>
               <a className={styles.banner_trending_links} title='Python-AI/ML'>
                 Python-AI/ML
               </a>
             </Link>
-            <Link href='https://learn.futureminds.in/course-category/web-development/'>
+            <Link href='/'>
               <a
                 className={styles.banner_trending_links}
                 title='Web Development'
@@ -56,12 +56,12 @@ const LandingPage = () => {
                 Web Development
               </a>
             </Link>
-            <Link href='https://learn.futureminds.in/course-category/ux-ui/'>
+            <Link href='/'>
               <a className={styles.banner_trending_links} title='UX/UI'>
                 UX/UI
               </a>
             </Link>
-            <Link href='https://learn.futureminds.in/course-category/development/'>
+            <Link href='/'>
               <a className={styles.banner_trending_links} title='Data Science'>
                 Data Science
               </a>
@@ -71,7 +71,7 @@ const LandingPage = () => {
         <div className={styles.banner_image_container}>
           <img
             className={styles.banner_image}
-            src='/images/Main Banner.png'
+            src='/images/main_banner.png'
             alt='Build Skills With Experts Any Time, Anywhere'
           />
         </div>

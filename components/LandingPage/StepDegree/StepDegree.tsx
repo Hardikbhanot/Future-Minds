@@ -26,7 +26,7 @@ const StepDegree = () => {
         <div className={styles.img_area}>
           <img
             className={styles.boy_img}
-            src='/images/StepDegree.png'
+            src='/images/step_degree.png'
             alt='Build Skills With Experts Any Time, Anywhere'
             width={530}
             height={760}

@@ -4,7 +4,7 @@
 
 .banner {
   width: 100%;
-  background-image: url(../../../public/images/MainBanner.svg);
+  background-image: url(../../../public/images/main_banner.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -77,34 +77,13 @@
 }
 
 .banner_image_container {
-  position: relative;
   width: 100%;
-  animation: bounceInDown 3s ease-in;
 }
 
 .banner_image {
-  position: relative;
-  z-index: 10;
   width: 100%;
   min-height: 287px;
   object-fit: cover;
-}
-
-@keyframes bounceInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-2000px);
-  }
-  60% {
-    opacity: 1;
-    transform: translateY(30px);
-  }
-  80% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
 }
 
 .banner_card_section {
