@@ -3,21 +3,17 @@
 }
 
 .banner_container {
-  width: 100%;
-  background-color: #f8f9f8;
-  padding: 3rem 0;
-  margin-bottom: 2rem;
+  width: 90%;
+  background-color: rgba(83, 82, 237, 0.9);
+  margin: 2rem auto;
+  padding-top: 5rem;
+  border-radius: 15px;
+}
+
+.banner_image {
+  margin-left: 2rem;
+  object-fit: contain;
   position: relative;
-}
-
-.banner_text {
-  color: #221638;
-  font-weight: 800;
-  font-size: 2.2em;
-  display: grid;
-  place-items: center;
-}
-
-.cross {
-  display: none;
+  bottom: -3px;
+  transform: rotate(0.25deg);
 }

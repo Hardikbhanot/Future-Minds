@@ -80,6 +80,7 @@ router.get('/:courseId', (req, res) => {
     });
 });
 
+// Add a course
 router.post('/addcourse', async (req, res) => {
   // Validate course data
   const { error } = courseAddValidation(req.body);
@@ -140,6 +141,67 @@ router.post('/addcourse', async (req, res) => {
     console.log('Error in adding course ' + error.message);
     res.status(500).json({ error: { message: error.message } });
   }
+});
+
+router.patch('/updatecourse/:courseId', (req, res) => {
+  const courseId = req.params.courseId;
+  Course.find({ _id: courseId }, (err, course) => {
+    if (err) {
+      console.log(
+        'Error in finding a course in path route of course ' + err.message
+      );
+      res.status(500).json({ error: { message: err.message } });
+    } else {
+      //! check instructor ID (courseBy/instructorId) of this course for further validation
+      //! and only allow change if login user ID macthes the course instuctor ID
+      // Send patch request as
+      // {
+      //		key1: value1,
+      //		key2: value2,
+      // }
+      const updateProps = {};
+      for (const [key, value] of Object.entries(req.body)) {
+        updateProps[key] = value;
+      }
+      updateProps['lastUpdated'] = Date.now();
+      Course.findOneAndUpdate({ _id: courseId }, updateProps, {
+        new: true
+      })
+        .select('-__v -dateAdded')
+        .exec()
+        .then((updateCourse) => {
+          const response = {
+            data: {
+              courseId: updateCourse._id,
+              courseName: updateCourse.courseName,
+              coursePrice: updateCourse.coursePrice,
+              courseImage: updateCourse.courseImage,
+              courseInclude: updateCourse.courseInclude,
+              courseBy: updateCourse.courseBy,
+              courseLevel: updateCourse.courseLevel,
+              courseCategory: updateCourse.courseCategory,
+              courseDuration: updateCourse.courseDuration,
+              smallDescription: updateCourse.smallDescription,
+              largeDescription: updateCourse.largeDescription,
+              whatWillYouLearnDesp: updateCourse.whatWillYouLearnDesp,
+              topicsOfCourse: updateCourse.topicsOfCourse,
+              rating: updateCourse.rating,
+              requirements: updateCourse.requirements,
+              tags: updateCourse.tags,
+              targetAudience: updateCourse.targetAudience,
+              lastUpdated: updateCourse.lastUpdated.toLocaleString('en-GB')
+            }
+          };
+          res.status(200).json(response);
+        })
+        .catch((err) => {
+          console.log(
+            'Error in updating a course patch route of course ' + err.message
+          );
+          res.status(500).json({ error: { message: err.message } });
+        });
+    }
+  });
 });
 
 module.exports = router;

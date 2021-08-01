@@ -19,7 +19,7 @@ interface pageProps {
 
 const CourseCard = ({ course }: pageProps) => {
   let levelSVG;
-  if (course.courseLevel === 'Begineer') {
+  if (course.courseLevel === 'Beginner') {
     levelSVG = (
       <svg
         className={styles.level_svg}
