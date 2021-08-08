@@ -1,4 +1,4 @@
-import { MongoClient, ObjectId } from 'mongodb';
+import { ObjectId } from 'mongodb';
 import { GetServerSideProps } from 'next';
 import { connectToDatabase } from '../../../utils/database';
 
@@ -23,7 +23,7 @@ interface pageProps {
     smallDescription: string;
     largeDescription: string;
     whatWillYouLearnDesp: string[];
-    topicsOfCourse: { topicName: string; topics: string[] }[];
+    topicsOfCourse: { chapterName: string; topics: string[] }[];
     ratings: number;
     requirements: string[];
     tags: string[];
@@ -65,9 +65,9 @@ export const getServerSideProps: GetServerSideProps = async (content) => {
       largeDescription: courseCollectionData.largeDescription,
       whatWillYouLearnDesp: courseCollectionData.whatWillYouLearnDesp,
       topicsOfCourse: courseCollectionData.topicsOfCourse.map(
-        (topicOfCourse: { topicName: string; topics: string[] }) => {
+        (topicOfCourse: { chapterName: string; topics: string[] }) => {
           return {
-            topicName: topicOfCourse.topicName,
+            chapterName: topicOfCourse.chapterName,
             topics: topicOfCourse.topics
           };
         }

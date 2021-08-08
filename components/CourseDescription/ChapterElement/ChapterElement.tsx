@@ -2,11 +2,11 @@ import { useState } from 'react';
 import styles from './ChapterElement.module.scss';
 
 interface pageProps {
-  topicName: string;
+  chapterName: string;
   topics: string[];
 }
 
-const ChapterElement = ({ topicName, topics }: pageProps) => {
+const ChapterElement = ({ chapterName, topics }: pageProps) => {
   const [showTopic, setShowTopic] = useState(false);
 
   const onTopicClickHandler = () => {
@@ -16,39 +16,41 @@ const ChapterElement = ({ topicName, topics }: pageProps) => {
   const topicsOfCourse = topics.map((topic) => {
     return (
       <li key={topic} className={styles.topic}>
-        <svg
-          className={styles.topic_svg}
-          width='22'
-          height='10'
-          viewBox='0 0 374 296'
-          fill='none'
-          xmlns='http://www.w3.org/2000/svg'
-        >
-          <path
-            d='M128.913 296L0.824341 167.754L51.8629 116.64L128.913 193.775L322.467 0L373.51 51.0969L128.913 296Z'
-            fill='#E5434C'
-          />
-        </svg>
-        <p className={styles.topic_content}>{topic}</p>
+        {topic}
       </li>
     );
   });
   let topicContainer: string = styles.topic_container;
+  let topicSVG: string = styles.topic_svg;
   if (showTopic) {
     topicContainer = [styles.topic_container, styles.show_topic_container].join(
       ' '
     );
+    topicSVG = [styles.topic_svg, styles.rotate180deg].join(' ');
   }
 
   return (
-    <div className={styles.course_chapter}>
+    <div className={styles.chapter_container}>
       <button
-        className={styles.topic_btn}
+        className={styles.chapter_btn}
         type='button'
-        name='Chapter Name'
+        name={'Chapter - ' + chapterName}
         onClick={onTopicClickHandler}
       >
-        {topicName}
+        <h3 className={styles.topic_name}>{chapterName}</h3>
+        <svg
+          className={topicSVG}
+          width='27'
+          height='15'
+          viewBox='0 0 27 15'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+        >
+          <path
+            d='M13.5 15L0.942631 0.75L26.0574 0.75L13.5 15Z'
+            fill='#1271FF'
+          />
+        </svg>
       </button>
       <ul className={topicContainer}>{topicsOfCourse}</ul>
     </div>

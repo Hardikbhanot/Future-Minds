@@ -40,13 +40,14 @@
 .card_heading {
   font-size: 1.1rem;
   font-weight: 700;
-  margin: 1rem 0 0.4rem 0;
+  margin: 1.4rem 0 0.4rem 0;
 }
 
 .card_description {
   font-size: 0.8rem;
   line-height: 1rem;
-  margin: 1rem 0;
+  margin: 1.4rem 0;
+  font-weight: normal;
 }
 
 .heading_bottom_line {
@@ -70,7 +71,6 @@
   .card_description {
     font-size: 1rem;
     line-height: 1.2rem;
-    margin: 1rem 0;
   }
   .heading_bottom_line {
     width: 70px;
@@ -98,7 +98,6 @@
   .card_description {
     font-size: 1.125rem;
     line-height: 1.4rem;
-    margin: 1rem 0;
   }
   .heading_bottom_line {
     width: 70px;
