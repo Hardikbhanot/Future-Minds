@@ -1,3 +1,5 @@
+@use '../../../styles/abstracts/breakpoints' as breakpoints;
+
 .banner {
   width: 100%;
 }
@@ -8,12 +10,24 @@
   margin: 2rem auto;
   padding-top: 5rem;
   border-radius: 15px;
+  position: relative;
 }
 
 .banner_image {
-  margin-left: 2rem;
+  margin: 0 2.5%;
+  width: 95%;
+  max-width: 320px;
   object-fit: contain;
   position: relative;
-  bottom: -3px;
-  transform: rotate(0.25deg);
+  bottom: -4px;
+}
+
+@media screen and (min-width: breakpoints.$monitor-screen) {
+  .banner_image {
+    margin-left: 2rem;
+    object-fit: contain;
+    position: relative;
+    bottom: -3px;
+    transform: rotate(0.25deg);
+  }
 }

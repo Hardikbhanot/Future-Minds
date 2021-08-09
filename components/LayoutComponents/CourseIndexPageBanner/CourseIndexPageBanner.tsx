@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 import styles from './CourseIndexPageBanner.module.scss';
 
 const CourseIndexPageBanner = () => {
@@ -10,8 +8,6 @@ const CourseIndexPageBanner = () => {
           className={styles.banner_image}
           src='/images/academy_index.png'
           alt='Course Index Page Banner'
-          width={449}
-          height={197}
         />
       </div>
     </div>

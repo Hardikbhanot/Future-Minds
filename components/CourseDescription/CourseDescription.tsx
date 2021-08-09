@@ -212,7 +212,7 @@ const CourseDescription = ({ course }: pageProps) => {
       </div>
       <div className={styles.features_container}>
         <h2 className={styles.features_heading}>
-          3 easy steps to achieve your dream career
+          3 Easy Steps to Achieve Your Dream Career
         </h2>
         <Features cards={featuresCardsData} />
       </div>

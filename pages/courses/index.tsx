@@ -32,12 +32,23 @@ interface pageProps {
 }
 
 const Courses = ({ courses, error }: pageProps) => {
-  const [sortCourses, setSortCourses] = useState('');
+  const [showfilter, setShowFilter] = useState(false);
+  // const [sortCourses, setSortCourses] = useState('');
 
-  const onCourseSortChange = (event: ChangeEvent<HTMLSelectElement>) => {
-    setSortCourses(event.target.value);
+  // const onCourseSortChange = (event: ChangeEvent<HTMLSelectElement>) => {
+  //   setSortCourses(event.target.value);
+  // };
+  let filterDropdownSvg = styles.filter_dropdown_triangle_svg;
+
+  const onFilterClickHandler = () => {
+    setShowFilter(!showfilter);
   };
-
+  if (showfilter) {
+    filterDropdownSvg = [
+      styles.filter_dropdown_triangle_svg,
+      styles.rotate180deg
+    ].join(' ');
+  }
   let card = courses.map((course) => {
     return <CourseCard key={course.courseId} course={course} />;
   });
@@ -46,26 +57,42 @@ const Courses = ({ courses, error }: pageProps) => {
     <>
       <CourseIndexPageBanner />
       <div className={styles.page_content}>
-        <div className={styles.course_filter}>
-          <p className={styles.pagination_detail}>
-            Showing <strong>{courses.length}</strong> Courses
-          </p>
-          <div className={styles.dropdown_container}>
-            <select
-              value={sortCourses}
-              className={styles.dropdown}
-              onChange={onCourseSortChange}
+        <div className={styles.filter_container}>
+          <button
+            className={styles.filter_heading_container}
+            onClick={onFilterClickHandler}
+          >
+            <h2 className={styles.filter_heading}>FILTER</h2>
+            <svg
+              className={filterDropdownSvg}
+              width='22'
+              height='14'
+              viewBox='0 0 22 14'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
             >
-              <option value='releaseDateAsc'>
-                Release Date (newest first)
-              </option>
-              <option value='releaseDateDes'>
-                Release Date (oldest first)
-              </option>
-              <option value='courseTitleAsc'>Course Title (a-z)</option>
-              <option value='courseTitleDes'>Course Title (z-a)</option>
-            </select>
+              <path d='M11 14L0.607697 0.5L21.3923 0.5L11 14Z' fill='black' />
+            </svg>
+          </button>
+          <div className={styles.filter_wrapper}>
+            <div className={styles.option_container}>
+              Select Program Details
+            </div>
+            <div className={styles.option_container}>Industry Skill Type</div>
+            <div className={styles.filter_btn_container}>
+              <button
+                className={[styles.filter_btn, styles.apply_btn].join(' ')}
+              >
+                Apply
+              </button>
+              <button
+                className={[styles.filter_btn, styles.reset_btn].join(' ')}
+              >
+                Reset
+              </button>
+            </div>
           </div>
+          <div className={styles.filter_ad}></div>
         </div>
         <div className={styles.card_container}>{card}</div>
       </div>

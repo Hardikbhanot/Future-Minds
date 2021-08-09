@@ -2,43 +2,59 @@
 @use '../../styles/abstracts/breakpoints' as breakpoints;
 
 .page_content {
-  width: 100%;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
 }
 
-.course_filter {
-  width: 95%;
+.filter_container {
+  padding: 0 0.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter_heading_container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin: auto;
-  margin-bottom: 3rem;
-  padding: 0 1.665%;
-}
-
-.pagination_detail {
-  width: max-content;
-}
-
-.dropdown_container {
-  margin: auto 0;
-  width: max-content;
-  height: max-content;
-}
-
-.dropdown {
-  width: max-content;
-  padding: 0.6rem 0.8rem;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0;
+  border: none;
+  background: transparent;
   outline: none;
-  border: 1px solid colors.$clr-black-20;
+}
+
+.filter_heading {
+  width: max-content;
+  font-size: 1.56em;
+  font-weight: 500;
+
+  color: colors.$clr-black-80;
+}
+
+.filter_dropdown_triangle_svg {
+  width: 22px;
+  height: 14px;
+}
+
+.rotate180deg {
+  transform: rotate(180deg);
+}
+
+.filter_wrapper {
+  display: none;
+}
+
+.filter_ad {
+  display: none;
 }
 
 .card_container {
-  width: 95%;
-  margin: auto;
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 @keyframes rotate {
@@ -51,23 +67,70 @@
 }
 
 @media screen and (min-width: breakpoints.$large-tablet-screen) {
-  .banner_container {
-    padding: 5rem 0;
-    margin-bottom: 4rem;
-  }
-  .cross {
-    display: inline-block;
-    position: absolute;
-    left: 10%;
-    animation: rotate 7s infinite;
+  .card_container {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
 @media screen and (min-width: breakpoints.$monitor-screen) {
-  .course_filter {
-    width: 90%;
+  .page_content {
+    flex-direction: row;
+    gap: 2%;
+  }
+  .filter_container {
+    width: 25%;
+  }
+  .filter_heading {
+    width: max-content;
+    font-size: 1.8em;
+  }
+  .filter_dropdown_triangle_svg {
+    display: none;
+  }
+  .filter_wrapper {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+  .option_container {
+    box-sizing: border-box;
+    font-size: 1.125em;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background-color: colors.$clr-grey-20;
+    border-radius: 3px;
+  }
+  .filter_btn_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .filter_btn {
+    font-size: 1.125em;
+    width: 45%;
+    padding: 0.8rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+  }
+  .apply_btn {
+    background-color: colors.$clr-secondary;
+    color: colors.$clr-black;
+  }
+  .reset_btn {
+    background-color: colors.$clr-black;
+    color: colors.$clr-white;
+  }
+  .filter_ad {
+    margin: 1rem 0 2rem 0;
+    height: 100%;
+    display: block;
+    background-color: colors.$clr-grey-20;
+    border-radius: 3px;
   }
   .card_container {
-    width: 90%;
+    width: 73%;
   }
 }
