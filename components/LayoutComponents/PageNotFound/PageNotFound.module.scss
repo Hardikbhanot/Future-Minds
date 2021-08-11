@@ -1,0 +1,131 @@
+@use '../../../styles/abstracts/colors' as colors;
+@use '../../../styles/abstracts/breakpoints' as breakpoints;
+
+.page_not_found_section {
+  min-height: 100vh;
+  background: colors.$clr-black
+    url('../../../public/images/page_not_found_stars_background.png') no-repeat
+    center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page_not_found_main_container {
+  width: clamp(300px, 60%, 650px);
+  color: colors.$clr-white;
+  text-align: center;
+}
+
+.page_not_found_main_wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.page_not_found_4_svg {
+  width: clamp(75px, 30%, 132px);
+}
+
+.big_planet {
+  width: min(40%, 180px);
+  object-fit: contain;
+}
+
+.page_not_found_image {
+  position: absolute;
+}
+
+.spaceman {
+  width: clamp(80.27px, 30%, 140px);
+  top: -40px;
+  z-index: 10;
+}
+
+.rocket_trail {
+  width: clamp(124px, 60%, 300px);
+  top: -95px;
+  right: 35px;
+  z-index: 0;
+}
+
+.rocket {
+  width: clamp(60px, 30%, 110px);
+  top: -100px;
+  right: 0px;
+  z-index: 10;
+}
+
+.page_not_found_sub_heading {
+  font-size: 2.25em;
+  font-weight: 500;
+}
+
+.page_not_found_text {
+  font-size: 1.25em;
+  font-weight: 300;
+  margin: 1rem 0;
+}
+
+.page_not_found_link_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.page_not_found_link {
+  padding: 0.6rem 1rem;
+  margin: 0 1rem;
+  font-size: 1em;
+  font-weight: 300;
+  border: 0.5px solid colors.$clr-white;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: breakpoints.$large-tablet-screen) {
+  .rocket_trail {
+    top: -100px;
+    right: 10px;
+    z-index: 0;
+  }
+}
+
+@media screen and (min-width: breakpoints.$laptop-screen) {
+  .rocket_trail {
+    top: -135px;
+    right: 0px;
+    z-index: 0;
+  }
+  .page_not_found_link {
+    font-size: 1.25em;
+  }
+}
+
+@media screen and (min-width: breakpoints.$monitor-screen) {
+  .spaceman {
+    top: -110px;
+    z-index: 10;
+  }
+
+  .rocket_trail {
+    top: -95px;
+    right: 35px;
+    z-index: 0;
+  }
+
+  .rocket {
+    top: -130px;
+    right: -40px;
+    z-index: 10;
+  }
+  .page_not_found_sub_heading {
+    font-size: 3.125em;
+  }
+
+  .page_not_found_text {
+    font-size: 1.875em;
+    margin: 1rem 0;
+  }
+}

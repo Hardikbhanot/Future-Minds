@@ -1,4 +1,4 @@
-import { Fragment, ReactNode } from 'react';
+import { ReactNode } from 'react';
 import Head from 'next/head';
 
 import styles from './Layout.module.scss';
@@ -11,7 +11,7 @@ interface layoutProps {
 
 const Layout = (props: layoutProps) => {
   return (
-    <Fragment>
+    <>
       <Head>
         <title>Future Minds – Imparting Education through Innovation</title>
         <meta
@@ -34,7 +34,7 @@ const Layout = (props: layoutProps) => {
       <LandingNavbar />
       <main className={styles.page_main}>{props.children}</main>
       <Footer />
-    </Fragment>
+    </>
   );
 };
 
