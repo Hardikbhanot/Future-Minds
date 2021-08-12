@@ -1,0 +1,84 @@
+@use '../../../styles/abstracts/colors' as colors;
+@use '../../../styles/abstracts/breakpoints' as breakpoints;
+
+.under_construction_section {
+  width: 100;
+  min-height: 110vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.under_construction_heading {
+  font-size: 2em;
+  font-weight: 400;
+  margin: 5rem 0 0 0;
+}
+
+.under_construction_sub_heading {
+  font-size: 1.125em;
+  font-weight: 400;
+  padding: 0.6rem 2rem;
+  margin: 1rem 0 0rem 0;
+  color: colors.$clr-white;
+  background-color: colors.$clr-primary;
+  border-radius: 4px;
+}
+
+.under_construction_img {
+  width: clamp(336px, 100%, 450px);
+  position: absolute;
+  z-index: 10;
+  top: 36.5%;
+  left: -8%;
+}
+
+.under_construction_blue_block {
+  width: clamp(157px, 20%, 233px);
+  min-height: 95px;
+  background: colors.$clr-primary;
+  position: absolute;
+  z-index: 0;
+  top: 80%;
+  left: 0%;
+}
+
+@media screen and (min-width: breakpoints.$large-tablet-screen) {
+  .under_construction_heading {
+    font-size: 3.65em;
+    margin: 5rem 0 0 2rem;
+  }
+  .under_construction_sub_heading {
+    font-size: 1.8em;
+    padding: 0.6rem 3rem;
+    margin: 1rem 0 0 2rem;
+  }
+  .under_construction_img {
+    top: 33%;
+    left: -5%;
+  }
+
+  .under_construction_blue_block {
+    top: 83%;
+    left: 0%;
+  }
+}
+
+@media screen and (min-width: breakpoints.$monitor-screen) {
+  .under_construction_heading {
+    font-size: 5em;
+  }
+  .under_construction_sub_heading {
+    font-size: 2.5em;
+  }
+  .under_construction_img {
+    top: 33%;
+    left: -2%;
+  }
+
+  .under_construction_blue_block {
+    top: 77%;
+    left: 0%;
+  }
+}

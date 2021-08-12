@@ -42,11 +42,11 @@ const Navbar = () => {
           </Link>
         </li>
         <li className={styles.navbar_links_item_mobile}>
-          <Link href='/courses'>
+          <Link href='/stepdegree'>
             <a
               className={styles.navbar_link_mobile}
-              title='Courses Page Link'
-              aria-label='Courses Page Link'
+              title='Step Degree Page Link'
+              aria-label='Step Degree Page Link'
             >
               StepDegree
             </a>
@@ -131,11 +131,11 @@ const Navbar = () => {
           >
             Coming soon
           </p>
-          <Link href='/courses'>
+          <Link href='/stepdegree'>
             <a
               className={styles.navbar_link}
-              title='Courses Page Link'
-              aria-label='Courses Page Link'
+              title='Step Degree Page Link'
+              aria-label='Step Degree Page Link'
             >
               StepDegree
             </a>
