@@ -76,7 +76,11 @@ const Navbar = () => {
         </li>
       </ul>
       <Link href='/'>
-        <a className={styles.logo_container}>
+        <a
+          className={styles.logo_container}
+          title='FutureMinds Logo'
+          aria-label='FutureMinds Logo'
+        >
           <svg
             className={styles.logo_svg}
             width='189'

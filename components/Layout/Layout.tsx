@@ -3,6 +3,7 @@ import Head from 'next/head';
 
 import styles from './Layout.module.scss';
 import LandingNavbar from '../LayoutComponents/LandingNavbar/LandingNavbar';
+import AcademyNavbar from '../LayoutComponents/AcademyNavbar/AcademyNavbar';
 import Footer from '../LayoutComponents/Footer/Footer';
 
 interface layoutProps {
@@ -31,7 +32,7 @@ const Layout = (props: layoutProps) => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <LandingNavbar />
+      <AcademyNavbar />
       <main className={styles.page_main}>{props.children}</main>
       <Footer />
     </>

@@ -230,7 +230,7 @@ const CourseDescription = ({ course }: pageProps) => {
             </div>
             <div className={styles.course_chapter_wrapper}>
               <h2 className={styles.course_section_heading}>
-                Course <span>Carriculam</span>
+                Course <span>Curriculum</span>
               </h2>
               {topicsOfCourse}
             </div>
