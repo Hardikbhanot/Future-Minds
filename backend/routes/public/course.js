@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const router = require('express').Router();
 const Course = require('../../models/CourseModel');
 const { courseAddValidation } = require('../../validation/courseValidation');
+const logger = require('../../../logger/index');
 
 router.get('/', (req, res) => {
   res.status(200).json({ message: 'course route' });
@@ -138,7 +139,7 @@ router.post('/addcourse', async (req, res) => {
     };
     res.status(200).json(response);
   } catch (error) {
-    console.log('Error in adding course ' + error.message);
+    logger.error('Error in adding course ' + error.message);
     res.status(500).json({ error: { message: error.message } });
   }
 });
@@ -147,7 +148,7 @@ router.patch('/updatecourse/:courseId', (req, res) => {
   const courseId = req.params.courseId;
   Course.find({ _id: courseId }, (err, course) => {
     if (err) {
-      console.log(
+      logger.log(
         'Error in finding a course in path route of course ' + err.message
       );
       res.status(500).json({ error: { message: err.message } });
@@ -195,7 +196,7 @@ router.patch('/updatecourse/:courseId', (req, res) => {
           res.status(200).json(response);
         })
         .catch((err) => {
-          console.log(
+          logger.log(
             'Error in updating a course patch route of course ' + err.message
           );
           res.status(500).json({ error: { message: err.message } });

@@ -5,6 +5,7 @@ const {
   registerValidation,
   loginValidation
 } = require('../../validation/userValidation');
+const logger = require('../../../logger/index');
 
 router.get('/', (req, res) => {
   res.status(200).json({ message: 'user route' });
@@ -36,7 +37,7 @@ router.post('/login', async (req, res) => {
         .json({ error: { message: 'Email or password is incorrect' } });
     res.status(200).json(loginUser);
   } catch (error) {
-    console.log('Error in loging user ' + error.message);
+    logger.error('Error in loging user ' + error.message);
     res.status(500).json({ error: { message: error.message } });
   }
 });
@@ -74,7 +75,7 @@ router.post('/register', async (req, res) => {
     const savedUser = await newUser.save();
     res.status(200).json(savedUser);
   } catch (error) {
-    console.log('Error in registering user ' + error.message);
+    logger.error('Error in registering user ' + error.message);
     res.status(500).json({ error: { message: error.message } });
   }
 });

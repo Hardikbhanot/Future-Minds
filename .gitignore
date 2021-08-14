@@ -24,6 +24,7 @@ out/
 
 # production
 build
+productionLogs.log
 
 # misc
 .DS_Store

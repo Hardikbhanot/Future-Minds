@@ -4,6 +4,7 @@ const next = require('next');
 const mongoose = require('mongoose');
 
 dotenv.config();
+const logger = require('./logger/index');
 const port = process.env.PORT || 8000;
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
@@ -23,9 +24,8 @@ const connectDB = async () => {
       useUnifiedTopology: true,
       useCreateIndex: true
     });
-    console.log('MongoDB Connection successful');
   } catch (error) {
-    console.log('MongoDB Connection failed');
+    logger.error('MongoDB Connection failed');
     process.exit(1);
   }
 };
@@ -55,6 +55,6 @@ app
     });
   })
   .catch((error) => {
-    console.error(error.stack);
+    logger.error(error.stack);
     process.exit(1);
   });
