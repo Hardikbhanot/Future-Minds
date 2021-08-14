@@ -23,37 +23,37 @@
   flex-direction: column;
 }
 
-.filter_heading_container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0;
-  border: none;
-  background: transparent;
-  outline: none;
-}
+// .filter_heading_container {
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   gap: 0.6rem;
+//   padding: 0;
+//   border: none;
+//   background: transparent;
+//   outline: none;
+// }
 
-.filter_heading {
-  width: max-content;
-  font-size: 1.56em;
-  font-weight: 500;
+// .filter_heading {
+//   width: max-content;
+//   font-size: 1.56em;
+//   font-weight: 500;
 
-  color: colors.$clr-black-80;
-}
+//   color: colors.$clr-black-80;
+// }
 
-.filter_dropdown_triangle_svg {
-  width: 22px;
-  height: 14px;
-}
+// .filter_dropdown_triangle_svg {
+//   width: 22px;
+//   height: 14px;
+// }
 
-.rotate180deg {
-  transform: rotate(180deg);
-}
+// .rotate180deg {
+//   transform: rotate(180deg);
+// }
 
-.filter_wrapper {
-  display: none;
-}
+// .filter_wrapper {
+//   display: none;
+// }
 
 .filter_ad {
   display: none;
@@ -89,50 +89,51 @@
   .filter_container {
     width: 25%;
   }
-  .filter_heading {
-    width: max-content;
-    font-size: 1.8em;
-  }
-  .filter_dropdown_triangle_svg {
-    display: none;
-  }
-  .filter_wrapper {
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.4rem;
-  }
-  .option_container {
-    box-sizing: border-box;
-    font-size: 1.125em;
-    width: 100%;
-    padding: 0.8rem 1rem;
-    background-color: colors.$clr-grey-20;
-    border-radius: 3px;
-  }
-  .filter_btn_container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .filter_btn {
-    font-size: 1.125em;
-    width: 45%;
-    padding: 0.8rem 1rem;
-    border: none;
-    outline: none;
-    border-radius: 3px;
-  }
-  .apply_btn {
-    background-color: colors.$clr-secondary;
-    color: colors.$clr-black;
-  }
-  .reset_btn {
-    background-color: colors.$clr-black;
-    color: colors.$clr-white;
-  }
+  // .filter_heading {
+  //   width: max-content;
+  //   font-size: 1.8em;
+  // }
+  // .filter_dropdown_triangle_svg {
+  //   display: none;
+  // }
+  // .filter_wrapper {
+  //   margin-top: 1rem;
+  //   display: flex;
+  //   flex-direction: column;
+  //   gap: 1.4rem;
+  // }
+  // .option_container {
+  //   box-sizing: border-box;
+  //   font-size: 1.125em;
+  //   width: 100%;
+  //   padding: 0.8rem 1rem;
+  //   background-color: colors.$clr-grey-20;
+  //   border-radius: 3px;
+  // }
+  // .filter_btn_container {
+  //   display: flex;
+  //   flex-direction: row;
+  //   justify-content: space-between;
+  // }
+  // .filter_btn {
+  //   font-size: 1.125em;
+  //   width: 45%;
+  //   padding: 0.8rem 1rem;
+  //   border: none;
+  //   outline: none;
+  //   border-radius: 3px;
+  // }
+  // .apply_btn {
+  //   background-color: colors.$clr-secondary;
+  //   color: colors.$clr-black;
+  // }
+  // .reset_btn {
+  //   background-color: colors.$clr-black;
+  //   color: colors.$clr-white;
+  // }
   .filter_ad {
-    margin: 1rem 0 2rem 0;
+    // margin: 1rem 0 2rem 0;
+    margin: 0 0 2rem 0;
     height: 100%;
     display: block;
     background-color: colors.$clr-grey-20;

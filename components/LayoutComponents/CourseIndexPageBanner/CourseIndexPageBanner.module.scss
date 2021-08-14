@@ -1,3 +1,4 @@
+@use '../../../styles/abstracts/colors' as colors;
 @use '../../../styles/abstracts/breakpoints' as breakpoints;
 
 .banner {
@@ -11,23 +12,50 @@
   padding-top: 5rem;
   border-radius: 15px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 1rem;
+}
+
+.banner_heading {
+  width: 90%;
+  margin: auto;
+  color: colors.$clr-white;
+  font-size: 1.8em;
+  line-height: 1.5em;
+  text-align: center;
 }
 
 .banner_image {
-  margin: 0 2.5%;
+  margin: 0 auto;
   width: 95%;
   max-width: 320px;
   object-fit: contain;
   position: relative;
-  bottom: -4px;
+  bottom: 0px;
+  transform: rotate(0.01deg);
 }
 
+// @media screen and (min-width: breakpoints.$tablet-screen) {
+// }
+
 @media screen and (min-width: breakpoints.$monitor-screen) {
+  .banner_container {
+    padding: 2.5rem 0;
+    flex-direction: row;
+  }
+  .banner_heading {
+    order: 2;
+    width: max-content;
+    font-size: 2.2em;
+  }
   .banner_image {
+    order: 1;
     margin-left: 2rem;
     object-fit: contain;
     position: relative;
-    bottom: -3px;
-    transform: rotate(0.25deg);
+    bottom: -2.55rem;
+    transform: rotate(0.01deg);
   }
 }

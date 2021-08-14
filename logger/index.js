@@ -1,7 +1,8 @@
 const productionLogger = require('./loggers');
 const developmentLogger = require('./loggers');
+const winston = require('winston');
 
-let logger = null;
+let logger = winston.Logger;
 
 // check NODE_ENV for environment
 // don't write log messages in file in development

@@ -14,7 +14,7 @@ const LandingPage = () => {
     if (explore && explore.current) {
       // can access explore current value here
       const valueTypedInExplore = explore.current.value;
-      router.push(`courses/${valueTypedInExplore}`);
+      router.push(`courses/`); //!Check this again
     }
   };
 

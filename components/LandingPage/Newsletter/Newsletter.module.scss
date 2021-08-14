@@ -48,7 +48,7 @@
   font-weight: 400;
   font-size: 1em;
   line-height: 1.9em;
-  & input[type='text'] {
+  & input[type='email'] {
     width: 90%;
     margin: auto;
     background-color: colors.$clr-card-white;
@@ -69,6 +69,13 @@
       margin: auto;
     }
   }
+}
+
+.newsletter_result {
+  color: colors.$clr-primary;
+  font-size: 1em;
+  margin-top: 2rem;
+  text-align: center;
 }
 
 .newsletter_concentric_circle_animation {
@@ -137,7 +144,7 @@
     width: 55%;
     flex-direction: row;
     gap: 0;
-    & input[type='text'] {
+    & input[type='email'] {
       width: 70%;
       border-radius: 5px 0 0 5px;
     }

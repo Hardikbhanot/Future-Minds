@@ -1,6 +1,53 @@
+import { useRef, useState } from 'react';
+import axios from '../../../utils/axiosInstance';
+
 import styles from './Newsletter.module.scss';
 
 const BottomBanner = () => {
+  const [message, setMessage] = useState('');
+
+  const newsletter = useRef<HTMLInputElement>(null);
+  const onNewsletterSubmitHandler = async (event: React.SyntheticEvent) => {
+    event.preventDefault();
+    if (newsletter && newsletter.current) {
+      // can access newsletter current value here
+      const email = newsletter.current.value;
+      await axios({
+        method: 'POST',
+        url: '/backend/api/newsletter',
+        headers: {
+          'content-type': 'application/json'
+        },
+        data: {
+          email: email
+        }
+      })
+        .then((response) => {
+          if (response.status === 200) {
+            setMessage('You are now subscribed');
+            setTimeout(() => {
+              setMessage('');
+            }, 3000);
+          } else if (response.status === 208) {
+            setMessage('You are already subscribed');
+            setTimeout(() => {
+              setMessage('');
+            }, 3000);
+          } else {
+            setMessage('Some error occured. Please try again later');
+            setTimeout(() => {
+              setMessage('');
+            }, 3000);
+            console.error(response.data.error.message);
+          }
+        })
+        .catch((error) => {
+          console.error(error.message);
+        });
+      newsletter.current.value = '';
+    }
+  };
+
   return (
     <section className={styles.newsletter_section}>
       <section className={styles.newsletter_section_container}>
@@ -11,12 +58,20 @@ const BottomBanner = () => {
         <p className={styles.newsletter_discription}>
           We do not share your email with any third parties.
         </p>
-        <form className={styles.newsletter_form}>
-          <input type='text' placeholder='Enter your email address' />
+        <form
+          className={styles.newsletter_form}
+          onSubmit={onNewsletterSubmitHandler}
+        >
+          <input
+            type='email'
+            placeholder='Enter your email address'
+            ref={newsletter}
+          />
           <button type='submit'>
             <p>Subscribe Now</p>
           </button>
         </form>
+        <p className={styles.newsletter_result}>{message}</p>
         <svg
           className={styles.newsletter_concentric_circle_animation}
           width='197'
