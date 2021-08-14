@@ -57,7 +57,6 @@ router.post('/register', async (req, res) => {
     return res.status(208).json({
       error: { message: 'Email already registered' }
     });
-  const date = new Date();
   // creates a new user
   const newUser = new User({
     _id: new mongoose.Types.ObjectId(),
@@ -66,8 +65,7 @@ router.post('/register', async (req, res) => {
     email: req.body.email,
     password: req.body.password,
     mobileNumber: req.body.mobileNumber,
-    typeOfUser: req.body.typeOfUser,
-    dateAdded: date.toLocaleString('en-GB')
+    typeOfUser: req.body.typeOfUser
   });
 
   // save a new user

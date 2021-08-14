@@ -17,7 +17,6 @@ interface pageProps {
     courseName: string;
     coursePrice: number;
     courseImage: string;
-    courseInclude: string[];
     courseBy: {
       instructorId: string;
       instructorName: string;
@@ -25,16 +24,13 @@ interface pageProps {
     courseLevel: string;
     courseCategory: string[];
     courseDuration: number;
-    totalEnrolledStudents: number;
-    lastUpdated: string;
-    smallDescription: string;
-    largeDescription: string;
-    whatWillYouLearnDesp: string[];
+    courseMode: string;
+    tags: string[];
+    description: string;
     topicsOfCourse: { chapterName: string; topics: string[] }[];
     ratings: number;
     requirements: string[];
-    tags: string[];
-    targetAudience: string[];
+    lastUpdated: string;
   };
   error: boolean;
 }
@@ -44,7 +40,7 @@ const DynamicCourses = ({ course, error }: pageProps) => {
     <>
       <Head>
         <title>{course.courseName}</title>
-        <meta name='description' content={course.smallDescription} />
+        <meta name='description' content={course.description} />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link
           rel='preconnect'
@@ -81,15 +77,13 @@ export const getServerSideProps: GetServerSideProps = async (content) => {
       courseName: courseCollectionData.courseName,
       coursePrice: courseCollectionData.coursePrice,
       courseImage: courseCollectionData.courseImage,
-      courseInclude: courseCollectionData.courseInclude,
       courseBy: courseCollectionData.courseBy,
       courseLevel: courseCollectionData.courseLevel,
       courseCategory: courseCollectionData.courseCategory,
       courseDuration: courseCollectionData.courseDuration,
-      totalEnrolledStudents: courseCollectionData.totalEnrolledStudents,
-      smallDescription: courseCollectionData.smallDescription,
-      largeDescription: courseCollectionData.largeDescription,
-      whatWillYouLearnDesp: courseCollectionData.whatWillYouLearnDesp,
+      tags: courseCollectionData.tags,
+      description: courseCollectionData.description,
+      courseMode: courseCollectionData.courseMode,
       topicsOfCourse: courseCollectionData.topicsOfCourse.map(
         (topicOfCourse: { chapterName: string; topics: string[] }) => {
           return {
@@ -100,8 +94,6 @@ export const getServerSideProps: GetServerSideProps = async (content) => {
       ),
       rating: courseCollectionData.rating || 0,
       requirements: courseCollectionData.requirements,
-      tags: courseCollectionData.tags,
-      targetAudience: courseCollectionData.targetAudience,
       lastUpdated: courseCollectionData.lastUpdated.toLocaleDateString('en-GB')
     };
     return {

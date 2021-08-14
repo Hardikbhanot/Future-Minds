@@ -17,7 +17,7 @@ interface courseStructure {
   courseName: string;
   courseDuration: number;
   courseLevel: string;
-  courseClassType: string;
+  courseMode: string;
   isTrending: boolean;
 }
 
@@ -29,7 +29,7 @@ interface pageProps {
     courseName: string;
     courseDuration: number;
     courseLevel: string;
-    courseClassType: string;
+    courseMode: string;
     isTrending: boolean;
   }[];
   error: boolean;
@@ -142,11 +142,11 @@ export const getStaticProps = async () => {
           courseId: `${course._id}`,
           courseImage: course.courseImage,
           courseName: course.courseName,
-          courseCategory: course.courseCategory || 'Web',
+          courseCategory: course.courseCategory,
           courseLevel: course.courseLevel,
           courseDuration: course.courseDuration,
-          courseClassType: course.courseClassType || 'Online',
-          isTrending: course.isTrending || false
+          courseMode: course.courseMode,
+          isTrending: course.isTrending
         };
       })
     };

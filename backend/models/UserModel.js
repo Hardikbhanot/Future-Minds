@@ -12,7 +12,7 @@ const userSchema = new mongoose.Schema({
   courseAdded: [mongoose.Schema.Types.ObjectId],
   coursePurchased: [mongoose.Schema.Types.ObjectId],
   cart: [mongoose.Schema.Types.ObjectId],
-  dateAdded: { type: Date, required: true }
+  dateAdded: { type: Date, default: Date.now }
 });
 
 module.exports = mongoose.model('users', userSchema);

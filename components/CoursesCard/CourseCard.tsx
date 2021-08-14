@@ -3,12 +3,12 @@ import styles from './CourseCard.module.scss';
 
 interface courseFields {
   courseId: string;
+  courseName: string;
   courseImage: string;
   courseCategory: string;
-  courseName: string;
   courseDuration: number;
   courseLevel: string;
-  courseClassType: string;
+  courseMode: string;
   isTrending: boolean;
 }
 
@@ -173,9 +173,7 @@ const CourseCard = ({ course }: pageProps) => {
         <p className={styles.course_details}>
           Duration: {course.courseDuration}
         </p>
-        <p className={styles.course_details}>
-          Classes: {course.courseClassType}
-        </p>
+        <p className={styles.course_details}>Classes: {course.courseMode}</p>
         <p className={styles.course_details}>Support: 1-1</p>
 
         <div className={styles.course_link_container}>

@@ -20,11 +20,12 @@ router.get('/all', (req, res) => {
             return {
               courseId: course._id,
               courseName: course.courseName,
-              coursePrice: course.coursePrice,
               courseImage: course.courseImage,
+              courseCategory: course.courseCategory,
+              courseDuration: course.courseDuration,
               courseLevel: course.courseLevel,
-              smallDescription: course.smallDescription,
-              rating: course.rating
+              courseMode: course.courseMode,
+              isTrending: course.isTrending
             };
           })
         };
@@ -53,19 +54,16 @@ router.get('/:courseId', (req, res) => {
             courseName: course.courseName,
             coursePrice: course.coursePrice,
             courseImage: course.courseImage,
-            courseInclude: course.courseInclude,
             courseBy: course.courseBy,
             courseLevel: course.courseLevel,
-            courseCategory: course.courseCategory,
             courseDuration: course.courseDuration,
-            smallDescription: course.smallDescription,
-            largeDescription: course.largeDescription,
-            whatWillYouLearnDesp: course.whatWillYouLearnDesp,
+            courseMode: course.courseMode,
+            courseCategory: course.courseCategory,
+            tags: course.tags,
+            description: course.description,
             topicsOfCourse: course.topicsOfCourse,
             rating: course.rating,
             requirements: course.requirements,
-            tags: course.tags,
-            targetAudience: course.targetAudience,
             lastUpdated: course.lastUpdated.toLocaleString('en-GB')
           }
         };
@@ -96,20 +94,17 @@ router.post('/addcourse', async (req, res) => {
     courseName: req.body.courseName,
     coursePrice: req.body.coursePrice,
     courseImage: req.body.courseImage,
-    courseInclude: req.body.courseInclude,
     courseBy: req.body.courseBy,
     courseLevel: req.body.courseLevel,
-    courseCategory: req.body.courseCategory,
     courseDuration: req.body.courseDuration,
-    lastUpdated: Date.now(),
-    dateAdded: Date.now(),
-    smallDescription: req.body.smallDescription,
-    largeDescription: req.body.largeDescription,
-    whatWillYouLearnDesp: req.body.whatWillYouLearnDesp,
+    courseMode: req.body.courseMode,
+    courseCategory: req.body.courseCategory,
+    tags: req.body.tags,
+    description: req.body.description,
     topicsOfCourse: req.body.topicsOfCourse,
     requirements: req.body.requirements,
-    tags: req.body.tags,
-    targetAudience: req.body.targetAudience
+    lastUpdated: Date.now(),
+    dateAdded: Date.now()
   });
 
   // save a new course
@@ -121,19 +116,16 @@ router.post('/addcourse', async (req, res) => {
         courseName: savedCourse.courseName,
         coursePrice: savedCourse.coursePrice,
         courseImage: savedCourse.courseImage,
-        courseInclude: savedCourse.courseInclude,
         courseBy: savedCourse.courseBy,
         courseLevel: savedCourse.courseLevel,
-        courseCategory: savedCourse.courseCategory,
         courseDuration: savedCourse.courseDuration,
-        smallDescription: savedCourse.smallDescription,
-        largeDescription: savedCourse.largeDescription,
-        whatWillYouLearnDesp: savedCourse.whatWillYouLearnDesp,
+        courseMode: savedCourse.courseMode,
+        courseCategory: savedCourse.courseCategory,
+        tags: savedCourse.tags,
+        description: savedCourse.description,
         topicsOfCourse: savedCourse.topicsOfCourse,
         rating: savedCourse.rating,
         requirements: savedCourse.requirements,
-        tags: savedCourse.tags,
-        targetAudience: savedCourse.targetAudience,
         lastUpdated: savedCourse.lastUpdated.toLocaleString('en-GB')
       }
     };
@@ -177,19 +169,16 @@ router.patch('/updatecourse/:courseId', (req, res) => {
               courseName: updateCourse.courseName,
               coursePrice: updateCourse.coursePrice,
               courseImage: updateCourse.courseImage,
-              courseInclude: updateCourse.courseInclude,
               courseBy: updateCourse.courseBy,
               courseLevel: updateCourse.courseLevel,
-              courseCategory: updateCourse.courseCategory,
               courseDuration: updateCourse.courseDuration,
-              smallDescription: updateCourse.smallDescription,
-              largeDescription: updateCourse.largeDescription,
-              whatWillYouLearnDesp: updateCourse.whatWillYouLearnDesp,
+              courseMode: updateCourse.courseMode,
+              courseCategory: updateCourse.courseCategory,
+              tags: updateCourse.tags,
+              description: updateCourse.description,
               topicsOfCourse: updateCourse.topicsOfCourse,
               rating: updateCourse.rating,
               requirements: updateCourse.requirements,
-              tags: updateCourse.tags,
-              targetAudience: updateCourse.targetAudience,
               lastUpdated: updateCourse.lastUpdated.toLocaleString('en-GB')
             }
           };

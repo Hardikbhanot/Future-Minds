@@ -10,7 +10,6 @@ interface pageProps {
     courseName: string;
     coursePrice: number;
     courseImage: string;
-    courseInclude: string[];
     courseBy: {
       instructorId: string;
       instructorName: string;
@@ -18,16 +17,13 @@ interface pageProps {
     courseLevel: string;
     courseCategory: string[];
     courseDuration: number;
-    totalEnrolledStudents: number;
-    lastUpdated: string;
-    smallDescription: string;
-    largeDescription: string;
-    whatWillYouLearnDesp: string[];
+    courseMode: string;
+    tags: string[];
+    description: string;
     topicsOfCourse: { chapterName: string; topics: string[] }[];
     ratings: number;
     requirements: string[];
-    tags: string[];
-    targetAudience: string[];
+    lastUpdated: string;
   };
 }
 
@@ -224,9 +220,7 @@ const CourseDescription = ({ course }: pageProps) => {
               <h2 className={styles.course_section_heading}>
                 Course <span>Description</span>
               </h2>
-              <p className={styles.course_description}>
-                {course.largeDescription}
-              </p>
+              <p className={styles.course_description}>{course.description}</p>
             </div>
             <div className={styles.course_chapter_wrapper}>
               <h2 className={styles.course_section_heading}>
