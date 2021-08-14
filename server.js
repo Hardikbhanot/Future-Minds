@@ -11,6 +11,7 @@ const app = next({ dev });
 const handle = app.getRequestHandler();
 
 // Import all server routes
+const newsletterRoutes = require('./backend/routes/public/newsletter');
 const publicRoutes = require('./backend/routes/public/public');
 const userPublicRoutes = require('./backend/routes/public/user');
 const coursePublicRoutes = require('./backend/routes/public/course');
@@ -41,6 +42,7 @@ app
 
     // pass routes starting with /api to backend
     server.use('/backend/api/', publicRoutes);
+    server.use('/backend/api/newsletter', newsletterRoutes);
     server.use('/backend/api/user', userPublicRoutes);
     server.use('/backend/api/course', coursePublicRoutes);
 
