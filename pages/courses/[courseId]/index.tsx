@@ -1,8 +1,15 @@
+import Head from 'next/head';
+
+import AcademyNavbar from '../../../components/LayoutComponents/AcademyNavbar/AcademyNavbar';
+import Footer from '../../../components/LayoutComponents/Footer/Footer';
+
 import { ObjectId } from 'mongodb';
 import { GetServerSideProps } from 'next';
 import { connectToDatabase } from '../../../utils/database';
 
 import CourseDescription from '../../../components/CourseDescription/CourseDescription';
+
+import styles from '../../../styles/index.module.scss';
 
 interface pageProps {
   course: {
@@ -35,7 +42,26 @@ interface pageProps {
 const DynamicCourses = ({ course, error }: pageProps) => {
   return (
     <>
-      <CourseDescription course={course} />
+      <Head>
+        <title>{course.courseName}</title>
+        <meta name='description' content={course.smallDescription} />
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link
+          rel='preconnect'
+          href='https://fonts.gstatic.com'
+          crossOrigin='true'
+        />
+        <link
+          href='https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'
+          rel='stylesheet'
+        />
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
+      <main className={styles.page_main}>
+        <AcademyNavbar />
+        <CourseDescription course={course} />
+        <Footer />
+      </main>
     </>
   );
 };

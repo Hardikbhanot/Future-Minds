@@ -7,11 +7,11 @@ import UnderConstruction from '../../components/LayoutComponents/UnderConstructi
 
 import styles from '../../styles/index.module.scss';
 
-const StepDegree = () => {
+const TermsAndConditions = () => {
   return (
     <>
       <Head>
-        <title>StepDegree by Future Minds</title>
+        <title>Terms and Conditions of Future Minds</title>
         <meta
           name='description'
           content='Futureminds is an incubated startup by DESU, Shakarpur campus, Govt. Of NCT of Delhi. An organisation which are imparting education through innovation by upskilling the student and prepare student to get employed and succees in their workplace, through edcational courses on affordable prices and few  specialized courses which will be availabe free of cost to DESU students and faculty.'
@@ -37,4 +37,4 @@ const StepDegree = () => {
   );
 };
 
-export default StepDegree;
+export default TermsAndConditions;

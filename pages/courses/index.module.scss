@@ -1,6 +1,14 @@
 @use '../../styles/abstracts/colors' as colors;
 @use '../../styles/abstracts/breakpoints' as breakpoints;
 
+.page_main {
+  padding: 5rem 0 0 0;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
 .page_content {
   width: 90%;
   margin: auto;

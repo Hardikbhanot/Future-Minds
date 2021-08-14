@@ -17,7 +17,7 @@ const Layout = (props: layoutProps) => {
         <title>Future Minds – Imparting Education through Innovation</title>
         <meta
           name='description'
-          content='... websites in every aspects like certification, providing guaranteed internship opportunities and many more. I am going to recommend FutureMinds for sure!'
+          content='Working to bring significant changes in online-based learning by doing extensive research for course curriculum preparation, student engagements, and looking forward to the flexible education!'
         />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link
