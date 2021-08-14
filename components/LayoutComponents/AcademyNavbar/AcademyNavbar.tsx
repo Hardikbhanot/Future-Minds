@@ -35,7 +35,7 @@ const AcademyNavbar = () => {
             <span className={styles.user_image_mobile}>A</span>
             <p className={styles.user_detail_mobile}>guest user</p>
           </div>
-          <Link href='/signin'>
+          <Link href='/login'>
             <a
               className={styles.signIn}
               title='Sign In Link'
@@ -229,13 +229,13 @@ const AcademyNavbar = () => {
             </Link>
           </li>
           <li className={styles.navbar_links_item_mobile}>
-            <Link href='/events'>
+            <Link href='/leet'>
               <a
                 className={styles.navbar_link_mobile}
-                title='Events Page Link'
-                aria-label='Events Page Link'
+                title='LEET Program Page Link'
+                aria-label='LEET Program Page Link'
               >
-                <p className={styles.navbar_link_mobile_text}>Events</p>
+                <p className={styles.navbar_link_mobile_text}>LEET</p>
                 <svg
                   className={styles.navbar_link_mobile_arrow}
                   width='25'
@@ -404,7 +404,7 @@ const AcademyNavbar = () => {
       </ul>
 
       <div className={styles.signIn_container}>
-        <Link href='/signin'>
+        <Link href='/login'>
           <a
             className={styles.signIn}
             title='Sign In Link'

@@ -18,23 +18,23 @@ const Footer = () => {
           <h3 className={styles.sub_heading}>Explore</h3>
           <ul className={styles.links_list}>
             <li>
-              <Link href='https://futureminds.in/courses/'>
-                <a title='Courses' aria-label='Courses'>
-                  Courses
+              <Link href='/stepdegree'>
+                <a title='StepDegree' aria-label='StepDegree'>
+                  StepDegree
                 </a>
               </Link>
             </li>
             <li>
-              <Link href='https://futureminds.in/#'>
-                <a title='Free Courses' aria-label='Free Courses'>
-                  Free Courses
+              <Link href='/topslot'>
+                <a title='TopSlot' aria-label='TopSlot'>
+                  TopSlot
                 </a>
               </Link>
             </li>
             <li>
-              <Link href='https://futureminds.in/#'>
-                <a title='Boot Camps' aria-label='Boot Camps'>
-                  Boot Camps
+              <Link href='/leet'>
+                <a title='LEET' aria-label='LEET'>
+                  LEET
                 </a>
               </Link>
             </li>
@@ -44,43 +44,23 @@ const Footer = () => {
           <h3 className={styles.sub_heading}>Resources</h3>
           <ul className={styles.links_list}>
             <li>
-              <Link href='https://futureminds.in/courses/'>
+              <Link href='/courses'>
                 <a title='Courses' aria-label='Courses'>
                   Courses
                 </a>
               </Link>
             </li>
             <li>
-              <Link href='https://futureminds.in/instructor-registration/'>
-                <a
-                  title='Instructor Registration'
-                  aria-label='Instructor Registration'
-                >
-                  Instructor Registration
+              <Link href='/login'>
+                <a title='Sign in' aria-label='Sign in'>
+                  Sign In
                 </a>
               </Link>
             </li>
             <li>
-              <Link href='https://futureminds.in/student-registration/'>
-                <a
-                  title='Student Registration'
-                  aria-label='Student Registration'
-                >
-                  Student Registration
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href='https://futureminds.in/reset-password/'>
-                <a title='Reset Password' aria-label='Reset Password'>
-                  Reset Password
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href='https://futureminds.in/success-story/'>
-                <a title='Sucess Story' aria-label='Sucess Story'>
-                  Sucess Story
+              <Link href='/register'>
+                <a title='Register' aria-label='Register'>
+                  Register
                 </a>
               </Link>
             </li>
@@ -104,7 +84,7 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href='/info@futureminds.in'>
+              <Link href='mailto:info@futureminds.in'>
                 <a title='Contact Email' aria-label='Contact Email'>
                   info@futureminds.in
                 </a>
@@ -224,12 +204,12 @@ const Footer = () => {
           ©2021 Futureminds. All right reserved.
         </p>
         <div className={styles.all_rights_reserved_links}>
-          <Link href='https://futureminds.in/privacy-policy/'>
+          <Link href='/privacy-policy'>
             <a title='Pricacy Policy' aria-label='Privacy Policy'>
               Privacy Policy
             </a>
           </Link>
-          <Link href='https://futureminds.in/terms-conditions/'>
+          <Link href='/terms-conditions'>
             <a title='Terms & Conditions' aria-label='Terms & Conditions'>
               Terms & Conditions
             </a>

@@ -53,24 +53,24 @@ const Navbar = () => {
           </Link>
         </li>
         <li className={styles.navbar_links_item_mobile}>
-          <Link href='/courses'>
+          <Link href='/topslot'>
             <a
               className={styles.navbar_link_mobile}
-              title='Courses Page Link'
-              aria-label='Courses Page Link'
+              title='TopSlot Page Link'
+              aria-label='TopSlot Page Link'
             >
               TopSlot
             </a>
           </Link>
         </li>
         <li className={styles.navbar_links_item_mobile}>
-          <Link href='/courses'>
+          <Link href='/leet'>
             <a
               className={styles.navbar_link_mobile}
-              title='Courses Page Link'
-              aria-label='Courses Page Link'
+              title='LEET Program Page Link'
+              aria-label='LEET Program Page Link'
             >
-              Events
+              LEET
             </a>
           </Link>
         </li>
@@ -154,30 +154,30 @@ const Navbar = () => {
           >
             Coming soon
           </p>
-          <Link href='/courses'>
+          <Link href='/topslot'>
             <a
               className={styles.navbar_link}
-              title='Courses Page Link'
-              aria-label='Courses Page Link'
+              title='TopSlot Page Link'
+              aria-label='TopSlot Page Link'
             >
               TopSlot
             </a>
           </Link>
         </li>
         <li className={styles.navbar_links_item}>
-          <Link href='/courses'>
+          <Link href='/leet'>
             <a
               className={styles.navbar_link}
-              title='Courses Page Link'
-              aria-label='Courses Page Link'
+              title='LEET Program Page Link'
+              aria-label='LEET Program Page Link'
             >
-              Events
+              LEET
             </a>
           </Link>
         </li>
       </ul>
       <div className={styles.signIn_container}>
-        <Link href='/'>
+        <Link href='/login'>
           <a
             className={styles.signIn}
             title='Sign In Link'
@@ -201,7 +201,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div className={styles.signIn_container_mobile}>
-        <Link href='/'>
+        <Link href='/login'>
           <a
             className={styles.signIn_mobile}
             title='Sign In Link'
