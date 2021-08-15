@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { ChangeEvent, useState } from 'react';
+import { useState } from 'react';
 import { connectToDatabase } from '../../utils/database';
 // import axios from '../../utils/axiosInstance';
 
@@ -42,17 +42,17 @@ const Courses = ({ courses, error }: pageProps) => {
   // const onCourseSortChange = (event: ChangeEvent<HTMLSelectElement>) => {
   //   setSortCourses(event.target.value);
   // };
-  let filterDropdownSvg = styles.filter_dropdown_triangle_svg;
+  // let filterDropdownSvg = styles.filter_dropdown_triangle_svg;
 
-  const onFilterClickHandler = () => {
-    setShowFilter(!showfilter);
-  };
-  if (showfilter) {
-    filterDropdownSvg = [
-      styles.filter_dropdown_triangle_svg,
-      styles.rotate180deg
-    ].join(' ');
-  }
+  // const onFilterClickHandler = () => {
+  //   setShowFilter(!showfilter);
+  // };
+  // if (showfilter) {
+  //   filterDropdownSvg = [
+  //     styles.filter_dropdown_triangle_svg,
+  //     styles.rotate180deg
+  //   ].join(' ');
+  // }
   let card = courses.map((course) => {
     return <CourseCard key={course.courseId} course={course} />;
   });

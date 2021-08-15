@@ -63,7 +63,13 @@ const DynamicCourses = ({ course, error }: pageProps) => {
 };
 
 export const getServerSideProps: GetServerSideProps = async (content) => {
-  const reqCourseId: string = content.params?.courseId || '';
+  const paramsCourseId = content.params?.courseId || '';
+  let reqCourseId: string;
+  if (typeof paramsCourseId !== 'string') {
+    reqCourseId = paramsCourseId.join('');
+  } else {
+    reqCourseId = paramsCourseId;
+  }
   const courseId = new ObjectId(reqCourseId);
 
   const { db } = await connectToDatabase();

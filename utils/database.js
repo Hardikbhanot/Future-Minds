@@ -1,15 +1,15 @@
 import { MongoClient } from 'mongodb';
 
-const MONGODB_URL = process.env.MONGODB_URL;
-const MONGODB_DB = process.env.MONGODB_DB;
+const MONGODB_URL = process.env.MONGODB_URL || '';
+const MONGODB_DB = process.env.MONGODB_DB || '';
 
-if (!MONGODB_URL) {
+if (MONGODB_URL.length === 0) {
   throw new Error(
     'Please define the MONGODB_URI environment variable inside .env.local'
   );
 }
 
-if (!MONGODB_DB) {
+if (MONGODB_DB.length === 0) {
   throw new Error(
     'Please define the MONGODB_DB environment variable inside .env.local'
   );
@@ -20,7 +20,7 @@ if (!MONGODB_DB) {
  * in development. This prevents connections growing exponentially
  * during API Route usage.
  */
-const globalVar: any = global;
+const globalVar = global;
 
 let cached = globalVar.mongo;
 
