@@ -1,0 +1,67 @@
+@use '../../../styles/abstracts/colors' as colors;
+@use '../../../styles/abstracts/breakpoints' as breakpoints;
+
+.faq_container {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.question_btn {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  background-color: colors.$clr-white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.question {
+  font-size: 1em;
+  font-weight: 500;
+  color: colors.$clr-black;
+}
+
+.question_svg {
+  width: 10px;
+  height: 10px;
+}
+
+.display_negetaive > line:nth-child(2) {
+  display: none;
+}
+
+.answer_container {
+  display: none;
+}
+
+.show_answer_container {
+  display: block;
+  background-color: colors.$clr-white;
+}
+
+.answer {
+  list-style: none;
+  font-size: 0.8em;
+  line-height: 1.4em;
+  font-weight: 400;
+  color: colors.$clr-black;
+  padding: 1rem 1rem 1rem 2rem;
+  border-bottom: 1px solid colors.$clr-course-topic-border;
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+@media screen and (min-width: breakpoints.$large-tablet-screen) {
+  .question {
+    font-size: 1.5em;
+  }
+  .answer {
+    font-size: 1em;
+  }
+}

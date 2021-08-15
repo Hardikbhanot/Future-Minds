@@ -1,7 +1,9 @@
-import ChapterElement from './ChapterElement/ChapterElement';
-import Features from '../LayoutComponents/Features/Features';
-import Highlights from '../LandingPage/Highlights/Highlights';
 import Link from 'next/link';
+
+import FAQElement from './FAQElement/FAQElement';
+import Features from '../LayoutComponents/Features/Features';
+import ChapterElement from './ChapterElement/ChapterElement';
+import Highlights from '../LandingPage/Highlights/Highlights';
 
 import styles from './CourseDescription.module.scss';
 interface pageProps {
@@ -51,6 +53,23 @@ const CourseDescription = ({ course }: pageProps) => {
     {
       heading: 'Conquer',
       description: 'Apply for your desired jobs & get it like a cakewalk'
+    }
+  ];
+
+  const faqData = [
+    {
+      question: 'What are the benefits of this course?',
+      answer:
+        'Future minds will help you to get internship & Placement post course completion. '
+    },
+    {
+      question: 'What are the perquisite of this course?',
+      answer: 'Basic knowledge of computer, Laptop/PC.'
+    },
+    {
+      question: 'How could I get this course with EMI option?',
+      answer:
+        'With future minds, you can simply pay in instalments at checkout page.'
     }
   ];
 
@@ -174,6 +193,16 @@ const CourseDescription = ({ course }: pageProps) => {
     );
   }
 
+  const FAQS = faqData.map((faq) => {
+    return (
+      <FAQElement
+        key={faq.question}
+        question={faq.question}
+        answer={faq.answer}
+      />
+    );
+  });
+
   return (
     <section className={styles.course_description_main_section}>
       <section className={styles.course_description_section}>
@@ -271,6 +300,7 @@ const CourseDescription = ({ course }: pageProps) => {
           <h2 className={styles.course_description_faq_heading}>
             Frequently Asked Questions
           </h2>
+          {FAQS}
         </div>
       </section>
     </section>

@@ -1,14 +1,27 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import Link from 'next/link';
 
 import styles from './AcademyNavbar.module.scss';
 
 const AcademyNavbar = () => {
   const [menu, setMenu] = useState<boolean>(false);
+  const search = useRef<HTMLInputElement>(null);
 
   // handle burger menu click
   const onMenuClick = () => {
     setMenu(!menu);
+  };
+
+  // handle seach form submit
+  // at this moment the search funtionality is not working
+  const onSearchSubmitHandler = (event: React.SyntheticEvent) => {
+    event.preventDefault();
+    if (search && search.current) {
+      //* can acess seach current value here
+      // to get the value => search.current.value
+      // Reset the form
+      search.current.value = '';
+    }
   };
 
   // Dynamically changes classNames
@@ -306,11 +319,12 @@ const AcademyNavbar = () => {
       </Link>
 
       <div className={styles.search_container}>
-        <form className={styles.search_form}>
+        <form className={styles.search_form} onSubmit={onSearchSubmitHandler}>
           <input
             type='text'
             placeholder='Search for courses'
             className={styles.search_input}
+            ref={search}
           />
           <button type='submit' className={styles.search_btn}>
             <svg
@@ -344,7 +358,7 @@ const AcademyNavbar = () => {
 
       <ul className={styles.navbar_links_container}>
         <li className={styles.navbar_links_item}>
-          <Link href='/'>
+          <Link href='/course'>
             <a
               className={styles.navbar_links}
               title='Notification'
