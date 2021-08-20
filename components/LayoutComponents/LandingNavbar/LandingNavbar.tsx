@@ -53,24 +53,13 @@ const Navbar = () => {
           </Link>
         </li>
         <li className={styles.navbar_links_item_mobile}>
-          <Link href='/topslot'>
+          <Link href='/prep'>
             <a
               className={styles.navbar_link_mobile}
-              title='TopSlot Page Link'
-              aria-label='TopSlot Page Link'
+              title='Competitive Preparation Courses'
+              aria-label='Competitive Preparation Courses'
             >
-              TopSlot
-            </a>
-          </Link>
-        </li>
-        <li className={styles.navbar_links_item_mobile}>
-          <Link href='/leet'>
-            <a
-              className={styles.navbar_link_mobile}
-              title='LEET Program Page Link'
-              aria-label='LEET Program Page Link'
-            >
-              LEET
+              PREP
             </a>
           </Link>
         </li>
@@ -145,7 +134,7 @@ const Navbar = () => {
             </a>
           </Link>
         </li>
-        <li className={styles.navbar_links_item}>
+        {/* <li className={styles.navbar_links_item}>
           <p
             className={[
               styles.navbar_links_detail,
@@ -163,15 +152,15 @@ const Navbar = () => {
               TopSlot
             </a>
           </Link>
-        </li>
+        </li> */}
         <li className={styles.navbar_links_item}>
-          <Link href='/leet'>
+          <Link href='/prep'>
             <a
               className={styles.navbar_link}
-              title='LEET Program Page Link'
-              aria-label='LEET Program Page Link'
+              title='Competitive Preparation Courses'
+              aria-label='Competitive Preparation Courses'
             >
-              LEET
+              PREP
             </a>
           </Link>
         </li>

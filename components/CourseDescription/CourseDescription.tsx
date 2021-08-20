@@ -35,7 +35,7 @@ const CourseDescription = ({ course }: pageProps) => {
       <ChapterElement
         chapterName={topic.chapterName}
         topics={topic.topics}
-        key={topic.chapterName}
+        key={topic.chapterName + '' + Math.floor(Math.random() * 10)}
       />
     );
   });
@@ -213,7 +213,7 @@ const CourseDescription = ({ course }: pageProps) => {
               {levelSVG} {course.courseLevel}
             </div>
             <div className={styles.course_duration}>
-              <strong>{course.courseDuration}</strong> Months
+              <strong>{course.courseDuration}</strong> hr
             </div>
             <div className={styles.course_type}>
               <strong>Live</strong> Classes
@@ -266,7 +266,7 @@ const CourseDescription = ({ course }: pageProps) => {
             />
             <div className={styles.course_price_wrapper}>
               <h2 className={styles.course_price}>₹ {course.coursePrice}</h2>
-              <p className={styles.discount_offer}>30% off</p>
+              <p className={styles.discount_offer}>incl. GST</p>
             </div>
             <div className={styles.payment_card_detail_container}>
               <p className={styles.payment_card_detail}>
@@ -279,7 +279,7 @@ const CourseDescription = ({ course }: pageProps) => {
               </p>
               <p className={styles.payment_card_detail}>
                 <strong>Language: </strong>
-                {course.courseLevel}
+                English/Hindi
               </p>
               <Link href='/'>
                 <a

@@ -15,7 +15,10 @@ const ChapterElement = ({ chapterName, topics }: pageProps) => {
 
   const topicsOfCourse = topics.map((topic) => {
     return (
-      <li key={topic} className={styles.topic}>
+      <li
+        key={topic + '' + Math.floor(Math.random() * 10)}
+        className={styles.topic}
+      >
         {topic}
       </li>
     );

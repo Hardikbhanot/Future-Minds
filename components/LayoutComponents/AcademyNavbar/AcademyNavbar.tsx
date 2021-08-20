@@ -217,38 +217,13 @@ const AcademyNavbar = () => {
             </Link>
           </li>
           <li className={styles.navbar_links_item_mobile}>
-            <Link href='/topslot'>
+            <Link href='/prep'>
               <a
                 className={styles.navbar_link_mobile}
-                title='TopSlot Page Link'
-                aria-label='TopSlot Page Link'
+                title='Competitive Preparation Courses'
+                aria-label='Competitive Preparation Courses'
               >
-                <p className={styles.navbar_link_mobile_text}>TopSlot</p>
-                <svg
-                  className={styles.navbar_link_mobile_arrow}
-                  width='25'
-                  height='41'
-                  viewBox='0 0 25 41'
-                  fill='none'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
-                  <path
-                    d='M24.7428 19.8799L5.14867 0.257498C4.81514 -0.0858326 4.26504 -0.0858326 3.92205 0.257498L0.250557 3.93627C-0.0835189 4.27961 -0.0835189 4.82199 0.250557 5.16533L15.5596 20.5033L0.250557 35.8414C-0.0835189 36.1847 -0.0835189 36.7271 0.250557 37.0705L3.92205 40.7492C4.26504 41.0836 4.81514 41.0836 5.14867 40.7492L24.7428 21.1089C25.0857 20.7746 25.0857 20.2322 24.7428 19.8799Z'
-                    fill='black'
-                    fillOpacity='0.4'
-                  />
-                </svg>
-              </a>
-            </Link>
-          </li>
-          <li className={styles.navbar_links_item_mobile}>
-            <Link href='/leet'>
-              <a
-                className={styles.navbar_link_mobile}
-                title='LEET Program Page Link'
-                aria-label='LEET Program Page Link'
-              >
-                <p className={styles.navbar_link_mobile_text}>LEET</p>
+                <p className={styles.navbar_link_mobile_text}>PREP</p>
                 <svg
                   className={styles.navbar_link_mobile_arrow}
                   width='25'
@@ -358,7 +333,7 @@ const AcademyNavbar = () => {
 
       <ul className={styles.navbar_links_container}>
         <li className={styles.navbar_links_item}>
-          <Link href='/course'>
+          <Link href='/courses'>
             <a
               className={styles.navbar_links}
               title='Notification'

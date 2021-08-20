@@ -43,27 +43,22 @@ const LandingPage = () => {
           </form>
           <div className={styles.banner_trending_links_container}>
             <p className={styles.banner_trending_para}>Trending </p>
-            <Link href='/'>
-              <a className={styles.banner_trending_links} title='Python-AI/ML'>
-                Python-AI/ML
-              </a>
-            </Link>
-            <Link href='/'>
+            <Link href='https://futureminds.in/courses/6118284cd4ac27532b7d35d5'>
               <a
                 className={styles.banner_trending_links}
-                title='Web Development'
+                title='Full Stack Web Development'
               >
-                Web Development
+                Full Stack Web Development
               </a>
             </Link>
-            <Link href='/'>
+            <Link href='https://futureminds.in/courses/611828ffdb3ba7543e8c1ea7'>
               <a className={styles.banner_trending_links} title='UX/UI'>
                 UX/UI
               </a>
             </Link>
-            <Link href='/'>
-              <a className={styles.banner_trending_links} title='Data Science'>
-                Data Science
+            <Link href='https://futureminds.in/courses/6118293bdb3ba7543e8c1eb6'>
+              <a className={styles.banner_trending_links} title='Python'>
+                Python
               </a>
             </Link>
           </div>

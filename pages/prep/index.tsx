@@ -7,7 +7,7 @@ import UnderConstruction from '../../components/LayoutComponents/UnderConstructi
 
 import styles from '../../styles/index.module.scss';
 
-const PrivacyPolicy = () => {
+const Prep = () => {
   return (
     <>
       <Head>
@@ -15,7 +15,7 @@ const PrivacyPolicy = () => {
           name='description'
           content='FutureMinds is an incubated startup by DESU, Shakarpur campus, Govt. Of NCT of Delhi. An organisation which are imparting education through innovation by upskilling the student and prepare student to get employed and succees in their workplace, through edcational courses on affordable prices and few specialized courses which will be availabe free of cost to DESU students and faculty.'
         />
-        <title>Privacy Policy of FutureMinds</title>
+        <title>Entrance prepration by FutureMinds</title>
       </Head>
       <LandingNavbar />
       <main className={styles.page_main}>
@@ -26,4 +26,4 @@ const PrivacyPolicy = () => {
   );
 };
 
-export default PrivacyPolicy;
+export default Prep;

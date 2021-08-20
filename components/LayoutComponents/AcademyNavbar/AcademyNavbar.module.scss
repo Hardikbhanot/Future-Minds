@@ -2,7 +2,7 @@
 @use '../../../styles/abstracts/breakpoints' as breakpoints;
 
 .navbar {
-  width: 100%;
+  width: 100vw;
   margin: auto;
   max-height: 8rem;
   padding: 1.3rem 0.3rem;

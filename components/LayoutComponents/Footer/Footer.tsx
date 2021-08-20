@@ -7,16 +7,23 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.footer_main_content}>
         <div className={styles.discription_card_container}>
-          <h2 className={styles.main_heading}>Future Minds</h2>
+          <h2 className={styles.main_heading}>FutureMinds</h2>
           <p className={styles.main_discription}>
-            Working to bring significant changes in online-based learning by
-            doing extensive research for course curriculum preparation, student
-            engagements, and looking forward to the flexible education!
+            We believe in imparting education through innovation. Here, we
+            provide a flexible education environment by developing an engaging,
+            fruitful and motivating learning experience.
           </p>
         </div>
         <div className={styles.card_container}>
           <h3 className={styles.sub_heading}>Explore</h3>
           <ul className={styles.links_list}>
+            <li>
+              <Link href='/courses'>
+                <a title='Academy' aria-label='Academy'>
+                  Academy
+                </a>
+              </Link>
+            </li>
             <li>
               <Link href='/stepdegree'>
                 <a title='StepDegree' aria-label='StepDegree'>
@@ -25,16 +32,12 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href='/topslot'>
-                <a title='TopSlot' aria-label='TopSlot'>
-                  TopSlot
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href='/leet'>
-                <a title='LEET' aria-label='LEET'>
-                  LEET
+              <Link href='/prep'>
+                <a
+                  title='Competitive Preparation Courses'
+                  aria-label='Competitive Preparation Courses'
+                >
+                  PREP
                 </a>
               </Link>
             </li>
@@ -72,7 +75,8 @@ const Footer = () => {
             <li>
               <Link href='https://futureminds.in/'>
                 <a title='Address' aria-label='Address'>
-                  New Delhi, India
+                  BKIF, BPIBS Campus, Opp. Madhuban Colony, Near Nirman Vihar
+                  Metro Station, Shakarpur, New Delhi, Delhi, India 110092
                 </a>
               </Link>
             </li>
