@@ -58,7 +58,7 @@
 
 .course_level,
 .course_duration {
-  background-color: colors.$clr-course-chapter-background;
+  background-color: colors.$clr-navbar-background;
   border-radius: 3px;
 }
 
@@ -96,7 +96,7 @@
   object-fit: cover;
   position: absolute;
   z-index: 10;
-  top: 27%;
+  top: 22%;
   right: -20%;
 }
 
@@ -119,10 +119,11 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 10%;
+  gap: 8%;
 }
 
 .flex_column {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -158,8 +159,7 @@
 }
 
 .course_payment_card {
-  width: 100%;
-  min-width: 320px;
+  width: clamp(320px, 100%, 395px);
   padding: 1rem;
   box-sizing: border-box;
   border-radius: 7px;
@@ -193,7 +193,7 @@
   margin-left: 2rem;
   padding: 0.4rem 1rem;
   font-weight: normal;
-  background-color: colors.$clr-course-chapter-background;
+  background-color: colors.$clr-navbar-background;
   color: colors.$clr-primary;
   border: none;
   border-radius: 5px;
@@ -231,6 +231,14 @@
   padding: 1.5rem 0;
 }
 
+@media screen and (min-width: breakpoints.$tablet-screen) {
+  .course_description_image {
+    width: 70%;
+    top: 6%;
+    right: 0;
+  }
+}
+
 @media screen and (min-width: breakpoints.$monitor-screen) {
   .course_description_section {
     padding: 0 2rem;
@@ -260,7 +268,6 @@
   }
   .course_description_image {
     width: 50%;
-    z-index: 10;
     top: 0;
     right: 0;
   }
@@ -274,6 +281,9 @@
   .course_description_container {
     padding: 0 2rem;
     flex-direction: row;
+  }
+  .flex_column {
+    width: 80%;
   }
   .course_section_heading,
   .course_description_faq_heading {

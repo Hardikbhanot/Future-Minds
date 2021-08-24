@@ -1,11 +1,12 @@
 import Head from 'next/head';
 
+import { connectToDatabase } from '../utils/database';
 import LandingNavbar from '../components/LayoutComponents/LandingNavbar/LandingNavbar';
 import Footer from '../components/LayoutComponents/Footer/Footer';
 
 import MainBanner from '../components/LandingPage/MainBanner/MainBanner';
 import Features from '../components/LayoutComponents/Features/Features';
-// import CourseBanner from '../components/LandingPage/CourseBanner/CourseBanner';
+import CourseBanner from '../components/LandingPage/CourseBanner/CourseBanner';
 import Highlights from '../components/LandingPage/Highlights/Highlights';
 import StepDegree from '../components/LandingPage/StepDegree/StepDegree';
 import OtherFeatures from '../components/LandingPage/OtherFeatures/OtherFeatures';
@@ -13,7 +14,31 @@ import Newsletter from '../components/LandingPage/Newsletter/Newsletter';
 
 import styles from '../styles/index.module.scss';
 
-const Home = () => {
+interface courseStructure {
+  _id: string;
+  courseImage: string;
+  courseCategory: string;
+  courseName: string;
+  courseDuration: number;
+  courseLevel: string;
+  courseMode: string;
+  isTrending: boolean;
+}
+interface pageProps {
+  courses: {
+    courseId: string;
+    courseImage: string;
+    courseCategory: string;
+    courseName: string;
+    courseDuration: number;
+    courseLevel: string;
+    courseMode: string;
+    isTrending: boolean;
+  }[];
+  error: boolean;
+}
+
+const Home = ({ courses, error }: pageProps) => {
   const featuresCardsData = [
     {
       heading: 'Live Classes',
@@ -46,7 +71,7 @@ const Home = () => {
       <main className={styles.page_main}>
         <MainBanner />
         <Features cards={featuresCardsData} />
-        {/* <CourseBanner /> */}
+        <CourseBanner courses={courses} />
         <Highlights />
         <StepDegree />
         <OtherFeatures />
@@ -55,6 +80,44 @@ const Home = () => {
       <Footer />
     </>
   );
+};
+
+export const getStaticProps = async () => {
+  const { db } = await connectToDatabase();
+  const coursesCollectionData = await db
+    .collection('courses')
+    .find()
+    .limit(6)
+    .toArray();
+  if (coursesCollectionData && coursesCollectionData.length > 0) {
+    const response = {
+      count: coursesCollectionData.length,
+      courses: coursesCollectionData.map((course: courseStructure) => {
+        return {
+          courseId: `${course._id}`,
+          courseImage: course.courseImage,
+          courseName: course.courseName,
+          courseCategory: course.courseCategory,
+          courseLevel: course.courseLevel,
+          courseDuration: course.courseDuration,
+          courseMode: course.courseMode,
+          isTrending: course.isTrending
+        };
+      })
+    };
+    return {
+      props: {
+        courses: response.courses,
+        error: false
+      }
+    };
+  }
+  return {
+    props: {
+      courses: [],
+      error: true
+    }
+  };
 };
 
 export default Home;

@@ -43,14 +43,15 @@
 .banner_explore_form input[type='text'] {
   font-size: 1em;
   padding: 0.8rem 0.6rem;
-  color: colors.$clr-black-20;
+  color: colors.$clr-black-60;
   background-color: colors.$clr-white;
   border: 0.1px solid colors.$clr-white-40;
   border-radius: 5px 0 0 5px;
   transition: border 0.3s linear;
   &:active,
   &:focus {
-    border: 0.1px solid colors.$clr-primary-17;
+    border: 0.1px solid colors.$clr-primary-04;
+    outline: none;
   }
 }
 

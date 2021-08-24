@@ -55,9 +55,9 @@ const Highlights = () => {
           <div className={styles.card}>
             <div className={styles.card_top}>
               <div className={styles.card_main_container}>
-                <p className={styles.main_text_refer}>
+                <h2 className={styles.main_text_refer}>
                   Refer & Get Free Course
-                </p>
+                </h2>
               </div>
               <ul className={styles.card_list_container}>
                 <li className={styles.list_item}>

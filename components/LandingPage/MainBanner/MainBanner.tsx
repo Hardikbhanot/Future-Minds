@@ -42,13 +42,13 @@ const LandingPage = () => {
             </button>
           </form>
           <div className={styles.banner_trending_links_container}>
-            <p className={styles.banner_trending_para}>Trending </p>
+            <p className={styles.banner_trending_para}>Trending:</p>
             <Link href='https://futureminds.in/courses/6118284cd4ac27532b7d35d5'>
               <a
                 className={styles.banner_trending_links}
                 title='Full Stack Web Development'
               >
-                Full Stack Web Development
+                Web Development
               </a>
             </Link>
             <Link href='https://futureminds.in/courses/611828ffdb3ba7543e8c1ea7'>

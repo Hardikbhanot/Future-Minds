@@ -73,7 +73,7 @@ const Footer = () => {
           <h3 className={styles.sub_heading}>Address</h3>
           <ul className={styles.links_list}>
             <li>
-              <Link href='https://futureminds.in/'>
+              <Link href='/'>
                 <a title='Address' aria-label='Address'>
                   BKIF, BPIBS Campus, Opp. Madhuban Colony, Near Nirman Vihar
                   Metro Station, Shakarpur, New Delhi, Delhi, India 110092

@@ -1,19 +1,17 @@
 import Link from 'next/link';
 import styles from './CourseCard.module.scss';
 
-interface courseFields {
-  courseId: string;
-  courseName: string;
-  courseImage: string;
-  courseCategory: string;
-  courseDuration: number;
-  courseLevel: string;
-  courseMode: string;
-  isTrending: boolean;
-}
-
 interface pageProps {
-  course: courseFields;
+  course: {
+    courseId: string;
+    courseName: string;
+    courseImage: string;
+    courseCategory: string;
+    courseDuration: number;
+    courseLevel: string;
+    courseMode: string;
+    isTrending: boolean;
+  };
 }
 
 const CourseCard = ({ course }: pageProps) => {

@@ -1,76 +1,38 @@
+import { useRef } from 'react';
 import Link from 'next/link';
+import CourseCard from '../../CoursesCard/CourseCard';
 
 import styles from './CourseBanner.module.scss';
 
-const CourseBanner = () => {
-  const dummyCourseData = [
-    { _id: 1, name: 'UI/UX Designing' },
-    { _id: 2, name: 'AI/Machine Learning' },
-    { _id: 3, name: 'Front End Development' }
-    // { _id: 4, name: 'Back End Development' },
-    // { _id: 5, name: 'Human Resourses' }
-  ];
-  const course_card = dummyCourseData.map((course) => {
-    return (
-      <div key={course._id} className={styles.card}>
-        <div className={styles.card_image_background}></div>
-        <div className={styles.card_details_container}>
-          <h4 className={styles.course_heading}>{course.name}</h4>
-          <div className={styles.course_features}>
-            <img
-              src='/icons/card-icon-clock.png'
-              alt='clock-icon'
-              className={styles.course_features_img}
-            />
-            <p className={styles.course_features_description}>2-3 Months</p>
-          </div>
-          <div className={styles.course_features}>
-            <img
-              src='/icons/card-icon-chat-bubble.png'
-              alt='chat-icon'
-              className={styles.course_features_img}
-            />
-            <p className={styles.course_features_description}>Hindi/English</p>
-          </div>
-          <div className={styles.course_features}>
-            <img
-              src='/icons/card-icon-technical-support.png'
-              alt='technical-support-icon'
-              className={styles.course_features_img}
-            />
-            <p className={styles.course_features_description}>1-1 Support</p>
-          </div>
-          <div className={styles.course_features}>
-            <img
-              src='/icons/card-icon-job-seeker.png'
-              alt='job-seeker-icon'
-              className={styles.course_features_img}
-            />
-            <p className={styles.course_features_description}>
-              Placement Assistance
-            </p>
-          </div>
-          <Link href='#'>
-            <a
-              title={`${course.name} course link`}
-              aria-label={`${course.name} course link`}
-              className={styles.course_link}
-            >
-              Explore Course --{'>'}
-            </a>
-          </Link>
-        </div>
-      </div>
-    );
-  });
+interface pageProps {
+  courses: {
+    courseId: string;
+    courseName: string;
+    courseImage: string;
+    courseCategory: string;
+    courseDuration: number;
+    courseLevel: string;
+    courseMode: string;
+    isTrending: boolean;
+  }[];
+}
+
+const CourseBanner = ({ courses }: pageProps) => {
+  const courseCardContainerRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (scrollOffset: number) => {
+    if (courseCardContainerRef && courseCardContainerRef.current) {
+      courseCardContainerRef.current.scrollLeft += scrollOffset;
+    }
+  };
 
   return (
     <section className={styles.course_banner_section}>
       <div className={styles.course_banner_container}>
         <div className={styles.course_banner_description_container}>
-          <h3 className={styles.course_banner_heading}>
-            Our <span>popular</span> courses
-          </h3>
+          <h2 className={styles.course_banner_heading}>
+            Our <span>Popular</span> Courses
+          </h2>
           <p className={styles.course_banner_description}>
             Explore our courses and open the gateway to a bright career, So
             start learning now ! We promise you'll be the winner always!
@@ -86,7 +48,10 @@ const CourseBanner = () => {
               </a>
             </Link>
             <div className={styles.pagination_btn_container}>
-              <button className={styles.pagination_btn}>
+              <button
+                className={styles.pagination_btn}
+                onClick={() => scroll(-282)}
+              >
                 <svg
                   width='10'
                   height='18'
@@ -103,7 +68,10 @@ const CourseBanner = () => {
                   />
                 </svg>
               </button>
-              <button className={styles.pagination_btn}>
+              <button
+                className={styles.pagination_btn}
+                onClick={() => scroll(282)}
+              >
                 <svg
                   width='10'
                   height='18'
@@ -123,7 +91,11 @@ const CourseBanner = () => {
             </div>
           </div>
         </div>
-        <div className={styles.card_container}>{course_card}</div>
+        <div className={styles.card_container} ref={courseCardContainerRef}>
+          {courses.map((course) => {
+            return <CourseCard key={course.courseId} course={course} />;
+          })}
+        </div>
         <div className={styles.show_all_courses_link_mobile_container}>
           <Link href='/courses'>
             <a
@@ -135,7 +107,10 @@ const CourseBanner = () => {
             </a>
           </Link>
           <div className={styles.pagination_btn_container}>
-            <button className={styles.pagination_btn}>
+            <button
+              className={styles.pagination_btn}
+              onClick={() => scroll(-266)}
+            >
               <svg
                 width='10'
                 height='18'
@@ -152,7 +127,10 @@ const CourseBanner = () => {
                 />
               </svg>
             </button>
-            <button className={styles.pagination_btn}>
+            <button
+              className={styles.pagination_btn}
+              onClick={() => scroll(266)}
+            >
               <svg
                 width='10'
                 height='18'

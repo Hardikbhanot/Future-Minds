@@ -14,26 +14,25 @@
 }
 
 .highlight_heading {
-  width: 90%;
-  margin: auto;
-  font-size: 2.5em;
+  width: 100%;
+  font-size: 3.375em;
   font-weight: bold;
   color: colors.$clr-font-main;
 }
 
 .card_container {
-  width: 90%;
-  margin: 1rem auto 0 auto;
+  width: 100%;
+  margin: 1rem 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
 .card {
-  width: 100%;
-  max-width: 340px;
+  width: 90%;
+  max-width: 410px;
   min-width: 300px;
-  margin: 0.5rem 0;
+  margin: 0.5rem auto;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
@@ -42,9 +41,10 @@
 
 .card_top {
   padding: 0 1.5rem;
-  min-height: 9rem;
+  min-height: 14rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   color: colors.$clr-white;
   border-radius: 10px 10px 0 0;
   background-color: colors.$clr-primary;
@@ -64,36 +64,36 @@
 }
 
 .main_percentage_0 {
-  margin-right: 3.5rem;
-  font-size: 4.5em;
+  margin-right: 0.5rem;
+  font-size: 8em;
 }
 
 .main_percentage_100 {
-  font-size: 4em;
+  font-size: 5em;
   line-height: 1.15em;
-  margin-right: 2rem;
+  margin-right: 0.5rem;
 }
 
 .main_text {
-  font-size: 1.5em;
+  font-size: 1.625em;
   line-height: 1.2em;
 }
 
 .main_text_refer {
   font-size: 2em;
   line-height: 1em;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .card_list_container {
-  margin-top: 0.2rem;
+  margin: 0.2rem 0;
   width: 100%;
-  padding: 0.5rem 0 0 0.8rem;
+  padding: 0.2rem 0 0.2rem 0.8rem;
 }
 
 .list_item {
   list-style: disc;
-  font-size: 0.8em;
+  font-size: 1em;
   line-height: 1.4em;
 }
 
@@ -108,7 +108,7 @@
 }
 
 .bottom_text {
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 
 .t_c_para {
@@ -126,34 +126,40 @@
   .card_container {
     width: 70%;
   }
-  .main_text_refer {
-    font-size: 1.8em;
-  }
 }
 @media screen and (min-width: breakpoints.$large-tablet-screen) {
   .card_container {
-    width: 90%;
+    width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
   }
   .card {
-    width: 46%;
-    margin-right: 2%;
+    width: 48%;
+    // margin-right: 2%;
+  }
+  .main_percentage_100 {
+    font-size: 6.25em;
+  }
+  .main_text {
+    font-size: 1.875em;
+  }
+  .main_text_refer {
+    font-size: 2.875em;
   }
 }
 
 @media screen and (min-width: breakpoints.$monitor-screen) {
   .card_container {
-    width: 90%;
+    width: 100%;
     flex-wrap: nowrap;
     justify-content: center;
   }
   .card {
-    width: 30%;
-    margin: 0.5rem 1.66%;
-    &:last-child {
-      margin-right: 0;
+    width: 32%;
+    margin: 0.5rem 0;
+    &:nth-child(2) {
+      margin: auto;
     }
   }
 }
