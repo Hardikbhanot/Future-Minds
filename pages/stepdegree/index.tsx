@@ -2,8 +2,7 @@ import Head from 'next/head';
 
 import LandingNavbar from '../../components/LayoutComponents/LandingNavbar/LandingNavbar';
 import Footer from '../../components/LayoutComponents/Footer/Footer';
-
-import UnderConstruction from '../../components/LayoutComponents/UnderConstruction/UnderConstruction';
+import StepDegreePage from '../../components/StepDegreePage/StepDegreePage';
 
 import styles from '../../styles/index.module.scss';
 
@@ -19,7 +18,7 @@ const StepDegree = () => {
       </Head>
       <LandingNavbar />
       <main className={styles.page_main}>
-        <UnderConstruction />
+        <StepDegreePage />
       </main>
       <Footer />
     </>
