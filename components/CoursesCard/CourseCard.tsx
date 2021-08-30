@@ -136,56 +136,45 @@ const CourseCard = ({ course }: pageProps) => {
   }
 
   return (
-    <div className={styles.course_card}>
-      <div className={styles.img_container}>
-        <img
-          src={course.courseImage}
-          alt='Course name'
-          className={styles.card_img}
-          width={200}
-          height={300}
-        />
-        {course.isTrending ? (
-          <div className={styles.trending}>Trending</div>
-        ) : (
-          <div className={styles.not_trending}>Trending</div>
-        )}
-      </div>
-      <div className={styles.detail_container}>
-        <div className={styles.category_level_container}>
-          <Link href='/'>
-            <a
-              className={styles.course_category}
-              title={course.courseCategory + ' Course'}
-            >
-              {course.courseCategory}
-            </a>
-          </Link>
-          <div className={styles.course_level_container}>
-            {levelSVG}
-            <p className={styles.course_level}>{course.courseLevel}</p>
-          </div>
-        </div>
+    <Link href={'/courses/' + course.courseId}>
+      <a className={styles.course_card} title={course.courseName}>
+        <span className={styles.img_container}>
+          <img
+            src={course.courseImage}
+            alt='Course name'
+            className={styles.card_img}
+            width={200}
+            height={300}
+          />
+          {course.isTrending ? (
+            <span className={styles.trending}>Trending</span>
+          ) : (
+            <span className={styles.not_trending}>Trending</span>
+          )}
+        </span>
+        <span className={styles.detail_container}>
+          <span className={styles.category_level_container}>
+            <p className={styles.course_category}>{course.courseCategory}</p>
 
-        <h3 className={styles.course_name}>{course.courseName}</h3>
-        <p className={styles.course_details}>
-          Duration: {course.courseDuration} hr
-        </p>
-        <p className={styles.course_details}>Classes: {course.courseMode}</p>
-        <p className={styles.course_details}>Support: 1-1</p>
+            <span className={styles.course_level_container}>
+              {levelSVG}
+              <p className={styles.course_level}>{course.courseLevel}</p>
+            </span>
+          </span>
 
-        <div className={styles.course_link_container}>
-          <Link href={'/courses/' + course.courseId}>
-            <a
-              className={styles.course_link}
-              title='Know more about this course'
-            >
-              Know more
-            </a>
-          </Link>
-        </div>
-      </div>
-    </div>
+          <h3 className={styles.course_name}>{course.courseName}</h3>
+          <p className={styles.course_details}>
+            Duration: {course.courseDuration} hr
+          </p>
+          <p className={styles.course_details}>Classes: {course.courseMode}</p>
+          <p className={styles.course_details}>Support: 1-1</p>
+
+          <span className={styles.course_link_container}>
+            <p className={styles.course_link}>Know more</p>
+          </span>
+        </span>
+      </a>
+    </Link>
   );
 };
 

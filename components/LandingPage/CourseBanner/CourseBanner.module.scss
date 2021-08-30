@@ -69,6 +69,7 @@
 .card_container {
   width: 95%;
   margin: 1rem 0 2rem auto;
+  padding: 1.2rem;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -82,7 +83,7 @@
   display: none; /* Safari and Chrome */
 }
 
-.card_container > div {
+.card_container > a {
   min-height: 20rem;
   min-width: 250px;
   margin: 0 0.5rem;
@@ -133,7 +134,7 @@
     overflow-x: hidden;
   }
 
-  .card_container > div {
+  .card_container > a {
     min-height: 20rem;
     margin: 0 1rem;
     &:last-child {
