@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import styles from './StepDegree.module.scss';
 
 const StepDegree = () => {
@@ -23,7 +25,9 @@ const StepDegree = () => {
             isn't helping out! We've planned for you to enhance your chances to
             better jobs & money.
           </p>
-          <button className={styles.coming_soon_btn}>Coming Soon</button>
+          <Link href='/stepdegree'>
+            <a className={styles.coming_soon_mobile_btn}>Know More</a>
+          </Link>
         </div>
         <div className={styles.img_area}>
           <img
@@ -138,7 +142,9 @@ const StepDegree = () => {
             isn't helping out! We've planned for you to enhance your chances to
             better jobs & money.
           </p>
-          <button className={styles.coming_soon_mobile_btn}>Coming Soon</button>
+          <Link href='/stepdegree'>
+            <a className={styles.coming_soon_mobile_btn}>Know More</a>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
-import styles from './StepDegreePage.module.scss';
+import styles from './MainBanner.module.scss';
 
-const StepDegreePage = () => {
+const MainBanner = () => {
   return (
     <section className={styles.stepdegree_page}>
       <section className={styles.main_section}>
@@ -61,4 +61,4 @@ const StepDegreePage = () => {
   );
 };
 
-export default StepDegreePage;
+export default MainBanner;

@@ -2,7 +2,9 @@ import Head from 'next/head';
 
 import LandingNavbar from '../../components/LayoutComponents/LandingNavbar/LandingNavbar';
 import Footer from '../../components/LayoutComponents/Footer/Footer';
-import StepDegreePage from '../../components/StepDegreePage/StepDegreePage';
+
+import MainBanner from '../../components/StepDegreePage/MainBanner/MainBanner';
+import BenefitsBanner from '../../components/StepDegreePage/BenefitsBanner/BenefitsBanner';
 
 import styles from '../../styles/index.module.scss';
 
@@ -18,7 +20,8 @@ const StepDegree = () => {
       </Head>
       <LandingNavbar />
       <main className={styles.page_main}>
-        <StepDegreePage />
+        <MainBanner />
+        <BenefitsBanner />
       </main>
       <Footer />
     </>

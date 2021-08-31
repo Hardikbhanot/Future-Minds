@@ -80,10 +80,10 @@
 
 .coming_soon_mobile_btn {
   font-size: 1em;
-  margin: 1.4rem 0;
-  padding: 0.6rem 1.4rem;
+  display: inline-block;
+  margin: 1.2rem 0;
+  padding: 0.8rem 1.4rem;
   text-decoration: none;
-  border: none;
   border-radius: 30px;
   background-color: colors.$clr-secondary-40;
 }
@@ -142,11 +142,11 @@
     left: -20px;
   }
   .coming_soon_btn {
+    display: inline-block;
     margin-top: 1.4em;
-    padding: 1em 1.8em;
+    padding: 1em 2em;
     border-radius: 30px;
     background-color: colors.$clr-secondary-40;
-    border: none;
     text-decoration: none;
     font-size: 1em;
   }
