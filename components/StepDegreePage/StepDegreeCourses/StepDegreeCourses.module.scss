@@ -1,23 +1,169 @@
 @use '../../../styles/abstracts/colors' as colors;
 @use '../../../styles/abstracts/breakpoints' as breakpoints;
 
+.stepdegree_course_section {
+  width: 100%;
+  text-align: center;
+  min-height: 80vh; //! remove
+}
+
+.heading {
+  // font-size: 1.75em;
+  font-size: 1.375em;
+  font-weight: 700;
+}
+
+.description {
+  margin: 1.5rem 0;
+  // font-size: 1.125em;
+  font-size: 0.875em;
+  font-weight: 400;
+  color: colors.$clr-font-para-lt;
+}
+
+.course_card_container {
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.card {
+  box-sizing: border-box;
+  width: clamp(340px, 95%, 465px);
+  min-height: 177px;
+  margin: auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: colors.$clr-white;
+  background-color: rgba(0, 102, 255, 1);
+  border-radius: 14px;
+  border: none;
+  outline: none;
+  position: relative;
+}
+
+.active {
+  color: colors.$clr-black;
+  background-color: rgba(229, 240, 255, 1);
+
+  .card_know_more_link {
+    display: none;
+  }
+
+  .fill_hexagon_svg_1 g path {
+    fill: colors.$clr-black;
+  }
+
+  .fill_hexagon_svg_2 g path {
+    fill: colors.$clr-black;
+  }
+
+  .stroke_hexagon_svg_1 path {
+    stroke: colors.$clr-black;
+  }
+
+  .stroke_hexagon_svg_2 path {
+    fill: colors.$clr-black;
+  }
+
+  .fill_circle_svg g circle {
+    fill: colors.$clr-black;
+  }
+}
+
+.card_heading {
+  width: 45%;
+  text-align: start;
+  // font-size: 1.75em;
+  font-size: 1.375em;
+  font-weight: 500;
+  line-height: 1.2em;
+}
+
+.card_description {
+  // font-size: 0.85em;
+  margin-top: 0.5rem;
+  font-size: 0.75em;
+  font-weight: 400;
+}
+
+.card_know_more_link {
+  margin-top: 1.5rem;
+  display: inline-block;
+  font-size: 0.75em;
+  font-weight: 300;
+  padding: 0.6rem 1rem;
+  color: colors.$clr-black;
+  background-color: colors.$clr-white;
+  border-radius: 18px;
+  text-decoration: none;
+}
+
+.know_more_arror_svg {
+  color: colors.$clr-black;
+  margin-left: 0.4rem;
+}
+
 .honeycomb_svg {
+  position: absolute;
+  top: -20px;
+  left: -20px;
 }
 
 .fill_hexagon_svg_1 {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 7px;
+  right: 100px;
 }
 
 .fill_hexagon_svg_2 {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: 65px;
+  right: 5px;
 }
 
 .stroke_hexagon_svg_1 {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 20px;
+  right: 35px;
 }
 
 .stroke_hexagon_svg_2 {
+  width: 66px;
+  height: 51px;
+  position: absolute;
+  bottom: 0px;
+  right: 40px;
 }
 
 .fill_circle_svg {
+  position: absolute;
+  bottom: 50px;
+  right: 27px;
 }
 
-.gradient_circle_svg {
+.gradient_circle_svg_1 {
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 25px;
+  right: 62px;
+}
+
+.gradient_circle_svg_2 {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  bottom: 40px;
+  right: 95px;
 }

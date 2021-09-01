@@ -5,6 +5,7 @@ import Footer from '../../components/LayoutComponents/Footer/Footer';
 
 import MainBanner from '../../components/StepDegreePage/MainBanner/MainBanner';
 import BenefitsBanner from '../../components/StepDegreePage/BenefitsBanner/BenefitsBanner';
+import StepDegreeCourses from '../../components/StepDegreePage/StepDegreeCourses/StepDegreeCourses';
 
 import styles from '../../styles/index.module.scss';
 
@@ -22,6 +23,7 @@ const StepDegree = () => {
       <main className={styles.page_main}>
         <MainBanner />
         <BenefitsBanner />
+        <StepDegreeCourses />
       </main>
       <Footer />
     </>
