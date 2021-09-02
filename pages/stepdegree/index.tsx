@@ -6,6 +6,9 @@ import Footer from '../../components/LayoutComponents/Footer/Footer';
 import MainBanner from '../../components/StepDegreePage/MainBanner/MainBanner';
 import BenefitsBanner from '../../components/StepDegreePage/BenefitsBanner/BenefitsBanner';
 import StepDegreeCourses from '../../components/StepDegreePage/StepDegreeCourses/StepDegreeCourses';
+import StepDegreeDescription from '../../components/StepDegreePage/StepDegreeDescription/StepDegreeDescription';
+import HowToApply from '../../components/StepDegreePage/HowToApply/HowToApply';
+import FAQSection from '../../components/StepDegreePage/FAQSection/FAQSection';
 
 import styles from '../../styles/index.module.scss';
 
@@ -24,6 +27,9 @@ const StepDegree = () => {
         <MainBanner />
         <BenefitsBanner />
         <StepDegreeCourses />
+        <StepDegreeDescription />
+        <HowToApply />
+        <FAQSection />
       </main>
       <Footer />
     </>

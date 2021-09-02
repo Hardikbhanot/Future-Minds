@@ -1,0 +1,5 @@
+@use '../../../styles/abstracts/colors' as colors;
+@use '../../../styles/abstracts/breakpoints' as breakpoints;
+
+@media screen and (min-width: breakpoints.$monitor-screen) {
+}
