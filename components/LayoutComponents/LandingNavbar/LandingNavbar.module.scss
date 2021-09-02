@@ -215,10 +215,20 @@
     border-radius: 25px;
     background-color: colors.$clr-secondary-50;
   }
-
   .navbar_link {
     font-size: 1.2em;
     line-height: 1.4em;
+    position: relative;
+    // border-bottom: 4px solid colors.$clr-primary-04;
+  }
+  .navbar_link_active::after {
+    content: '';
+    width: 26px;
+    height: 3px;
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    border-bottom: 4px solid colors.$clr-secondary;
   }
   .signIn_container {
     grid-column: 4/5;

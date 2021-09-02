@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import styles from './LandingNavbar.module.scss';
 
 const Navbar = () => {
   const [menu, setMenu] = useState<boolean>(false);
+  const router = useRouter();
 
   // handle burger menu click
   const onMenuClick = () => {
@@ -105,10 +107,13 @@ const Navbar = () => {
         </Link>
         <ul className={styles.navbar_links_container}>
           <li className={styles.navbar_links_item}>
-            <p className={styles.navbar_links_detail}>Explore</p>
             <Link href='/courses'>
               <a
-                className={styles.navbar_link}
+                className={
+                  router.pathname == '/courses'
+                    ? [styles.navbar_link, styles.navbar_link_active].join(' ')
+                    : styles.navbar_link
+                }
                 title='Courses Page Link'
                 aria-label='Courses Page Link'
               >
@@ -119,7 +124,11 @@ const Navbar = () => {
           <li className={styles.navbar_links_item}>
             <Link href='/stepdegree'>
               <a
-                className={styles.navbar_link}
+                className={
+                  router.pathname == '/stepdegree'
+                    ? [styles.navbar_link, styles.navbar_link_active].join(' ')
+                    : styles.navbar_link
+                }
                 title='Step Degree Page Link'
                 aria-label='Step Degree Page Link'
               >
@@ -149,7 +158,11 @@ const Navbar = () => {
           <li className={styles.navbar_links_item}>
             <Link href='/prep'>
               <a
-                className={styles.navbar_link}
+                className={
+                  router.pathname == '/prep'
+                    ? [styles.navbar_link, styles.navbar_link_active].join(' ')
+                    : styles.navbar_link
+                }
                 title='Competitive Preparation Courses'
                 aria-label='Competitive Preparation Courses'
               >

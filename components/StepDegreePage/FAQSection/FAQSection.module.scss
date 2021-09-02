@@ -1,5 +1,69 @@
 @use '../../../styles/abstracts/colors' as colors;
 @use '../../../styles/abstracts/breakpoints' as breakpoints;
 
+.faq_section {
+  width: 100%;
+  padding: 2rem 0;
+  background-color: colors.$clr-primary;
+  color: colors.$clr-white;
+}
+
+.heading {
+  font-size: 1.375em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.btn_container {
+  margin: 2rem auto 0 auto;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.btn {
+  padding: 0.3rem 0.5rem;
+  font-size: 0.75em;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  background-color: colors.$clr-white-20;
+  color: colors.$clr-white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.active_btn {
+  background-color: colors.$clr-white;
+  color: colors.$clr-primary;
+}
+
+.faq_container {
+  width: 100%;
+}
+
 @media screen and (min-width: breakpoints.$monitor-screen) {
+  .faq_section {
+    padding: 4rem 0;
+  }
+  .heading {
+    font-size: 2.25em;
+    text-align: left;
+    margin-left: 10%;
+  }
+  .btn_container {
+    margin: 2rem auto;
+    width: 80%;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+  .btn {
+    padding: 0.6rem 1rem;
+    font-size: 1em;
+  }
+  .faq_container {
+    width: 80%;
+    margin: auto;
+  }
 }

@@ -1,5 +1,91 @@
 @use '../../../styles/abstracts/colors' as colors;
 @use '../../../styles/abstracts/breakpoints' as breakpoints;
 
+.how_to_apply_section {
+  width: 100%;
+  padding-bottom: 2rem;
+}
+
+.heading {
+  width: max-content;
+  margin: 2rem auto;
+  font-size: 1.625em;
+  font-weight: 600;
+}
+
+.steps_container {
+  width: 80%;
+  margin: 4rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5rem;
+}
+
+.steps_wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+}
+
+.steps_counter {
+  width: 46px;
+  height: 46px;
+  box-sizing: border-box;
+  font-size: 1.875em;
+  font-weight: 900;
+  padding: 0.5rem 0.9rem;
+  color: colors.$clr-white;
+  background-color: colors.$clr-primary;
+  border-radius: 50%;
+  position: relative;
+}
+
+.steps_counter::before {
+  content: '';
+  width: 54px;
+  height: 54px;
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  z-index: -10;
+  border-radius: 50%;
+  border: 3px dashed colors.$clr-primary;
+}
+
+.steps {
+  width: 80%;
+  font-size: 1.125em;
+  font-weight: 400;
+}
+
+.steps_wrapper::after {
+  content: '>>';
+  font-size: 1.8em;
+  color: colors.$clr-black-60;
+  position: absolute;
+  top: 130%;
+  right: 45%;
+  transform: rotate(90deg);
+}
+
+.steps_wrapper:last-child::after {
+  content: '';
+}
+
 @media screen and (min-width: breakpoints.$monitor-screen) {
+  .steps_container {
+    flex-direction: row;
+    gap: 4rem;
+  }
+  .steps_wrapper::after {
+    top: 5px;
+    right: 10px;
+    transform: rotate(0deg);
+  }
 }
