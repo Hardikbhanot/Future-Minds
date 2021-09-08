@@ -24,11 +24,11 @@ const BenefitsBanner = () => {
       </div>
       <div className={styles.benefits_heading_container}>
         <h3 className={styles.benefits_heading}>
-          We Will Get the Benefits Include
+          You Will Get the Following Benefits
         </h3>
         <p className={styles.benefits_description}>
-          From a decade major corporates shifted to skilled profiles instead of
-          premium institutions
+          From a decade, major corporates shifted to skilled profiles rather
+          than premium institutions
         </p>
       </div>
       <div className={styles.benefits_card_container}>
@@ -43,7 +43,9 @@ const BenefitsBanner = () => {
             Flexible <strong>Timing</strong>
           </p>
           <p className={styles.benefits_card_description}>
-            Learn Along with your study & job without disturb your daily life
+            It allows you to participate within agreed time limits selected by
+            the students which will also provide them with a flexible working
+            environment.
           </p>
           <div className={styles.benefits_card_shadow}></div>
         </div>
@@ -58,7 +60,9 @@ const BenefitsBanner = () => {
             Guranteed <strong>Job</strong>
           </p>
           <p className={styles.benefits_card_description}>
-            Learn Along with your study & job without disturb your daily life
+            We aim to achieve the professional success by helping you to become
+            a desirable candidate for the professional world or money will be
+            refunded.
           </p>
           <div className={styles.benefits_card_shadow}></div>
         </div>
@@ -73,7 +77,9 @@ const BenefitsBanner = () => {
             Expert <strong>Mentors</strong>
           </p>
           <p className={styles.benefits_card_description}>
-            Learn Along with your study & job without disturb your daily life
+            Students will receive a supporting guide from industrial experts.
+            Through online session mentors will guide the students towards their
+            professional goals.
           </p>
           <div className={styles.benefits_card_shadow}></div>
         </div>
@@ -88,7 +94,9 @@ const BenefitsBanner = () => {
             Live <strong>Projects</strong>
           </p>
           <p className={styles.benefits_card_description}>
-            Learn Along with your study & job without disturb your daily life
+            It will allow the students to experience a productive educational
+            and external collaborators for educational as well as professional
+            development.
           </p>
           <div className={styles.benefits_card_shadow}></div>
         </div>

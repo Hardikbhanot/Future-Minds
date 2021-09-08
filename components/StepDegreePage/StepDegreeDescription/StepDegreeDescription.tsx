@@ -15,11 +15,10 @@ const StepDegreeDescription = () => {
             upfront fee
           </h1>
           <p className={styles.description}>
-            You pay no fees while studying at Masai School. Only once you
-            complete the course, get placed and start earning Rs. 5 lakh or more
-            per year, you will pay 15% of your monthly income towards the Income
-            Share Agreement (ISA) for a maximum of 3 years or until you have
-            paid Rs 3 lakhs (including GST).
+            Futureminds assures you guaranteed placement after the completion of
+            course with salary starting from Rs.5 lakh or more per year. You
+            will pay 15% of your monthly income towards the Income Share
+            Agreement (ISA) until you have paid Rs.3 lakhs.
           </p>
         </div>
       </div>
