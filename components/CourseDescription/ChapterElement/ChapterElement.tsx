@@ -4,14 +4,19 @@ import styles from './ChapterElement.module.scss';
 interface pageProps {
   chapterName: string;
   topics: string[];
+  isActive: boolean;
+  elementIndex: number;
+  onTopicClickHandler: (elementIndex: number, isActive: boolean) => void;
 }
 
-const ChapterElement = ({ chapterName, topics }: pageProps) => {
-  const [showTopic, setShowTopic] = useState(false);
-
-  const onTopicClickHandler = () => {
-    setShowTopic(!showTopic);
-  };
+const ChapterElement = ({
+  chapterName,
+  topics,
+  isActive,
+  elementIndex,
+  onTopicClickHandler
+}: pageProps) => {
+  const [showTopic, setShowTopic] = useState(isActive);
 
   const topicsOfCourse = topics.map((topic) => {
     return (
@@ -38,7 +43,7 @@ const ChapterElement = ({ chapterName, topics }: pageProps) => {
         className={styles.chapter_btn}
         type='button'
         name={'Chapter - ' + chapterName}
-        onClick={onTopicClickHandler}
+        onClick={() => onTopicClickHandler(elementIndex, isActive)}
       >
         <h3 className={styles.topic_name}>{chapterName}</h3>
         <svg

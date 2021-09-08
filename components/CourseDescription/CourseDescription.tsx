@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 import FAQElement from './FAQElement/FAQElement';
@@ -6,6 +7,7 @@ import ChapterElement from './ChapterElement/ChapterElement';
 import Highlights from '../LandingPage/Highlights/Highlights';
 
 import styles from './CourseDescription.module.scss';
+
 interface pageProps {
   course: {
     courseId: string;
@@ -29,16 +31,56 @@ interface pageProps {
   };
 }
 
+interface topicsType {
+  chapterName: string;
+  topics: string[];
+  isActive: boolean;
+}
+
 const CourseDescription = ({ course }: pageProps) => {
-  const topicsOfCourse = course.topicsOfCourse.map((topic) => {
-    return (
-      <ChapterElement
-        chapterName={topic.chapterName}
-        topics={topic.topics}
-        key={topic.chapterName + '' + Math.floor(Math.random() * 10)}
-      />
-    );
+  const [topics, setTopics] = useState<topicsType[]>();
+  let updatedTopics = course.topicsOfCourse.map((topic) => {
+    return { ...topic, isActive: false };
   });
+
+  useEffect(() => {
+    setTopics([...updatedTopics]);
+  }, []);
+
+  const expandAndCollapseHandler = (
+    elementIndex: number,
+    isActive: boolean
+  ) => {
+    if (isActive) {
+      updatedTopics = course.topicsOfCourse.map((topic) => {
+        return { ...topic, isActive: false };
+      });
+    } else {
+      updatedTopics = course.topicsOfCourse.map((topic, index) => {
+        if (index !== elementIndex) {
+          return { ...topic, isActive: false };
+        }
+        return { ...topic, isActive: true };
+      });
+    }
+    setTopics([...updatedTopics]);
+  };
+
+  let topicsOfCourse;
+  if (topics) {
+    topicsOfCourse = topics.map((topic, index) => {
+      return (
+        <ChapterElement
+          chapterName={topic.chapterName}
+          topics={topic.topics}
+          isActive={topic.isActive}
+          elementIndex={index}
+          onTopicClickHandler={expandAndCollapseHandler}
+          key={topic.chapterName + '' + Math.floor(Math.random() * 10)}
+        />
+      );
+    });
+  }
 
   const featuresCardsData = [
     {

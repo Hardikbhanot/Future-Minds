@@ -1,9 +1,8 @@
-const dotenv = require('dotenv');
+const dotenv = require('dotenv').config();
 const express = require('express');
 const next = require('next');
 const mongoose = require('mongoose');
 
-dotenv.config();
 const logger = require('./logger/index');
 const port = process.env.PORT || 8000;
 const dev = process.env.NODE_ENV !== 'production';
