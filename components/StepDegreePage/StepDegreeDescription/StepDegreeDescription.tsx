@@ -12,13 +12,14 @@ const StepDegreeDescription = () => {
         <div className={styles.heading_container}>
           <h1 className={styles.heading}>
             Pay only after Job, <span className={styles.green_zero}>Zero</span>{' '}
-            upfront fee
+            upfront fee.
           </h1>
           <p className={styles.description}>
             Futureminds assures you guaranteed placement after the completion of
-            course with salary starting from Rs.5 lakh or more per year. You
-            will pay 15% of your monthly income towards the Income Share
-            Agreement (ISA) until you have paid Rs.3 lakhs.
+            course with salary starting from Rs.6 lakh or more per year. You
+            will pay 20% of your monthly income towards the Income Share
+            Agreement (ISA) 36 months or until the full fees is recovered i.e.,
+            3.60 Lakh.
           </p>
         </div>
       </div>

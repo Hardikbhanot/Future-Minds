@@ -101,6 +101,7 @@ const BenefitsBanner = () => {
           <div className={styles.benefits_card_shadow}></div>
         </div>
       </div>
+      <div className={styles.radial_background}></div>
     </section>
   );
 };

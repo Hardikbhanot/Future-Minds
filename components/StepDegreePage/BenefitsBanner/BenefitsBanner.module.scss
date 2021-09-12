@@ -7,6 +7,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 .company_section {
@@ -112,6 +113,10 @@
   box-shadow: 0px 4px 41px 14px rgba(0, 102, 255, 0.15);
 }
 
+.radial_background {
+  display: none;
+}
+
 @media screen and (min-width: breakpoints.$monitor-screen) {
   .company_heading {
     font-size: 1.125em;
@@ -143,5 +148,19 @@
   }
   .benefits_card_description {
     font-size: 1em;
+  }
+  .radial_background {
+    display: block;
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    top: -20%;
+    left: -15%;
+    z-index: -10;
+    background: radial-gradient(
+      34.47% 27.99% at 50% 50%,
+      rgba(18, 113, 255, 0.13) 0%,
+      rgba(4, 105, 255, 0) 100%
+    );
   }
 }

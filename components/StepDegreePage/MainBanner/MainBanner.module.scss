@@ -5,7 +5,7 @@
   width: 100%;
   overflow: visible;
   position: relative;
-  min-height: 85vh;
+  min-height: 75vh;
 }
 
 .main_section {
@@ -150,15 +150,15 @@
 
 @media screen and (min-width: breakpoints.$monitor-screen) {
   .main_section {
-    padding: 4rem 2rem 2rem 2rem;
+    padding: 5rem 2rem 2rem 2rem;
     flex-direction: row;
   }
   .main_image_container {
     order: 2;
   }
   .boy_background_circle {
-    width: 440px;
-    height: 440px;
+    width: 480px;
+    height: 480px;
   }
   .boy_image {
     width: 100%;
@@ -168,8 +168,8 @@
     transform: translate(0, 0);
   }
   .boy_light_background_circle {
-    width: 340px;
-    height: 340px;
+    width: 380px;
+    height: 380px;
   }
   .company_logo {
     width: max-content;
