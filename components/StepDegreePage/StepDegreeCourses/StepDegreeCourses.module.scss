@@ -37,8 +37,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  color: colors.$clr-white;
-  background-color: rgba(0, 102, 255, 1);
+  color: colors.$clr-black;
+  background-color: rgba(229, 240, 255, 1);
   border-radius: 14px;
   border: none;
   outline: none;
@@ -46,31 +46,32 @@
 }
 
 .active {
-  color: colors.$clr-black;
-  background-color: rgba(229, 240, 255, 1);
+  color: colors.$clr-white;
+  background-color: rgba(0, 102, 255, 1);
 
-  .card_know_more_link {
-    display: none;
+  .card_know_more_btn {
+    display: inline-block;
   }
 
   .fill_hexagon_svg_1 g path {
-    fill: colors.$clr-black;
+    fill: colors.$clr-white;
   }
 
   .fill_hexagon_svg_2 g path {
-    fill: colors.$clr-black;
+    fill: colors.$clr-white;
   }
 
   .stroke_hexagon_svg_1 path {
-    stroke: colors.$clr-black;
+    stroke: colors.$clr-white;
   }
 
   .stroke_hexagon_svg_2 path {
-    fill: colors.$clr-black;
+    stroke: colors.$clr-white;
+    fill: colors.$clr-white;
   }
 
   .fill_circle_svg g circle {
-    fill: colors.$clr-black;
+    fill: colors.$clr-white;
   }
 }
 
@@ -88,21 +89,31 @@
   font-weight: 400;
 }
 
-.card_know_more_link {
+.card_know_more_btn {
+  display: none;
   margin-top: 1.5rem;
-  display: inline-block;
   font-size: 0.75em;
   font-weight: 300;
   padding: 0.6rem 1rem;
   color: colors.$clr-black;
   background-color: colors.$clr-white;
+  border: none;
   border-radius: 18px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .know_more_arror_svg {
-  color: colors.$clr-black;
   margin-left: 0.4rem;
+}
+
+.card_know_more_btn:hover,
+.card_know_more_btn:focus,
+.card_know_more_btn:active {
+  color: colors.$clr-primary;
+  .know_more_arror_svg path {
+    fill: colors.$clr-primary;
+  }
 }
 
 .honeycomb_svg {
@@ -117,6 +128,9 @@
   position: absolute;
   top: 7px;
   right: 100px;
+  g path {
+    fill: colors.$clr-black;
+  }
 }
 
 .fill_hexagon_svg_2 {
@@ -125,6 +139,9 @@
   position: absolute;
   bottom: 65px;
   right: 5px;
+  g path {
+    fill: colors.$clr-black;
+  }
 }
 
 .stroke_hexagon_svg_1 {
@@ -133,6 +150,9 @@
   position: absolute;
   top: 20px;
   right: 35px;
+  path {
+    stroke: colors.$clr-black;
+  }
 }
 
 .stroke_hexagon_svg_2 {
@@ -141,12 +161,19 @@
   position: absolute;
   bottom: 0px;
   right: 40px;
+  path {
+    stroke: colors.$clr-black;
+    fill: colors.$clr-black;
+  }
 }
 
 .fill_circle_svg {
   position: absolute;
   bottom: 50px;
   right: 27px;
+  g circle {
+    fill: colors.$clr-black;
+  }
 }
 
 .gradient_circle_svg_1 {
@@ -195,5 +222,275 @@
   }
   .card_know_more_link {
     font-size: 1.25em;
+  }
+}
+
+.course_curriculum_register_container {
+  display: none;
+}
+
+.show_course_curriculum {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 0.2s linear;
+}
+
+.course_curriculum_container,
+.register_form_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.course_curriculum_container {
+  padding: 2rem 0.5rem 2.5rem 0.5rem;
+  gap: 1rem;
+  background-color: colors.$clr-course-topic-background;
+}
+
+.course_curriculum_heading_download_container,
+.course_curriculum_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.course_curriculum_heading_download_container {
+  width: 100%;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 1.5rem;
+}
+
+.course_curriculum_heading {
+  width: max-content;
+  font-size: 1.625em;
+  font-weight: 600;
+}
+
+.syllabus_download_btn {
+  font-size: 1.185em;
+  padding: 0;
+  border: none;
+  outline: none;
+  color: colors.$clr-primary;
+  background-color: transparent;
+}
+
+.course_curriculum {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  counter-reset: curriculumCounter;
+}
+
+.course_curriculum_item {
+  width: 100%;
+  box-sizing: border-box;
+  flex-direction: row;
+  padding: 0.4rem 0.4rem 0.4rem 2.5rem;
+  background-color: colors.$clr-white;
+  border-radius: 4px;
+  box-shadow: 0px 1.90672px 11.917px 0.47668px rgba(18, 113, 255, 0.11);
+  position: relative;
+}
+
+.course_curriculum_item::before {
+  counter-increment: curriculumCounter;
+  content: counter(curriculumCounter);
+  padding: 0.5rem 0.8rem;
+  position: absolute;
+  top: 50%;
+  left: -2%;
+  z-index: 5;
+  background-color: colors.$clr-primary;
+  color: colors.$clr-white;
+  transform: translateY(-50%);
+  border-radius: 3.99351px 0px 0px 3.99351px;
+}
+
+.chapter {
+  width: max-content;
+  font-size: 1em;
+  font-weight: 400;
+  color: colors.$clr-font-para-ltst;
+  text-align: start;
+}
+
+.duration {
+  min-width: 64px;
+  font-size: 0.875em;
+  padding: 0.4rem 0.4rem;
+  border-radius: 3.5px;
+  color: colors.$clr-primary;
+  background-color: colors.$clr-light-primary;
+}
+
+.register_form_container {
+  gap: 0.8rem;
+  box-sizing: border-box;
+  width: 100%;
+  align-items: flex-start;
+  color: colors.$clr-white;
+  padding: 2.5rem 1rem 0 1rem;
+  background-color: rgba(0, 17, 44, 1);
+}
+
+.register_form_heading {
+  font-size: 1.8em;
+  font-weight: 500;
+}
+
+.register_form_sub_heading {
+  font-size: 1.125em;
+  line-height: 1.25em;
+  font-weight: 400;
+  text-align: start;
+}
+
+.register_form {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  gap: 0.8rem;
+}
+
+.register_form_input {
+  padding: 0.625rem 0.75rem;
+  font-size: 1em;
+  background-color: colors.$clr-course-topic-background;
+  border-radius: 6.5px;
+  border: none;
+  outline: none;
+}
+
+.register_form_input:active {
+  outline: none;
+}
+
+.register_form_submit_btn {
+  width: max-content;
+  box-sizing: border-box;
+  font-size: 1.125em;
+  padding: 0.625rem 0.75rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  outline: none;
+  border-radius: 6.5px;
+  color: colors.$clr-white;
+  background-color: colors.$clr-primary;
+}
+
+.promotional_container {
+  margin-top: 0.4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.promotional_para {
+  width: max-content;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.promotional_input i {
+  width: 20px;
+  height: 20px;
+}
+
+.form_submit_response {
+  width: max-content;
+  margin: auto;
+  font-size: 1.2em;
+  font-weight: 400;
+  color: colors.$clr-white;
+}
+
+.register_form_svg {
+  margin-top: 1rem;
+  width: 210px;
+  height: auto;
+  margin-left: auto;
+}
+
+@media screen and (min-width: breakpoints.$monitor-screen) {
+  .show_course_curriculum {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .course_curriculum_container {
+    width: 60%;
+    min-height: 620px;
+    box-sizing: border-box;
+    padding: 4rem;
+  }
+  .course_curriculum_heading_download_container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+  }
+  .syllabus_download_btn {
+    font-size: 1.25em;
+  }
+  .course_curriculum {
+    padding: 1rem 0.8rem 1rem 3rem;
+    gap: 0.8rem;
+  }
+  .course_curriculum_item {
+    padding: 0.6rem 0.8rem 0.6rem 3rem;
+  }
+  .course_curriculum_item::before {
+    font-size: 1.4em;
+  }
+  .chapter {
+    font-size: 1.375em;
+  }
+  .duration {
+    min-width: 90px;
+    font-size: 1.125em;
+  }
+  .register_form_container {
+    width: 40%;
+    min-height: 620px;
+    padding: 6rem 2rem;
+    position: relative;
+  }
+  .register_form {
+    flex-flow: row wrap;
+  }
+  .register_form_input {
+    box-sizing: border-box;
+    min-width: 216px;
+  }
+  .promotional_container {
+    gap: 0.5rem;
+  }
+  .form_submit_response {
+    margin: 0;
+  }
+  .register_form_svg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
   }
 }

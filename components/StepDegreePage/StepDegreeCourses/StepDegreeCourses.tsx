@@ -1,13 +1,78 @@
-import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 import styles from './StepDegreeCourses.module.scss';
 
-const StepDegreeCourses = () => {
-  const [isActive, setActive] = useState(false);
+const course_breif_data = [
+  {
+    chapter: 'HTML',
+    duration: 2
+  },
+  {
+    chapter: 'Data Structures & Algorithm',
+    duration: 4
+  },
+  {
+    chapter: 'System Desigm(HLD+LLD)',
+    duration: 6
+  },
+  {
+    chapter: 'Front End - HTML, CSS, JavaScript etc.',
+    duration: 4
+  },
+  {
+    chapter: 'HTML',
+    duration: 2
+  },
+  {
+    chapter: 'Data Structures & Algorithm',
+    duration: 4
+  },
+  {
+    chapter: 'System Desigm(HLD+LLD)',
+    duration: 6
+  }
+];
 
-  const activeClassToggler = () => {
-    setActive(!isActive);
+const StepDegreeCourses = () => {
+  const [showCurriculum, setShowCurriculum] = useState(false);
+  const nameRef = useRef<HTMLInputElement>(null);
+  const [stateUT, setSateUT] = useState('Delhi');
+  const contactNoRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+  const [promoCheck, setPromoCheck] = useState(true);
+
+  const showCurriculumHandler = () => {
+    setShowCurriculum(!showCurriculum);
+  };
+
+  const onStateUTChange = (value: string) => {
+    setSateUT(value);
+  };
+
+  const onPromoChange = () => {
+    setPromoCheck(!promoCheck);
+  };
+
+  const registerHandler = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (
+      nameRef.current &&
+      nameRef.current.value &&
+      contactNoRef.current &&
+      contactNoRef.current.value &&
+      emailRef.current &&
+      emailRef.current.value
+    ) {
+      console.log(
+        nameRef.current.value,
+        stateUT,
+        contactNoRef.current.value,
+        emailRef.current.value,
+        promoCheck
+      );
+    } else {
+      console.log('Incomplete form, please retry');
+    }
   };
 
   return (
@@ -17,32 +82,28 @@ const StepDegreeCourses = () => {
         We crafted courses according to market demand
       </p>
       <div className={styles.course_card_container}>
-        <button
-          className={
-            isActive ? [styles.card, styles.active].join(' ') : styles.card
-          }
-          onClick={activeClassToggler}
-        >
+        <div className={[styles.card, styles.active].join(' ')}>
           <h3 className={styles.card_heading}>Full Stack Developer</h3>
           <p className={styles.card_description}>Part Time | Six Months</p>
-          <Link href='/stepdegree'>
-            <a className={styles.card_know_more_link}>
-              Know More{' '}
-              <svg
-                className={styles.know_more_arror_svg}
-                width='26'
-                height='8'
-                viewBox='0 0 26 8'
-                fill='none'
-                xmlns='http://www.w3.org/2000/svg'
-              >
-                <path
-                  d='M25.3536 4.35355C25.5488 4.15829 25.5488 3.84171 25.3536 3.64645L22.1716 0.464466C21.9763 0.269204 21.6597 0.269204 21.4645 0.464466C21.2692 0.659728 21.2692 0.976311 21.4645 1.17157L24.2929 4L21.4645 6.82843C21.2692 7.02369 21.2692 7.34027 21.4645 7.53553C21.6597 7.7308 21.9763 7.7308 22.1716 7.53553L25.3536 4.35355ZM0 4.5H25V3.5H0V4.5Z'
-                  fill='black'
-                />
-              </svg>
-            </a>
-          </Link>
+          <button
+            className={styles.card_know_more_btn}
+            onClick={showCurriculumHandler}
+          >
+            Know More{' '}
+            <svg
+              className={styles.know_more_arror_svg}
+              width='26'
+              height='8'
+              viewBox='0 0 26 8'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
+            >
+              <path
+                d='M25.3536 4.35355C25.5488 4.15829 25.5488 3.84171 25.3536 3.64645L22.1716 0.464466C21.9763 0.269204 21.6597 0.269204 21.4645 0.464466C21.2692 0.659728 21.2692 0.976311 21.4645 1.17157L24.2929 4L21.4645 6.82843C21.2692 7.02369 21.2692 7.34027 21.4645 7.53553C21.6597 7.7308 21.9763 7.7308 22.1716 7.53553L25.3536 4.35355ZM0 4.5H25V3.5H0V4.5Z'
+                fill='black'
+              />
+            </svg>
+          </button>
           <svg
             className={styles.honeycomb_svg}
             width='113'
@@ -779,33 +840,26 @@ const StepDegreeCourses = () => {
               </linearGradient>
             </defs>
           </svg>
-        </button>
-        <button
-          className={
-            !isActive ? [styles.card, styles.active].join(' ') : styles.card
-          }
-          onClick={activeClassToggler}
-        >
+        </div>
+        <div className={styles.card}>
           <h3 className={styles.card_heading}>Data Scientist</h3>
           <p className={styles.card_description}>Full Time | Six Months</p>
-          <Link href='/stepdegree'>
-            <a className={styles.card_know_more_link}>
-              Know More{' '}
-              <svg
-                className={styles.know_more_arror_svg}
-                width='26'
-                height='8'
-                viewBox='0 0 26 8'
-                fill='none'
-                xmlns='http://www.w3.org/2000/svg'
-              >
-                <path
-                  d='M25.3536 4.35355C25.5488 4.15829 25.5488 3.84171 25.3536 3.64645L22.1716 0.464466C21.9763 0.269204 21.6597 0.269204 21.4645 0.464466C21.2692 0.659728 21.2692 0.976311 21.4645 1.17157L24.2929 4L21.4645 6.82843C21.2692 7.02369 21.2692 7.34027 21.4645 7.53553C21.6597 7.7308 21.9763 7.7308 22.1716 7.53553L25.3536 4.35355ZM0 4.5H25V3.5H0V4.5Z'
-                  fill='black'
-                />
-              </svg>
-            </a>
-          </Link>
+          <button className={styles.card_know_more_btn}>
+            Coming Soon{' '}
+            <svg
+              className={styles.know_more_arror_svg}
+              width='26'
+              height='8'
+              viewBox='0 0 26 8'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
+            >
+              <path
+                d='M25.3536 4.35355C25.5488 4.15829 25.5488 3.84171 25.3536 3.64645L22.1716 0.464466C21.9763 0.269204 21.6597 0.269204 21.4645 0.464466C21.2692 0.659728 21.2692 0.976311 21.4645 1.17157L24.2929 4L21.4645 6.82843C21.2692 7.02369 21.2692 7.34027 21.4645 7.53553C21.6597 7.7308 21.9763 7.7308 22.1716 7.53553L25.3536 4.35355ZM0 4.5H25V3.5H0V4.5Z'
+                fill='black'
+              />
+            </svg>
+          </button>
           <svg
             className={styles.honeycomb_svg}
             width='113'
@@ -1542,7 +1596,165 @@ const StepDegreeCourses = () => {
               </linearGradient>
             </defs>
           </svg>
-        </button>
+        </div>
+      </div>
+      <div
+        className={
+          showCurriculum
+            ? [
+                styles.course_curriculum_register_container,
+                styles.show_course_curriculum
+              ].join(' ')
+            : styles.course_curriculum_register_container
+        }
+      >
+        <div className={styles.course_curriculum_container}>
+          <div className={styles.course_curriculum_heading_download_container}>
+            <h2 className={styles.course_curriculum_heading}>Curriculum</h2>
+            <button className={styles.syllabus_download_btn}>
+              Get Detailed Syllabus
+            </button>
+          </div>
+          <ul className={styles.course_curriculum}>
+            {course_breif_data.map((element) => {
+              return (
+                <li
+                  key={
+                    element.duration.toString() + Math.ceil(Math.random() * 51)
+                  }
+                  className={styles.course_curriculum_item}
+                >
+                  <p className={styles.chapter}>{element.chapter}</p>
+                  <p className={styles.duration}>{element.duration} weeks</p>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div className={styles.register_form_container}>
+          <h2 className={styles.register_form_heading}>Request a callback</h2>
+          <p className={styles.register_form_sub_heading}>
+            Our Career adviser will contact you within 24 hours
+          </p>
+          <form className={styles.register_form} onSubmit={registerHandler}>
+            <input
+              type='text'
+              placeholder='Your Name'
+              ref={nameRef}
+              className={styles.register_form_input}
+            />
+            <select
+              value={stateUT}
+              onChange={(event) => onStateUTChange(event.target.value)}
+              className={styles.register_form_input}
+            >
+              <option value='Andaman and Nicobar'>Andaman and Nicobar</option>
+              <option value='Andhra Pradesh'>Andhra Pradesh</option>
+              <option value='Arunachal Pradesh'>Arunachal Pradesh</option>
+              <option value='Assam'>Assam</option>
+              <option value='Bihar'>Bihar</option>
+              <option value='Chandigarh'>Chandigarh</option>
+              <option value='Chhattisgarh'>Chhattisgarh</option>
+              <option value='Dadra and Nagar Haveli'>
+                Dadra and Nagar Haveli
+              </option>
+              <option value='Daman and Diu'>Daman and Diu</option>
+              <option value='Delhi'>Delhi</option>
+              <option value='Goa'>Goa</option>
+              <option value='Gujarat'>Gujarat</option>
+              <option value='Haryana'>Haryana</option>
+              <option value='Himachal Pradesh'>Himachal Pradesh</option>
+              <option value='Jammu and Kashmir'>Jammu and Kashmir</option>
+              <option value='Jharkhand'>Jharkhand</option>
+              <option value='Karnataka'>Karnataka</option>
+              <option value='Kerala'>Kerala</option>
+              <option value='Lakshadweep'>Lakshadweep</option>
+              <option value='Madhya Pradesh'>Madhya Pradesh</option>
+              <option value='Maharashtra'>Maharashtra</option>
+              <option value='Manipur'>Manipur</option>
+              <option value='Meghalaya'>Meghalaya</option>
+              <option value='Mizoram'>Mizoram</option>
+              <option value='Nagaland'>Nagaland</option>
+              <option value='Orissa'>Orissa</option>
+              <option value='Puducherry'>Puducherry</option>
+              <option value='Punjab'>Punjab</option>
+              <option value='Rajasthan'>Rajasthan</option>
+              <option value='Sikkim'>Sikkim</option>
+              <option value='Tamil Nadu'>Tamil Nadu</option>
+              <option value='Tripura'>Tripura</option>
+              <option value='Uttar Pradesh'>Uttar Pradesh</option>
+              <option value='Uttarakhand'>Uttarakhand</option>
+              <option value='West Bengal'>West Bengal</option>
+            </select>
+            <input
+              type='tel'
+              placeholder='Contact Number'
+              ref={contactNoRef}
+              className={styles.register_form_input}
+            />
+            <input
+              type='email'
+              placeholder='Email ID'
+              ref={emailRef}
+              className={styles.register_form_input}
+            />
+            <button type='submit' className={styles.register_form_submit_btn}>
+              Submit & Share{' '}
+              <svg
+                width='34'
+                height='34'
+                viewBox='0 0 34 34'
+                fill='none'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path
+                  d='M32.3302 16.6566C32.3411 15.8132 31.8843 15.038 31.1424 14.6312L13.8533 5.13205C13.0789 4.69439 12.166 4.74816 11.4363 5.24643C10.6932 5.7531 10.3129 6.95923 10.5206 7.83036L12.1346 14.5925C12.3003 15.2859 12.9209 15.7741 13.6349 15.771L23.2562 15.7412C23.7489 15.7313 24.1485 16.1309 24.1386 16.6236C24.1371 17.1079 23.7434 17.5016 23.2507 17.5115L13.6202 17.5338C12.9063 17.5352 12.2826 18.0257 12.1126 18.7201L10.4416 25.5091C10.2387 26.3113 10.47 27.1123 11.036 27.6783C11.1026 27.7449 11.1776 27.8198 11.2525 27.8781C11.9856 28.4436 12.9457 28.5158 13.7654 28.079L31.1131 18.6728C31.8575 18.2781 32.3192 17.5 32.3302 16.6566Z'
+                  fill='white'
+                />
+              </svg>
+            </button>
+            <div className={styles.promotional_container}>
+              <input
+                type='checkbox'
+                defaultChecked={promoCheck}
+                onChange={onPromoChange}
+                className={styles.promotional_input}
+              />
+              <p className={styles.promotional_para}>
+                I would be happy to get promotinal emails.
+              </p>
+            </div>
+          </form>
+          <p className={styles.form_submit_response}></p>
+          <svg
+            className={styles.register_form_svg}
+            width='210'
+            height='176'
+            viewBox='0 0 210 176'
+            fill='none'
+            xmlns='http://www.w3.org/2000/svg'
+          >
+            <path
+              fillRule='evenodd'
+              clipRule='evenodd'
+              d='M208 175.244L208 115.5C208 92.0278 188.972 72.9999 165.5 72.9999C142.028 72.9999 123 92.0278 123 115.5L123 175.244L208 175.244Z'
+              fill='#FFAEAE'
+            />
+            <path
+              fillRule='evenodd'
+              clipRule='evenodd'
+              d='M123.244 72.542L50.9998 72.542C22.8333 72.542 -0.000160501 95.6045 -0.000160501 123.771C-0.000160501 151.938 22.8333 175 50.9998 175H123.244L123.244 72.542Z'
+              fill='#FFA14A'
+            />
+            <path
+              fillRule='evenodd'
+              clipRule='evenodd'
+              d='M123 72.4326L173.046 73.5474C192.707 73.9854 209.002 58.4014 209.44 38.7396C209.877 19.0779 194.293 2.78378 174.632 2.34581L124.586 1.23102L123 72.4326Z'
+              fill='#FFA14A'
+            />
+            <circle cx='87' cy='36' r='36' fill='white' />
+          </svg>
+        </div>
       </div>
     </section>
   );

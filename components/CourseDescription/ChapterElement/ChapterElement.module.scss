@@ -19,13 +19,16 @@
 }
 
 .topic_name {
+  width: max-content;
   font-size: 1.6em;
   font-weight: bold;
   color: colors.$clr-primary;
+  text-align: start;
 }
 
 .topic_svg {
   width: 20px;
+  min-width: 20px;
   height: 20px;
 }
 
