@@ -1,6 +1,5 @@
-@use '../../../styles/abstracts/fonts';
-@use '../../../styles/abstracts/colors';
-@use '../../../styles/abstracts/breakpoints' as breakpoints;
+@use '@/colors' as colors;
+@use '@/breakpoints' as breakpoints;
 
 .other_features_section {
   width: 100%;

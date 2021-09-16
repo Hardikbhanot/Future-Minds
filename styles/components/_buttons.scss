@@ -1,5 +1,4 @@
-@use '../abstracts/sizes' as sizes;
-@use '../abstracts/colors' as colors;
+@use '@/colors' as colors;
 
 @mixin action-btn {
   border: none;

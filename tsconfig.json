@@ -1,13 +1,10 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "skipDefaultLibCheck": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
@@ -17,7 +14,13 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "skipLibCheck": true
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": ["components/*"],
+      "@/styles/*": ["styles/*"],
+      "@/colors": ["styles/abstracts/_colors.scss"],
+      "@/breakpoints": ["styles/abstracts/_breakpoints.scss"]
+    }
   },
   "include": [
     "next-env.d.ts",
@@ -26,7 +29,5 @@
     "/logger/index.js",
     "utils/database.js"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

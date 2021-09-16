@@ -1,6 +1,7 @@
-@use '../../../styles/abstracts/colors' as colors;
-@use '../../../styles/components/buttons' as act_btn;
-@use '../../../styles/abstracts/breakpoints' as breakpoints;
+// @use 'styles/abstracts/colors' as colors;
+@use '@/colors' as colors;
+@use '@/breakpoints' as breakpoints;
+@use '@/styles/components/buttons' as act_btn;
 
 .banner {
   width: 100%;

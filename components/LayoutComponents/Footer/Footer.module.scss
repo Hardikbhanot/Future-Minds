@@ -1,5 +1,5 @@
-@use '../../../styles/abstracts/colors' as colors;
-@use '../../../styles/abstracts/breakpoints' as breakpoints;
+@use '@/colors' as colors;
+@use '@/breakpoints' as breakpoints;
 
 .footer {
   width: 100%;
