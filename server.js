@@ -1,8 +1,10 @@
-const dotenv = require('dotenv').config();
+const dotenv = require('dotenv');
 const express = require('express');
+const cors = require('cors');
 const next = require('next');
 const mongoose = require('mongoose');
 
+dotenv.config();
 const logger = require('./logger/index');
 const port = process.env.PORT || 8000;
 const dev = process.env.NODE_ENV !== 'production';
@@ -39,7 +41,7 @@ app
     const server = express();
     // to accept body as json in api routes
     server.use(express.json());
-
+    server.use(cors());
     // pass routes starting with /api to backend
     server.use('/backend/api/', publicRoutes);
     server.use('/backend/api/newsletter', newsletterRoutes);
