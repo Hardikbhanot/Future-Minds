@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useState } from 'react';
-import { connectToDatabase } from '../../utils/database';
+import { connectToDatabase } from 'utils/database';
 // import axios from '../../utils/axiosInstance';
 
 import AcademyNavbar from '../../components/LayoutComponents/AcademyNavbar/AcademyNavbar';
@@ -71,8 +71,8 @@ const Courses = ({ courses, error }: pageProps) => {
       <main className={styles.page_main}>
         <CourseIndexPageBanner />
         <div className={styles.page_content}>
-          <div className={styles.filter_container}>
-            {/* <button
+          {/*<div className={styles.filter_container}>
+            <button
               className={styles.filter_heading_container}
               onClick={onFilterClickHandler}
             >
@@ -105,9 +105,9 @@ const Courses = ({ courses, error }: pageProps) => {
                   Reset
                 </button>
               </div>
-            </div> */}
+            </div> 
             <div className={styles.filter_ad}></div>
-          </div>
+          </div>*/}
           <div className={styles.card_container}>{card}</div>
         </div>
       </main>

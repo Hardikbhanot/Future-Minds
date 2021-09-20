@@ -124,3 +124,10 @@
     margin: 0 1.665% 3rem 1.665%;
   }
 }
+
+@media screen and (min-width: breakpoints.$big-tv-screen) {
+  .course_card {
+    width: clamp(276px, 16%, 330px);
+    margin: 0 1.665% 3rem 1.665%;
+  }
+}
