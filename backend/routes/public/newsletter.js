@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 const router = require('express').Router();
-const Newsletter = require('../../models/newsletterModel');
+const Newsletter = require('../../models/NewsletterModel');
 const logger = require('../../../logger/index');
 
 router.get('/', (req, res) => {
-  res.status(200).json({ message: 'hello' });
+  res.status(200).json({ message: 'Welcome to Newsletter Routes' });
 });
 
 router.post('/', async (req, res) => {

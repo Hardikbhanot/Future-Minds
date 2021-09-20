@@ -51,7 +51,7 @@ const MainBanner = () => {
             <span className={styles.green_heading}> Industry Experts</span>
           </h1>
           <h4 className={styles.tag_line}>
-            With <strong>StepDegree</strong>, No Job then No Fees Gurantee*
+            With <strong>StepDegree</strong>, No Job then No Fees Guarantee*
           </h4>
         </div>
       </section>

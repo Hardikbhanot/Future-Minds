@@ -7,17 +7,17 @@ const FAQSection = () => {
     {
       question: 'What is StepDegree?',
       answer:
-        "StepDegree offered by FutureMinds is an income share agreement (ISA). In which, FutureMinds offer courses (in online mode) and grantees job placement, in return for a portion of the money earned once the individual is placed. The proportion and length of payment are determined by the individual's course and the job offer."
+        "StepDegree offered by FutureMinds, is an income share agreement (ISA). In which, FutureMinds offer courses (in online mode) and guaranteed job placement, in return for a portion of the money earned once the individual is placed. The proportion and length of payment are determined by the individual's course and the job offer."
     },
     {
       question: 'How StepDegree Works?',
       answer:
-        'Our financial partner will authorise a 0% interest capital equal to your fees after your successful registration. Now, after completing your 6-month training, you will be successfully placed at a minimum package of 6.0 LPA. Following your placement, you will be required to pay 20% of your monthly salary for 36 months or until the whole fees, i.e. 3.60 lakh, is collected. Your ISA will automatically terminate after you reach the 3.60 lac target, and you will obtain your NOC. If your annual income falls below 6.0 LPA, your ISA will be paused.'
+        'Our financial partner will authorise a 0% interest capital equal to your fees after your successful registration. Now, after completing your 6-month training, you will be successfully placed at a minimum package of ₹6.0 LPA. Following your placement, you will be required to pay 20% of your monthly salary for 36 months or until the whole fees, i.e. ₹3.60 lakh, is collected. Your ISA will automatically terminate after you reach the ₹3.60 lac target, and you will obtain your NOC. If your annual income falls below ₹ 6.0 LPA, your ISA will be paused.'
     },
     {
       question: 'What happen if I withdraw from StepDegree?',
       answer:
-        "If you decide that FutureMinds isn't for you or that you can't keep up with the terms of the agreement, you can cancel within the first month without penalty. However, if you wish to leave after 2-3 months, you would be required to pay FutureMinds Rs. 50,000. If you withdraw after four months, you must pay the whole amount of your ISA."
+        "If you decide that FutureMinds isn't for you or that you can't keep up with the terms of the agreement, you can cancel within the first month without penalty. However, if you wish to leave after 2-3 months, you would be required to pay FutureMinds ₹50,000. If you withdraw after four months, you must pay the whole amount of your ISA."
     },
     {
       question: "What happens if I'm not placed?",

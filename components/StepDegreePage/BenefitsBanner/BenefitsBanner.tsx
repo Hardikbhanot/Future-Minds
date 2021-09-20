@@ -40,7 +40,7 @@ const BenefitsBanner = () => {
             />
           </div>
           <p className={styles.benefits_card_heading}>
-            Flexible <strong>Timing</strong>
+            Flexible <strong>Timings</strong>
           </p>
           <p className={styles.benefits_card_description}>
             It allows you to participate within agreed time limits selected by
@@ -57,7 +57,7 @@ const BenefitsBanner = () => {
             />
           </div>
           <p className={styles.benefits_card_heading}>
-            Guranteed <strong>Job</strong>
+            Guarantee <strong>Job</strong>
           </p>
           <p className={styles.benefits_card_description}>
             We aim to achieve the professional success by helping you to become

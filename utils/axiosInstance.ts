@@ -5,13 +5,13 @@ const NodeEnv = process.env.NODE_ENV;
 
 const configs = {
   development: {
-    SERVER_URI: `http://localhost:${port}`
+    SERVER_URI: `http://localhost:${port}/backend/api`
   },
   production: {
-    SERVER_URI: ''
+    SERVER_URI: 'https://futureminds.in/backend/api/'
   },
   test: {
-    SERVER_URI: `http://localhost:${port}`
+    SERVER_URI: `http://localhost:${port}/backend/api`
   }
 };
 

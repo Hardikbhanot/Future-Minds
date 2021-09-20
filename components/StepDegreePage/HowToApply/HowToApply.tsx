@@ -7,7 +7,10 @@ const HowToApply = () => {
       <ul className={styles.steps_container}>
         <li className={styles.steps_wrapper}>
           <h2 className={styles.steps_counter}>1</h2>
-          <p className={styles.steps}>Register for the Course</p>
+          <p className={styles.steps}>
+            Register yourself <br />
+            for the Course
+          </p>
         </li>
         <li className={styles.steps_wrapper}>
           <h2 className={styles.steps_counter}>2</h2>
@@ -18,7 +21,7 @@ const HowToApply = () => {
         </li>
         <li className={styles.steps_wrapper}>
           <h2 className={styles.steps_counter}>3</h2>
-          <p className={styles.steps}>Complete Proccess</p>
+          <p className={styles.steps}>Complete Process</p>
         </li>
       </ul>
     </section>

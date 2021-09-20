@@ -17,6 +17,7 @@
     "baseUrl": ".",
     "paths": {
       "@/components/*": ["components/*"],
+      "@/utils/*": ["utils/*"],
       "@/styles/*": ["styles/*"],
       "@/colors": ["styles/abstracts/_colors.scss"],
       "@/breakpoints": ["styles/abstracts/_breakpoints.scss"]

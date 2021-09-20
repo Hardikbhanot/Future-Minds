@@ -3,7 +3,7 @@ import styles from './StepDegreeDescription.module.scss';
 const StepDegreeDescription = () => {
   return (
     <section className={styles.description_section}>
-      <h3 className={styles.sub_heading}>And Best Part is</h3>
+      <h3 className={styles.sub_heading}>And The Best Part is</h3>
       <div className={styles.description_container}>
         <div className={styles.currency_container}>
           <h1 className={styles.currency_symbol}>₹</h1>
@@ -18,7 +18,7 @@ const StepDegreeDescription = () => {
             Futureminds assures you guaranteed placement after the completion of
             course with salary starting from Rs.6 lakh or more per year. You
             will pay 20% of your monthly income towards the Income Share
-            Agreement (ISA) 36 months or until the full fees is recovered i.e.,
+            Agreement (ISA), 36 months or until the full fees is recovered i.e.,
             3.60 Lakh.
           </p>
         </div>

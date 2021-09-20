@@ -11,6 +11,7 @@ const handle = app.getRequestHandler();
 
 // Import all server routes
 const newsletterRoutes = require('./backend/routes/public/newsletter');
+const stepdegreeRoutes = require('./backend/routes/public/stepDegree');
 const publicRoutes = require('./backend/routes/public/public');
 const userPublicRoutes = require('./backend/routes/public/user');
 const coursePublicRoutes = require('./backend/routes/public/course');
@@ -42,9 +43,13 @@ app
     // pass routes starting with /api to backend
     server.use('/backend/api/', publicRoutes);
     server.use('/backend/api/newsletter', newsletterRoutes);
+    server.use('/backend/api/stepdegree', stepdegreeRoutes);
     server.use('/backend/api/user', userPublicRoutes);
     server.use('/backend/api/course', coursePublicRoutes);
-
+    server.use(
+      '/isa-syllabus',
+      express.static(__dirname + '/public/syllabus/syllabus-ISA-FM.pdf')
+    );
     // pass all the other routes to nextJS frontend
     server.get('*', (req, res) => {
       return handle(req, res);

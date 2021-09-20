@@ -1,59 +1,80 @@
-import { useState, useRef } from 'react';
-
+import React, { useState, useRef } from 'react';
+import axios from 'utils/axiosInstance';
 import styles from './StepDegreeCourses.module.scss';
 
 const course_breif_data = [
   {
-    chapter: 'HTML',
+    id: 111,
+    chapter: 'Computer Science Fundamentals',
     duration: 2
   },
   {
-    chapter: 'Data Structures & Algorithm',
-    duration: 4
-  },
-  {
-    chapter: 'System Desigm(HLD+LLD)',
-    duration: 6
-  },
-  {
-    chapter: 'Front End - HTML, CSS, JavaScript etc.',
-    duration: 4
-  },
-  {
-    chapter: 'HTML',
+    id: 112,
+    chapter: 'Introduction to Programming',
     duration: 2
   },
   {
-    chapter: 'Data Structures & Algorithm',
+    id: 113,
+    chapter: 'Data Structure and Algorithm',
     duration: 4
   },
   {
-    chapter: 'System Desigm(HLD+LLD)',
+    id: 114,
+    chapter: 'System Design',
+    duration: 2
+  },
+  {
+    id: 115,
+    chapter: 'Frontend Develpoment',
+    duration: 3
+  },
+  {
+    id: 116,
+    chapter: 'Frontend Framework React',
     duration: 6
+  },
+  {
+    id: 117,
+    chapter: 'Backend Develpoment',
+    duration: 4
   }
 ];
 
 const StepDegreeCourses = () => {
+  const [activeCard, setActiveCard] = useState(true);
   const [showCurriculum, setShowCurriculum] = useState(false);
   const nameRef = useRef<HTMLInputElement>(null);
-  const [stateUT, setSateUT] = useState('Delhi');
+  const [stateUT, setStateUT] = useState('Delhi');
   const contactNoRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
   const [promoCheck, setPromoCheck] = useState(true);
+  const [responseMessage, setResponseMessage] = useState('');
 
-  const showCurriculumHandler = () => {
+  const cardClick = () => {
+    if (!activeCard) {
+      setShowCurriculum(false);
+    }
+    setActiveCard(!activeCard);
+  };
+
+  const showCurriculumHandler = (
+    event: React.MouseEvent<HTMLButtonElement>
+  ) => {
+    // TO stop triggering parent's click event
+    event.stopPropagation();
     setShowCurriculum(!showCurriculum);
   };
 
   const onStateUTChange = (value: string) => {
-    setSateUT(value);
+    setStateUT(value);
   };
 
   const onPromoChange = () => {
     setPromoCheck(!promoCheck);
   };
 
-  const registerHandler = (event: React.FormEvent<HTMLFormElement>) => {
+  //* request a callback form submit handler
+  const registerHandler = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (
       nameRef.current &&
@@ -63,16 +84,37 @@ const StepDegreeCourses = () => {
       emailRef.current &&
       emailRef.current.value
     ) {
-      console.log(
-        nameRef.current.value,
-        stateUT,
-        contactNoRef.current.value,
-        emailRef.current.value,
-        promoCheck
-      );
+      await axios({
+        method: 'post',
+        url: '/stepdegree',
+        data: {
+          name: nameRef.current.value,
+          city: stateUT,
+          contactNumber: contactNoRef.current.value,
+          email: emailRef.current.value,
+          promo: promoCheck
+        }
+      })
+        .then((res) => {
+          if (res.status === 200) {
+            setResponseMessage('Registration Successfull');
+          } else {
+            setResponseMessage(res.data.error.message);
+          }
+        })
+        .catch((err) => {
+          setResponseMessage(err.error.message);
+        });
+      nameRef.current.value = '';
+      contactNoRef.current.value = '';
+      emailRef.current.value = '';
+      setStateUT('Delhi');
     } else {
-      console.log('Incomplete form, please retry');
+      setResponseMessage('Incomplete Form');
     }
+    setTimeout(() => {
+      setResponseMessage('');
+    }, 3000);
   };
 
   return (
@@ -82,7 +124,12 @@ const StepDegreeCourses = () => {
         We crafted courses according to market demand
       </p>
       <div className={styles.course_card_container}>
-        <div className={[styles.card, styles.active].join(' ')}>
+        <div
+          className={
+            activeCard ? [styles.card, styles.active].join(' ') : styles.card
+          }
+          onClick={cardClick}
+        >
           <h3 className={styles.card_heading}>Full Stack Developer</h3>
           <p className={styles.card_description}>Part Time | Six Months</p>
           <button
@@ -841,24 +888,22 @@ const StepDegreeCourses = () => {
             </defs>
           </svg>
         </div>
-        <div className={styles.card}>
+
+        <div
+          className={
+            !activeCard ? [styles.card, styles.active].join(' ') : styles.card
+          }
+          onClick={cardClick}
+        >
           <h3 className={styles.card_heading}>Data Scientist</h3>
           <p className={styles.card_description}>Full Time | Six Months</p>
-          <button className={styles.card_know_more_btn}>
-            Coming Soon{' '}
-            <svg
-              className={styles.know_more_arror_svg}
-              width='26'
-              height='8'
-              viewBox='0 0 26 8'
-              fill='none'
-              xmlns='http://www.w3.org/2000/svg'
-            >
-              <path
-                d='M25.3536 4.35355C25.5488 4.15829 25.5488 3.84171 25.3536 3.64645L22.1716 0.464466C21.9763 0.269204 21.6597 0.269204 21.4645 0.464466C21.2692 0.659728 21.2692 0.976311 21.4645 1.17157L24.2929 4L21.4645 6.82843C21.2692 7.02369 21.2692 7.34027 21.4645 7.53553C21.6597 7.7308 21.9763 7.7308 22.1716 7.53553L25.3536 4.35355ZM0 4.5H25V3.5H0V4.5Z'
-                fill='black'
-              />
-            </svg>
+          <button
+            className={[styles.card_know_more_btn, styles.coming_soon_btn].join(
+              ' '
+            )}
+            disabled
+          >
+            Coming Soon
           </button>
           <svg
             className={styles.honeycomb_svg}
@@ -1598,6 +1643,7 @@ const StepDegreeCourses = () => {
           </svg>
         </div>
       </div>
+
       <div
         className={
           showCurriculum
@@ -1611,19 +1657,18 @@ const StepDegreeCourses = () => {
         <div className={styles.course_curriculum_container}>
           <div className={styles.course_curriculum_heading_download_container}>
             <h2 className={styles.course_curriculum_heading}>Curriculum</h2>
-            <button className={styles.syllabus_download_btn}>
+            <a
+              className={styles.syllabus_download_btn}
+              href='/isa-syllabus'
+              download='FutureMinds Full Stack Web Development Syllabus'
+            >
               Get Detailed Syllabus
-            </button>
+            </a>
           </div>
           <ul className={styles.course_curriculum}>
             {course_breif_data.map((element) => {
               return (
-                <li
-                  key={
-                    element.duration.toString() + Math.ceil(Math.random() * 51)
-                  }
-                  className={styles.course_curriculum_item}
-                >
+                <li key={element.id} className={styles.course_curriculum_item}>
                   <p className={styles.chapter}>{element.chapter}</p>
                   <p className={styles.duration}>{element.duration} weeks</p>
                 </li>
@@ -1639,9 +1684,10 @@ const StepDegreeCourses = () => {
           <form className={styles.register_form} onSubmit={registerHandler}>
             <input
               type='text'
+              className={styles.register_form_input}
               placeholder='Your Name'
               ref={nameRef}
-              className={styles.register_form_input}
+              required
             />
             <select
               value={stateUT}
@@ -1688,15 +1734,17 @@ const StepDegreeCourses = () => {
             </select>
             <input
               type='tel'
+              className={styles.register_form_input}
               placeholder='Contact Number'
               ref={contactNoRef}
-              className={styles.register_form_input}
+              required
             />
             <input
               type='email'
+              className={styles.register_form_input}
               placeholder='Email ID'
               ref={emailRef}
-              className={styles.register_form_input}
+              required
             />
             <button type='submit' className={styles.register_form_submit_btn}>
               Submit & Share{' '}
@@ -1716,16 +1764,17 @@ const StepDegreeCourses = () => {
             <div className={styles.promotional_container}>
               <input
                 type='checkbox'
+                className={styles.promotional_input}
                 defaultChecked={promoCheck}
                 onChange={onPromoChange}
-                className={styles.promotional_input}
+                required
               />
               <p className={styles.promotional_para}>
                 I would be happy to get promotinal emails.
               </p>
             </div>
           </form>
-          <p className={styles.form_submit_response}></p>
+          <p className={styles.form_submit_response}>{responseMessage}</p>
           <svg
             className={styles.register_form_svg}
             width='210'
