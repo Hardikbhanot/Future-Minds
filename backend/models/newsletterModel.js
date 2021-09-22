@@ -5,4 +5,4 @@ const newsletterSchema = new mongoose.Schema({
   email: { type: String, trim: true, required: true, min: 6, max: 255 }
 });
 
-module.exports = mongoose.model('newsletter', newsletterSchema);
+module.exports = mongoose.model('newsletters', newsletterSchema);
