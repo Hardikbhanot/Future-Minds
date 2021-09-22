@@ -40,11 +40,11 @@ app
   .then(() => {
     const server = express();
     // to accept body as json in api routes
-    server.use(express.json());
     server.use(cors());
+    server.use(express.json());
     // pass routes starting with /api to backend
     server.use('/backend/api/', publicRoutes);
-    server.use('/backend/api/newsletter', newsletterRoutes);
+    server.use('/backend/api/newsletter', newsletterRoutes); //! CHECK THIS ROUTE
     server.use('/backend/api/stepdegree', stepdegreeRoutes);
     server.use('/backend/api/user', userPublicRoutes);
     server.use('/backend/api/course', coursePublicRoutes);

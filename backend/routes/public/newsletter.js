@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 const router = require('express').Router();
 const Newsletter = require('../../models/NewsletterModel');
+const {
+  newsletterValidation
+} = require('../../validation/newsletterValidation');
 const logger = require('../../../logger/index');
 
 router.get('/', (req, res) => {
@@ -9,7 +12,15 @@ router.get('/', (req, res) => {
 
 router.post('/', async (req, res) => {
   const email = req.body.email;
-  logger.info(email);
+  // Validate stepDegree user register data
+  const { error } = newsletterValidation({
+    email
+  });
+  if (error)
+    return res
+      .status(400)
+      .json({ error: { message: error.details[0].message } });
+
   // check if email exist
   const emailExist = await Newsletter.findOne({ email: email });
   if (emailExist)

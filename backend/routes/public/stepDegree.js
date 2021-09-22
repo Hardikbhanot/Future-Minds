@@ -30,7 +30,6 @@ router.post('/', async (req, res) => {
       .status(400)
       .json({ error: { message: error.details[0].message } });
 
-  logger.info(email);
   // check if email exist
   const emailExist = await StepDegree.findOne({ email: email });
   if (emailExist)

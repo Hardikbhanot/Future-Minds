@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import axios from '../../../utils/axiosInstance';
+import axios from 'utils/axiosInstance';
 
 import styles from './Newsletter.module.scss';
 
@@ -7,14 +7,16 @@ const BottomBanner = () => {
   const [message, setMessage] = useState('');
 
   const newsletter = useRef<HTMLInputElement>(null);
-  const onNewsletterSubmitHandler = async (event: React.SyntheticEvent) => {
+  const onNewsletterSubmitHandler = async (
+    event: React.FormEvent<HTMLFormElement>
+  ) => {
     event.preventDefault();
     if (newsletter && newsletter.current) {
       // can access newsletter current value here
       const email = newsletter.current.value;
       await axios({
         method: 'POST',
-        url: '/backend/api/newsletter',
+        url: 'newsletter',
         headers: {
           'content-type': 'application/json'
         },
