@@ -1,0 +1,93 @@
+@use '@/breakpoints' as breakpoints;
+
+.certi_verify_page {
+  width: 100%;
+  min-height: 100vh;
+  background: #d2e4ff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.fm_logo_container {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.fm_logo {
+  margin: 0.5rem 0 0 3rem;
+}
+
+.certi_verify_svg_container {
+  width: clamp(335px, 90%, 740px);
+  margin: auto;
+  position: relative;
+  z-index: 0;
+}
+
+.certi_verify_container {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5rem 2.5rem;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(
+    111.68deg,
+    rgba(192, 217, 255, 0.29) 7.59%,
+    rgba(0, 102, 255, 0.12) 102.04%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-sizing: border-box;
+  border-radius: 18px;
+  position: relative;
+  z-index: 10;
+}
+
+.certi_verify_img {
+  align-self: center;
+}
+
+.certi_verify_heading {
+  margin-top: 1rem;
+  align-self: center;
+  font-weight: 500;
+  font-size: 1.5em;
+  color: #454545;
+}
+
+.top_filter_svg {
+  position: absolute;
+  z-index: 0;
+  top: -60%;
+  left: -50%;
+}
+
+.circle_svg {
+  display: none;
+}
+
+@media screen and (min-width: breakpoints.$laptop-screen) {
+  .top_filter_svg {
+    top: -25%;
+    left: -25%;
+  }
+  .circle_svg {
+    position: absolute;
+    z-index: 5;
+    display: inline;
+  }
+  .circle_svg_1 {
+    top: -18%;
+    left: -10%;
+  }
+  .circle_svg_2 {
+    bottom: -30%;
+    right: -20%;
+  }
+}
