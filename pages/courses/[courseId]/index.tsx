@@ -31,6 +31,7 @@ interface pageProps {
     ratings: number;
     requirements: string[];
     lastUpdated: string;
+    paymentGateway: string;
   };
   error: boolean;
 }
@@ -89,7 +90,8 @@ export const getServerSideProps: GetServerSideProps = async (content) => {
       ),
       rating: courseCollectionData.rating || 0,
       requirements: courseCollectionData.requirements,
-      lastUpdated: courseCollectionData.lastUpdated.toLocaleDateString('en-GB')
+      lastUpdated: courseCollectionData.lastUpdated.toLocaleDateString('en-GB'),
+      paymentGateway: courseCollectionData.paymentGateway || '/'
     };
     return {
       props: {

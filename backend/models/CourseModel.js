@@ -32,7 +32,8 @@ const courseSchema = new mongoose.Schema({
   requirements: { type: [String], required: true },
   lastUpdated: { type: Date },
   dateAdded: { type: Date, required: true },
-  isTrending: { type: Boolean, default: false }
+  isTrending: { type: Boolean, default: false },
+  paymentGateway: { type: String, required: true }
 });
 
 module.exports = mongoose.model('courses', courseSchema);

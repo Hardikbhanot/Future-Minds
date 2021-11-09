@@ -64,7 +64,8 @@ router.get('/:courseId', (req, res) => {
             topicsOfCourse: course.topicsOfCourse,
             rating: course.rating,
             requirements: course.requirements,
-            lastUpdated: course.lastUpdated.toLocaleString('en-GB')
+            lastUpdated: course.lastUpdated.toLocaleString('en-GB'),
+            paymentGateway: course.paymentGateway
           }
         };
         res.status(200).json(response);
@@ -104,7 +105,8 @@ router.post('/addcourse', async (req, res) => {
     topicsOfCourse: req.body.topicsOfCourse,
     requirements: req.body.requirements,
     lastUpdated: Date.now(),
-    dateAdded: Date.now()
+    dateAdded: Date.now(),
+    paymentGateway: req.body.paymentGateway
   });
 
   // save a new course
@@ -126,7 +128,8 @@ router.post('/addcourse', async (req, res) => {
         topicsOfCourse: savedCourse.topicsOfCourse,
         rating: savedCourse.rating,
         requirements: savedCourse.requirements,
-        lastUpdated: savedCourse.lastUpdated.toLocaleString('en-GB')
+        lastUpdated: savedCourse.lastUpdated.toLocaleString('en-GB'),
+        paymentGateway: savedCourse.paymentGateway
       }
     };
     res.status(200).json(response);
@@ -179,7 +182,8 @@ router.patch('/updatecourse/:courseId', (req, res) => {
               topicsOfCourse: updateCourse.topicsOfCourse,
               rating: updateCourse.rating,
               requirements: updateCourse.requirements,
-              lastUpdated: updateCourse.lastUpdated.toLocaleString('en-GB')
+              lastUpdated: updateCourse.lastUpdated.toLocaleString('en-GB'),
+              paymentGateway: updateCourse.paymentGateway
             }
           };
           res.status(200).json(response);

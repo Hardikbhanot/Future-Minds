@@ -28,6 +28,7 @@ interface pageProps {
     ratings: number;
     requirements: string[];
     lastUpdated: string;
+    paymentGateway: string;
   };
 }
 
@@ -255,7 +256,7 @@ const CourseDescription = ({ course }: pageProps) => {
               {levelSVG} {course.courseLevel}
             </div>
             <div className={styles.course_duration}>
-              <strong>{course.courseDuration}</strong> hr
+              <strong>{course.courseDuration}</strong> months
             </div>
             <div className={styles.course_type}>
               <strong>Live</strong> Classes
@@ -317,13 +318,13 @@ const CourseDescription = ({ course }: pageProps) => {
               </p>
               <p className={styles.payment_card_detail}>
                 <strong>Duration: </strong>
-                {course.courseDuration} hr
+                {course.courseDuration} months
               </p>
               <p className={styles.payment_card_detail}>
                 <strong>Language: </strong>
                 English/Hindi
               </p>
-              <Link href='/'>
+              <Link href={course.paymentGateway}>
                 <a
                   className={styles.enroll_now_btn}
                   title='Enroll Button'

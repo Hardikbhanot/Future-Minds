@@ -23,7 +23,8 @@ const courseAddValidation = (data) => {
         })
       )
       .required(),
-    requirements: Joi.array().items(Joi.string()).required()
+    requirements: Joi.array().items(Joi.string()).required(),
+    paymentGateway: Joi.string().required()
   });
 
   return courseAddSchema.validate(data);
