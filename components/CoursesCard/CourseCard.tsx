@@ -164,7 +164,7 @@ const CourseCard = ({ course }: pageProps) => {
 
           <h3 className={styles.course_name}>{course.courseName}</h3>
           <p className={styles.course_details}>
-            Duration: {course.courseDuration} hr
+            Duration: {course.courseDuration} months
           </p>
           <p className={styles.course_details}>Classes: {course.courseMode}</p>
           <p className={styles.course_details}>Support: 1-1</p>
