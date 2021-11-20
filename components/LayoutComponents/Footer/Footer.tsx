@@ -1,10 +1,11 @@
 import Link from 'next/link';
-
+import Tawk from '../tawk-to/tawk';
 import styles from './Footer.module.scss';
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
+      <Tawk/>
       <div className={styles.footer_main_content}>
         <div className={styles.discription_card_container}>
           <h2 className={styles.main_heading}>FutureMinds</h2>

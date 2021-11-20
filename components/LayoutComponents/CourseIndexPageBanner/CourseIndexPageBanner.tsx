@@ -5,7 +5,7 @@ const CourseIndexPageBanner = () => {
     <div className={styles.banner}>
       <div className={styles.banner_container}>
         <h1 className={styles.banner_heading}>
-          Welcome to Academy by FutureMinds
+          Welcome to FutureMinds Academy
         </h1>
         <img
           className={styles.banner_image}

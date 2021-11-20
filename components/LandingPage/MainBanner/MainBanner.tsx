@@ -43,7 +43,7 @@ const LandingPage = () => {
           </form>
           <div className={styles.banner_trending_links_container}>
             <p className={styles.banner_trending_para}>Trending:</p>
-            <Link href='https://futureminds.in/courses/6118284cd4ac27532b7d35d5'>
+            <Link href='/courses/6118284cd4ac27532b7d35d5'>
               <a
                 className={styles.banner_trending_links}
                 title='Full Stack Web Development'

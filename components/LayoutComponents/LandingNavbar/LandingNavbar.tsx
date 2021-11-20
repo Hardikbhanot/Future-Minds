@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-
 import styles from './LandingNavbar.module.scss';
 
 const Navbar = () => {
@@ -13,6 +12,7 @@ const Navbar = () => {
     setMenu(!menu);
   };
 
+  
   // Dynamically changes classNames
   let toggle_navbar_links_mobile: string = styles.toggle_navbar_links_mobile;
   let menu_item: string = styles.menu_item;
@@ -23,7 +23,7 @@ const Navbar = () => {
       styles.toggle_navbar_active
     ].join(' ');
   }
-
+  
   return (
     <nav className={styles.navbar_background}>
       <div className={styles.navbar}>
@@ -207,6 +207,9 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
+     
+  
+    
   );
 };
 

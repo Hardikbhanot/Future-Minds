@@ -5,6 +5,7 @@
   width: 100%;
   text-align: center;
   padding-top: 4rem;
+  scroll-behavior: smooth;
 }
 
 .heading {
@@ -196,6 +197,7 @@
   bottom: 40px;
   right: 95px;
 }
+
 
 @media screen and (min-width: breakpoints.$monitor-screen) {
   .heading {

@@ -263,7 +263,7 @@ const CourseDescription = ({ course }: pageProps) => {
             </div>
           </div>
           <div className={styles.course_details_wrapper}>
-            <Link href='/'>
+            <Link href={course.paymentGateway}>
               <a
                 className={styles.enroll_now_btn}
                 title='Enroll Button'

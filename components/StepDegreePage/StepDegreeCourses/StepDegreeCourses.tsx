@@ -58,8 +58,16 @@ const StepDegreeCourses = () => {
   };
 
   const showCurriculumHandler = (
+    
     event: React.MouseEvent<HTMLButtonElement>
   ) => {
+    if(window.innerWidth>1000){
+      window.scrollTo(0,1800);
+    }
+    else if(window.innerWidth<1000){
+      window.scrollTo(0,2500);
+    }
+    
     // TO stop triggering parent's click event
     event.stopPropagation();
     setShowCurriculum(!showCurriculum);
@@ -81,6 +89,7 @@ const StepDegreeCourses = () => {
       nameRef.current.value &&
       contactNoRef.current &&
       contactNoRef.current.value &&
+      emailRef.current &&
       emailRef.current &&
       emailRef.current.value
     ) {
@@ -132,11 +141,12 @@ const StepDegreeCourses = () => {
         >
           <h3 className={styles.card_heading}>Full Stack Developer</h3>
           <p className={styles.card_description}>Part Time | Six Months</p>
+          
           <button
             className={styles.card_know_more_btn}
             onClick={showCurriculumHandler}
           >
-            Know More{' '}
+            Enroll Now{' '}
             <svg
               className={styles.know_more_arror_svg}
               width='26'
@@ -151,6 +161,7 @@ const StepDegreeCourses = () => {
               />
             </svg>
           </button>
+          
           <svg
             className={styles.honeycomb_svg}
             width='113'
@@ -1645,6 +1656,7 @@ const StepDegreeCourses = () => {
       </div>
 
       <div
+        
         className={
           showCurriculum
             ? [

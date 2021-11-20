@@ -33,7 +33,7 @@ const FAQSection = () => {
         <button className={[styles.btn, styles.active_btn].join(' ')}>
           StepDegree
         </button>
-        <button className={styles.btn}>Carriculam</button>
+        <button className={styles.btn}>Curriculum</button>
         <button className={styles.btn}>Mentors</button>
         <button className={styles.btn}>Placement</button>
       </div>
