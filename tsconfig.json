@@ -23,6 +23,6 @@
       "@/breakpoints": ["styles/abstracts/_breakpoints.scss"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/LayoutComponents/tawk-to/tawk.jsx"],
   "exclude": ["node_modules"]
 }

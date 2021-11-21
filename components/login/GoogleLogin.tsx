@@ -3,17 +3,18 @@ import { GoogleLogin, GoogleLogout } from 'react-google-login';
 
 const clientId = "55278909707-i3v15l81qqco9rtfijmaghkafpsfgrm1.apps.googleusercontent.com";
 
+
 function GoogleLoginComponent() {
 
     const [showloginButton, setShowloginButton] = useState(true);
     const [showlogoutButton, setShowlogoutButton] = useState(false);
-    const onLoginSuccess = (res) => {
+    const onLoginSuccess = (res:any) => {
         console.log('Login Success:', res.profileObj);
         setShowloginButton(false);
         setShowlogoutButton(true);
     };
 
-    const onLoginFailure = (res) => {
+    const onLoginFailure = (res:any) => {
         console.log('Login Failed:', res);
     };
 
