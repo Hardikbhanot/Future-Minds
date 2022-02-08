@@ -21,7 +21,7 @@ const Footer = () => {
             <li>
               <Link href='/courses'>
                 <a title='Academy' aria-label='Academy'>
-                  Academy
+                  Academy.
                 </a>
               </Link>
             </li>
